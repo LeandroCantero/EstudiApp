@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #FAF3E1;
+    --foreground: #222222;
+    --card: #F5E7C6;
+    --card-foreground: #222222;
+    --primary: #FA8112;
+    --primary-foreground: #FAF3E1;
+    --secondary: #F5E7C6;
+    --secondary-foreground: #222222;
+    --accent: #FA8112;
+    --accent-foreground: #FAF3E1;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: #222222;
+    --foreground: #FAF3E1;
+    --card: #2C2C2C;
+    --card-foreground: #FAF3E1;
+    --primary: #FA8112;
+    --primary-foreground: #FAF3E1;
+    --secondary: #333333;
+    --secondary-foreground: #FAF3E1;
+    --accent: #FA8112;
+    --accent-foreground: #FAF3E1;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}

@@ -1,5 +1,5 @@
 # Documentación de Requerimientos de Negocio
-**CursApp - Study Tracker & Simulator**
+**CursApp - Study Tracker**
 
 - **Versión:** 1.0
 - **Fecha:** 12/02/2026
