@@ -1,0 +1,373 @@
+{
+  "career_id": "ing-energia-electrica",
+  "subjects": [
+    {
+      "code": "INGXX",
+      "name": "Introducción a la Energía Eléctrica",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Álgebra y Geometría Analítica",
+      "credits": 7,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Cultura y alfabetización digital en la universidad",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Química",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Introducción al análisis matemático",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Electrotecnia",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Sistemas de representación gráfica",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Física I",
+      "credits": 7,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Materia UNAHUR",
+      "credits": 3,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Análisis matemático I",
+      "credits": 7,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Sistemas de mediciones",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Programación",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Circuitos eléctricos",
+      "credits": 7,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Inglés I",
+      "credits": 3,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Física II",
+      "credits": 7,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Ingeniería ambiental, seguridad e higiene",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Dispositivos e instalaciones eléctricas I",
+      "credits": 7,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Electrónica",
+      "credits": 7,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Inglés II",
+      "credits": 3,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Máquinas eléctricas I",
+      "credits": 7,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Espacio de integración curricular I",
+      "credits": 10,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Análisis matemático II",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Termodinámica",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Organización industrial",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Materiales eléctricos",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Física III",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Matemática avanzada",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Probabilidad y estadística",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Sistemas de control",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Estabilidad y resistencia de materiales",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Dispositivos e instalaciones eléctricas II",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Electrónica industrial",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Electromagnetismo aplicado",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Máquinas eléctricas II",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Mediciones y comunicaciones eléctricas",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Análisis de circuitos y señales",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Uso eficiente de la energía",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Economía",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Transmisión de la energía eléctrica",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Distribución de la energía eléctrica",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Generación de energía eléctrica",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Legislación",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Sistemas eléctricos de potencia",
+      "credits": 7,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Optativa",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Diseño de líneas de transmisión y estaciones transformadoras",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Espacio de integración curricular II",
+      "credits": 14,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    }
+  ]
+}

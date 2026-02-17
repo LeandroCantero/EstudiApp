@@ -1,0 +1,229 @@
+{
+  "career_id": "tec-mantenimiento-hospitalario",
+  "subjects": [
+    {
+      "code": "TECXX",
+      "name": "PRIMER AÑO",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Matemática",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Introducción a la gestión del mantenimiento",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Cultura y alfabetización digital en la universidad",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Organización de sistemas de salud",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Química general",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Física",
+      "credits": 7,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Electrotecnia",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Asignatura Unahur",
+      "credits": 3,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Seguridad, higiene y medio ambiente",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Sistemas de Representación Gráfica",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "TOTAL PRIMER AÑO:",
+      "credits": 3,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "SEGUNDO AÑO",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Materiales y elementos de máquinas",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Hidráulica y neumática",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Planificación del Mantenimiento",
+      "credits": 7,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Instalaciones eléctricas",
+      "credits": 7,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Instalaciones hospitalarias",
+      "credits": 11,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Control de gestión",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Gases medicinales y acondicionamiento de aire",
+      "credits": 7,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Gestión de la calidad",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "TOTAL SEGUNDO AÑO:",
+      "credits": 3,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "TERCER AÑO",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Redes de datos y comunicaciones",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Proyecto de integración",
+      "credits": 9,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "TOTAL TERCER AÑO:",
+      "credits": 15,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Actividades Curriculares Acreditables (ACA)",
+      "credits": 10,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Técnico/a Universitario/a en Mantenimiento hospitalario",
+      "credits": 8,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    }
+  ]
+}

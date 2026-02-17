@@ -1,0 +1,125 @@
+{
+  "career_id": "tec-electromovilidad",
+  "subjects": [
+    {
+      "code": "TECXX",
+      "name": "Introducción a la energía eléctrica",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Álgebra y geometría analítica",
+      "credits": 10,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Cultura y alfabetización digital en la universidad",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Introducción al análisis matemático",
+      "credits": 9,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Electrotecnia",
+      "credits": 9,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Electromovilidad I",
+      "credits": 7,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Análisis matemático I",
+      "credits": 10,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Física I",
+      "credits": 10,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Electromovilidad II",
+      "credits": 7,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Sistemas de mediciones",
+      "credits": 9,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Programación",
+      "credits": 9,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Física II",
+      "credits": 10,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Circuitos eléctricos",
+      "credits": 10,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Electrónica",
+      "credits": 10,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Química",
+      "credits": 9,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    }
+  ]
+}

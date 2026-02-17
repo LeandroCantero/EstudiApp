@@ -1,0 +1,133 @@
+{
+  "career_id": "tec-redes-operaciones",
+  "subjects": [
+    {
+      "code": "TECXX",
+      "name": "Matemática para informática I",
+      "credits": 7,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Introducción a lógica y problemas computacionales",
+      "credits": 7,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Introducción a los sistemas de comunicación y seguridad",
+      "credits": 10,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Cultura y alfabetización digital en la universidad",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Taller de intérpretes de comandos",
+      "credits": 9,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Organización de computadoras I",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Bases de Datos",
+      "credits": 7,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Taller de programación",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Redes de computadoras",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Organización de computadoras II",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Sistemas Operativos",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Operaciones",
+      "credits": 9,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Materia UNAHUR",
+      "credits": 3,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Redes avanzadas",
+      "credits": 10,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Seguridad de la Información",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Desarrollo, seguridad y operaciones",
+      "credits": 10,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    }
+  ]
+}

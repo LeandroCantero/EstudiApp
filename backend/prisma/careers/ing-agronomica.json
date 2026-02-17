@@ -1,0 +1,37 @@
+{
+  "career_id": "ing-agronomica",
+  "subjects": [
+    {
+      "code": "INGXX",
+      "name": "Apicultura",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Forrajicultura",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Cerealicultura",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "INGXX",
+      "name": "Cannabicultura",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    }
+  ]
+}

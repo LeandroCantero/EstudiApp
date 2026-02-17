@@ -1,0 +1,165 @@
+{
+  "career_id": "tec-inteligencia-artificial",
+  "subjects": [
+    {
+      "code": "TECXX",
+      "name": "Matemática para informática",
+      "credits": 7,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Introducción a lógica y problemas computacionales",
+      "credits": 7,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Introducción a la inteligencia artificial",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Cultura y alfabetización digital en la universidad",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Álgebra lineal",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Cálculo",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Taller de Programación I",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Tecnología y sociedad",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Bases de datos",
+      "credits": 7,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Probabilidad y estadística",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Taller de Programación II",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Fundamentos de ciencias de datos",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Fundamentos de redes neuronales",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Aprendizaje Automático",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Taller de Programación III",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Inglés",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Asignatura UNAHUR",
+      "credits": 3,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Aprendizaje Automático Avanzado",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Procesamiento de Imágenes y Visión por Computadora",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "TECXX",
+      "name": "Proyecto integrador",
+      "credits": 8,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    }
+  ]
+}

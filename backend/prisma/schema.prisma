@@ -1,38 +1,115 @@
 generator client {
-  provider = "prisma-client-js"
+  provider   = "prisma-client-js"
+  engineType = "client"
 }
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
 }
 
 model User {
   id        String    @id @default(uuid())
   email     String    @unique
   name      String?
+  careerId  String?
+  career    Career?   @relation(fields: [careerId], references: [id])
   subjects  Subject[]
   credits   Credit[]
+  resources Resource[]
+  events    Event[]
   createdAt DateTime  @default(now())
 }
 
+model Career {
+  id        String    @id @default(uuid())
+  name      String    @unique
+  institute String?   // Instituto (ej: "Tecnología e Ingeniería")
+  duration  Float?    // Duración en años
+  subjects  Subject[]
+  users     User[]
+}
+
 model Subject {
-  id        String   @id @default(uuid())
+  id        String        @id @default(uuid())
   name      String
-  code      String
-  status    String   // PENDIENTE, EN_CURSO, etc.
+  code      String        // Código de la materia (ej: I101)
+  status    SubjectStatus @default(PENDIENTE)
   grade     Float?
-  year      Int
-  period    Int
+  credits   Int           @default(0)
+  year      Int?
+  period    Int?
   userId    String
-  user      User     @relation(fields: [userId], references: [id])
+  user      User          @relation(fields: [userId], references: [id])
+  careerId  String?
+  career    Career?       @relation(fields: [careerId], references: [id])
+  
+  // Correlatividades (RN2, RN8)
+  prerequisites Subject[] @relation("Correlatives")
+  requiredBy    Subject[] @relation("Correlatives")
+
+  // Recursos y Eventos vinculados
+  resources     Resource[]
+  events        Event[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum SubjectStatus {
+  PENDIENTE
+  EN_CURSO
+  REGULARIZADA
+  APROBADA
+  LIBRE
 }
 
 model Credit {
-  id        String   @id @default(uuid())
-  category  String
-  activity  String
-  amount    Int
+  id          String   @id @default(uuid())
+  name        String
+  description String?
+  hours       Int
+  approved    Boolean  @default(false)
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+  createdAt   DateTime @default(now())
+}
+
+model Resource {
+  id          String       @id @default(uuid())
+  title       String
+  url         String?
+  description String?
+  type        ResourceType
+  subjectId   String?
+  subject     Subject?     @relation(fields: [subjectId], references: [id])
+  userId      String
+  user        User         @relation(fields: [userId], references: [id])
+  createdAt   DateTime     @default(now())
+}
+
+enum ResourceType {
+  LINK
+  PDF
+  VIDEO
+  NOTE
+}
+
+model Event {
+  id        String    @id @default(uuid())
+  title     String
+  date      DateTime
+  type      EventType
+  completed Boolean   @default(false)
+  subjectId String?
+  subject   Subject?  @relation(fields: [subjectId], references: [id])
   userId    String
-  user      User     @relation(fields: [userId], references: [id])
+  user      User      @relation(fields: [userId], references: [id])
+  createdAt DateTime  @default(now())
+}
+
+enum EventType {
+  EXAM
+  DELIVERY
+  CLASS
+  OTHER
 }

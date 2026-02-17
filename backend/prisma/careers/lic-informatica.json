@@ -1,0 +1,574 @@
+{
+  "career_id": "lic-informatica",
+  "subjects": [
+    {
+      "code": "LIC1",
+      "name": "Matemática I",
+      "credits": 8,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC10",
+      "name": "Programación con Objetos II",
+      "credits": 6,
+      "prerequisites": [
+        "Programación con Objetos I"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC11",
+      "name": "Redes de Computadoras",
+      "credits": 6,
+      "prerequisites": [
+        "Organización de Computadoras"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC12",
+      "name": "Sistemas Operativos",
+      "credits": 6,
+      "prerequisites": [
+        "Introducción a la Programación",
+        "Organización de Computadoras"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC13",
+      "name": "Programación Funcional",
+      "credits": 4,
+      "prerequisites": [
+        "Estructuras de Datos"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC14",
+      "name": "Construcción de Interfaces de Usuario",
+      "credits": 6,
+      "prerequisites": [
+        "Programación con Objetos II"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC15",
+      "name": "Algoritmos",
+      "credits": 6,
+      "prerequisites": [
+        "Programación Funcional"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC16",
+      "name": "Estrategias de Persistencia",
+      "credits": 6,
+      "prerequisites": [
+        "Programación con Objetos II",
+        "Bases de Datos"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC17",
+      "name": "Laboratorio de Sistemas Operativos y Redes",
+      "credits": 4,
+      "prerequisites": [
+        "Sistemas Operativos",
+        "Redes de Computadoras"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC18",
+      "name": "Análisis Matemático",
+      "credits": 6,
+      "prerequisites": [
+        "Matemática II"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC19",
+      "name": "Lógica y Programación",
+      "credits": 6,
+      "prerequisites": [
+        "Matemática I",
+        "Introducción a la Programación"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC2",
+      "name": "Introducción a la Programación",
+      "credits": 8,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC20",
+      "name": "Elementos de Ingeniería de Software",
+      "credits": 6,
+      "prerequisites": [
+        "Programación con Objetos II"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC21",
+      "name": "Seguridad de la Información",
+      "credits": 4,
+      "prerequisites": [
+        "Laboratorio de Sistemas Operativos y Redes"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC22",
+      "name": "Materia UNAHUR I",
+      "credits": 2,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC23",
+      "name": "Inglés II",
+      "credits": 2,
+      "prerequisites": [
+        "Inglés I"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC24",
+      "name": "Matemática III",
+      "credits": 4,
+      "prerequisites": [
+        "Análisis Matemático"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC25",
+      "name": "Programación Concurrente",
+      "credits": 4,
+      "prerequisites": [
+        "Estructuras de Datos"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC26",
+      "name": "Ingeniería de Requerimientos",
+      "credits": 4,
+      "prerequisites": [
+        "Elementos de Ingeniería de Software"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC27",
+      "name": "Desarrollo de Aplicaciones",
+      "credits": 6,
+      "prerequisites": [
+        "Elementos de Ingeniería de Software",
+        "Estrategias de Persistencia",
+        "Construcción de Interfaces de Usuario"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC28",
+      "name": "Probabilidad y estadística",
+      "credits": 4,
+      "prerequisites": [
+        "Matemática III"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC29",
+      "name": "Gestión de Proyectos de Desarrollo de Soft- ware",
+      "credits": 4,
+      "prerequisites": [
+        "Ingeniería de Requerimientos"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC3",
+      "name": "Organización de Computadoras",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC30",
+      "name": "Lenguajes formales y autómatas",
+      "credits": 4,
+      "prerequisites": [
+        "Lógica y Programación"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC31",
+      "name": "Programación con Objetos III",
+      "credits": 4,
+      "prerequisites": [
+        "Programación con Objetos II"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC32",
+      "name": "Materia UNAHUR II",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC33",
+      "name": "Práctica Profesional Supervisada",
+      "credits": 4,
+      "prerequisites": [
+        "Programación Funcional",
+        "Laboratorio de Sistemas Operativos y Redes",
+        "Desarrollo de Aplicaciones",
+        "Programación Concurrente"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC34",
+      "name": "Teoría de la computación",
+      "credits": 4,
+      "prerequisites": [
+        "Lenguajes formales y autómatas"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC35",
+      "name": "Arquitectura de Software I",
+      "credits": 4,
+      "prerequisites": [
+        "Elementos de Ingeniería de Software",
+        "Gestión de Proyectos de Desarrollo de Soft- ware",
+        "Desarrollo de Aplicaciones",
+        "Programación Concurrente"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC36",
+      "name": "Sistemas Distribuidos y Tiempo Real",
+      "credits": 4,
+      "prerequisites": [
+        "Laboratorio de Sistemas Operativos y Redes",
+        "Programación Concurrente"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC37",
+      "name": "Tesina de Licenciatura",
+      "credits": 4,
+      "prerequisites": [
+        "Gestión de Proyectos de Desarrollo de Soft- ware",
+        "Lenguajes formales y autómatas",
+        "Programación con Objetos III"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC38",
+      "name": "Materia Optativa I",
+      "credits": 4,
+      "prerequisites": [
+        "Elementos de Ingeniería de Software",
+        "Programación con Objetos II",
+        "Bases de Datos",
+        "Programación Concurrente"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC39",
+      "name": "Características de Lenguajes de Progra- mación",
+      "credits": 4,
+      "prerequisites": [
+        "Lógica y Programación"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC4",
+      "name": "Nuevos Entornos y Lenguajes",
+      "credits": 2,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC40",
+      "name": "Arquitectura de Software II",
+      "credits": 4,
+      "prerequisites": [
+        "Sistemas Distribuidos y Tiempo Real",
+        "Arquitectura de Software I"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC41",
+      "name": "Arquitectura de Computadoras",
+      "credits": 4,
+      "prerequisites": [
+        "Laboratorio de Sistemas Operativos y Redes"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC42",
+      "name": "Materia Optativa II",
+      "credits": 4,
+      "prerequisites": [
+        "Elementos de Ingeniería de Software",
+        "Programación con Objetos II",
+        "Bases de Datos",
+        "Programación Concurrente"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC43",
+      "name": "Parseo y generación de código",
+      "credits": 4,
+      "prerequisites": [
+        "Características de Lenguajes de Progra- mación",
+        "Lenguajes formales y autómatas"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC44",
+      "name": "Ejercicio profesional",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC45",
+      "name": "Tecnología y sociedad",
+      "credits": 4,
+      "prerequisites": [
+        "Ejercicio profesional"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC5",
+      "name": "Estructuras de Datos",
+      "credits": 8,
+      "prerequisites": [
+        "Introducción a la Programación"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC6",
+      "name": "Programación con Objetos I",
+      "credits": 8,
+      "prerequisites": [
+        "Introducción a la Programación"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC7",
+      "name": "Bases de Datos",
+      "credits": 6,
+      "prerequisites": [
+        "Matemática I"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC8",
+      "name": "Inglés I",
+      "credits": 2,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LIC9",
+      "name": "Matemática II",
+      "credits": 4,
+      "prerequisites": [
+        "Matemática I"
+      ],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Bases de Datos II",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Fundamentos de Aprendizaje Automático",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Introducción a la Bioinformática",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Políticas Públicas en la Sociedad de la Infor- mación y la Era Digital",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Sistemas de Información Geográfica",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Introducción al Desarrollo de Videojuegos",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Análisis Estático de Programas y Herramientas Asociadas",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Semántica de Lenguajes de Programación",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Administración de las Organizaciones",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Literatura Argentina y Latinoamericana",
+      "credits": 2,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Historia del Pensamiento Científico y el Desarrol- lo Tecnológico",
+      "credits": 2,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Ficciones de la Patria",
+      "credits": 2,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Creatividad e innovación tecnológica",
+      "credits": 2,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Problemas de la Filosofía",
+      "credits": 2,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    }
+  ]
+}

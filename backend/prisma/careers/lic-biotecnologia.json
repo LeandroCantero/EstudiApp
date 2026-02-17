@@ -1,0 +1,189 @@
+{
+  "career_id": "lic-biotecnologia",
+  "subjects": [
+    {
+      "code": "LICXX",
+      "name": "Matemática I",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Biología General",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Introducción a la Química",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Cultura y alfabetización digital en la universidad",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Química General e Inorgánica",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Laboratorio de Análisis Ambiental",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Matemática II",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Microbiología General",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Química Orgánica",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Física",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Matemática III",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Física Aplicada",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Introducción a la Biología Celular y Molecular",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Laboratorio de Química Instrumental y Analítica",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Fisicoquímica",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Bioquímica I",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Asignatura Unahur",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Estadística y Diseño experimental",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Bioquímica II",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Introducción a la Biotecnología",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Higiene y Seguridad",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Gestión de la Calidad",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Laboratorio de Análisis de Alimentos, Medicamentos y",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    }
+  ]
+}

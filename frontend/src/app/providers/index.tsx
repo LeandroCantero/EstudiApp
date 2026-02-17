@@ -1,5 +1,6 @@
 import React from 'react';
 import { ErrorBoundary } from './error-boundary';
+import { ThemeProvider } from './theme-provider';
 
 /**
  * HOC para envolver la aplicación con todos los Providers necesarios.
@@ -8,7 +9,9 @@ import { ErrorBoundary } from './error-boundary';
 export const withProviders = (component: () => React.ReactNode) => () => (
     <React.StrictMode>
         <ErrorBoundary>
-            {component()}
+            <ThemeProvider>
+                {component()}
+            </ThemeProvider>
         </ErrorBoundary>
     </React.StrictMode>
 );

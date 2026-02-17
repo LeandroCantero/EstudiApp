@@ -1,0 +1,189 @@
+{
+  "career_id": "lic-desarrollo-agrario",
+  "subjects": [
+    {
+      "code": "LICXX",
+      "name": "Introducciónalabotánica",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Ecofisiologíavegetal",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Químicageneral",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Inmersiónalarealidadsocialagraria",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Economíasocialyecológica",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Floricultura",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Fundamentosdelasanidadvegetal",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Tallerdebioensayos",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Desarrolloruralyextensiónagraria",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Horticultura",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Fruticultura",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Biodiversidadagrícola",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "AntropologíaparalaAgricultura Familiar",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Bioinsumosagropecuarios",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Turismoruralyperiurbano",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Arboricultura",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Manejoagroecológicode adversidades",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Administracióndeagroecosistemas",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "InglésII",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Historiadelaccesoalatierra",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Análisisdeterritorios",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Formulaciónyevaluaciónde proyectos",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Tallerdeintegraciónfinal",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    }
+  ]
+}

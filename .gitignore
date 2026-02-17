@@ -40,3 +40,7 @@ Thumbs.db
 # Ignoramos la DB local de SQLite y logs, pero las migraciones deben subirse.
 backend/prisma/*.db
 backend/prisma/*.db-journal
+
+# --- Scripts Locales ---
+scripts/
+

@@ -1,14 +1,16 @@
-
-import { BookMarked, BookOpen, Calendar, Home } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
+import { ThemeToggle } from '../../shared/ui/theme-toggle';
+import { NAV_ITEMS } from './nav-config';
 
 export const MobileNav = () => {
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-card border-t border-foreground/5 backdrop-blur-lg px-6 py-3 flex justify-between items-center z-50 md:hidden">
-      <NavItem to="/" icon={<Home size={24} />} label="Inicio" />
-      <NavItem to="/materias" icon={<BookOpen size={24} />} label="Materias" />
-      <NavItem to="/calendario" icon={<Calendar size={24} />} label="Calendario" />
-      <NavItem to="/recursos" icon={<BookMarked size={24} />} label="Recursos" />
+    <nav className="fixed bottom-0 left-0 right-0 bg-card/80 backdrop-blur-lg px-6 py-3 flex justify-between items-center z-50 md:hidden">
+      {NAV_ITEMS.map((item) => (
+        <NavItem key={item.to} to={item.to} icon={<item.icon size={24} />} label={item.label} />
+      ))}
+      <div className="flex items-center">
+        <ThemeToggle />
+      </div>
     </nav>
   );
 };

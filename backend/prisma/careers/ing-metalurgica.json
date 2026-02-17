@@ -1,0 +1,13 @@
+{
+  "career_id": "ing-metalurgica",
+  "subjects": [
+    {
+      "code": "INGXX",
+      "name": "Introducción a la Metalurgia",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    }
+  ]
+}

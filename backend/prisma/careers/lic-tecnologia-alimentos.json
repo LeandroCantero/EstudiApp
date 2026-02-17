@@ -1,0 +1,461 @@
+{
+  "career_id": "lic-tecnologia-alimentos",
+  "subjects": [
+    {
+      "code": "LICXX",
+      "name": "Matemática I",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Introducción a la Tecnología de los Alimentos",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Cultura y alfabetización digital en la universidad",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Introducción a la Química",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Biología General",
+      "credits": 7,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Matemática II",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Introducción al Laboratorio de Alimentos",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Química General e Inorgánica",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Higiene y Seguridad",
+      "credits": 3,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "TOTAL PRIMER AÑO",
+      "credits": 3,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Microbiología General",
+      "credits": 7,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Química Orgánica",
+      "credits": 7,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Física",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Laboratorio de Química Instrumental y Analítica",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Microbiología de los Alimentos I",
+      "credits": 8,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Fisicoquímica de los Alimentos I",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Química de los Alimentos",
+      "credits": 8,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "TOTAL SEGUNDO AÑO",
+      "credits": 3,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Bromatología y Análisis de la Calidad",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Gestión de la Calidad e Inocuidad de los Alimentos",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Seminario General de Procesos Productivos de los Alimentos I",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Operaciones Unitarias",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "ACTIVIDADES CURRICULARES ACREDITABLES (ACA)",
+      "credits": 10,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "TÉCNICO/A UNIVERSITARIO/A EN TECNOLOGÍA DE LOS ALIMENTOS",
+      "credits": 8,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Inglés I",
+      "credits": 2,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Física Aplicada",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Fenómenos de Transporte",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Estadística y Diseño Experimental",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Técnicas Analíticas e Instrumentales en Alimentos",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Matemática III",
+      "credits": 9,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Economía",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Fisicoquímica de los Alimentos II",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "TOTAL TERCER AÑO",
+      "credits": 3,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Biotecnología de Alimentos",
+      "credits": 7,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Bioquímica de los Alimentos",
+      "credits": 9,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Análisis Sensorial",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Legislación y Normas de la Industria Alimenticia",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Asignatura UNAHUR",
+      "credits": 2,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Envases, Empaque y Embalaje",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Procesos de Preservación de Alimentos",
+      "credits": 9,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Gestión de Costos",
+      "credits": 5,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Toxicología de los Alimentos",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "TOTAL CUARTO AÑO",
+      "credits": 3,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Formulación y Evaluación de Proyectos con Práctica Integradora",
+      "credits": 13,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Diseño y Desarrollo de Productos Alimenticios",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Microbiología de los Alimentos II",
+      "credits": 9,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Gestión de Alérgenos y Alimentos Libres de Gluten",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Bioética y Responsabilidad Profesional",
+      "credits": 3,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Organización Industrial",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Tecnología de Alimentos",
+      "credits": 6,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Procesos de Saneamiento y Protección Ambiental",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "TOTAL QUINTO AÑO",
+      "credits": 3,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "TITULACIÓN FINAL: Licenciado/a en TECNOLOGÍA DE LOS ALIMENTOS",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "TOTAL CARRERA",
+      "credits": 18,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Actividades Curriculares Acreditables (ACAs)",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Seminario General de Procesos Productivos",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    },
+    {
+      "code": "LICXX",
+      "name": "Form. y Evaluación de Proyectos con Práctica Integradora",
+      "credits": 4,
+      "prerequisites": [],
+      "year": null,
+      "period": null
+    }
+  ]
+}
