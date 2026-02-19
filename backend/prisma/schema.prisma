@@ -7,43 +7,239 @@ datasource db {
   provider = "postgresql"
 }
 
+// =====================================================
+// CATÁLOGO DE CARRERAS Y MATERIAS (Datos estáticos)
+// =====================================================
+
 model Career {
-  id        String    @id @default(uuid())
-  name      String    @unique
-  institute String?   // Instituto (ej: "Tecnología e Ingeniería")
-  duration  Float?    // Duración en años
-  subjects  CareerSubject[] // Materias vinculadas a esta carrera
+  id          String         @id @default(uuid())
+  name        String         @unique
+  institute   String?        // Instituto UNAHUR
+  duration    Float?         // Duración en años
+  subjects    CareerSubject[] // Materias del plan
+  userCareers UserCareer[]   // Usuarios que cursan esta carrera
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
 }
 
 model Subject {
-  id        String   @id @default(uuid())
-  name      String   @unique // Ej: "Matemática I"
-  hours     Int      @default(0) // Horas totales globales
-  
-  careers   CareerSubject[] // Dónde se dicta esta materia
-  
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id          String         @id @default(uuid())
+  name        String         @unique // Nombre global
+  hours       Int            @default(0) // Horas totales
+  careers     CareerSubject[] // En qué carreras se dicta
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
 }
 
+// Materia específica de una carrera (con código, año, período)
 model CareerSubject {
-  id        String   @id @default(uuid())
-  code      String   // Código específico en el plan (ej: I101)
-  year      Int?     // Año en que se dicta en ESTA carrera
-  period    Int?     // Cuatrimestre en que se dicta en ESTA carrera
+  id              String   @id @default(uuid())
+  code            String   // Código en el plan (ej: I101)
+  year            Int?     // Año de cursada
+  period          Int?     // 1 o 2 (cuatrimestre)
   
-  careerId  String
-  career    Career   @relation(fields: [careerId], references: [id])
+  careerId        String
+  career          Career   @relation(fields: [careerId], references: [id], onDelete: Cascade)
+  
+  subjectId       String
+  subject         Subject  @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+  
+  // Correlatividades
+  prerequisites   CareerSubject[] @relation("CareerSubjectCorrelatives")
+  requiredBy      CareerSubject[] @relation("CareerSubjectCorrelatives")
+  
+  // Instancias de usuarios cursando esta materia
+  studentSubjects StudentSubject[]
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
 
-  subjectId String
-  subject   Subject  @relation(fields: [subjectId], references: [id])
+  @@unique([careerId, subjectId])
+  @@unique([careerId, code])
+}
 
-  // Correlatividades (Self-relation en el contexto de la carrera)
-  prerequisites CareerSubject[] @relation("CareerSubjectCorrelatives")
-  requiredBy    CareerSubject[] @relation("CareerSubjectCorrelatives")
+// =====================================================
+// USUARIOS Y AUTENTICACIÓN
+// =====================================================
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+model User {
+  id            String    @id @default(uuid())
+  email         String    @unique
+  name          String
+  password      String    // Hash bcrypt
+  
+  // Relaciones
+  userCareers   UserCareer[]     // Carreras que cursa (puede ser 2)
+  subjects      StudentSubject[] // Sus materias
+  credits       Credit[]         // Créditos extracurriculares
+  events        Event[]          // Eventos del calendario
+  resources     UserResource[]   // Recursos/links guardados
+  globalResources GlobalResource[] @relation("CreatedBy") // Recursos que creó
+  
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
 
-  @@unique([careerId, subjectId]) // Una materia no puede estar dos veces en la misma carrera con distintos códigos
+// Relación Usuario-Carrera (permite cursar 2 carreras)
+model UserCareer {
+  id            String   @id @default(uuid())
+  userId        String
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  careerId      String
+  career        Career   @relation(fields: [careerId], references: [id], onDelete: Cascade)
+  
+  // Requisitos para 2da carrera
+  approvedCount Int      @default(0) // Materias aprobadas (para validar requisito de 10)
+  isActive      Boolean  @default(true)
+  
+  createdAt     DateTime @default(now())
+  
+  @@unique([userId, careerId])
+}
+
+// =====================================================
+// MATERIAS DEL ESTUDIANTE (Estado académico)
+// =====================================================
+
+enum SubjectStatus {
+  PENDIENTE
+  EN_CURSO
+  REGULARIZADA
+  PROMOCIONADA
+  DESAPROBADA
+  RECURSANDO
+}
+
+model StudentSubject {
+  id              String   @id @default(uuid())
+  
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  careerSubjectId String
+  careerSubject   CareerSubject @relation(fields: [careerSubjectId], references: [id])
+  
+  // Estado y notas
+  status          SubjectStatus @default(PENDIENTE)
+  courseGrade     Float?   // Nota de cursada
+  finalGrade      Float?   // Nota del final
+  
+  // Historial de intentos
+  attemptCount    Int      @default(1)
+  
+  // Detalles
+  notes           SubjectNote[]    // Notas de texto/links
+  exams           Exam[]           // Parciales, recuperatorios, finales
+  events          Event[]          // Eventos específicos de esta materia
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  @@unique([userId, careerSubjectId])
+}
+
+// Notas/links por materia
+model SubjectNote {
+  id                String   @id @default(uuid())
+  studentSubjectId  String
+  studentSubject    StudentSubject @relation(fields: [studentSubjectId], references: [id], onDelete: Cascade)
+  
+  title             String?
+  content           String?  // Nota de texto
+  url               String?  // Link a recurso
+  
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+// Exámenes/Evaluaciones dentro de una materia
+model Exam {
+  id                String   @id @default(uuid())
+  studentSubjectId  String
+  studentSubject    StudentSubject @relation(fields: [studentSubjectId], references: [id], onDelete: Cascade)
+  
+  type              String   // "parcial1", "parcial2", "recuperatorio", "final", "promocion"
+  date              DateTime // Fecha del examen
+  grade             Float?   // Nota obtenida
+  maxGrade          Float    @default(10)
+  
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+// =====================================================
+// CRÉDITOS EXTRACURRICULARES
+// =====================================================
+
+model Credit {
+  id          String   @id @default(uuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  category    String   // "Cursos", "Seminarios", "Investigación", etc
+  activity    String   // Descripción
+  credits     Int      // Cantidad de créditos
+  date        DateTime @default(now())
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// =====================================================
+// CALENDARIO Y EVENTOS
+// =====================================================
+
+model Event {
+  id                String   @id @default(uuid())
+  userId            String
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  // Opcional: si es evento de una materia específica
+  studentSubjectId  String?
+  studentSubject    StudentSubject? @relation(fields: [studentSubjectId], references: [id])
+  
+  title             String
+  type              String   // "parcial", "final", "entrega", "general"
+  date              DateTime
+  description       String?
+  
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+// =====================================================
+// RECURSOS Y LINKS
+// =====================================================
+
+// Recursos globales (default para todos)
+model GlobalResource {
+  id          String   @id @default(uuid())
+  
+  category    String   // "unahur", "calendario", "biblioteca", "general"
+  title       String
+  url         String
+  description String?
+  
+  createdById String?
+  createdBy   User?    @relation("CreatedBy", fields: [createdById], references: [id])
+  
+  isDefault   Boolean  @default(true)
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// Recursos personales del usuario
+model UserResource {
+  id          String   @id @default(uuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  category    String
+  title       String
+  url         String?
+  description String?
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }

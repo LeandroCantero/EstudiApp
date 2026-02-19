@@ -1,3 +1,4 @@
+import './prisma-extensions'; // Extensión temporal de tipos Prisma
 import { Logger, ValidationPipe, VersioningType } from '@nestjs/common';
 import { HttpAdapterHost, NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
