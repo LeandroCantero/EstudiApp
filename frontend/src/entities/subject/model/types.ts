@@ -6,7 +6,7 @@ export interface Subject {
   code: string;
   status: SubjectStatus;
   grade?: number;
-  credits: number;
+  hours: number;
   year?: number;
   period?: number;
   userId: string;

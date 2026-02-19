@@ -1,189 +1,285 @@
 {
-  "career_id": "lic-biotecnologia",
+  "career": "Licenciatura en Biotecnología",
   "subjects": [
     {
-      "code": "LICXX",
-      "name": "Matemática I",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "LICXX",
-      "name": "Biología General",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "LICXX",
-      "name": "Introducción a la Química",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "LICXX",
-      "name": "Cultura y alfabetización digital en la universidad",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "LICXX",
-      "name": "Química General e Inorgánica",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "LICXX",
-      "name": "Laboratorio de Análisis Ambiental",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "LICXX",
-      "name": "Matemática II",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "LICXX",
-      "name": "Microbiología General",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "LICXX",
-      "name": "Química Orgánica",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "LICXX",
-      "name": "Física",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "LICXX",
-      "name": "Matemática III",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "LICXX",
-      "name": "Física Aplicada",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "LICXX",
-      "name": "Introducción a la Biología Celular y Molecular",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "LICXX",
-      "name": "Laboratorio de Química Instrumental y Analítica",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "LICXX",
-      "name": "Fisicoquímica",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "LICXX",
-      "name": "Bioquímica I",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "LICXX",
-      "name": "Asignatura Unahur",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "LICXX",
-      "name": "Estadística y Diseño experimental",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "LICXX",
-      "name": "Bioquímica II",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "LICXX",
+      "code": "1",
       "name": "Introducción a la Biotecnología",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "LICXX",
+      "code": "2",
+      "name": "Matemática I",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "3",
+      "name": "Biología General",
+      "hours": 80,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "4",
+      "name": "Introducción a la Química",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "6",
+      "name": "Química General e Inorgánica",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "7",
+      "name": "Laboratorio de Análisis Ambiental",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "8",
+      "name": "Matemática II",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "9",
       "name": "Higiene y Seguridad",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 32,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "LICXX",
+      "code": "10",
       "name": "Gestión de la Calidad",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "LICXX",
-      "name": "Laboratorio de Análisis de Alimentos, Medicamentos y",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "11",
+      "name": "Microbiología General",
+      "hours": 96,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "12",
+      "name": "Química Orgánica",
+      "hours": 96,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "13",
+      "name": "Física",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "17",
+      "name": "Laboratorio de Producción Vegetal",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "22",
+      "name": "Laboratorio de Análisis Clínicos",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "23",
+      "name": "Bioquímica I",
+      "hours": 96,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "14",
+      "name": "Matemática III",
+      "hours": 96,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "16",
+      "name": "Física Aplicada",
+      "hours": 48,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "20",
+      "name": "Fisicoquímica",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "24",
+      "name": "Asignatura Unahur",
+      "hours": 32,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "25",
+      "name": "Genética Molecular",
+      "hours": 96,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "26",
+      "name": "Economía de la Innovación",
+      "hours": 48,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "27",
+      "name": "Estadística y Diseño experimental",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "28",
+      "name": "Bioética y Responsabilidad Profesional",
+      "hours": 32,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "29",
+      "name": "Biotecnología Médica e Inmunología",
+      "hours": 96,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "30",
+      "name": "Ingeniería Genética",
+      "hours": 96,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "31",
+      "name": "Formulación y Evaluación de Proyectos",
+      "hours": 48,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "32",
+      "name": "Biología Molecular y Celular",
+      "hours": 96,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "33",
+      "name": "Bioinformática",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "34",
+      "name": "Bioquímica II",
+      "hours": 96,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "35",
+      "name": "Biotecnología Animal",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "36",
+      "name": "Sociología de la Ciencia y La Tecnología",
+      "hours": 48,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "37",
+      "name": "Bioprocesos",
+      "hours": 96,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "38",
+      "name": "Procesos Biotecnológicos Industriales",
+      "hours": 96,
+      "year": 5,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "39",
+      "name": "Biotecnología Ambiental",
+      "hours": 64,
+      "year": 5,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "40",
+      "name": "Agrobiotecnología",
+      "hours": 64,
+      "year": 5,
+      "period": 1,
+      "correlatives": []
     }
   ]
 }

@@ -3,7 +3,7 @@ import { CheckCircle2, GraduationCap, TrendingUp } from 'lucide-react';
 import { useSubjects } from '../../entities/subject/model/use-subjects';
 
 export const DashboardPage = () => {
-  const { user, metrics, isLoading, error } = useSubjects();
+  const { user, metrics, suggestions, isLoading, error } = useSubjects();
 
   if (isLoading) {
     return (
@@ -52,12 +52,23 @@ export const DashboardPage = () => {
         <p className="text-xs text-foreground/70">Basado en tu ritmo de 4 materias por cuatrimestre.</p>
       </div>
 
-      {/* Suggested Subjects (Placeholder/RN5) */}
+      {/* Suggested Subjects (Real Data) */}
       <section className="flex flex-col gap-4">
         <h2 className="text-lg font-semibold">Sugerencias de Cursada</h2>
         <div className="flex flex-col gap-3">
-          <SubjectSuggestion name="Ingeniería de Software" reason="Desbloquea 3 materias" />
-          <SubjectSuggestion name="Base de Datos II" reason="Prioridad Alta (Correlatividad)" />
+          {suggestions.length > 0 ? (
+            suggestions.map((subject) => (
+              <SubjectSuggestion 
+                key={subject.code} 
+                name={subject.name} 
+                reason={subject.reason || 'Correlativas al día'} 
+              />
+            ))
+          ) : (
+             <div className="p-4 bg-muted/20 text-muted-foreground text-sm rounded-xl">
+               No hay sugerencias disponibles por el momento. 🎉
+             </div>
+          )}
         </div>
       </section>
     </div>

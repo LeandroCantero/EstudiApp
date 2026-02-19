@@ -21,119 +21,116 @@ Sistema de seguimiento académico diseñado para estudiantes de la UNAHUR. Permi
 - **Lenguaje:** TypeScript
 - **Estilos:** TailwindCSS (Previsto)
 
-- [Node.js](https://nodejs.org/) (v18 o superior)
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/) (opcional, para la base de datos)
-- Git
+
+- **Estilos:** TailwindCSS (Previsto)
 
 ---
 
-## 🚀 Guía de Inicio Rápido (Paso a Paso)
+## 📋 Requisitos Previos
 
-Sigue estos pasos para levantar todo el entorno de desarrollo desde cero.
+Antes de empezar, asegúrate de tener instalado lo siguiente:
 
-### 1. Clonar el repositorio e instalar dependencias
+1.  **[Node.js](https://nodejs.org/)** (v18 o superior)
+    *   *Para verificar:* Abre una terminal y escribe `node -v`.
+2.  **[PostgreSQL](https://www.postgresql.org/download/)**
+    *   Puedes instalarlo localmente o usar [Docker Desktop](https://www.docker.com/products/docker-desktop/) (recomendado si no quieres configurar servicios manuales).
+3.  **[Git](https://git-scm.com/downloads)**
+    *   Para clonar el repositorio.
 
+---
+
+## 🚀 Guía de Inicio Rápido (Método Simplificado)
+
+Hemos creado scripts automáticos para facilitar la instalación.
+
+### 1. Inicialización
 ```bash
-# Clonar proyecto
+# 1. Clonar
 git clone <url-del-repo>
 cd CursApp
 
-# Instalar dependencias del Backend
-cd backend
-npm install
-
-# Instalar dependencias del Frontend
-cd ../frontend
+# 2. Instalar dependencias
 npm install
 ```
 
-### 2. Configuración del Entorno (.env)
+### 2. Configuración (Variables de Entorno)
+Copia los archivos de ejemplo para tener tu configuración lista:
 
-#### Backend (`/backend/.env`)
-Crea el archivo `.env` en la carpeta backend:
+```bash
+# Copiar .env del backend (Windows)
+copy backend\.env.example backend\.env
+
+# Copiar .env del frontend (Windows)
+copy frontend\.env.example frontend\.env
+```
+*(Si usas Mac/Linux, usa `cp` en lugar de `copy`)*
+
+> 📝 **Nota:** El archivo `.env` del backend asume que tu base de datos usuario/pass es `postgres`/`admin`. Si es diferente, edita `backend/.env`.
+
+### 3. Base de Datos
+Asegúrate de que tu PostgreSQL esté corriendo. Luego ejecuta:
+
+```bash
+# Configura las tablas y carga los datos de prueba
+npm run db:setup
+```
+
+### 4. ¡Arrancar! 🏁
+```bash
+# Inicia Backend y Frontend en paralelo
+npm start
+```
+- Frontend: [http://localhost:5173](http://localhost:5173)
+- Backend: [http://localhost:3001](http://localhost:3001)
+
+---
+
+## ⚙️ Configuración Manual (Detallada)
+
+Si prefieres tener el control total o el método simplificado falla.
+
+### 1. Variables de Entorno (.env)
+
+**Backend (`/backend/.env`)**
 ```env
-DATABASE_URL="postgresql://user:admin@localhost:5432/cursapp?schema=public"
-JWT_SECRET="tu_clave_secreta_para_desarrollo"
+DATABASE_URL="postgresql://postgres:admin@localhost:5432/cursapp?schema=public"
+JWT_SECRET="secreto_desarrollo"
 PORT=3001
-NODE_ENV=development
 ```
 
-#### Frontend (`/frontend/.env`)
-Crea el archivo `.env` en la carpeta frontend:
+**Frontend (`/frontend/.env`)**
 ```env
-VITE_API_URL=http://localhost:5173/api/v1
-VITE_APP_ENV=development
+VITE_API_URL=http://localhost:3001/api/v1
 ```
 
-### 3. Configuración de la Base de Datos
-
-#### Opción A: Docker (Recomendado)
-Utilizamos Docker para gestionar PostgreSQL y pgAdmin rápidamente.
-```bash
-# En la raíz del proyecto
-docker-compose up -d
-```
-> **Nota:** Esto levantará Postgres en el puerto `5432` y pgAdmin en `http://localhost:8080`.
-
-#### Opción B: PostgreSQL Local (Sin Docker)
-Si ya tienes PostgreSQL instalado en tu sistema:
-1. Crea una base de datos llamada `cursapp`.
-2. Edita el archivo `backend/.env` y ajusta la URL:
-```env
-DATABASE_URL="postgresql://USUARIO:PASSWORD@localhost:5432/cursapp?schema=public"
-```
-
-### 4. Configuración y Migraciones (Backend)
-Configura la base de datos y carga los datos iniciales (Institutos y Carreras).
-
+### 2. Backend Setup
 ```bash
 cd backend
-
-# 1. Crear estructura de tablas
-npx prisma migrate dev --name init
-
-# 2. Cargar datos base (Carreras y Usuario Admin)
-npx prisma db seed
+npm install
+npx prisma db push    # Sincronizar DB
+npx prisma db seed    # Cargar datos (Carreras y Materias)
+npm run start:dev     # Iniciar servidor
 ```
 
-### 5. Carga de Planes de Estudio 📄
-El `seed` básico crea las carreras pero **no** las materias. Para cargar el plan de estudios completo (ej: Lic. en Informática) con sus correlatividades, ejecutamos el script de importación:
-
+### 3. Frontend Setup
 ```bash
-# Estando en la carpeta /backend
-npx ts-node --transpile-only scripts/test-import.ts
-```
-> ✅ Esto cargará ~50 materias de Informática y establecerá sus correlatividades en el usuario `admin`.
-
-### 6. Ejecutar la Aplicación
-
-#### Backend (API)
-```bash
-# Terminal 1 - Carpeta /backend
-npm run start:dev
-# La API correrá en http://localhost:3001
-```
-
-#### Frontend (UI)
-```bash
-# Terminal 2 - Carpeta /frontend
+cd frontend
+npm install
 npm run dev
-# La App correrá en http://localhost:5173 (o similar)
 ```
 
 ---
 
 ## 📂 Estructura del Proyecto
-- `backend/prisma/plans/`: PDFs originales de los planes de estudio.
-- `backend/prisma/careers/`: JSONs procesados listos para importar.
-- `backend/src/import/`: Módulo de NestJS encargado de la lógica de ingestión.
+- `backend/`: API NestJS + Prisma ORM.
+  - `prisma/plans/`: PDFs originales.
+  - `src/careers/`: Lógica de carreras e importación.
+  - `src/subjects/`: Motor de correlatividades y sugerencias.
+- `frontend/`: UI React + Vite.
 
 ## 🤝 Contribución
-1. Fork del proyecto.
-2. Crea tu Feature Branch (`git checkout -b feature/AmazingFeature`).
-3. Commit de tus cambios (`git commit -m 'Add some AmazingFeature'`).
-4. Push a la rama (`git push origin feature/AmazingFeature`).
-5. Abre un Pull Request.
+1. Fork & Branch (`feature/NuevaFuncionalidad`).
+2. Pull Request.
 
 ---
 *Desarrollado para la comunidad UNAHUR - 2026*

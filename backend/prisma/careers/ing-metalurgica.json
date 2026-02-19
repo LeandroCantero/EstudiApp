@@ -1,13 +1,301 @@
 {
-  "career_id": "ing-metalurgica",
+  "career": "Ingeniería Metalúrgica",
   "subjects": [
     {
-      "code": "INGXX",
+      "code": "E1",
       "name": "Introducción a la Metalurgia",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "E2",
+      "name": "Algebra y Geometría Analítica",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "E3",
+      "name": "Química",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "E4",
+      "name": "Introducción al análisis Matemático",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "E5",
+      "name": "Metalurgia I",
+      "hours": 96,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "E6",
+      "name": "Sistemas de Representación Gráfica",
+      "hours": 32,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "E7",
+      "name": "Física I",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "E8",
+      "name": "Asignatura UNAHUR",
+      "hours": 32,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "E9",
+      "name": "Análisis Matemático I",
+      "hours": 96,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "E10",
+      "name": "Técnicas de Análisis",
+      "hours": 64,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "E11",
+      "name": "Programación",
+      "hours": 64,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "E12",
+      "name": "Metalurgia II",
+      "hours": 96,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "E13",
+      "name": "Inglés I",
+      "hours": 32,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "E14",
+      "name": "Física II",
+      "hours": 64,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "E15",
+      "name": "Probabilidad y Estadística",
+      "hours": 64,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "E16",
+      "name": "Inglés II",
+      "hours": 32,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "E17",
+      "name": "Ensayos de Materiales",
+      "hours": 64,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "E18",
+      "name": "Espacio de Integración Curricular I",
+      "hours": 128,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "E19",
+      "name": "Análisis Matemático II",
+      "hours": 96,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "E20",
+      "name": "Termodinámica",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "E21",
+      "name": "Organización Industrial",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "E22",
+      "name": "Ciencia de los Materiales",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "E23",
+      "name": "Física III",
+      "hours": 96,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "E24",
+      "name": "Matemática Avanzada",
+      "hours": 96,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "E25",
+      "name": "Química II -Inorgánica",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "E26",
+      "name": "Metalurgia Física",
+      "hours": 96,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "E27",
+      "name": "Fisicoquímica Metalúrgica",
+      "hours": 96,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "E28",
+      "name": "Electrotecnia y Sistemas de Control",
+      "hours": 96,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "E29",
+      "name": "Mecánica de los Fluidos",
+      "hours": 64,
+      "year": 4,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "E30",
+      "name": "Instalaciones Térmicas",
+      "hours": 64,
+      "year": 4,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "E31",
+      "name": "Soldadura",
+      "hours": 80,
+      "year": 4,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "E32",
+      "name": "Economía",
+      "hours": 64,
+      "year": 4,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "E33",
+      "name": "Refractarios y Cerámicos",
+      "hours": 80,
+      "year": 5,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "E34",
+      "name": "Legislación",
+      "hours": 64,
+      "year": 5,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "E35",
+      "name": "Procesos de Reducción y Aceración",
+      "hours": 80,
+      "year": 5,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "E36",
+      "name": "Conformación Plástica",
+      "hours": 80,
+      "year": 5,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "E37",
+      "name": "Espacio de Integración Curricular II",
+      "hours": 3,
+      "year": 5,
+      "period": 2,
+      "correlatives": []
     }
   ]
 }

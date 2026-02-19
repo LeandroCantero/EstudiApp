@@ -5,8 +5,6 @@ import { CareersModule } from './careers/careers.module';
 import { validateEnv } from './common/config/env.validation';
 import { ImportModule } from './import/import.module';
 import { PrismaService } from './prisma.service';
-import { SubjectsModule } from './subjects/subjects.module';
-import { UsersModule } from './users/users.module';
 
 @Module({
     imports: [
@@ -14,8 +12,6 @@ import { UsersModule } from './users/users.module';
             isGlobal: true,
             validate: validateEnv,
         }),
-        SubjectsModule,
-        UsersModule,
         CareersModule,
         ImportModule,
     ],

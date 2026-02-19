@@ -1,0 +1,317 @@
+{
+  "career": "Profesorado Universitario en Educación Física",
+  "subjects": [
+    {
+      "code": "S1",
+      "name": "Pedagogía",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S2",
+      "name": "Lectura, escritura y oralidad",
+      "hours": 48,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S3",
+      "name": "Aprendizajes y prácticas educativas",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S4",
+      "name": "Territorio, sujetos e instituciones",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S5",
+      "name": "Deporte comunitario",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S6",
+      "name": "Educación física en la niñez",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S7",
+      "name": "Taller de prácticas lúdicas",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S8",
+      "name": "Educación física en el joven y el adulto",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S9",
+      "name": "didáctica I",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S10",
+      "name": "Prácticas gimnásticas I",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S11",
+      "name": "Didáctica y curriculum",
+      "hours": 48,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S12",
+      "name": "Educación sexual integral",
+      "hours": 32,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S13",
+      "name": "latinoamericano",
+      "hours": 48,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S14",
+      "name": "universidad",
+      "hours": 32,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S15",
+      "name": "socioeducativo",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S16",
+      "name": "didáctica II",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S17",
+      "name": "Prácticas gimnásticas II",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S18",
+      "name": "didáctica III",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S19",
+      "name": "didáctica - Natación I",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S20",
+      "name": "Educación física",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S21",
+      "name": "proyectos educativos",
+      "hours": 48,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S22",
+      "name": "superior",
+      "hours": 48,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S23",
+      "name": "Asignatura UNAHUR",
+      "hours": 32,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S24",
+      "name": "y primario",
+      "hours": 160,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S25",
+      "name": "Diseño de proyectos sociocomunitarios",
+      "hours": 48,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S26",
+      "name": "didáctica IV",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S27",
+      "name": "discapacidad",
+      "hours": 48,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S28",
+      "name": "Taller de primeros auxilios",
+      "hours": 48,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S29",
+      "name": "didáctica - Natación II",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S30",
+      "name": "Historia de la Educación física argentina",
+      "hours": 48,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S31",
+      "name": "Tecnología educativa",
+      "hours": 32,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S32",
+      "name": "Política educativa",
+      "hours": 48,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S33",
+      "name": "secundario y superior",
+      "hours": 160,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S34",
+      "name": "Educación ambiental",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S35",
+      "name": "didáctica - Atletismo",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S36",
+      "name": "Teoría de la Educación física",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S37",
+      "name": "física y desarrollo curricular",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S38",
+      "name": "expresivas",
+      "hours": 48,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S39",
+      "name": "entrenamiento deportivo",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    }
+  ]
+}

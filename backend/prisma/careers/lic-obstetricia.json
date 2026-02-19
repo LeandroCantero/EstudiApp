@@ -1,0 +1,285 @@
+{
+  "career": "Licenciatura en Obstetricia",
+  "subjects": [
+    {
+      "code": "1",
+      "name": "Introducción a la Salud Comunitaria",
+      "hours": 6,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "2",
+      "name": "Anátomo-Fisiología I",
+      "hours": 6,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "3",
+      "name": "Genética Humana",
+      "hours": 4,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "4",
+      "name": "Introducción a la Obstetricia",
+      "hours": 4,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "5",
+      "name": "Anátomo-Fisiología II",
+      "hours": 6,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "6",
+      "name": "Salud Comunitaria I",
+      "hours": 6,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "7",
+      "name": "Bioquímica",
+      "hours": 4,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "8",
+      "name": "Cultura y alfabetización digital en la universidad",
+      "hours": 4,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "9",
+      "name": "Introducción a la Nutrición",
+      "hours": 3,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "10",
+      "name": "Salud Comunitaria II",
+      "hours": 9,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "11",
+      "name": "Obstetricia I",
+      "hours": 9,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "12",
+      "name": "Salud Sexual y Reproductiva",
+      "hours": 9,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "13",
+      "name": "Obstetricia II",
+      "hours": 9,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "14",
+      "name": "Antropología",
+      "hours": 3,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "15",
+      "name": "Salud Comunitaria III",
+      "hours": 9,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "16",
+      "name": "Asignatura UNAHUR",
+      "hours": 3,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "17",
+      "name": "Psicología",
+      "hours": 3,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "18",
+      "name": "Obstetricia III",
+      "hours": 10,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "19",
+      "name": "Salud Comunitaria IV",
+      "hours": 9,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "20",
+      "name": "Deontología y aspectos legales del ejercicio profesional de la obstetricia",
+      "hours": 4,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "21",
+      "name": "Obstetricia patológica",
+      "hours": 6,
+      "year": 3,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "22",
+      "name": "Obstetricia IV",
+      "hours": 10,
+      "year": 3,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "23",
+      "name": "Preparación Integral para la maternidad",
+      "hours": 5,
+      "year": 3,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "24",
+      "name": "Microbiología",
+      "hours": 3,
+      "year": 3,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "25",
+      "name": "Farmacología",
+      "hours": 3,
+      "year": 3,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "26",
+      "name": "Evaluación de salud fetal",
+      "hours": 4,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "27",
+      "name": "Farmacología Obstétrica",
+      "hours": 5,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "28",
+      "name": "Práctica obstétrica integrada I",
+      "hours": 12,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "29",
+      "name": "Taller de investigación I",
+      "hours": 4,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "30",
+      "name": "Salud Comunitaria V",
+      "hours": 9,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "31",
+      "name": "Historia Sociosanitaria de la Salud",
+      "hours": 6,
+      "year": 4,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "32",
+      "name": "Ética y desarrollo Profesional",
+      "hours": 3,
+      "year": 4,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "33",
+      "name": "Puericultura",
+      "hours": 4,
+      "year": 4,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "34",
+      "name": "Taller de investigación II",
+      "hours": 4,
+      "year": 4,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "35",
+      "name": "Práctica obstétrica integrada II",
+      "hours": 12,
+      "year": 4,
+      "period": 2,
+      "correlatives": []
+    }
+  ]
+}

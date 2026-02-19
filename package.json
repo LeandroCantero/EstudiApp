@@ -1,0 +1,17 @@
+{
+  "name": "cursapp-root",
+  "version": "1.0.0",
+  "description": "Root script for CursApp ecosystem",
+  "scripts": {
+    "postinstall": "npm run install:all",
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "db:setup": "cd backend && npx prisma db push --force-reset && npx prisma db seed",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "cd backend && npm run start:dev",
+    "start:frontend": "cd frontend && npm run dev",
+    "dev": "npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

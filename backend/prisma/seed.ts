@@ -1,17 +1,20 @@
 /// <reference types="node" />
 import { PrismaPg } from '@prisma/adapter-pg';
 import { PrismaClient } from '@prisma/client';
+import 'dotenv/config';
 
 const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL });
 const prisma = new PrismaClient({ adapter });
+
+import { CareersImportService } from '../src/careers/careers-import.service';
 
 async function main() {
   console.log('🌱 Starting seed...');
 
   // Limpiar base de datos
+  await prisma.careerSubject.deleteMany();
   await prisma.subject.deleteMany();
   await prisma.career.deleteMany();
-  await prisma.user.deleteMany();
 
   console.log('📚 Creating UNAHUR careers...');
 
@@ -79,19 +82,22 @@ async function main() {
 
   console.log(`✅ Created ${careers.length} careers`);
 
-  // Crear usuario de prueba con la primera carrera encontrada (ej: Lic. Informática en su nueva posición)
-  const infoCareer = createdCareers.find(c => c.name === 'Licenciatura en Informática');
+  // Importar Planes de Estudio (Templates)
+  // Necesitamos instanciar el servicio con un PrismaService real
+  // Como `prisma` aquí es un PrismaClient, podemos castearlo o wrappearlo si el servicio lo requiere.
+  // Pero CareersImportService pide `PrismaService` en el constructor.
+  // PrismaService extiende PrismaClient, por lo que `prisma` debería funcionar si coincide la firma.
+  // El problema es que PrismaService tiene `onModuleInit` etc.
+  // Para el seed, podemos hacer un mock o usar el prisma client directo si modificamos el servicio
+  // O mejor, instanciamos PrismaService (que es un wrapper)
 
-  const user = await prisma.user.create({
-    data: {
-      email: 'leandro@cursapp.com',
-      name: 'Leandro Cantero',
-      // No asignamos carrera para forzar el Onboarding
-    },
-  });
+  // Hack: CareersImportService espera PrismaService. 
+  // Vamos a asumir que podemos pasarle `prisma` si el tipo es compatible, o creamos un objeto compatible.
+  const importService = new CareersImportService(prisma as any);
+  await importService.importAllPlans();
 
   console.log('✅ Seed completed successfully!');
-  console.log({ userEmail: user.email, totalCareers: careers.length });
+  console.log({ totalCareers: careers.length });
 }
 
 main()

@@ -1,37 +1,477 @@
 {
-  "career_id": "ing-agronomica",
+  "career": "Ingeniería Agronómica",
   "subjects": [
     {
-      "code": "INGXX",
-      "name": "Apicultura",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "1",
+      "name": "Introducción al desarrollo agrario",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "INGXX",
-      "name": "Forrajicultura",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "2",
+      "name": "Ateneo de estudio de casos",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": [
+        "Matemática aplicada"
+      ]
     },
     {
-      "code": "INGXX",
-      "name": "Cerealicultura",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "3",
+      "name": "Agroecología",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "INGXX",
-      "name": "Cannabicultura",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "4",
+      "name": "Biología",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "5",
+      "name": "Matemática aplicada",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "7",
+      "name": "UNAHUR I",
+      "hours": 32,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "8",
+      "name": "Introducción a la botánica",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Biología"
+      ]
+    },
+    {
+      "code": "9",
+      "name": "Química general",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Matemática aplicada"
+      ]
+    },
+    {
+      "code": "10",
+      "name": "Floricultura I",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Introducción al desarrollo agrario",
+        "Agroecología"
+      ]
+    },
+    {
+      "code": "11",
+      "name": "Discusiones sobre desarrollo",
+      "hours": 32,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Introducción al desarrollo agrario"
+      ]
+    },
+    {
+      "code": "12",
+      "name": "Fundamentos de sanidad vegetal",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Biología"
+      ]
+    },
+    {
+      "code": "13",
+      "name": "Inglés I",
+      "hours": 32,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "14",
+      "name": "Ecología teórica",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Biología"
+      ]
+    },
+    {
+      "code": "15",
+      "name": "Bases biológicas de la producción animal",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Biología"
+      ]
+    },
+    {
+      "code": "16",
+      "name": "Horticultura I",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Floricultura I",
+        "Matemática aplicada"
+      ]
+    },
+    {
+      "code": "18",
+      "name": "Geografía agraria nacional",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "19",
+      "name": "Ecofisiología vegetal",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Introducción a la botánica"
+      ]
+    },
+    {
+      "code": "20",
+      "name": "Fruticultura I",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Floricultura I"
+      ]
+    },
+    {
+      "code": "21",
+      "name": "Producción animal I",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Bases biológicas de la producción animal"
+      ]
+    },
+    {
+      "code": "22",
+      "name": "Economía social y ecológica",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "23",
+      "name": "Edafología y manejo de suelos",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Química general"
+      ]
+    },
+    {
+      "code": "24",
+      "name": "Manejo agroecológico de adversidades",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Fundamentos de sanidad vegetal",
+        "Ecofisiología vegetal"
+      ]
+    },
+    {
+      "code": "25",
+      "name": "Arboricultura I",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Floricultura I"
+      ]
+    },
+    {
+      "code": "26",
+      "name": "Historia del acceso a la tierra",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "27",
+      "name": "Nutrición y soberanía alimentaria",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Agroecología"
+      ]
+    },
+    {
+      "code": "28",
+      "name": "Seguridad en prácticas agrícolas",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "29",
+      "name": "Botánica agrícola",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Introducción a la botánica"
+      ]
+    },
+    {
+      "code": "30",
+      "name": "Análisis de territorios",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Geografía agraria nacional"
+      ]
+    },
+    {
+      "code": "31",
+      "name": "Biofísica aplicada",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Matemática aplicada"
+      ]
+    },
+    {
+      "code": "32",
+      "name": "Políticas para el desarrollo territorial",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "33",
+      "name": "UNAHUR II",
+      "hours": 32,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "34",
+      "name": "Floricultura II",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Floricultura I"
+      ]
+    },
+    {
+      "code": "35",
+      "name": "Horticultura II",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Horticultura I"
+      ]
+    },
+    {
+      "code": "36",
+      "name": "Biodiversidad agrícola",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Botánica agrícola"
+      ]
+    },
+    {
+      "code": "37",
+      "name": "Climatología y fenología",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "38",
+      "name": "Agua y sistemas de riego",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Biofísica aplicada"
+      ]
+    },
+    {
+      "code": "40",
+      "name": "Bioinsumos agropecuarios",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Química general"
+      ]
+    },
+    {
+      "code": "41",
+      "name": "Inglés II",
+      "hours": 32,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Inglés I"
+      ]
+    },
+    {
+      "code": "42",
+      "name": "Taller de bioensayos",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "43",
+      "name": "Tecnologías agrícolas",
+      "hours": 96,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Biofísica aplicada",
+        "Matemática aplicada"
+      ]
+    },
+    {
+      "code": "44",
+      "name": "Desarrollo rural y extensión agraria",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "45",
+      "name": "Turismo rural y periurbano",
+      "hours": 32,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "46",
+      "name": "Fruticultura II",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Fruticultura I"
+      ]
+    },
+    {
+      "code": "47",
+      "name": "Arboricultura II",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Arboricultura I"
+      ]
+    },
+    {
+      "code": "48",
+      "name": "Fitomejoramiento",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Ecofisiología vegetal"
+      ]
+    },
+    {
+      "code": "49",
+      "name": "Diseño y manejo de agroecosistemas",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Manejo agroecológico de adversidades"
+      ]
+    },
+    {
+      "code": "50",
+      "name": "Administración de agroecosistemas",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Economía social y ecológica"
+      ]
+    },
+    {
+      "code": "51",
+      "name": "Materia electiva",
+      "hours": 128,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Floricultura I"
+      ]
+    },
+    {
+      "code": "52",
+      "name": "Producción animal II",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": [
+        "Producción animal I"
+      ]
+    },
+    {
+      "code": "54",
+      "name": "Taller de integración final",
+      "hours": 96,
+      "year": 1,
+      "period": 1,
+      "correlatives": [
+        "Matemática aplicada"
+      ]
     }
   ]
 }

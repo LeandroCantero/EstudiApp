@@ -1,0 +1,221 @@
+{
+  "career": "Tec. Univ. en Viverismo",
+  "subjects": [
+    {
+      "code": "1",
+      "name": "Introducción al viverismo",
+      "hours": 4,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "2",
+      "name": "Ateneo de estudio de casos",
+      "hours": 4,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "3",
+      "name": "Biología",
+      "hours": 4,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "4",
+      "name": "Matemática aplicada",
+      "hours": 4,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "5",
+      "name": "Introducción a la botánica",
+      "hours": 4,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Biología"
+      ]
+    },
+    {
+      "code": "6",
+      "name": "Floricultura",
+      "hours": 4,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Introducción al viverismo"
+      ]
+    },
+    {
+      "code": "7",
+      "name": "Química general",
+      "hours": 4,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Matemática aplicada"
+      ]
+    },
+    {
+      "code": "8",
+      "name": "Nuevos entornos y lenguajes",
+      "hours": 2,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "9",
+      "name": "Inglés I",
+      "hours": 2,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "10",
+      "name": "Ecofisiología vegetal",
+      "hours": 4,
+      "year": 2,
+      "period": 1,
+      "correlatives": [
+        "Introducción a la botánica"
+      ]
+    },
+    {
+      "code": "11",
+      "name": "Fruticultura",
+      "hours": 4,
+      "year": 2,
+      "period": 1,
+      "correlatives": [
+        "Floricultura"
+      ]
+    },
+    {
+      "code": "12",
+      "name": "Suelos y sustratos",
+      "hours": 4,
+      "year": 2,
+      "period": 1,
+      "correlatives": [
+        "Química general"
+      ]
+    },
+    {
+      "code": "13",
+      "name": "Inmersión a la realidad social agraria",
+      "hours": 4,
+      "year": 2,
+      "period": 1,
+      "correlatives": [
+        "Introducción al viverismo"
+      ]
+    },
+    {
+      "code": "14",
+      "name": "Propagación de plantas",
+      "hours": 4,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Ecofisiología vegetal"
+      ]
+    },
+    {
+      "code": "15",
+      "name": "Arboricultura",
+      "hours": 4,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Floricultura"
+      ]
+    },
+    {
+      "code": "16",
+      "name": "Fundamentos de sanidad vegetal",
+      "hours": 4,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Biología"
+      ]
+    },
+    {
+      "code": "17",
+      "name": "Administración de agroecosistemas",
+      "hours": 4,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Inmersión a la realidad social agraria"
+      ]
+    },
+    {
+      "code": "18",
+      "name": "Asignatura UNAHUR I",
+      "hours": 2,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "19",
+      "name": "Tecnologías para cultivos protegidos",
+      "hours": 4,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Ecofisiología vegetal"
+      ]
+    },
+    {
+      "code": "20",
+      "name": "Manejo agroecológico de adversidades",
+      "hours": 4,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Fundamentos de sanidad vegetal"
+      ]
+    },
+    {
+      "code": "21",
+      "name": "Formulación y evaluación de proyectos",
+      "hours": 4,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Administración de agroecosistemas"
+      ]
+    },
+    {
+      "code": "22",
+      "name": "Seguridad en prácticas agrícolas",
+      "hours": 2,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Floricultura"
+      ]
+    },
+    {
+      "code": "23",
+      "name": "Vivero de atención al público",
+      "hours": 4,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Introducción al viverismo"
+      ]
+    }
+  ]
+}

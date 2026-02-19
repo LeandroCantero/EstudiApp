@@ -1,0 +1,317 @@
+{
+  "career": "Licenciatura en Gestión Ambiental",
+  "subjects": [
+    {
+      "code": "1",
+      "name": "Introducción a la cuestión ambiental CIC",
+      "hours": 48,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "2",
+      "name": "Matemática I CFB",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "3",
+      "name": "Biología CFE",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "4",
+      "name": "Introducción a la química CFB",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "6",
+      "name": "Asignatura Unahur CFC",
+      "hours": 32,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "7",
+      "name": "Ecología CFE",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "8",
+      "name": "Matemática II CFB",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "9",
+      "name": "Química general e inorgánica CFB",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "10",
+      "name": "Legislación ambiental CFE",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "11",
+      "name": "Problemáticas ambientales urbanas CFE",
+      "hours": 48,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "12",
+      "name": "Higiene y seguridad CFE",
+      "hours": 32,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "13",
+      "name": "Taller integrado de gestión ambiental CIC",
+      "hours": 96,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "14",
+      "name": "Física CFB",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "15",
+      "name": "Matemática III CFB",
+      "hours": 96,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "16",
+      "name": "Geología ambiental CFE",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "17",
+      "name": "Climatología CFE",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "18",
+      "name": "Ecología política CFE",
+      "hours": 48,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "20",
+      "name": "Fisicoquímica CFB",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "21",
+      "name": "Química ambiental CFE",
+      "hours": 96,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "22",
+      "name": "Gestión del agua CFE",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "23",
+      "name": "Economía ambiental CFE",
+      "hours": 128,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "24",
+      "name": "Estadística y diseño experimental CFB",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "26",
+      "name": "Cartografía y SIG CFE",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "27",
+      "name": "Educación ambiental CFE",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "29",
+      "name": "Gestión de residuos CFE",
+      "hours": 48,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "31",
+      "name": "Química analítica aplicada CFE",
+      "hours": 32,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "32",
+      "name": "Evaluación de sitios contaminados CFE",
+      "hours": 48,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "33",
+      "name": "Política ambiental CFE",
+      "hours": 48,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "34",
+      "name": "Gestión integral de proyectos CIC",
+      "hours": 96,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "35",
+      "name": "Taller de trabajo final CIC",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "36",
+      "name": "Tecnologías de remediación CFE",
+      "hours": 48,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "37",
+      "name": "Gestión ambiental en gobiernos locales CFE",
+      "hours": 48,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "38",
+      "name": "Manejo integrado de cuencas CFE",
+      "hours": 48,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "39",
+      "name": "Gestión de la infraestructura verde urbana CFE",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "40",
+      "name": "Gestión comunitaria en salud y ambiente CFE",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "41",
+      "name": "Energía y ambiente CFE",
+      "hours": 48,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "42",
+      "name": "Gestión integral del riesgo CFE",
+      "hours": 48,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "5",
+      "name": "Cultura y alfabetización digital en la UniversidadCFC",
+      "hours": 32,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "19",
+      "name": "Muestreo ambiental CFE",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    }
+  ]
+}

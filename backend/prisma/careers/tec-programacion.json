@@ -1,157 +1,145 @@
 {
-  "career_id": "tec-programacion",
+  "career": "Tec. Univ. en Programación",
   "subjects": [
     {
-      "code": "TECXX",
-      "name": "1. Matemática para informática I",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "1",
+      "name": "Matemática para informática I",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
-      "name": "2. Introducción a lógica y problemas computacionales",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "3",
+      "name": "Organización de computadoras I",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
-      "name": "3. Organización de computadoras I",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "4",
+      "name": "Nuevos entornos y lenguajes",
+      "hours": 32,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
-      "name": "4. Nuevos entornos y lenguajes",
-      "credits": 2,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "5",
+      "name": "Taller de lenguajes de marcado y tecnologías web",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
-      "name": "5. Taller de lenguajes de marcado y tecnologías web",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "6",
+      "name": "Programación estructurada",
+      "hours": 96,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
-      "name": "6. Programación estructurada",
-      "credits": 6,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "7",
+      "name": "Matemática para Informática II",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Matemática para informática I"
+      ]
     },
     {
-      "code": "TECXX",
-      "name": "7. Matemática para Informática II",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "8",
+      "name": "Inglés I",
+      "hours": 32,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
-      "name": "8. Inglés I",
-      "credits": 2,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "9",
+      "name": "Bases de Datos",
+      "hours": 96,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Matemática para informática I",
+        "Matemática para Informática II"
+      ]
     },
     {
-      "code": "TECXX",
-      "name": "9. Bases de Datos",
-      "credits": 6,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "10",
+      "name": "Programación con objetos I",
+      "hours": 128,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Programación estructurada"
+      ]
     },
     {
-      "code": "TECXX",
-      "name": "10. Programación con objetos I",
-      "credits": 8,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "11",
+      "name": "Estructuras de datos",
+      "hours": 128,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Programación estructurada"
+      ]
     },
     {
-      "code": "TECXX",
-      "name": "11. Estructuras de datos",
-      "credits": 8,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "13",
+      "name": "Programación con objetos II",
+      "hours": 96,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Programación con objetos I"
+      ]
     },
     {
-      "code": "TECXX",
-      "name": "12. Materia UNAHUR",
-      "credits": 2,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "14",
+      "name": "Electiva I",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Programación estructurada"
+      ]
     },
     {
-      "code": "TECXX",
-      "name": "13. Programación con objetos II",
-      "credits": 6,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "15",
+      "name": "Electiva II",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Organización de computadoras I"
+      ]
     },
     {
-      "code": "TECXX",
-      "name": "14. Electiva I",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "16",
+      "name": "Inglés II",
+      "hours": 32,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Inglés I"
+      ]
     },
     {
-      "code": "TECXX",
-      "name": "15. Electiva II",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "TECXX",
-      "name": "16. Inglés II",
-      "credits": 2,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "TECXX",
-      "name": "17. Construcción de interfaces de usuario",
-      "credits": 6,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "TECXX",
-      "name": "18. Estrategias de persistencia",
-      "credits": 6,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "TECXX",
-      "name": "19. Elementos de ingeniería de software",
-      "credits": 6,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "18",
+      "name": "Estrategias de persistencia",
+      "hours": 96,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Programación con objetos I",
+        "Programación con objetos II"
+      ]
     }
   ]
 }

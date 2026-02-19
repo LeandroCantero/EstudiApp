@@ -1,5 +1,6 @@
 
 import { Outlet } from 'react-router-dom';
+import { MobileHeader } from '../widgets/navigation/mobile-header';
 import { MobileNav } from '../widgets/navigation/mobile-nav';
 import { Sidebar } from '../widgets/navigation/sidebar';
 
@@ -10,6 +11,9 @@ export const MainLayout = () => {
       <Sidebar />
       
       <div className="flex-1 flex flex-col min-w-0">
+        {/* Mobile Header */}
+        <MobileHeader />
+
         <main className="flex-1 w-full max-w-5xl mx-auto px-4 py-8 md:px-10 pb-24 md:pb-8">
           <Outlet />
         </main>

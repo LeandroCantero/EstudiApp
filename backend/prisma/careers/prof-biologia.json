@@ -1,0 +1,309 @@
+{
+  "career": "Profesorado Universitario de Biología",
+  "subjects": [
+    {
+      "code": "S1",
+      "name": "Pedagogía",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S2",
+      "name": "Lectura, escritura y oralidad",
+      "hours": 48,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S3",
+      "name": "educativas",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S4",
+      "name": "instituciones",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S5",
+      "name": "celular y molecular",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S6",
+      "name": "Química general e inorgánica",
+      "hours": 80,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S7",
+      "name": "para Biología",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S8",
+      "name": "Zoología",
+      "hours": 96,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S9",
+      "name": "Botánica",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S10",
+      "name": "digital en la universidad",
+      "hours": 32,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S11",
+      "name": "Didáctica y currículum",
+      "hours": 48,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S12",
+      "name": "Educación Sexual Integral",
+      "hours": 32,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S13",
+      "name": "latinoamericano",
+      "hours": 48,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S14",
+      "name": "el ámbito socioeducativo",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S15",
+      "name": "Biofísica I",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S16",
+      "name": "naturales I",
+      "hours": 48,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S17",
+      "name": "Química orgánica",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S18",
+      "name": "humana",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S19",
+      "name": "Biofísica II",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S20",
+      "name": "laboratorio",
+      "hours": 48,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S21",
+      "name": "Educación superior",
+      "hours": 48,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S22",
+      "name": "Asignatura UNAHUR",
+      "hours": 32,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S23",
+      "name": "Bioquímica",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S24",
+      "name": "naturales II",
+      "hours": 48,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S25",
+      "name": "Microbiología e Inmunología",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S26",
+      "name": "Evolución",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S27",
+      "name": "Genética",
+      "hours": 48,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S28",
+      "name": "Historia de la ciencia",
+      "hours": 48,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S29",
+      "name": "nivel secundario",
+      "hours": 160,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S30",
+      "name": "Tecnología educativa",
+      "hours": 32,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S31",
+      "name": "Política educativa",
+      "hours": 48,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S32",
+      "name": "experimental",
+      "hours": 48,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S33",
+      "name": "Ciencias naturales",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S34",
+      "name": "Ciencias de la Tierra",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S35",
+      "name": "Educación ambiental",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S36",
+      "name": "Educación para la salud",
+      "hours": 48,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S37",
+      "name": "Ecología general",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S38",
+      "name": "nivel superior",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    }
+  ]
+}

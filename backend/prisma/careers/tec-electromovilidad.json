@@ -1,125 +1,133 @@
 {
-  "career_id": "tec-electromovilidad",
+  "career": "Tec. Univ. en Electromovilidad",
   "subjects": [
     {
-      "code": "TECXX",
-      "name": "Introducción a la energía eléctrica",
-      "credits": 6,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "TECXX",
+      "code": "E1",
       "name": "Álgebra y geometría analítica",
-      "credits": 10,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
-      "name": "Cultura y alfabetización digital en la universidad",
-      "credits": 6,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "TECXX",
-      "name": "Introducción al análisis matemático",
-      "credits": 9,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "TECXX",
+      "code": "E2",
       "name": "Electrotecnia",
-      "credits": 9,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 96,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "E3",
       "name": "Electromovilidad I",
-      "credits": 7,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 48,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "E4",
       "name": "Análisis matemático I",
-      "credits": 10,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 96,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "E5",
       "name": "Física I",
-      "credits": 10,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "E6",
       "name": "Electromovilidad II",
-      "credits": 7,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 48,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "E7",
       "name": "Sistemas de mediciones",
-      "credits": 9,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "E8",
       "name": "Programación",
-      "credits": 9,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "E9",
       "name": "Física II",
-      "credits": 10,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "E10",
       "name": "Circuitos eléctricos",
-      "credits": 10,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 96,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "E11",
       "name": "Electrónica",
-      "credits": 10,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 96,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "E12",
       "name": "Química",
-      "credits": 9,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "E13",
+      "name": "Asignatura UNAHUR",
+      "hours": 32,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "E14",
+      "name": "Inglés I",
+      "hours": 32,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "E15",
+      "name": "Electromovilidad III",
+      "hours": 48,
+      "year": 3,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "E16",
+      "name": "Máquinas eléctricas",
+      "hours": 96,
+      "year": 3,
+      "period": 2,
+      "correlatives": []
     }
   ]
 }

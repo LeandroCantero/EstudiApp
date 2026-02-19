@@ -1,0 +1,333 @@
+{
+  "career": "Licenciatura en Kinesiología y Fisiatría",
+  "subjects": [
+    {
+      "code": "1",
+      "name": "Cultura y alfabetización digital en la universidad",
+      "hours": 4,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "2",
+      "name": "Anátomo-Fisiología I",
+      "hours": 6,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "3",
+      "name": "Introducción to la Salud Comunitaria",
+      "hours": 6,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "4",
+      "name": "Fundamentos de la Kinesiología y Fisiatría",
+      "hours": 4,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "5",
+      "name": "Desarrollo de las Capacidades Funcionales",
+      "hours": 5,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "6",
+      "name": "Anátomo-Fisiología II",
+      "hours": 6,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "7",
+      "name": "Salud Comunitaria I",
+      "hours": 6,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "8",
+      "name": "Antropología",
+      "hours": 3,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "9",
+      "name": "Valoración Funcional I",
+      "hours": 5,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "10",
+      "name": "Comunicación en Salud",
+      "hours": 5,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "11",
+      "name": "Salud Comunitaria II",
+      "hours": 9,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "12",
+      "name": "Aptitud Física y Ejercicio Saludable",
+      "hours": 4,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "13",
+      "name": "Valoración Funcional II",
+      "hours": 4,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "14",
+      "name": "Bases y Fundamentos del Diagnóstico en Salud",
+      "hours": 4,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "15",
+      "name": "Práctica Kinefisiátrica I",
+      "hours": 5,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "16",
+      "name": "Introducción a la Nutrición",
+      "hours": 3,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "17",
+      "name": "Salud Comunitaria III",
+      "hours": 9,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "18",
+      "name": "Fisiopatología",
+      "hours": 3,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "19",
+      "name": "Valoración Funcional III",
+      "hours": 5,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "20",
+      "name": "Práctica Kinefisiátrica II",
+      "hours": 4,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "21",
+      "name": "Salud Comunitaria IV",
+      "hours": 9,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "22",
+      "name": "Ateneo Clínico I",
+      "hours": 4,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "23",
+      "name": "Farmacología",
+      "hours": 3,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "24",
+      "name": "Psicología",
+      "hours": 3,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "25",
+      "name": "Historia Sociosanitaria de la Salud",
+      "hours": 6,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "26",
+      "name": "Valoración Funcional IV",
+      "hours": 5,
+      "year": 3,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "27",
+      "name": "Kinefisiatría I",
+      "hours": 5,
+      "year": 3,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "28",
+      "name": "Ateneo Clínico II",
+      "hours": 4,
+      "year": 3,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "29",
+      "name": "Kinefisiatría II",
+      "hours": 6,
+      "year": 3,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "30",
+      "name": "Práctica Kinefisiátrica III",
+      "hours": 6,
+      "year": 3,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "31",
+      "name": "Salud Comunitaria V",
+      "hours": 9,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "32",
+      "name": "Deontología y aspectos legales del ejercicio profesional de la Kinesiología y Fisiatría",
+      "hours": 3,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "33",
+      "name": "Asignatura UNAHUR",
+      "hours": 3,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "34",
+      "name": "Kinefisiatría III",
+      "hours": 5,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "35",
+      "name": "Terapéutica Kinésica Cardio-Respiratoria",
+      "hours": 6,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "36",
+      "name": "Práctica Kinefisiátrica IV",
+      "hours": 7,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "37",
+      "name": "Ética y desarrollo Profesional",
+      "hours": 3,
+      "year": 4,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "38",
+      "name": "Práctica Kinefisiátrica V",
+      "hours": 7,
+      "year": 4,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "39",
+      "name": "Kinefisiatría IV",
+      "hours": 5,
+      "year": 4,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "40",
+      "name": "Kinesiología y Fisiatría Laboral y Ergonomía",
+      "hours": 5,
+      "year": 4,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "41",
+      "name": "Práctica comunitaria en kinesiología",
+      "hours": 6,
+      "year": 4,
+      "period": 2,
+      "correlatives": []
+    }
+  ]
+}

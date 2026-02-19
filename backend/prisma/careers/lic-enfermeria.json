@@ -1,0 +1,364 @@
+{
+  "career": "Licenciatura en Enfermería",
+  "subjects": [
+    {
+      "code": "1",
+      "name": "Introducción a la Salud Comunitaria",
+      "hours": 6,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "2",
+      "name": "Cultura y alfabetización digital en la universidad",
+      "hours": 4,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "3",
+      "name": "Anatomo-Fisiología I",
+      "hours": 6,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "4",
+      "name": "Fundamentos de Enfermería I",
+      "hours": 6,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "5",
+      "name": "Salud Comunitaria I",
+      "hours": 6,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "6",
+      "name": "Anátomo-Fisiología II",
+      "hours": 6,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Anatomo-Fisiología I"
+      ]
+    },
+    {
+      "code": "7",
+      "name": "Introducción to la Nutrición",
+      "hours": 3,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "8",
+      "name": "Enfermería en Salud Materno Infantil I",
+      "hours": 10,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Fundamentos de Enfermería I"
+      ]
+    },
+    {
+      "code": "9",
+      "name": "Enfermería de la persona Adulta y Anciana I",
+      "hours": 10,
+      "year": 2,
+      "period": 1,
+      "correlatives": [
+        "Anatomo-Fisiología I"
+      ]
+    },
+    {
+      "code": "10",
+      "name": "Enfermería en Salud Mental",
+      "hours": 9,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "11",
+      "name": "Fundamentos de Enfermería II",
+      "hours": 6,
+      "year": 2,
+      "period": 1,
+      "correlatives": [
+        "Fundamentos de Enfermería I"
+      ]
+    },
+    {
+      "code": "12",
+      "name": "Introducción en microbiología y farmacología para enfermería",
+      "hours": 5,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "13",
+      "name": "Antropología",
+      "hours": 3,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "14",
+      "name": "Enfermería en Salud Materno Infantil II",
+      "hours": 10,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Enfermería en Salud Materno Infantil I"
+      ]
+    },
+    {
+      "code": "15",
+      "name": "Salud Comunitaria II",
+      "hours": 9,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Salud Comunitaria I"
+      ]
+    },
+    {
+      "code": "16",
+      "name": "Epistemología de la Salud",
+      "hours": 6,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "17",
+      "name": "Salud Comunitaria III",
+      "hours": 9,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Salud Comunitaria II"
+      ]
+    },
+    {
+      "code": "18",
+      "name": "Microbiología",
+      "hours": 3,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Introducción en microbiología y farmacología para enfermería"
+      ]
+    },
+    {
+      "code": "19",
+      "name": "Farmacología",
+      "hours": 3,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Introducción en microbiología y farmacología para enfermería"
+      ]
+    },
+    {
+      "code": "20",
+      "name": "Salud Comunitaria IV",
+      "hours": 9,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Salud Comunitaria III"
+      ]
+    },
+    {
+      "code": "21",
+      "name": "Enfermería de la persona Adulta y Anciana II",
+      "hours": 9,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Enfermería de la persona Adulta y Anciana I"
+      ]
+    },
+    {
+      "code": "22",
+      "name": "Enfermería Infanto Juvenil",
+      "hours": 10,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Enfermería en Salud Materno Infantil II"
+      ]
+    },
+    {
+      "code": "23",
+      "name": "Fundamentos de enfermería III",
+      "hours": 4,
+      "year": 3,
+      "period": 2,
+      "correlatives": [
+        "Fundamentos de Enfermería II"
+      ]
+    },
+    {
+      "code": "24",
+      "name": "Psicología",
+      "hours": 3,
+      "year": 3,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "25",
+      "name": "Deontología y aspectos legales del ejercicio profesional de la Enfermería",
+      "hours": 4,
+      "year": 3,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "26",
+      "name": "Práctica pre- Profesional Supervisada I",
+      "hours": 9,
+      "year": 3,
+      "period": 2,
+      "correlatives": [
+        "Enfermería de la persona Adulta y Anciana II"
+      ]
+    },
+    {
+      "code": "27",
+      "name": "Epistemología Aplicada a la Enfermería",
+      "hours": 7,
+      "year": 4,
+      "period": 1,
+      "correlatives": [
+        "Epistemología de la Salud"
+      ]
+    },
+    {
+      "code": "28",
+      "name": "Salud Comunitaria V",
+      "hours": 9,
+      "year": 4,
+      "period": 1,
+      "correlatives": [
+        "Salud Comunitaria IV"
+      ]
+    },
+    {
+      "code": "29",
+      "name": "Gestión en Salud Comunitaria",
+      "hours": 10,
+      "year": 4,
+      "period": 1,
+      "correlatives": [
+        "Salud Comunitaria IV"
+      ]
+    },
+    {
+      "code": "30",
+      "name": "Enfermería en Emergentología y Área crítica I",
+      "hours": 10,
+      "year": 4,
+      "period": 1,
+      "correlatives": [
+        "Enfermería de la persona Adulta y Anciana II"
+      ]
+    },
+    {
+      "code": "31",
+      "name": "Introducción al taller de Investigación en Enfermería",
+      "hours": 9,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "32",
+      "name": "Enfermería en Emergentología y Área crítica II",
+      "hours": 10,
+      "year": 4,
+      "period": 2,
+      "correlatives": [
+        "Enfermería en Emergentología y Área crítica I"
+      ]
+    },
+    {
+      "code": "33",
+      "name": "Historia Sociosanitaria de la Salud",
+      "hours": 6,
+      "year": 4,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "34",
+      "name": "Ética y Desarrollo Profesional",
+      "hours": 3,
+      "year": 4,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "35",
+      "name": "Educación en Enfermería",
+      "hours": 6,
+      "year": 5,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "36",
+      "name": "Taller de Investigación en Enfermería",
+      "hours": 16,
+      "year": 5,
+      "period": 1,
+      "correlatives": [
+        "Introducción al taller de Investigación en Enfermería"
+      ]
+    },
+    {
+      "code": "37",
+      "name": "Gestión en Servicios de Enfermería",
+      "hours": 11,
+      "year": 5,
+      "period": 1,
+      "correlatives": [
+        "Gestión en Salud Comunitaria"
+      ]
+    },
+    {
+      "code": "38",
+      "name": "Enfermería en Salud Comunitaria",
+      "hours": 12,
+      "year": 5,
+      "period": 1,
+      "correlatives": [
+        "Salud Comunitaria V"
+      ]
+    },
+    {
+      "code": "39",
+      "name": "Práctica pre- Profesional Supervisada II",
+      "hours": 11,
+      "year": 5,
+      "period": 2,
+      "correlatives": [
+        "Práctica pre- Profesional Supervisada I",
+        "Enfermería en Emergentología y Área crítica II"
+      ]
+    }
+  ]
+}

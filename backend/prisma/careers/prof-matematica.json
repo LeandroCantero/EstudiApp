@@ -1,0 +1,277 @@
+{
+  "career": "Profesorado Universitario de Matemática",
+  "subjects": [
+    {
+      "code": "S1",
+      "name": "Pedagogía",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S2",
+      "name": "Lectura, escritura y oralidad",
+      "hours": 48,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S3",
+      "name": "Aprendizajes y prácticas educativas",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S4",
+      "name": "Territorio, sujetos e instituciones",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S5",
+      "name": "Introducción al análisis matemático",
+      "hours": 160,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S6",
+      "name": "Geometría euclideana y analítica",
+      "hours": 160,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S7",
+      "name": "Algoritmos y estructura de datos",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S8",
+      "name": "universidad",
+      "hours": 32,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S9",
+      "name": "Didáctica y curriculum",
+      "hours": 48,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S10",
+      "name": "Educación sexual integral",
+      "hours": 32,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S11",
+      "name": "latinoamericano",
+      "hours": 48,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S12",
+      "name": "socioeducativo",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S13",
+      "name": "Álgebra lineal",
+      "hours": 80,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S14",
+      "name": "Análisis matemático I",
+      "hours": 80,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S15",
+      "name": "Análisis matemático II",
+      "hours": 80,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S16",
+      "name": "Teoría de números",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S17",
+      "name": "Matemática discreta",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S18",
+      "name": "secundario I",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S19",
+      "name": "Historia de la Nación Argentina y sus",
+      "hours": 48,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S20",
+      "name": "Superior",
+      "hours": 48,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S21",
+      "name": "Asignatura UNAHUR",
+      "hours": 32,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S22",
+      "name": "matemática",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S23",
+      "name": "Probabilidad y estadística",
+      "hours": 80,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S24",
+      "name": "Didáctica de la matemática I",
+      "hours": 80,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S25",
+      "name": "Fundamentos de la matemática I",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S26",
+      "name": "Análisis complejo",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S27",
+      "name": "secundario II",
+      "hours": 96,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S28",
+      "name": "Política educativa",
+      "hours": 48,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S29",
+      "name": "Computación científica",
+      "hours": 80,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S30",
+      "name": "Didáctica de la matemática II",
+      "hours": 80,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S31",
+      "name": "Fundamentos de la matemática II",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S32",
+      "name": "Modelos matemáticos",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S33",
+      "name": "Prácticas docentes en el nivel superior",
+      "hours": 128,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S34",
+      "name": "Investigación educativa en matemática",
+      "hours": 32,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    }
+  ]
+}

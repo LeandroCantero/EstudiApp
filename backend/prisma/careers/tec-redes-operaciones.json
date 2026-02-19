@@ -1,133 +1,101 @@
 {
-  "career_id": "tec-redes-operaciones",
+  "career": "Tec. Univ. en Redes y Operaciones Informáticas",
   "subjects": [
     {
-      "code": "TECXX",
+      "code": "E1",
       "name": "Matemática para informática I",
-      "credits": 7,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
-      "name": "Introducción a lógica y problemas computacionales",
-      "credits": 7,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "TECXX",
-      "name": "Introducción a los sistemas de comunicación y seguridad",
-      "credits": 10,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "TECXX",
-      "name": "Cultura y alfabetización digital en la universidad",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "TECXX",
+      "code": "E2",
       "name": "Taller de intérpretes de comandos",
-      "credits": 9,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "E3",
       "name": "Organización de computadoras I",
-      "credits": 5,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "E4",
       "name": "Bases de Datos",
-      "credits": 7,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "E5",
       "name": "Taller de programación",
-      "credits": 6,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "E6",
       "name": "Redes de computadoras",
-      "credits": 5,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "E7",
       "name": "Organización de computadoras II",
-      "credits": 5,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "E8",
       "name": "Sistemas Operativos",
-      "credits": 6,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "E9",
       "name": "Operaciones",
-      "credits": 9,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "E10",
       "name": "Materia UNAHUR",
-      "credits": 3,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 32,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "E11",
       "name": "Redes avanzadas",
-      "credits": 10,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 96,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "E12",
       "name": "Seguridad de la Información",
-      "credits": 5,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "TECXX",
-      "name": "Desarrollo, seguridad y operaciones",
-      "credits": 10,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
     }
   ]
 }

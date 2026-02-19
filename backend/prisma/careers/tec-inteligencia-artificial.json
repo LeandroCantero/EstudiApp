@@ -1,165 +1,196 @@
 {
-  "career_id": "tec-inteligencia-artificial",
+  "career": "Tec. Univ. en Inteligencia Artificial",
   "subjects": [
     {
-      "code": "TECXX",
+      "code": "1",
       "name": "Matemática para informática",
-      "credits": 7,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 7,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "2",
       "name": "Introducción a lógica y problemas computacionales",
-      "credits": 7,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 7,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "3",
       "name": "Introducción a la inteligencia artificial",
-      "credits": 5,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 5,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "4",
       "name": "Cultura y alfabetización digital en la universidad",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 4,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "5",
       "name": "Álgebra lineal",
-      "credits": 5,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 5,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Matemática para informática"
+      ]
     },
     {
-      "code": "TECXX",
+      "code": "6",
       "name": "Cálculo",
-      "credits": 6,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 6,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Matemática para informática"
+      ]
     },
     {
-      "code": "TECXX",
+      "code": "7",
       "name": "Taller de Programación I",
-      "credits": 6,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 6,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Introducción a lógica y problemas computacionales"
+      ]
     },
     {
-      "code": "TECXX",
+      "code": "8",
       "name": "Tecnología y sociedad",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 4,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "9",
       "name": "Bases de datos",
-      "credits": 7,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 7,
+      "year": 2,
+      "period": 1,
+      "correlatives": [
+        "Taller de Programación I"
+      ]
     },
     {
-      "code": "TECXX",
+      "code": "10",
       "name": "Probabilidad y estadística",
-      "credits": 5,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 5,
+      "year": 2,
+      "period": 1,
+      "correlatives": [
+        "Matemática para informática"
+      ]
     },
     {
-      "code": "TECXX",
+      "code": "11",
       "name": "Taller de Programación II",
-      "credits": 5,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 5,
+      "year": 2,
+      "period": 1,
+      "correlatives": [
+        "Taller de Programación I"
+      ]
     },
     {
-      "code": "TECXX",
+      "code": "12",
       "name": "Fundamentos de ciencias de datos",
-      "credits": 5,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 5,
+      "year": 2,
+      "period": 1,
+      "correlatives": [
+        "Taller de Programación I"
+      ]
     },
     {
-      "code": "TECXX",
+      "code": "13",
       "name": "Fundamentos de redes neuronales",
-      "credits": 5,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 5,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Álgebra lineal",
+        "Cálculo"
+      ]
     },
     {
-      "code": "TECXX",
+      "code": "14",
       "name": "Aprendizaje Automático",
-      "credits": 6,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 6,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Fundamentos de ciencias de datos",
+        "Probabilidad y estadística"
+      ]
     },
     {
-      "code": "TECXX",
+      "code": "15",
       "name": "Taller de Programación III",
-      "credits": 5,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 5,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Taller de Programación II"
+      ]
     },
     {
-      "code": "TECXX",
+      "code": "16",
       "name": "Inglés",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 4,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "17",
       "name": "Asignatura UNAHUR",
-      "credits": 3,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 3,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "18",
       "name": "Aprendizaje Automático Avanzado",
-      "credits": 6,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 6,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Aprendizaje Automático",
+        "Fundamentos de redes neuronales"
+      ]
     },
     {
-      "code": "TECXX",
+      "code": "19",
       "name": "Procesamiento de Imágenes y Visión por Computadora",
-      "credits": 5,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 5,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Álgebra lineal",
+        "Taller de Programación II"
+      ]
     },
     {
-      "code": "TECXX",
+      "code": "20",
       "name": "Proyecto integrador",
-      "credits": 8,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 8,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Aprendizaje Automático",
+        "Bases de datos"
+      ]
     }
   ]
 }

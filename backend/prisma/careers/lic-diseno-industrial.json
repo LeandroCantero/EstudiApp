@@ -1,0 +1,293 @@
+{
+  "career": "Licenciatura en Diseño Industrial",
+  "subjects": [
+    {
+      "code": "S1",
+      "name": "Introducción al Diseño",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S2",
+      "name": "Sistemas de representación gráfica",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S3",
+      "name": "Tecnología I",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S4",
+      "name": "Modelado",
+      "hours": 32,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S5",
+      "name": "Taller de Diseño I",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S6",
+      "name": "Matemática",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S7",
+      "name": "Morfología I",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S8",
+      "name": "universidad",
+      "hours": 32,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S9",
+      "name": "Taller de Diseño II",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S10",
+      "name": "Tecnología y sociedad",
+      "hours": 32,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S11",
+      "name": "Taller de producción I",
+      "hours": 96,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S12",
+      "name": "Tecnología II",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S13",
+      "name": "Programación",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S14",
+      "name": "Ciencias aplicadas al diseño",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S15",
+      "name": "Taller de Diseño III",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S16",
+      "name": "Morfología II",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S17",
+      "name": "Tecnologías de fabricación digital I",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S18",
+      "name": "Asignatura UNAHUR",
+      "hours": 32,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S19",
+      "name": "Taller de Diseño IV",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S20",
+      "name": "Tecnología III",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S21",
+      "name": "Tecnologías de fabricación digital II",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S22",
+      "name": "Diseño e industria",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S23",
+      "name": "Inglés I",
+      "hours": 32,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S24",
+      "name": "Diseño Centrado en las personas",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S25",
+      "name": "Taller de producción II",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S26",
+      "name": "diseño",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S27",
+      "name": "Gestión del conocimiento",
+      "hours": 32,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S28",
+      "name": "Laboratorio de diseño e innovación",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S29",
+      "name": "Nuevas tecnologías",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S30",
+      "name": "usuario",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S31",
+      "name": "Gestión de proyectos",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S32",
+      "name": "Comunicación de proyecto",
+      "hours": 32,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S33",
+      "name": "Proyecto final",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S34",
+      "name": "Economía y diseño",
+      "hours": 32,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S35",
+      "name": "Diseño, ética y sociedad",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S36",
+      "name": "Sustentabilidad",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    }
+  ]
+}

@@ -7,109 +7,43 @@ datasource db {
   provider = "postgresql"
 }
 
-model User {
-  id        String    @id @default(uuid())
-  email     String    @unique
-  name      String?
-  careerId  String?
-  career    Career?   @relation(fields: [careerId], references: [id])
-  subjects  Subject[]
-  credits   Credit[]
-  resources Resource[]
-  events    Event[]
-  createdAt DateTime  @default(now())
-}
-
 model Career {
   id        String    @id @default(uuid())
   name      String    @unique
   institute String?   // Instituto (ej: "Tecnología e Ingeniería")
   duration  Float?    // Duración en años
-  subjects  Subject[]
-  users     User[]
+  subjects  CareerSubject[] // Materias vinculadas a esta carrera
 }
 
 model Subject {
-  id        String        @id @default(uuid())
-  name      String
-  code      String        // Código de la materia (ej: I101)
-  status    SubjectStatus @default(PENDIENTE)
-  grade     Float?
-  credits   Int           @default(0)
-  year      Int?
-  period    Int?
-  userId    String
-  user      User          @relation(fields: [userId], references: [id])
-  careerId  String?
-  career    Career?       @relation(fields: [careerId], references: [id])
+  id        String   @id @default(uuid())
+  name      String   @unique // Ej: "Matemática I"
+  hours     Int      @default(0) // Horas totales globales
   
-  // Correlatividades (RN2, RN8)
-  prerequisites Subject[] @relation("Correlatives")
-  requiredBy    Subject[] @relation("Correlatives")
-
-  // Recursos y Eventos vinculados
-  resources     Resource[]
-  events        Event[]
-
+  careers   CareerSubject[] // Dónde se dicta esta materia
+  
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
-enum SubjectStatus {
-  PENDIENTE
-  EN_CURSO
-  REGULARIZADA
-  APROBADA
-  LIBRE
-}
+model CareerSubject {
+  id        String   @id @default(uuid())
+  code      String   // Código específico en el plan (ej: I101)
+  year      Int?     // Año en que se dicta en ESTA carrera
+  period    Int?     // Cuatrimestre en que se dicta en ESTA carrera
+  
+  careerId  String
+  career    Career   @relation(fields: [careerId], references: [id])
 
-model Credit {
-  id          String   @id @default(uuid())
-  name        String
-  description String?
-  hours       Int
-  approved    Boolean  @default(false)
-  userId      String
-  user        User     @relation(fields: [userId], references: [id])
-  createdAt   DateTime @default(now())
-}
+  subjectId String
+  subject   Subject  @relation(fields: [subjectId], references: [id])
 
-model Resource {
-  id          String       @id @default(uuid())
-  title       String
-  url         String?
-  description String?
-  type        ResourceType
-  subjectId   String?
-  subject     Subject?     @relation(fields: [subjectId], references: [id])
-  userId      String
-  user        User         @relation(fields: [userId], references: [id])
-  createdAt   DateTime     @default(now())
-}
+  // Correlatividades (Self-relation en el contexto de la carrera)
+  prerequisites CareerSubject[] @relation("CareerSubjectCorrelatives")
+  requiredBy    CareerSubject[] @relation("CareerSubjectCorrelatives")
 
-enum ResourceType {
-  LINK
-  PDF
-  VIDEO
-  NOTE
-}
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
-model Event {
-  id        String    @id @default(uuid())
-  title     String
-  date      DateTime
-  type      EventType
-  completed Boolean   @default(false)
-  subjectId String?
-  subject   Subject?  @relation(fields: [subjectId], references: [id])
-  userId    String
-  user      User      @relation(fields: [userId], references: [id])
-  createdAt DateTime  @default(now())
-}
-
-enum EventType {
-  EXAM
-  DELIVERY
-  CLASS
-  OTHER
+  @@unique([careerId, subjectId]) // Una materia no puede estar dos veces en la misma carrera con distintos códigos
 }

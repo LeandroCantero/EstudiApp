@@ -1,0 +1,389 @@
+{
+  "career": "Licenciatura en Nutrición",
+  "subjects": [
+    {
+      "code": "1",
+      "name": "Cultura y alfabetización digital en la universidad",
+      "hours": 3,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "2",
+      "name": "Bioquímica",
+      "hours": 4,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "3",
+      "name": "Introducción a la nutrición",
+      "hours": 3,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "4",
+      "name": "Anátomo-Fisiología I",
+      "hours": 6,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "5",
+      "name": "Introducción a la Salud Comunitaria",
+      "hours": 6,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "6",
+      "name": "Idioma extranjero",
+      "hours": 4,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "7",
+      "name": "Anátomo-Fisiología II",
+      "hours": 6,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "8",
+      "name": "Salud Comunitaria I",
+      "hours": 6,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "9",
+      "name": "Bioquímica Aplicada",
+      "hours": 6,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "10",
+      "name": "Fundamentos de la Nutrición",
+      "hours": 6,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "11",
+      "name": "Microbiología",
+      "hours": 3,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "12",
+      "name": "Salud Comunitaria II",
+      "hours": 9,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "13",
+      "name": "Introducción a la Tecnología de los Alimentos",
+      "hours": 5,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "14",
+      "name": "Nutrición en la Infancia y la Adolescencia",
+      "hours": 6,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "15",
+      "name": "Técnica en el Manejo de los Alimentos I",
+      "hours": 6,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "16",
+      "name": "Psicología",
+      "hours": 3,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "17",
+      "name": "Antropología",
+      "hours": 3,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "18",
+      "name": "Salud Comunitaria III",
+      "hours": 9,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "19",
+      "name": "Bromatología y Microbiología de los Alimentos",
+      "hours": 4,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "20",
+      "name": "Técnica en el Manejo de los Alimentos II",
+      "hours": 6,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "21",
+      "name": "PPS: Prácticas en Nutrición Comunitaria y Gestión I",
+      "hours": 6,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "22",
+      "name": "Ética y Desarrollo Profesional",
+      "hours": 3,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "23",
+      "name": "Salud Comunitaria IV",
+      "hours": 9,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "24",
+      "name": "Fisiopatología y Dietoterapia de la persona adulta I",
+      "hours": 6,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "25",
+      "name": "Evaluación Nutricional",
+      "hours": 6,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "26",
+      "name": "PPS: Prácticas en Nutrición Comunitaria y Gestión II",
+      "hours": 6,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "27",
+      "name": "Farmacología",
+      "hours": 3,
+      "year": 3,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "28",
+      "name": "Fisiopatología y Dietoterapia de la persona adulta II",
+      "hours": 5,
+      "year": 3,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "29",
+      "name": "Técnica Dietoterápica I",
+      "hours": 5,
+      "year": 3,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "30",
+      "name": "Fisiopatología y Dietoterapia en la Infancia y la adolescencia",
+      "hours": 7,
+      "year": 3,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "31",
+      "name": "Economía y Producción Regional de Alimentos",
+      "hours": 5,
+      "year": 3,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "32",
+      "name": "Salud Comunitaria V",
+      "hours": 9,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "33",
+      "name": "Educación Alimentaria y Nutricional",
+      "hours": 5,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "34",
+      "name": "Técnica Dietoterápica II",
+      "hours": 5,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "35",
+      "name": "Psicología aplicada a la Nutrición",
+      "hours": 5,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "36",
+      "name": "Fundamentos de los diferentes patrones de alimentación",
+      "hours": 3,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "37",
+      "name": "Historia Sociosanitaria de la Salud",
+      "hours": 6,
+      "year": 4,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "38",
+      "name": "Gestión y Administración de los Servicios de Alimentación",
+      "hours": 5,
+      "year": 4,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "39",
+      "name": "Tecnología e Investigación en el desarrollo de los alimentos",
+      "hours": 5,
+      "year": 4,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "40",
+      "name": "Estadística y análisis de datos en ciencias de la salud",
+      "hours": 5,
+      "year": 4,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "41",
+      "name": "PPS: Práctica en la Industria Alimentaria I",
+      "hours": 7,
+      "year": 4,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "42",
+      "name": "PPS: Práctica en la Industria Alimentaria II",
+      "hours": 7,
+      "year": 5,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "43",
+      "name": "Política de salud alimentaria nacional y latinoamericana",
+      "hours": 5,
+      "year": 5,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "44",
+      "name": "PPS: Práctica en Administración de Servicios de Alimentación",
+      "hours": 12,
+      "year": 5,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "45",
+      "name": "Trabajo final",
+      "hours": 7,
+      "year": 5,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "46",
+      "name": "Nutrición en la actividad física y el deporte",
+      "hours": 4,
+      "year": 5,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "47",
+      "name": "Nutrigenómica y actualización de paradigmas en nutrición",
+      "hours": 3,
+      "year": 5,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "48",
+      "name": "PPS: Práctica en dietoterapia",
+      "hours": 12,
+      "year": 5,
+      "period": 2,
+      "correlatives": []
+    }
+  ]
+}

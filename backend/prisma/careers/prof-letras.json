@@ -1,461 +1,309 @@
 {
-  "career_id": "prof-letras",
+  "career": "Profesorado Universitario de Letras",
   "subjects": [
     {
-      "code": "PROXX",
-      "name": "PRIMER AÑO",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "PROXX",
+      "code": "S1",
       "name": "Pedagogía",
-      "credits": 5,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S2",
       "name": "Lectura, escritura y oralidad",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 48,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S3",
       "name": "Aprendizajes y prácticas educativas",
-      "credits": 5,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S4",
       "name": "Territorio, sujetos e instituciones",
-      "credits": 6,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S5",
       "name": "Introducción a los Estudios Literarios",
-      "credits": 6,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S6",
       "name": "Taller de escritura creativa",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 32,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S7",
       "name": "Introducción a los Estudios lingüísticos",
-      "credits": 7,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S8",
       "name": "Taller de escritura académica",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 32,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S9",
       "name": "Literatura infantil y juvenil",
-      "credits": 5,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 48,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
-      "name": "Cultura y alfabetización digital en la",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "PROXX",
+      "code": "S10",
       "name": "universidad",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 32,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
-      "name": "TOTAL PRIMER AÑO",
-      "credits": 3,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "PROXX",
-      "name": "SEGUNDO AÑO",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "PROXX",
+      "code": "S11",
       "name": "Didáctica y currículum",
-      "credits": 5,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 48,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S12",
       "name": "Educación Sexual Integral",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 32,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S13",
       "name": "Pensamiento pedagógico latinoamericano",
-      "credits": 5,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 48,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
-      "name": "Prácticas de la enseñanza en el ámbito",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "PROXX",
+      "code": "S14",
       "name": "socioeducativo",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S15",
       "name": "Gramática",
-      "credits": 12,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 128,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
-      "name": "Cultura y literatura de la antigüedad",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "PROXX",
+      "code": "S16",
       "name": "clásica",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S17",
       "name": "Literaturas premodernas europeas",
-      "credits": 7,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S18",
       "name": "Teoría y práctica de proyectos culturales",
-      "credits": 7,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S19",
       "name": "Didáctica de la lectura y la escritura",
-      "credits": 7,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
-      "name": "TOTAL SEGUNDO AÑO",
-      "credits": 3,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "PROXX",
-      "name": "ACTIVIDADES CURRICULARES ACREDITABLES (ACA)",
-      "credits": 20,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "PROXX",
-      "name": "Técnico/a universitario/a en prácticas socioeducativas en escritura y lectura",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "PROXX",
-      "name": "TERCER AÑO",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "PROXX",
-      "name": "Historia de la Nación Argentina y sus",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "PROXX",
+      "code": "S20",
       "name": "proyectos Educativos",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 48,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
-      "name": "Didáctica en contextos de Educación",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "PROXX",
+      "code": "S21",
       "name": "Superior",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 48,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S22",
       "name": "Asignatura UNAHUR",
-      "credits": 3,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 32,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S23",
       "name": "Lingüística general",
-      "credits": 7,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 96,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S24",
       "name": "Didáctica de la literatura",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 48,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
-      "name": "Lenguas y culturas de los pueblos",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "PROXX",
+      "code": "S25",
       "name": "originarios de América",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 48,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S26",
       "name": "Didáctica de la Lengua",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 48,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S27",
       "name": "Literatura argentina",
-      "credits": 6,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S28",
       "name": "Literatura latinoamericana",
-      "credits": 6,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S29",
       "name": "Prácticas docentes en el Nivel Secundario",
-      "credits": 11,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 160,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
-      "name": "TOTAL TERCER AÑO",
-      "credits": 3,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "PROXX",
-      "name": "CUARTO AÑO",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "PROXX",
+      "code": "S30",
       "name": "Tecnología educativa",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 32,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S31",
       "name": "Política educativa",
-      "credits": 5,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 48,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S32",
       "name": "Alfabetización",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 48,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S33",
       "name": "Teoría y crítica literaria",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 48,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S34",
       "name": "Análisis del discurso",
-      "credits": 6,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S35",
       "name": "Políticas del lenguaje",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 48,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S36",
       "name": "Literaturas modernas europeas",
-      "credits": 6,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
-      "name": "Prácticas de alfabetización de jóvenes y",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "PROXX",
+      "code": "S37",
       "name": "adultos",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 80,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "PROXX",
+      "code": "S38",
       "name": "Prácticas docentes en el Nivel Superior",
-      "credits": 6,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "PROXX",
-      "name": "TOTAL CUARTO AÑO",
-      "credits": 2,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "PROXX",
-      "name": "Titulación final: Profesor/a Universitario/a de Letras",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
-    },
-    {
-      "code": "PROXX",
-      "name": "TOTAL DE LA CARRERA",
-      "credits": 15,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 80,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
     }
   ]
 }

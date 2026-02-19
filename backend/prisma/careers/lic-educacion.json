@@ -1,0 +1,179 @@
+{
+  "career": "Licenciatura en Educación",
+  "subjects": [
+    {
+      "code": "1",
+      "name": "Materia UNAHUR",
+      "hours": 32,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "2",
+      "name": "Nuevos entornos y lenguajes",
+      "hours": 32,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "3",
+      "name": "Inglés I",
+      "hours": 32,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "4",
+      "name": "Inglés II",
+      "hours": 32,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Inglés I"
+      ]
+    },
+    {
+      "code": "5",
+      "name": "Culturas juveniles",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "6",
+      "name": "Sujetos e Instituciones",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "7",
+      "name": "Pedagogía I: Los sentidos de educar",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "8",
+      "name": "Pedagogía II: Enfoques y teorías",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Pedagogía I: Los sentidos de educar"
+      ]
+    },
+    {
+      "code": "9",
+      "name": "Pensamiento Pedagógico Latinoamericano",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Pedagogía I: Los sentidos de educar"
+      ]
+    },
+    {
+      "code": "10",
+      "name": "Didáctica y currículum",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Pedagogía I: Los sentidos de educar"
+      ]
+    },
+    {
+      "code": "11",
+      "name": "Educación y proyecto nacional",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "12",
+      "name": "Filosofía de la educación",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "13",
+      "name": "Estado, educación y sociedad",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": [
+        "Educación y proyecto nacional"
+      ]
+    },
+    {
+      "code": "14",
+      "name": "Análisis y diseño de políticas públicas",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": [
+        "Educación y proyecto nacional"
+      ]
+    },
+    {
+      "code": "15",
+      "name": "Evaluación de los sistemas educativos, instituciones y programas",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": [
+        "Didáctica y currículum"
+      ]
+    },
+    {
+      "code": "16",
+      "name": "Legislación y normativa educativa",
+      "hours": 64,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Estado, educación y sociedad"
+      ]
+    },
+    {
+      "code": "17",
+      "name": "Conducción de instituciones educativas",
+      "hours": 64,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Sujetos e Instituciones"
+      ]
+    },
+    {
+      "code": "18",
+      "name": "Política educativa comparada",
+      "hours": 64,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Estado, educación y sociedad"
+      ]
+    },
+    {
+      "code": "19",
+      "name": "Espacio de Integración Curricular",
+      "hours": 96,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Didáctica y currículum"
+      ]
+    }
+  ]
+}

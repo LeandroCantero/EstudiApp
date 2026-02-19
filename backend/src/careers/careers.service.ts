@@ -17,7 +17,15 @@ export class CareersService {
     return this.prisma.career.findUnique({
       where: { id },
       include: {
-        subjects: true,
+        subjects: {
+          include: {
+            subject: true,
+          },
+          orderBy: [
+            { year: 'asc' },
+            { period: 'asc' },
+          ]
+        },
       },
     });
   }

@@ -1,133 +1,133 @@
 {
-  "career_id": "tec-videojuegos",
+  "career": "Tec. Univ. en Programación de Videojuegos",
   "subjects": [
     {
-      "code": "TECXX",
+      "code": "1",
       "name": "Matemática para informática I",
-      "credits": 7,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 7,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "2",
       "name": "Introducción a lógica y problemas computacionales",
-      "credits": 7,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 7,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "3",
       "name": "Introducción a los Videojuegos",
-      "credits": 8,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 8,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "4",
       "name": "Cultura y alfabetización digital en la universidad",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 4,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "5",
       "name": "Taller de diseño conceptual de juegos",
-      "credits": 7,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 7,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "6",
       "name": "Taller de programación",
-      "credits": 7,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 7,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "7",
       "name": "Arte digital para videojuegos",
-      "credits": 8,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 8,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "8",
       "name": "Materia UNAHUR",
-      "credits": 3,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 3,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "9",
       "name": "Programación con objetos",
-      "credits": 7,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 7,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "10",
       "name": "Diseño de interfaces y experiencia de usuario",
-      "credits": 7,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 7,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "11",
       "name": "Introducción a motores de videojuegos",
-      "credits": 7,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 7,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "12",
       "name": "Programación de videojuegos I",
-      "credits": 6,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 6,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "13",
       "name": "Planificación de negocios",
-      "credits": 7,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 7,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "14",
       "name": "Bases de datos",
-      "credits": 7,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 7,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "15",
       "name": "Elementos de ingeniería de Software",
-      "credits": 7,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 7,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
     },
     {
-      "code": "TECXX",
+      "code": "16",
       "name": "Programación de videojuegos II",
-      "credits": 9,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 9,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
     }
   ]
 }

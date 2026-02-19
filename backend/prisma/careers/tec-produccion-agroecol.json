@@ -1,0 +1,215 @@
+{
+  "career": "Tec. Univ. en Producción Agroecológica Periurbana",
+  "subjects": [
+    {
+      "code": "1",
+      "name": "Agroecología",
+      "hours": 4,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "2",
+      "name": "Ateneo de estudio de casos",
+      "hours": 4,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "3",
+      "name": "Biología",
+      "hours": 4,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "4",
+      "name": "Matemática aplicada",
+      "hours": 4,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "5",
+      "name": "Nuevos entornos y lenguajes",
+      "hours": 2,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "6",
+      "name": "Introducción a la botánica",
+      "hours": 4,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Biología"
+      ]
+    },
+    {
+      "code": "7",
+      "name": "Química general",
+      "hours": 4,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Matemática aplicada"
+      ]
+    },
+    {
+      "code": "8",
+      "name": "Fundamentos de la sanidad vegetal",
+      "hours": 4,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Biología"
+      ]
+    },
+    {
+      "code": "9",
+      "name": "Climatología y fenología",
+      "hours": 4,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Matemática aplicada"
+      ]
+    },
+    {
+      "code": "10",
+      "name": "Ecofisiología vegetal",
+      "hours": 4,
+      "year": 2,
+      "period": 1,
+      "correlatives": [
+        "Introducción a la botánica"
+      ]
+    },
+    {
+      "code": "11",
+      "name": "Inmersión a la realidad social agraria",
+      "hours": 4,
+      "year": 2,
+      "period": 1,
+      "correlatives": [
+        "Agroecología"
+      ]
+    },
+    {
+      "code": "12",
+      "name": "Edafología y manejo de suelos",
+      "hours": 6,
+      "year": 2,
+      "period": 1,
+      "correlatives": [
+        "Química general"
+      ]
+    },
+    {
+      "code": "13",
+      "name": "Inglés I",
+      "hours": 2,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "14",
+      "name": "Asignatura UNAHUR I",
+      "hours": 2,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "15",
+      "name": "Horticultura",
+      "hours": 4,
+      "year": 2,
+      "period": 1,
+      "correlatives": [
+        "Ecofisiología vegetal"
+      ]
+    },
+    {
+      "code": "16",
+      "name": "Producción animal",
+      "hours": 4,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Biología"
+      ]
+    },
+    {
+      "code": "17",
+      "name": "Economía Social y Ecológica",
+      "hours": 4,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "18",
+      "name": "Políticas para el desarrollo territorial",
+      "hours": 4,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "19",
+      "name": "Diseño y manejo de agroecosistemas",
+      "hours": 4,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Agroecología"
+      ]
+    },
+    {
+      "code": "20",
+      "name": "Tecnologías agrícolas",
+      "hours": 4,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "21",
+      "name": "Formulación y evaluación de proyectos",
+      "hours": 4,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Economía Social y Ecológica"
+      ]
+    },
+    {
+      "code": "22",
+      "name": "Manejo agroecológico de adversidades",
+      "hours": 4,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Fundamentos de la sanidad vegetal"
+      ]
+    },
+    {
+      "code": "23",
+      "name": "Fruticultura",
+      "hours": 4,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Ecofisiología vegetal"
+      ]
+    }
+  ]
+}

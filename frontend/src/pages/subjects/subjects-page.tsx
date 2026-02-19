@@ -1,8 +1,20 @@
+import { CreateSubjectModal } from '@/features/create-subject/ui/create-subject-modal';
+import { CareerSelector } from '@/features/onboarding/ui/career-selector';
 import { BookOpen, CheckCircle2, Filter, GraduationCap, Plus, Search } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { useSubjects } from '../../entities/subject/model/use-subjects';
 
 export const SubjectsPage = () => {
-  const { subjects, isLoading, error } = useSubjects();
+  const { subjects, isLoading, error, career, isGuest, studentCredits, updateStudentCredits } = useSubjects();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isCareerSelectorOpen, setIsCareerSelectorOpen] = useState(false);
+
+  useEffect(() => {
+    // If no career selected (and not loading), open selector
+    if (!isLoading && !career) {
+      setIsCareerSelectorOpen(true);
+    }
+  }, [isLoading, career]);
 
   if (isLoading) {
     return (
@@ -12,7 +24,7 @@ export const SubjectsPage = () => {
     );
   }
 
-  if (error) {
+  if (error && !isGuest) {
     return (
       <div className="p-6 bg-destructive/10 text-destructive rounded-2xl">
         Error: {error}
@@ -25,34 +37,83 @@ export const SubjectsPage = () => {
       <header className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold">Mis Materias</h1>
-          <p className="text-foreground/60 text-sm">Gestiona tu historial académico y cursadas actuales.</p>
+          <button 
+            onClick={() => setIsCareerSelectorOpen(true)}
+            className="text-foreground/60 text-sm hover:text-primary transition-colors text-left"
+          >
+            {career ? `${career.name}` : 'Selecciona una carrera'}
+          </button>
         </div>
-        <button className="bg-primary text-primary-foreground p-3 rounded-xl shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+        <button 
+          onClick={() => setIsModalOpen(true)}
+          disabled={!career}
+          className="bg-primary text-primary-foreground p-3 rounded-xl shadow-lg shadow-primary/20 hover:scale-105 transition-transform disabled:opacity-50 disabled:hover:scale-100"
+        >
           <Plus size={24} />
         </button>
       </header>
 
-      {/* Filters & Search */}
-      <div className="flex gap-3">
-        <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground/40" size={18} />
-          <input 
-            type="text" 
-            placeholder="Buscar materia..." 
-            className="w-full bg-card border-none rounded-xl py-3 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-          />
+      {/* Filters & Search & Credits */}
+      <div className="flex flex-col gap-4">
+        <div className="flex gap-3">
+          <div className="relative flex-1">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground/40" size={18} />
+            <input 
+              type="text" 
+              placeholder="Buscar materia..." 
+              className="w-full bg-card border-none rounded-xl py-3 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+            />
+          </div>
+          <button className="bg-card p-3 rounded-xl text-foreground/60 hover:text-foreground transition-colors border-none outline-none">
+            <Filter size={20} />
+          </button>
         </div>
-        <button className="bg-card p-3 rounded-xl text-foreground/60 hover:text-foreground transition-colors border-none outline-none">
-          <Filter size={20} />
-        </button>
+
+        {/* Extracurricular Credits Tracker */}
+        {career && (
+          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-4 flex items-center justify-between">
+            <div className="flex flex-col">
+              <span className="text-xs font-semibold text-primary/60 uppercase">Créditos Extracurriculares</span>
+              <div className="flex items-baseline gap-1">
+                <span className="text-2xl font-black text-primary">{studentCredits}</span>
+                <span className="text-sm font-medium text-foreground/40">/ 35</span>
+              </div>
+            </div>
+            <div className="flex items-center gap-2">
+              <button 
+                onClick={() => updateStudentCredits(Math.max(0, studentCredits - 1))}
+                className="w-8 h-8 rounded-full bg-card border border-foreground/10 flex items-center justify-center hover:bg-foreground/5 transition-colors"
+                aria-label="Restar crédito"
+              >
+                -
+              </button>
+              <button 
+                onClick={() => updateStudentCredits(studentCredits + 1)}
+                className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:scale-110 transition-transform"
+                aria-label="Sumar crédito"
+              >
+                +
+              </button>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Subjects List */}
       <div className="flex flex-col gap-4">
-        {subjects.length === 0 ? (
+        {!career ? (
+          <div className="flex flex-col items-center justify-center py-12 text-foreground/40 gap-3 text-center">
+             <BookOpen size={48} />
+             <p>Debes seleccionar una carrera para comenzar.</p>
+             <button onClick={() => setIsCareerSelectorOpen(true)} className="text-primary font-bold underline">
+                Seleccionar Carrera
+             </button>
+          </div>
+        ) : subjects.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-12 text-foreground/40 gap-3">
             <BookOpen size={48} />
             <p>No tienes materias cargadas aún.</p>
+            <p className="text-xs">¡Agrega tu primera materia arriba!</p>
           </div>
         ) : (
           subjects.map((subject) => (
@@ -73,7 +134,7 @@ export const SubjectsPage = () => {
               <div className="flex items-center gap-4 mt-4 text-xs text-foreground/60">
                 <div className="flex items-center gap-1.5">
                   <GraduationCap size={14} />
-                  <span>{subject.credits} Créditos</span>
+                  <span>{subject.hours} Horas</span>
                 </div>
                 {subject.grade && (
                   <div className="flex items-center gap-1.5">
@@ -91,6 +152,9 @@ export const SubjectsPage = () => {
           ))
         )}
       </div>
+
+      <CreateSubjectModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <CareerSelector isOpen={isCareerSelectorOpen} onClose={() => setIsCareerSelectorOpen(false)} />
     </div>
   );
 };

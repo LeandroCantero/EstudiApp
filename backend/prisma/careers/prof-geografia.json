@@ -1,0 +1,285 @@
+{
+  "career": "Profesorado Universitario de Geografía",
+  "subjects": [
+    {
+      "code": "S1",
+      "name": "Pedagogía",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S2",
+      "name": "Lectura, escritura y oralidad",
+      "hours": 48,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S3",
+      "name": "Aprendizajes y prácticas educativas",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S4",
+      "name": "Territorio, sujetos e instituciones",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S5",
+      "name": "Introducción a la Geografía",
+      "hours": 80,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S6",
+      "name": "Cartografía",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S7",
+      "name": "Geografía social I",
+      "hours": 80,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S8",
+      "name": "Geografía económica",
+      "hours": 80,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S9",
+      "name": "universidad",
+      "hours": 32,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S10",
+      "name": "Didáctica y curriculum",
+      "hours": 48,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S11",
+      "name": "Educación Sexual Integral",
+      "hours": 32,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S12",
+      "name": "Pensamiento pedagógico latinoamericano",
+      "hours": 48,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S13",
+      "name": "socioeducativo",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S14",
+      "name": "Geografía social II",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S15",
+      "name": "Geografía ambiental I",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S16",
+      "name": "Geografía política",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S17",
+      "name": "Geografía ambiental II",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S18",
+      "name": "Teoría de la Geografía",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S19",
+      "name": "proyectos Educativos",
+      "hours": 48,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S20",
+      "name": "superior",
+      "hours": 48,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S21",
+      "name": "Asignatura UNAHUR",
+      "hours": 32,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S22",
+      "name": "Didáctica de las Ciencias sociales",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S23",
+      "name": "Geografía ambiental de la Argentina",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S24",
+      "name": "Geografía urbana",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S25",
+      "name": "Geografía rural",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S26",
+      "name": "Didáctica de la Geografía",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S27",
+      "name": "Sistemas Informáticos Geográficos",
+      "hours": 48,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S28",
+      "name": "Prácticas docentes en el nivel secundario",
+      "hours": 160,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S29",
+      "name": "Política educativa",
+      "hours": 48,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S30",
+      "name": "capitalistas periféricos I",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S31",
+      "name": "Problemas territoriales de la Argentina",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S32",
+      "name": "capitalistas centrales",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S33",
+      "name": "capitalistas periféricos II",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S34",
+      "name": "Investigación educativa en Geografía",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "S35",
+      "name": "Prácticas docentes en el nivel superior",
+      "hours": 160,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
+    }
+  ]
+}

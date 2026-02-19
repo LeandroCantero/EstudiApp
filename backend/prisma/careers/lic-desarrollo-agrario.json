@@ -1,189 +1,351 @@
 {
-  "career_id": "lic-desarrollo-agrario",
+  "career": "Licenciatura en Desarrollo Agrario",
   "subjects": [
     {
-      "code": "LICXX",
-      "name": "Introducciónalabotánica",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "1",
+      "name": "Introducción al desarrollo agrario",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "LICXX",
-      "name": "Ecofisiologíavegetal",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "2",
+      "name": "Ateneo de estudio de casos",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "LICXX",
-      "name": "Químicageneral",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "3",
+      "name": "Agroecología",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "LICXX",
-      "name": "Inmersiónalarealidadsocialagraria",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "4",
+      "name": "Biología",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "LICXX",
-      "name": "Economíasocialyecológica",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "5",
+      "name": "UNAHUR I",
+      "hours": 32,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "LICXX",
+      "code": "6",
+      "name": "Discusiones sobre desarrollo",
+      "hours": 32,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "7",
+      "name": "Introducción a la botánica",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Biología"
+      ]
+    },
+    {
+      "code": "8",
+      "name": "Matemática aplicada",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "9",
+      "name": "Geografía agraria nacional",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "10",
+      "name": "Nutrición y soberanía alimentaria",
+      "hours": 32,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "11",
+      "name": "Nuevos entornos y lenguajes: la producción de conocimiento en la cultura digital",
+      "hours": 32,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "12",
+      "name": "Ecofisiología vegetal",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": [
+        "Introducción a la botánica"
+      ]
+    },
+    {
+      "code": "13",
+      "name": "Química general",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": [
+        "Matemática aplicada"
+      ]
+    },
+    {
+      "code": "14",
+      "name": "Inmersión a la realidad social agraria",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": [
+        "Introducción al desarrollo agrario"
+      ]
+    },
+    {
+      "code": "15",
+      "name": "Economía social y ecológica",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": [
+        "Introducción al desarrollo agrario"
+      ]
+    },
+    {
+      "code": "16",
+      "name": "Manipulación de alimentos",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "17",
       "name": "Floricultura",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Introducción al desarrollo agrario"
+      ]
     },
     {
-      "code": "LICXX",
-      "name": "Fundamentosdelasanidadvegetal",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "18",
+      "name": "Fundamentos de la sanidad vegetal",
+      "hours": 64,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Ecofisiología vegetal"
+      ]
     },
     {
-      "code": "LICXX",
-      "name": "Tallerdebioensayos",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "19",
+      "name": "Taller de bioensayos",
+      "hours": 64,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Matemática aplicada"
+      ]
     },
     {
-      "code": "LICXX",
-      "name": "Desarrolloruralyextensiónagraria",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "20",
+      "name": "Desarrollo rural y extensión agraria",
+      "hours": 64,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Discusiones sobre desarrollo"
+      ]
     },
     {
-      "code": "LICXX",
+      "code": "21",
+      "name": "Tecnologías agrícolas",
+      "hours": 64,
+      "year": 2,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "22",
       "name": "Horticultura",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Introducción al desarrollo agrario"
+      ]
     },
     {
-      "code": "LICXX",
+      "code": "23",
+      "name": "Trayecto electivo",
+      "hours": 256,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "24",
       "name": "Fruticultura",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 3,
+      "period": 2,
+      "correlatives": [
+        "Introducción al desarrollo agrario"
+      ]
     },
     {
-      "code": "LICXX",
-      "name": "Biodiversidadagrícola",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "25",
+      "name": "Biodiversidad agrícola",
+      "hours": 64,
+      "year": 3,
+      "period": 2,
+      "correlatives": [
+        "Introducción a la botánica"
+      ]
     },
     {
-      "code": "LICXX",
-      "name": "AntropologíaparalaAgricultura Familiar",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "26",
+      "name": "Antropología para la Agricultura Familiar",
+      "hours": 64,
+      "year": 3,
+      "period": 2,
+      "correlatives": [
+        "Inmersión a la realidad social agraria"
+      ]
     },
     {
-      "code": "LICXX",
-      "name": "Bioinsumosagropecuarios",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "27",
+      "name": "Bioinsumos agropecuarios",
+      "hours": 64,
+      "year": 3,
+      "period": 2,
+      "correlatives": [
+        "Química general"
+      ]
     },
     {
-      "code": "LICXX",
-      "name": "Turismoruralyperiurbano",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "28",
+      "name": "Turismo rural y periurbano",
+      "hours": 32,
+      "year": 3,
+      "period": 2,
+      "correlatives": [
+        "Desarrollo rural y extensión agraria"
+      ]
     },
     {
-      "code": "LICXX",
+      "code": "29",
+      "name": "Inglés I",
+      "hours": 32,
+      "year": 3,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "30",
       "name": "Arboricultura",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": [
+        "Introducción al desarrollo agrario"
+      ]
     },
     {
-      "code": "LICXX",
-      "name": "Manejoagroecológicode adversidades",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "31",
+      "name": "Manejo agroecológico de adversidades",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": [
+        "Biodiversidad agrícola"
+      ]
     },
     {
-      "code": "LICXX",
-      "name": "Administracióndeagroecosistemas",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "32",
+      "name": "Administración de agroecosistemas",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": [
+        "Economía social y ecológica"
+      ]
     },
     {
-      "code": "LICXX",
-      "name": "InglésII",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "33",
+      "name": "Seguridad en prácticas agrícolas",
+      "hours": 32,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "LICXX",
-      "name": "Historiadelaccesoalatierra",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "34",
+      "name": "Modelos de producción de conocimiento",
+      "hours": 64,
+      "year": 4,
+      "period": 1,
+      "correlatives": []
     },
     {
-      "code": "LICXX",
-      "name": "Análisisdeterritorios",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "35",
+      "name": "Inglés II",
+      "hours": 32,
+      "year": 4,
+      "period": 1,
+      "correlatives": [
+        "Inglés I"
+      ]
     },
     {
-      "code": "LICXX",
-      "name": "Formulaciónyevaluaciónde proyectos",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "36",
+      "name": "Historia del acceso a la tierra",
+      "hours": 64,
+      "year": 4,
+      "period": 2,
+      "correlatives": [
+        "Inmersión a la realidad social agraria"
+      ]
     },
     {
-      "code": "LICXX",
-      "name": "Tallerdeintegraciónfinal",
-      "credits": 4,
-      "prerequisites": [],
-      "year": null,
-      "period": null
+      "code": "37",
+      "name": "Análisis de territorios",
+      "hours": 64,
+      "year": 4,
+      "period": 2,
+      "correlatives": [
+        "Nutrición y soberanía alimentaria"
+      ]
+    },
+    {
+      "code": "38",
+      "name": "Políticas para el desarrollo territorial",
+      "hours": 64,
+      "year": 4,
+      "period": 2,
+      "correlatives": []
     }
   ]
 }

@@ -19,4 +19,7 @@ export const subjectApi = {
   
   remove: (id: string) => 
     apiClient.fetch<void>(`/subjects/${id}`, { method: 'DELETE' }),
+
+  getSuggestions: (userId: string) => 
+    apiClient.get<any[]>(`/subjects/suggestions?userId=${userId}`),
 };
