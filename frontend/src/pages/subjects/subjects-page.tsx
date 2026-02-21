@@ -97,9 +97,11 @@ export const SubjectsPage = () => {
                   {subject.code}
                 </span>
                 <span className={`text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-tighter ${
-                  subject.status === 'APROBADA' ? 'bg-green-500/10 text-green-500' : 
+                  subject.status === 'PROMOCIONADA' ? 'bg-green-500/10 text-green-500' : 
                   subject.status === 'EN_CURSO' ? 'bg-blue-500/10 text-blue-500' : 
                   subject.status === 'REGULARIZADA' ? 'bg-yellow-500/10 text-yellow-500' :
+                  subject.status === 'DESAPROBADA' ? 'bg-red-500/10 text-red-500' :
+                  subject.status === 'RECURSANDO' ? 'bg-purple-500/10 text-purple-500' :
                   'bg-foreground/10 text-foreground/40'
                 }`}>
                   {subject.status.replace('_', ' ')}
@@ -115,10 +117,10 @@ export const SubjectsPage = () => {
                   <GraduationCap size={14} />
                   <span>{subject.hours} Horas</span>
                 </div>
-                {subject.grade && (
+                {subject.grade !== undefined && subject.grade !== null && (
                   <div className="flex items-center gap-1.5">
                     <CheckCircle2 size={14} className="text-green-500" />
-                    <span className="font-bold text-foreground">Nota: {subject.grade}</span>
+                    <span className="font-bold text-foreground">Nota: {Number(subject.grade).toFixed(2)}</span>
                   </div>
                 )}
                 {subject.year && (

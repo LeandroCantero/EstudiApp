@@ -1,6 +1,6 @@
-import { GraduationCap } from 'lucide-react';
-import { NavLink } from 'react-router-dom';
 import { useUser } from '@/entities/user/model/use-user';
+import { GraduationCap, LogOut } from 'lucide-react';
+import { NavLink } from 'react-router-dom';
 import { ThemeToggle } from '../../shared/ui/theme-toggle';
 import { NAV_ITEMS } from './nav-config';
 
@@ -36,15 +36,26 @@ export const Sidebar = () => {
       </nav>
 
       <div className="p-4 mt-auto">
-        <div className="bg-foreground/5 rounded-2xl p-4 flex flex-col gap-1">
+        <div className="bg-foreground/5 rounded-2xl p-4 flex flex-col gap-1 relative group/user">
           <p className="text-[10px] font-bold text-primary uppercase tracking-tighter">Estudiante</p>
-          <p className="text-sm font-semibold truncate">{user?.name || 'Invitado'}</p>
+          <p className="text-sm font-semibold truncate pr-6">{user?.name || 'Invitado'}</p>
           <div className="flex items-center gap-1.5 text-foreground/40">
             <GraduationCap size={12} />
             <span className="text-[10px] font-medium truncate uppercase tracking-widest leading-none">
               {user?.career?.name || 'Sin Carrera'}
             </span>
           </div>
+          <button
+            onClick={() => {
+              localStorage.removeItem('token');
+              localStorage.removeItem('userId');
+              window.location.href = '/login';
+            }}
+            className="absolute top-4 right-4 text-foreground/20 hover:text-destructive opacity-0 group-hover/user:opacity-100 transition-all border-none outline-none"
+            title="Cerrar Sesión"
+          >
+            <LogOut size={16} />
+          </button>
         </div>
       </div>
     </aside>

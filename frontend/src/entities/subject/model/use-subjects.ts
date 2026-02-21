@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
-import { Subject, UpdateSubjectStatusDto, UpdateFinalDto } from './types';
-import { subjectApi, StudentSubjectResponse } from '../api/subject-api';
+import { StudentSubjectResponse, subjectApi } from '../api/subject-api';
+import { Subject, UpdateFinalDto, UpdateSubjectStatusDto } from './types';
 
 interface MappedSubject extends Subject {
   enrollmentYear?: number;
@@ -18,18 +18,14 @@ export const useSubjects = () => {
   const mapBackendToFrontend = (data: StudentSubjectResponse[]): MappedSubject[] => {
     return data.map((item) => ({
       id: item.id,
-      name: item.subject.name,
-      code: item.subject.code,
+      name: item.careerSubject.subject.name,
+      code: item.careerSubject.code,
       status: item.status as Subject['status'],
-      grade: item.grade ?? undefined,
-      hours: item.subject.hours,
-      year: item.subject.year,
-      period: item.subject.period,
+      grade: item.finalGrade ?? item.courseGrade ?? undefined,
+      hours: item.careerSubject.subject.hours,
+      year: item.careerSubject.year ?? undefined,
+      period: item.careerSubject.period ?? undefined,
       userId: '',
-      enrollmentYear: item.enrollmentYear ?? undefined,
-      enrollmentPeriod: item.enrollmentPeriod ?? undefined,
-      finalDate: item.finalDate ?? undefined,
-      finalGrade: item.finalGrade ?? undefined,
     }));
   };
 

@@ -1,21 +1,20 @@
 import { apiClient } from '../../../shared/api/base';
-import { Subject, UpdateSubjectStatusDto, UpdateFinalDto } from '../model/types';
+import { UpdateFinalDto, UpdateSubjectStatusDto } from '../model/types';
 
 export interface StudentSubjectResponse {
   id: string;
   status: string;
-  grade: number | null;
-  enrollmentYear: number | null;
-  enrollmentPeriod: number | null;
-  finalDate: string | null;
+  courseGrade: number | null;
   finalGrade: number | null;
-  subject: {
-    id: string;
-    name: string;
+  careerSubject: {
     code: string;
-    hours: number;
-    year: number;
-    period: number;
+    year: number | null;
+    period: number | null;
+    subject: {
+      id: string;
+      name: string;
+      hours: number;
+    };
   };
 }
 

@@ -134,11 +134,16 @@ export class UsersService {
       throw new NotFoundException('Usuario o carrera no encontrados');
     }
 
+    const primaryCareerId = user.userCareers[0].careerId;
+    const activeCareerSubjects = user.subjects.filter(
+      (s: any) => s.careerSubject.careerId === primaryCareerId
+    );
+
     const totalSubjects = user.userCareers[0].career.subjects.length;
-    const approvedSubjects = user.subjects.filter(
+    const approvedSubjects = activeCareerSubjects.filter(
       (s: any) => s.status === SubjectStatus.PROMOCIONADA
     ).length;
-    const regularizedSubjects = user.subjects.filter(
+    const regularizedSubjects = activeCareerSubjects.filter(
       (s: any) => s.status === SubjectStatus.REGULARIZADA
     ).length;
 
@@ -205,11 +210,16 @@ export class UsersService {
       throw new NotFoundException('Usuario o carrera no encontrados');
     }
 
+    const primaryCareerId = user.userCareers[0].careerId;
+    const activeCareerSubjects = user.subjects.filter(
+      (s: any) => s.careerSubject.careerId === primaryCareerId
+    );
+
     const totalSubjects = user.userCareers[0].career.subjects.length;
-    const approvedSubjects = user.subjects.filter(
+    const approvedSubjects = activeCareerSubjects.filter(
       (s: any) => s.status === SubjectStatus.PROMOCIONADA
     ).length;
-    const regularizedSubjects = user.subjects.filter(
+    const regularizedSubjects = activeCareerSubjects.filter(
       (s: any) => s.status === SubjectStatus.REGULARIZADA
     ).length;
 
@@ -217,9 +227,10 @@ export class UsersService {
     const progressPercentage =
       ((approvedSubjects + regularizedSubjects * 0.5) / totalSubjects) * 100;
 
-    // Promedio académico (RN6) - incluye nota final, o de cursada si fue promocionada sin final
-    const subjectsWithGrade = user.subjects.filter((s: any) => 
-      s.finalGrade !== null || (s.status === SubjectStatus.PROMOCIONADA && s.courseGrade !== null)
+    // Promedio académico (RN6) - incluye nota final o cursadas cerradas (aplazos importan)
+    const subjectsWithGrade = activeCareerSubjects.filter((s: any) => 
+      s.finalGrade !== null || 
+      (s.courseGrade !== null && [SubjectStatus.PROMOCIONADA, SubjectStatus.REGULARIZADA, SubjectStatus.DESAPROBADA].includes(s.status))
     );
     const averageGrade =
       subjectsWithGrade.length > 0
@@ -234,6 +245,7 @@ export class UsersService {
     const graduation = await this.getEstimatedGraduation(userId);
 
     return {
+      userName: user.name,
       careerName: user.userCareers[0].career.name,
       totalSubjects,
       approvedSubjects,

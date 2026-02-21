@@ -1,25 +1,24 @@
-import { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { 
-  ArrowLeft, 
-  BookOpen, 
-  Clock, 
-  Edit3, 
+import type { StudentSubjectResponse } from '@/entities/subject/api/subject-api';
+import { subjectApi } from '@/entities/subject/api/subject-api';
+import {
+  ArrowLeft,
+  BookOpen,
+  Clock,
+  Edit3,
   FileText,
   GraduationCap,
   Plus
 } from 'lucide-react';
-import { subjectApi } from '@/entities/subject/api/subject-api';
-import type { StudentSubjectResponse } from '@/entities/subject/api/subject-api';
+import { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const statusLabels: Record<string, { label: string; color: string }> = {
   PENDIENTE: { label: 'Pendiente', color: 'bg-gray-500/10 text-gray-500' },
   EN_CURSO: { label: 'En Curso', color: 'bg-blue-500/10 text-blue-500' },
   REGULARIZADA: { label: 'Regularizada', color: 'bg-yellow-500/10 text-yellow-500' },
   PROMOCIONADA: { label: 'Promocionada', color: 'bg-green-500/10 text-green-500' },
-  APROBADA: { label: 'Aprobada', color: 'bg-green-500/10 text-green-500' },
   DESAPROBADA: { label: 'Desaprobada', color: 'bg-red-500/10 text-red-500' },
-  RECUSANDO: { label: 'Recursando', color: 'bg-purple-500/10 text-purple-500' },
+  RECURSANDO: { label: 'Recursando', color: 'bg-purple-500/10 text-purple-500' },
 };
 
 export const SubjectDetailPage = () => {
@@ -81,15 +80,15 @@ export const SubjectDetailPage = () => {
         <div className="flex-1">
           <div className="flex items-center gap-2 mb-1">
             <span className="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded-lg">
-              {subject.subject.code}
+              {subject.careerSubject.code}
             </span>
             <span className={`text-xs font-bold px-2 py-1 rounded-lg ${status.color}`}>
               {status.label}
             </span>
           </div>
-          <h1 className="text-2xl font-bold">{subject.subject.name}</h1>
+          <h1 className="text-2xl font-bold">{subject.careerSubject.subject.name}</h1>
           <p className="text-sm text-foreground/60">
-            Año {subject.subject.year} - {subject.subject.period}° Cuatrimestre
+            Año {subject.careerSubject.year} - {subject.careerSubject.period}° Cuatrimestre
           </p>
         </div>
       </header>
@@ -130,13 +129,13 @@ export const SubjectDetailPage = () => {
                 <div className="bg-background rounded-xl p-4">
                   <span className="text-xs text-foreground/60">Cursada</span>
                   <p className="text-2xl font-bold">
-                    {subject.grade?.toFixed(1) || '-'}
+                    {subject.courseGrade?.toFixed(2) || '-'}
                   </p>
                 </div>
                 <div className="bg-background rounded-xl p-4">
                   <span className="text-xs text-foreground/60">Final</span>
                   <p className="text-2xl font-bold">
-                    {subject.finalGrade?.toFixed(1) || '-'}
+                    {subject.finalGrade?.toFixed(2) || '-'}
                   </p>
                 </div>
               </div>
@@ -149,7 +148,7 @@ export const SubjectDetailPage = () => {
               </div>
               <div>
                 <span className="text-xs text-foreground/60">Carga Horaria</span>
-                <p className="text-xl font-bold">{subject.subject.hours} horas</p>
+                <p className="text-xl font-bold">{subject.careerSubject.subject.hours} horas</p>
               </div>
             </div>
           </>

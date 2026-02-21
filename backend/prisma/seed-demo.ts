@@ -9,6 +9,10 @@ const prisma = new PrismaClient({ adapter });
 async function main() {
   console.log('🌱 Creando usuario demo...');
 
+  await prisma.user.deleteMany({
+    where: { email: 'demo@unahur.edu.ar' },
+  });
+
   const career = await prisma.career.findFirst({
     where: { name: { contains: 'Informática', mode: 'insensitive' } },
     include: { subjects: { include: { subject: true } } },
@@ -42,6 +46,10 @@ async function main() {
 
   const subjects = career.subjects;
   
+  const roundGrade = (min: number, max: number) => {
+    return Math.round((min + Math.random() * (max - min)) * 2) / 2;
+  };
+  
   for (let i = 0; i < subjects.length; i++) {
     const cs = subjects[i];
     let status: SubjectStatus = SubjectStatus.PENDIENTE;
@@ -51,11 +59,11 @@ async function main() {
 
     if (i < 8) {
       status = SubjectStatus.PROMOCIONADA;
-      courseGrade = 7 + Math.random() * 3;
-      finalGrade = i < 4 ? 4 + Math.random() * 4 : null;
+      courseGrade = roundGrade(7, 10);
+      finalGrade = i < 4 ? roundGrade(4, 10) : null;
     } else if (i < 12) {
       status = SubjectStatus.REGULARIZADA;
-      courseGrade = 4 + Math.random() * 3;
+      courseGrade = roundGrade(4, 6.5);
     } else if (i < 16) {
       status = SubjectStatus.EN_CURSO;
     } else if (i === 16) {
@@ -94,7 +102,7 @@ async function main() {
           studentSubjectId: studentSubject.id,
           type: 'parcial1',
           date: new Date('2024-03-15'),
-          grade: 6 + Math.random() * 4,
+          grade: roundGrade(6, 10),
         },
       });
     }

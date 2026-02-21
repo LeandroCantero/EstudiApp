@@ -24,7 +24,11 @@ export class SimulatorService {
     const currentSubjects = await this.prisma.studentSubject.findMany({
       where: { userId },
       include: {
-        careerSubject: true,
+        careerSubject: {
+          include: {
+            subject: true,
+          }
+        },
       },
     });
 
@@ -110,12 +114,18 @@ export class SimulatorService {
     currentSubjects: any[],
     simulatedSubjects: any[],
   ) {
-    const newlyApproved = simulatedSubjects.filter(
-      (s: any) =>
-        s.status === SubjectStatus.PROMOCIONADA &&
-        currentSubjects.find((c: any) => c.id === s.id)?.status !==
-          SubjectStatus.PROMOCIONADA,
-    );
+    const newlyApproved = simulatedSubjects.filter((s: any) => {
+      const isSimulatedValid = 
+        s.status === SubjectStatus.PROMOCIONADA || 
+        s.status === SubjectStatus.REGULARIZADA;
+      
+      const current = currentSubjects.find((c: any) => c.id === s.id);
+      const isCurrentValid = 
+        current?.status === SubjectStatus.PROMOCIONADA || 
+        current?.status === SubjectStatus.REGULARIZADA;
+        
+      return isSimulatedValid && !isCurrentValid;
+    });
 
     const unlocked = [];
 

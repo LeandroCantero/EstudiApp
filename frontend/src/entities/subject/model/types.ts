@@ -1,4 +1,4 @@
-export type SubjectStatus = 'PENDIENTE' | 'EN_CURSO' | 'RECUSANDO' | 'REGULARIZADA' | 'APROBADA';
+export type SubjectStatus = 'PENDIENTE' | 'EN_CURSO' | 'RECURSANDO' | 'REGULARIZADA' | 'PROMOCIONADA' | 'DESAPROBADA';
 
 export interface Subject {
   id: string;

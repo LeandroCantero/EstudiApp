@@ -6,8 +6,21 @@ import { PrismaService } from '../prisma.service';
 export class StudentSubjectsService {
   constructor(private prisma: PrismaService) {}
 
+  private formatSubject(subject: any) {
+    if (!subject) return subject;
+    return {
+      ...subject,
+      courseGrade: subject.courseGrade !== null && subject.courseGrade !== undefined 
+        ? Math.round(subject.courseGrade * 100) / 100 
+        : subject.courseGrade,
+      finalGrade: subject.finalGrade !== null && subject.finalGrade !== undefined 
+        ? Math.round(subject.finalGrade * 100) / 100 
+        : subject.finalGrade,
+    };
+  }
+
   async findAll(userId: string) {
-    return this.prisma.studentSubject.findMany({
+    const subjects = await this.prisma.studentSubject.findMany({
       where: { userId },
       include: {
         careerSubject: {
@@ -29,6 +42,8 @@ export class StudentSubjectsService {
         },
       },
     });
+
+    return subjects.map(s => this.formatSubject(s));
   }
 
   async findOne(userId: string, id: string) {
@@ -59,7 +74,7 @@ export class StudentSubjectsService {
       throw new NotFoundException('Materia no encontrada');
     }
 
-    return studentSubject;
+    return this.formatSubject(studentSubject);
   }
 
   // US-02: Cambiar estado de materia
