@@ -1,6 +1,6 @@
-import { Injectable, NotFoundException, BadRequestException } from '@nestjs/common';
+import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
+import { SubjectStatus } from '@prisma/client';
 import { PrismaService } from '../prisma.service';
-import { SubjectStatus } from '../prisma-client.mock';
 
 @Injectable()
 export class StudentSubjectsService {
@@ -67,6 +67,7 @@ export class StudentSubjectsService {
     userId: string,
     id: string,
     newStatus: SubjectStatus,
+    courseGrade?: number,
   ) {
     const studentSubject = await this.findOne(userId, id);
     const currentStatus = studentSubject.status;
@@ -84,9 +85,14 @@ export class StudentSubjectsService {
       await this.validatePrerequisitesForClosing(userId, studentSubject.careerSubjectId);
     }
 
+    const dataToUpdate: any = { status: newStatus };
+    if (courseGrade !== undefined) {
+      dataToUpdate.courseGrade = Math.round(courseGrade * 100) / 100;
+    }
+
     return this.prisma.studentSubject.update({
       where: { id },
-      data: { status: newStatus },
+      data: dataToUpdate,
       include: {
         careerSubject: {
           include: {
@@ -107,6 +113,8 @@ export class StudentSubjectsService {
       throw new BadRequestException('La nota debe estar entre 0 y 10');
     }
 
+    const roundedGrade = Math.round(grade * 100) / 100;
+
     const studentSubject = await this.findOne(userId, id);
 
     // Solo se puede registrar final si está REGULARIZADA
@@ -122,7 +130,7 @@ export class StudentSubjectsService {
     return this.prisma.studentSubject.update({
       where: { id },
       data: {
-        finalGrade: grade,
+        finalGrade: roundedGrade,
         status: newStatus,
       },
       include: {
@@ -190,7 +198,7 @@ export class StudentSubjectsService {
         );
       }
 
-      const validStatuses = [
+      const validStatuses: SubjectStatus[] = [
         SubjectStatus.REGULARIZADA,
         SubjectStatus.PROMOCIONADA,
       ];

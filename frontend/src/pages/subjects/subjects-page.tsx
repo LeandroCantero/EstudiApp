@@ -1,20 +1,10 @@
-import { CreateSubjectModal } from '@/features/create-subject/ui/create-subject-modal';
-import { CareerSelector } from '@/features/onboarding/ui/career-selector';
-import { BookOpen, CheckCircle2, Filter, GraduationCap, Plus, Search } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { BookOpen, CheckCircle2, ChevronRight, Filter, GraduationCap, Search } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { useSubjects } from '../../entities/subject/model/use-subjects';
 
 export const SubjectsPage = () => {
-  const { subjects, isLoading, error, career, isGuest, studentCredits, updateStudentCredits } = useSubjects();
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isCareerSelectorOpen, setIsCareerSelectorOpen] = useState(false);
-
-  useEffect(() => {
-    // If no career selected (and not loading), open selector
-    if (!isLoading && !career) {
-      setIsCareerSelectorOpen(true);
-    }
-  }, [isLoading, career]);
+  const navigate = useNavigate();
+  const { subjects, isLoading, error, studentCredits, updateStudentCredits } = useSubjects();
 
   if (isLoading) {
     return (
@@ -24,7 +14,7 @@ export const SubjectsPage = () => {
     );
   }
 
-  if (error && !isGuest) {
+  if (error) {
     return (
       <div className="p-6 bg-destructive/10 text-destructive rounded-2xl">
         Error: {error}
@@ -37,20 +27,10 @@ export const SubjectsPage = () => {
       <header className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold">Mis Materias</h1>
-          <button 
-            onClick={() => setIsCareerSelectorOpen(true)}
-            className="text-foreground/60 text-sm hover:text-primary transition-colors text-left"
-          >
-            {career ? `${career.name}` : 'Selecciona una carrera'}
-          </button>
+          <p className="text-foreground/60 text-sm">
+            {subjects.length} materias en total
+          </p>
         </div>
-        <button 
-          onClick={() => setIsModalOpen(true)}
-          disabled={!career}
-          className="bg-primary text-primary-foreground p-3 rounded-xl shadow-lg shadow-primary/20 hover:scale-105 transition-transform disabled:opacity-50 disabled:hover:scale-100"
-        >
-          <Plus size={24} />
-        </button>
       </header>
 
       {/* Filters & Search & Credits */}
@@ -70,66 +50,65 @@ export const SubjectsPage = () => {
         </div>
 
         {/* Extracurricular Credits Tracker */}
-        {career && (
-          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-4 flex items-center justify-between">
-            <div className="flex flex-col">
-              <span className="text-xs font-semibold text-primary/60 uppercase">Créditos Extracurriculares</span>
-              <div className="flex items-baseline gap-1">
-                <span className="text-2xl font-black text-primary">{studentCredits}</span>
-                <span className="text-sm font-medium text-foreground/40">/ 35</span>
-              </div>
-            </div>
-            <div className="flex items-center gap-2">
-              <button 
-                onClick={() => updateStudentCredits(Math.max(0, studentCredits - 1))}
-                className="w-8 h-8 rounded-full bg-card border border-foreground/10 flex items-center justify-center hover:bg-foreground/5 transition-colors"
-                aria-label="Restar crédito"
-              >
-                -
-              </button>
-              <button 
-                onClick={() => updateStudentCredits(studentCredits + 1)}
-                className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:scale-110 transition-transform"
-                aria-label="Sumar crédito"
-              >
-                +
-              </button>
+        <div className="bg-primary/5 border border-primary/20 rounded-2xl p-4 flex items-center justify-between">
+          <div className="flex flex-col">
+            <span className="text-xs font-semibold text-primary/60 uppercase">Créditos Extracurriculares</span>
+            <div className="flex items-baseline gap-1">
+              <span className="text-2xl font-black text-primary">{studentCredits}</span>
+              <span className="text-sm font-medium text-foreground/40">/ 35</span>
             </div>
           </div>
-        )}
+          <div className="flex items-center gap-2">
+            <button 
+              onClick={() => updateStudentCredits(Math.max(0, studentCredits - 1))}
+              className="w-8 h-8 rounded-full bg-card border border-foreground/10 flex items-center justify-center hover:bg-foreground/5 transition-colors"
+              aria-label="Restar crédito"
+            >
+              -
+            </button>
+            <button 
+              onClick={() => updateStudentCredits(studentCredits + 1)}
+              className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:scale-110 transition-transform"
+              aria-label="Sumar crédito"
+            >
+              +
+            </button>
+          </div>
+        </div>
       </div>
 
       {/* Subjects List */}
       <div className="flex flex-col gap-4">
-        {!career ? (
-          <div className="flex flex-col items-center justify-center py-12 text-foreground/40 gap-3 text-center">
-             <BookOpen size={48} />
-             <p>Debes seleccionar una carrera para comenzar.</p>
-             <button onClick={() => setIsCareerSelectorOpen(true)} className="text-primary font-bold underline">
-                Seleccionar Carrera
-             </button>
-          </div>
-        ) : subjects.length === 0 ? (
+        {subjects.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-12 text-foreground/40 gap-3">
             <BookOpen size={48} />
             <p>No tienes materias cargadas aún.</p>
-            <p className="text-xs">¡Agrega tu primera materia arriba!</p>
+            <p className="text-xs">Las materias se cargan automáticamente desde tu carrera.</p>
           </div>
         ) : (
           subjects.map((subject) => (
-            <div key={subject.id} className="bg-card rounded-2xl p-5 shadow-sm border border-foreground/5 hover:border-primary/20 transition-all group">
+            <button
+              key={subject.id}
+              onClick={() => navigate(`/materias/${subject.id}`)}
+              className="bg-card rounded-2xl p-5 shadow-sm border border-foreground/5 hover:border-primary/20 transition-all group text-left w-full"
+            >
               <div className="flex justify-between items-start mb-2">
                 <span className="text-xs font-bold text-primary px-2 py-1 bg-primary/10 rounded-lg uppercase tracking-wider">
                   {subject.code}
                 </span>
                 <span className={`text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-tighter ${
                   subject.status === 'APROBADA' ? 'bg-green-500/10 text-green-500' : 
-                  subject.status === 'EN_CURSO' ? 'bg-blue-500/10 text-blue-500' : 'bg-foreground/10 text-foreground/40'
+                  subject.status === 'EN_CURSO' ? 'bg-blue-500/10 text-blue-500' : 
+                  subject.status === 'REGULARIZADA' ? 'bg-yellow-500/10 text-yellow-500' :
+                  'bg-foreground/10 text-foreground/40'
                 }`}>
                   {subject.status.replace('_', ' ')}
                 </span>
               </div>
-              <h3 className="font-semibold text-lg group-hover:text-primary transition-colors">{subject.name}</h3>
+              <h3 className="font-semibold text-lg group-hover:text-primary transition-colors flex items-center justify-between">
+                {subject.name}
+                <ChevronRight size={18} className="text-foreground/20 group-hover:text-primary/60 transition-colors" />
+              </h3>
               
               <div className="flex items-center gap-4 mt-4 text-xs text-foreground/60">
                 <div className="flex items-center gap-1.5">
@@ -148,13 +127,10 @@ export const SubjectsPage = () => {
                   </div>
                 )}
               </div>
-            </div>
+            </button>
           ))
         )}
       </div>
-
-      <CreateSubjectModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-      <CareerSelector isOpen={isCareerSelectorOpen} onClose={() => setIsCareerSelectorOpen(false)} />
     </div>
   );
 };

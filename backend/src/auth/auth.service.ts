@@ -1,8 +1,8 @@
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-import { PrismaService } from '../prisma.service';
-import { SubjectStatus } from '../prisma-client.mock';
+import { SubjectStatus } from '@prisma/client';
 import * as bcrypt from 'bcryptjs';
+import { PrismaService } from '../prisma.service';
 
 @Injectable()
 export class AuthService {
@@ -100,7 +100,9 @@ export class AuthService {
     const user = await this.prisma.user.findUnique({
       where: { id: userId },
       include: {
-        career: true,
+        userCareers: {
+          include: { career: true }
+        }
       },
     });
 
@@ -112,7 +114,7 @@ export class AuthService {
       id: user.id,
       email: user.email,
       name: user.name,
-      career: user.career,
+      career: user.userCareers[0]?.career || null,
     };
   }
 

@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
+import { SubjectStatus } from '@prisma/client';
 import { PrismaService } from '../prisma.service';
-import { SubjectStatus } from '../prisma-client.mock';
 
 @Injectable()
 export class UsersService {
@@ -10,12 +10,16 @@ export class UsersService {
     const user = await this.prisma.user.findUnique({
       where: { id: userId },
       include: {
-        career: {
+        userCareers: {
           include: {
-            subjects: {
+            career: {
               include: {
-                subject: true,
-                prerequisites: true,
+                subjects: {
+                  include: {
+                    subject: true,
+                    prerequisites: true,
+                  },
+                },
               },
             },
           },
@@ -46,7 +50,9 @@ export class UsersService {
       where: { id: userId },
       data,
       include: {
-        career: true,
+        userCareers: {
+          include: { career: true },
+        },
       },
     });
   }
@@ -67,7 +73,13 @@ export class UsersService {
     // Actualizar carrera del usuario
     await this.prisma.user.update({
       where: { id: userId },
-      data: { careerId },
+      data: {
+        userCareers: {
+          create: {
+            careerId,
+          },
+        },
+      },
     });
 
     // Crear StudentSubject para cada materia de la carrera (US-07: carga inicial rápida)
@@ -86,7 +98,7 @@ export class UsersService {
     return {
       user: await this.prisma.user.findUnique({
         where: { id: userId },
-        include: { career: true },
+        include: { userCareers: { include: { career: true } } },
       }),
       subjectsCount: studentSubjects.length,
     };
@@ -101,9 +113,13 @@ export class UsersService {
     const user = await this.prisma.user.findUnique({
       where: { id: userId },
       include: {
-        career: {
+        userCareers: {
           include: {
-            subjects: true,
+            career: {
+              include: {
+                subjects: true,
+              },
+            },
           },
         },
         subjects: {
@@ -114,11 +130,11 @@ export class UsersService {
       },
     });
 
-    if (!user || !user.career) {
+    if (!user || !user.userCareers || user.userCareers.length === 0) {
       throw new NotFoundException('Usuario o carrera no encontrados');
     }
 
-    const totalSubjects = user.career.subjects.length;
+    const totalSubjects = user.userCareers[0].career.subjects.length;
     const approvedSubjects = user.subjects.filter(
       (s: any) => s.status === SubjectStatus.PROMOCIONADA
     ).length;
@@ -167,9 +183,13 @@ export class UsersService {
     const user = await this.prisma.user.findUnique({
       where: { id: userId },
       include: {
-        career: {
+        userCareers: {
           include: {
-            subjects: true,
+            career: {
+              include: {
+                subjects: true,
+              },
+            },
           },
         },
         subjects: {
@@ -181,11 +201,11 @@ export class UsersService {
       },
     });
 
-    if (!user || !user.career) {
+    if (!user || !user.userCareers || user.userCareers.length === 0) {
       throw new NotFoundException('Usuario o carrera no encontrados');
     }
 
-    const totalSubjects = user.career.subjects.length;
+    const totalSubjects = user.userCareers[0].career.subjects.length;
     const approvedSubjects = user.subjects.filter(
       (s: any) => s.status === SubjectStatus.PROMOCIONADA
     ).length;
@@ -197,11 +217,13 @@ export class UsersService {
     const progressPercentage =
       ((approvedSubjects + regularizedSubjects * 0.5) / totalSubjects) * 100;
 
-    // Promedio académico (RN6)
-    const subjectsWithGrade = user.subjects.filter((s: any) => s.finalGrade !== null);
+    // Promedio académico (RN6) - incluye nota final, o de cursada si fue promocionada sin final
+    const subjectsWithGrade = user.subjects.filter((s: any) => 
+      s.finalGrade !== null || (s.status === SubjectStatus.PROMOCIONADA && s.courseGrade !== null)
+    );
     const averageGrade =
       subjectsWithGrade.length > 0
-        ? subjectsWithGrade.reduce((sum: number, s: any) => sum + (s.finalGrade || 0), 0) /
+        ? subjectsWithGrade.reduce((sum: number, s: any) => sum + (s.finalGrade ?? s.courseGrade ?? 0), 0) /
           subjectsWithGrade.length
         : 0;
 
@@ -212,7 +234,7 @@ export class UsersService {
     const graduation = await this.getEstimatedGraduation(userId);
 
     return {
-      careerName: user.career.name,
+      careerName: user.userCareers[0].career.name,
       totalSubjects,
       approvedSubjects,
       regularizedSubjects,

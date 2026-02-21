@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
+import { SubjectStatus } from '@prisma/client';
 import { PrismaService } from '../prisma.service';
-import { SubjectStatus } from '../prisma-client.mock';
 
 @Injectable()
 export class RecommendationsService {
@@ -76,7 +76,7 @@ export class RecommendationsService {
 
       if (!studentPrereq) return false;
 
-      const validStatuses = [SubjectStatus.REGULARIZADA, SubjectStatus.PROMOCIONADA];
+      const validStatuses: SubjectStatus[] = [SubjectStatus.REGULARIZADA, SubjectStatus.PROMOCIONADA];
       if (!validStatuses.includes(studentPrereq.status)) {
         return false;
       }

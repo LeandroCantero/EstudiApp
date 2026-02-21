@@ -1,9 +1,9 @@
-import { Controller, Post, Body, UseGuards, Req } from '@nestjs/common';
-import { ApiTags, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
-import { SimulatorService } from './simulator.service';
+import { Body, Controller, Post, Req, UseGuards } from '@nestjs/common';
+import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
+import { SubjectStatus } from '@prisma/client';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 import { RequestWithUser } from '../types/express';
-import { SubjectStatus } from '../prisma-client.mock';
+import { SimulatorService } from './simulator.service';
 
 class SimulateChangeDto {
   subjectId: string;

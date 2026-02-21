@@ -1,8 +1,8 @@
-import { useSubjects } from '@/entities/subject/model/use-subjects';
+import { useUser } from '@/entities/user/model/use-user';
 import { GraduationCap } from 'lucide-react';
 
 export const MobileHeader = () => {
-  const { user } = useSubjects();
+  const { user } = useUser();
 
   return (
     <header className="md:hidden flex items-center justify-between px-6 py-4 bg-card/80 backdrop-blur-md border-b border-border sticky top-0 z-40">

@@ -15,6 +15,18 @@ export interface Subject {
 export interface CreateSubjectDto extends Omit<Subject, 'id'> {}
 export interface UpdateSubjectDto extends Partial<CreateSubjectDto> {}
 
+export interface UpdateSubjectStatusDto {
+  status: SubjectStatus;
+  grade?: number;
+  enrollmentYear?: number;
+  enrollmentPeriod?: number;
+}
+
+export interface UpdateFinalDto {
+  finalDate: string;
+  finalGrade: number;
+}
+
 export interface AcademicMetrics {
   total: number;
   approved: number;

@@ -1,12 +1,18 @@
-import { Controller, Get, Post, Patch, Body, Param, UseGuards, Req } from '@nestjs/common';
-import { ApiTags, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
-import { StudentSubjectsService } from './student-subjects.service';
+import { Body, Controller, Get, Param, Patch, Post, Req, UseGuards } from '@nestjs/common';
+import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
+import { SubjectStatus } from '@prisma/client';
+import { IsEnum, IsNumber, IsOptional } from 'class-validator';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
-import { SubjectStatus } from '../prisma-client.mock';
 import { RequestWithUser } from '../types/express';
+import { StudentSubjectsService } from './student-subjects.service';
 
 class UpdateStatusDto {
+  @IsEnum(SubjectStatus)
   status: SubjectStatus;
+
+  @IsOptional()
+  @IsNumber()
+  courseGrade?: number;
 }
 
 class RegisterGradeDto {
@@ -51,7 +57,7 @@ export class StudentSubjectsController {
     @Param('id') id: string,
     @Body() dto: UpdateStatusDto,
   ) {
-    return this.service.updateStatus(req.user.userId, id, dto.status);
+    return this.service.updateStatus(req.user.userId, id, dto.status, dto.courseGrade);
   }
 
   @Post(':id/final')

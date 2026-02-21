@@ -83,16 +83,6 @@ async function main() {
   console.log(`✅ Created ${careers.length} careers`);
 
   // Importar Planes de Estudio (Templates)
-  // Necesitamos instanciar el servicio con un PrismaService real
-  // Como `prisma` aquí es un PrismaClient, podemos castearlo o wrappearlo si el servicio lo requiere.
-  // Pero CareersImportService pide `PrismaService` en el constructor.
-  // PrismaService extiende PrismaClient, por lo que `prisma` debería funcionar si coincide la firma.
-  // El problema es que PrismaService tiene `onModuleInit` etc.
-  // Para el seed, podemos hacer un mock o usar el prisma client directo si modificamos el servicio
-  // O mejor, instanciamos PrismaService (que es un wrapper)
-
-  // Hack: CareersImportService espera PrismaService. 
-  // Vamos a asumir que podemos pasarle `prisma` si el tipo es compatible, o creamos un objeto compatible.
   const importService = new CareersImportService(prisma as any);
   await importService.importAllPlans();
 

@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
+import { SubjectStatus } from '@prisma/client';
 import { PrismaService } from '../prisma.service';
-import { SubjectStatus } from '../prisma-client.mock';
 import { UsersService } from '../users/users.service';
 
 interface SimulateChange {

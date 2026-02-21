@@ -1,17 +1,32 @@
-import { Controller, Post, Body, Get, UseGuards, Req } from '@nestjs/common';
-import { ApiTags, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
+import { Body, Controller, Get, Post, Req, UseGuards } from '@nestjs/common';
+import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
+import { IsEmail, IsNotEmpty, IsString } from 'class-validator';
 import { AuthService } from './auth.service';
 import { JwtAuthGuard } from './guards/jwt-auth.guard';
 
 class RegisterDto {
+  @IsEmail()
   email: string;
+
+  @IsString()
+  @IsNotEmpty()
   password: string;
+
+  @IsString()
+  @IsNotEmpty()
   name: string;
+
+  @IsString()
+  @IsNotEmpty()
   careerId: string;
 }
 
 class LoginDto {
+  @IsEmail()
   email: string;
+
+  @IsString()
+  @IsNotEmpty()
   password: string;
 }
 

@@ -14,7 +14,21 @@ export interface UpdateUserDto {
   career?: string;
 }
 
+export interface AuthResponse {
+  user: User;
+  token: string;
+  subjectsCount?: number;
+}
+
 export const userApi = {
+  login: async (email: string, password: string): Promise<AuthResponse> => {
+    return apiClient.post<AuthResponse>('/auth/login', { email, password });
+  },
+
+  register: async (email: string, password: string, name: string, careerId: string): Promise<AuthResponse> => {
+    return apiClient.post<AuthResponse>('/auth/register', { email, password, name, careerId });
+  },
+
   getMe: async (): Promise<User> => {
     return apiClient.get<User>('/auth/me');
   },

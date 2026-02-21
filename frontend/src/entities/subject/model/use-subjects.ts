@@ -1,137 +1,109 @@
-import { Career } from '@/entities/career/api/career-api';
-import { User } from '@/entities/user/api/user-api';
 import { useCallback, useEffect, useState } from 'react';
-import { AcademicMetrics, CreateSubjectDto, Subject } from './types';
+import { Subject, UpdateSubjectStatusDto, UpdateFinalDto } from './types';
+import { subjectApi, StudentSubjectResponse } from '../api/subject-api';
 
-const GUEST_DATA_KEY = 'cursapp_guest_data';
-
-interface GuestData {
-  subjects: Subject[];
-  career: Career | null;
-  name: string;
-  studentCredits: number; // For extracurricular credits (target 35)
+interface MappedSubject extends Subject {
+  enrollmentYear?: number;
+  enrollmentPeriod?: number;
+  finalDate?: string;
+  finalGrade?: number;
 }
 
 export const useSubjects = () => {
-  const [subjects, setSubjects] = useState<Subject[]>([]);
-  const [metrics, setMetrics] = useState<AcademicMetrics | null>(null);
-  const [user, setUser] = useState<User | null>(null);
-  const [career, setCareer] = useState<Career | null>(null);
-  const [studentCredits, setStudentCredits] = useState(0);
-  
-  // Always true now, effectively
-  const [isGuest, setIsGuest] = useState(true);
+  const [subjects, setSubjects] = useState<MappedSubject[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [suggestions, setSuggestions] = useState<any[]>([]);
+  const [studentCredits, setStudentCredits] = useState(0);
 
-  // Calculate metrics locally
-  const calculateMetrics = (subs: Subject[]): AcademicMetrics => {
-    const total = subs.length;
-    const approved = subs.filter(s => s.status === 'APROBADA').length;
-    const progress = total > 0 ? (approved / total) * 100 : 0;
-    
-    const approvedSubjects = subs.filter(s => s.status === 'APROBADA' && s.grade);
-    const sumGrades = approvedSubjects.reduce((acc, curr) => acc + (curr.grade || 0), 0);
-    const average = approvedSubjects.length > 0 ? sumGrades / approvedSubjects.length : 0;
-
-    return { total, approved, progress, average };
+  const mapBackendToFrontend = (data: StudentSubjectResponse[]): MappedSubject[] => {
+    return data.map((item) => ({
+      id: item.id,
+      name: item.subject.name,
+      code: item.subject.code,
+      status: item.status as Subject['status'],
+      grade: item.grade ?? undefined,
+      hours: item.subject.hours,
+      year: item.subject.year,
+      period: item.subject.period,
+      userId: '',
+      enrollmentYear: item.enrollmentYear ?? undefined,
+      enrollmentPeriod: item.enrollmentPeriod ?? undefined,
+      finalDate: item.finalDate ?? undefined,
+      finalGrade: item.finalGrade ?? undefined,
+    }));
   };
 
-  const loadData = useCallback(() => {
+  const fetchSubjects = useCallback(async () => {
     setIsLoading(true);
+    setError(null);
     try {
-      const raw = localStorage.getItem(GUEST_DATA_KEY);
-      if (raw) {
-        const data: GuestData = JSON.parse(raw);
-        setSubjects(data.subjects);
-        setCareer(data.career);
-        setStudentCredits(data.studentCredits || 0);
-        // Mock user object for compatibility
-        setUser({ id: 'guest', email: '', name: data.name, career: data.career, createdAt: new Date().toISOString() });
-        setMetrics(calculateMetrics(data.subjects));
-      } else {
-        // Init empty
-        setSubjects([]);
-        setStudentCredits(0);
-        setMetrics(calculateMetrics([]));
-      }
-      setIsGuest(true);
+      const data = await subjectApi.getMySubjects();
+      setSubjects(mapBackendToFrontend(data));
     } catch (err) {
-      console.error('Error loading local data', err);
-      setError('Error cargando datos locales');
+      console.error('Error fetching subjects:', err);
+      setError('Error al cargar las materias');
     } finally {
       setIsLoading(false);
     }
   }, []);
 
-  const saveData = (newSubjects: Subject[], newCareer: Career | null, newName: string, newCredits: number) => {
-    const data: GuestData = { 
-      subjects: newSubjects, 
-      career: newCareer, 
-      name: newName,
-      studentCredits: newCredits
-    };
-    localStorage.setItem(GUEST_DATA_KEY, JSON.stringify(data));
-    
-    setSubjects(newSubjects);
-    setCareer(newCareer);
-    setStudentCredits(newCredits);
-    setMetrics(calculateMetrics(newSubjects));
-    setUser({ id: 'guest', email: '', name: newName, career: newCareer, createdAt: new Date().toISOString() });
-  };
-
-  const updateStudentCredits = (val: number) => {
-    saveData(subjects, career, user?.name || 'Invitado', val);
-  };
-
-  const createSubject = useCallback(async (data: CreateSubjectDto) => {
+  const updateStatus = async (id: string, data: UpdateSubjectStatusDto) => {
     setIsLoading(true);
     try {
-      // Simulate async delay slightly for UX
-      await new Promise(r => setTimeout(r, 300));
-
-      const newSubject: Subject = {
-        ...data,
-        id: crypto.randomUUID(),
-        userId: 'guest',
-      };
-      
-      const newSubjects = [...subjects, newSubject];
-      saveData(newSubjects, career, user?.name || 'Invitado', studentCredits);
+      await subjectApi.updateStatus(id, data);
+      await fetchSubjects();
       return true;
     } catch (err) {
-      setError('Error al guardar materia localmente');
+      console.error('Error updating subject status:', err);
+      setError('Error al actualizar el estado de la materia');
       return false;
     } finally {
       setIsLoading(false);
     }
-  }, [subjects, career, user, studentCredits]);
+  };
 
-  const updateCareerGuest = useCallback((newCareer: Career, userName: string) => {
-    saveData([], newCareer, userName, 0); // Reset everything on career change
-  }, []);
+  const updateFinal = async (id: string, data: UpdateFinalDto) => {
+    setIsLoading(true);
+    try {
+      await subjectApi.updateFinal(id, data);
+      await fetchSubjects();
+      return true;
+    } catch (err) {
+      console.error('Error updating final exam:', err);
+      setError('Error al actualizar el final');
+      return false;
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const getSubjectById = async (id: string): Promise<MappedSubject | null> => {
+    try {
+      const data = await subjectApi.getById(id);
+      return mapBackendToFrontend([data])[0];
+    } catch (err) {
+      console.error('Error fetching subject:', err);
+      return null;
+    }
+  };
+
+  const updateStudentCredits = (val: number) => {
+    setStudentCredits(Math.max(0, val));
+  };
 
   useEffect(() => {
-    loadData();
-  }, [loadData]);
-
-  // Compatibility dummies
-  const refreshData = loadData;
+    fetchSubjects();
+  }, [fetchSubjects]);
 
   return {
     subjects,
-    metrics,
-    suggestions,
-    user,
-    career,
-    studentCredits,
     isLoading,
     error,
-    isGuest,
-    createSubject,
-    updateCareerGuest,
+    studentCredits,
     updateStudentCredits,
-    refreshData,
+    updateStatus,
+    updateFinal,
+    getSubjectById,
+    refreshData: fetchSubjects,
   };
 };

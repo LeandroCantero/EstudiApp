@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
+import { SubjectStatus } from '@prisma/client';
 import { PrismaService } from '../prisma.service';
-import { SubjectStatus } from '../prisma-client.mock';
 
 @Injectable()
 export class ImportService {
@@ -39,7 +39,13 @@ export class ImportService {
     // 4. Actualizar la carrera del usuario
     await this.prisma.user.update({
       where: { id: userId },
-      data: { careerId }
+      data: {
+        userCareers: {
+          create: {
+            careerId,
+          },
+        },
+      }
     });
 
     console.log(`✅ Importación finalizada: ${studentSubjects.length} materias asignadas al usuario.`);

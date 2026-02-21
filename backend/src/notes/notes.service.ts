@@ -6,7 +6,7 @@ export class NotesService {
   constructor(private prisma: PrismaService) {}
 
   async findBySubject(studentSubjectId: string) {
-    return this.prisma.note.findMany({
+    return this.prisma.subjectNote.findMany({
       where: { studentSubjectId },
       orderBy: { createdAt: 'desc' },
     });
@@ -20,7 +20,7 @@ export class NotesService {
       url?: string;
     },
   ) {
-    return this.prisma.note.create({
+    return this.prisma.subjectNote.create({
       data: {
         ...data,
         studentSubjectId,
@@ -29,7 +29,7 @@ export class NotesService {
   }
 
   async delete(id: string) {
-    return this.prisma.note.delete({
+    return this.prisma.subjectNote.delete({
       where: { id },
     });
   }

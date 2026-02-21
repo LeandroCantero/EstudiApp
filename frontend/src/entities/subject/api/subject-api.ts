@@ -1,25 +1,38 @@
 import { apiClient } from '../../../shared/api/base';
-import { AcademicMetrics, CreateSubjectDto, Subject, UpdateSubjectDto } from '../model/types';
+import { Subject, UpdateSubjectStatusDto, UpdateFinalDto } from '../model/types';
+
+export interface StudentSubjectResponse {
+  id: string;
+  status: string;
+  grade: number | null;
+  enrollmentYear: number | null;
+  enrollmentPeriod: number | null;
+  finalDate: string | null;
+  finalGrade: number | null;
+  subject: {
+    id: string;
+    name: string;
+    code: string;
+    hours: number;
+    year: number;
+    period: number;
+  };
+}
 
 export const subjectApi = {
-  getAll: (userId: string) => 
-    apiClient.get<Subject[]>(`/subjects?userId=${userId}`),
+  /** Get all subjects for the current authenticated user */
+  getMySubjects: () => 
+    apiClient.get<StudentSubjectResponse[]>('/my-subjects'),
   
-  getMetrics: (userId: string) => 
-    apiClient.get<AcademicMetrics>(`/subjects/metrics?userId=${userId}`),
+  /** Update subject status (e.g., from PENDIENTE to EN_CURSO) */
+  updateStatus: (id: string, data: UpdateSubjectStatusDto) => 
+    apiClient.patch<StudentSubjectResponse>(`/my-subjects/${id}/status`, data),
   
-  create: (data: CreateSubjectDto) => 
-    apiClient.post<Subject>('/subjects', data),
+  /** Update final exam information */
+  updateFinal: (id: string, data: UpdateFinalDto) => 
+    apiClient.post<StudentSubjectResponse>(`/my-subjects/${id}/final`, data),
   
-  update: (id: string, data: UpdateSubjectDto) => 
-    apiClient.fetch<Subject>(`/subjects/${id}`, {
-      method: 'PATCH',
-      body: JSON.stringify(data),
-    }),
-  
-  remove: (id: string) => 
-    apiClient.fetch<void>(`/subjects/${id}`, { method: 'DELETE' }),
-
-  getSuggestions: (userId: string) => 
-    apiClient.get<any[]>(`/subjects/suggestions?userId=${userId}`),
+  /** Get subject details by ID */
+  getById: (id: string) => 
+    apiClient.get<StudentSubjectResponse>(`/my-subjects/${id}`),
 };

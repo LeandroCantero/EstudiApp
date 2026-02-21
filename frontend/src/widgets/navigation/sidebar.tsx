@@ -1,11 +1,11 @@
 import { GraduationCap } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
-import { useSubjects } from '../../entities/subject/model/use-subjects';
+import { useUser } from '@/entities/user/model/use-user';
 import { ThemeToggle } from '../../shared/ui/theme-toggle';
 import { NAV_ITEMS } from './nav-config';
 
 export const Sidebar = () => {
-  const { user } = useSubjects();
+  const { user } = useUser();
 
   return (
     <aside className="hidden md:flex flex-col w-64 bg-card h-screen sticky top-0">
