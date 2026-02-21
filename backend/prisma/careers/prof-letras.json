@@ -87,7 +87,9 @@
       "hours": 48,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S12",
@@ -119,7 +121,9 @@
       "hours": 128,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a los Estudios lingüísticos"
+      ]
     },
     {
       "code": "S16",
@@ -151,7 +155,10 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Lectura, escritura y oralidad",
+        "Taller de escritura académica"
+      ]
     },
     {
       "code": "S20",
@@ -183,7 +190,9 @@
       "hours": 96,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Gramática"
+      ]
     },
     {
       "code": "S24",
@@ -191,7 +200,10 @@
       "hours": 48,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a los Estudios Literarios",
+        "Didáctica y currículum"
+      ]
     },
     {
       "code": "S25",
@@ -207,7 +219,10 @@
       "hours": 48,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Gramática",
+        "Didáctica y currículum"
+      ]
     },
     {
       "code": "S27",
@@ -215,7 +230,9 @@
       "hours": 64,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a los Estudios Literarios"
+      ]
     },
     {
       "code": "S28",
@@ -223,7 +240,9 @@
       "hours": 64,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a los Estudios Literarios"
+      ]
     },
     {
       "code": "S29",
@@ -263,7 +282,9 @@
       "hours": 48,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a los Estudios Literarios"
+      ]
     },
     {
       "code": "S34",
@@ -271,7 +292,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Lingüística general"
+      ]
     },
     {
       "code": "S35",

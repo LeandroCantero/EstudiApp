@@ -87,7 +87,10 @@
       "hours": 6,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Física",
+        "Química general"
+      ]
     },
     {
       "code": "12",
@@ -95,7 +98,9 @@
       "hours": 6,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Física"
+      ]
     },
     {
       "code": "13",
@@ -103,7 +108,9 @@
       "hours": 7,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la gestión del mantenimiento"
+      ]
     },
     {
       "code": "14",
@@ -111,7 +118,9 @@
       "hours": 7,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Electrotecnia"
+      ]
     },
     {
       "code": "15",
@@ -119,7 +128,9 @@
       "hours": 11,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Organización industrial"
+      ]
     },
     {
       "code": "16",
@@ -135,7 +146,9 @@
       "hours": 7,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Materiales y elementos de máquinas"
+      ]
     },
     {
       "code": "18",
@@ -151,7 +164,9 @@
       "hours": 6,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Física"
+      ]
     },
     {
       "code": "20",
@@ -199,7 +214,10 @@
       "hours": 11,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Planificación del Mantenimiento",
+        "Gestión de la calidad"
+      ]
     },
     {
       "code": "26",
@@ -207,7 +225,10 @@
       "hours": 6,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Probabilidad y estadística",
+        "Técnicas predictivas"
+      ]
     },
     {
       "code": "27",
@@ -231,7 +252,11 @@
       "hours": 7,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Políticas de mantenimiento I",
+        "Planificación del Mantenimiento",
+        "Gestión de la calidad"
+      ]
     },
     {
       "code": "30",
@@ -247,7 +272,10 @@
       "hours": 6,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Gestión de la calidad",
+        "Políticas de mantenimiento I"
+      ]
     },
     {
       "code": "32",
@@ -263,7 +291,10 @@
       "hours": 12,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Proyecto de integración",
+        "Políticas de mantenimiento II"
+      ]
     }
   ]
 }

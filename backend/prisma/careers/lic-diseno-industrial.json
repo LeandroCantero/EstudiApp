@@ -71,7 +71,10 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Taller de Diseño I",
+        "Morfología I"
+      ]
     },
     {
       "code": "S10",
@@ -87,7 +90,9 @@
       "hours": 96,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Tecnología I"
+      ]
     },
     {
       "code": "S12",
@@ -95,7 +100,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Tecnología I"
+      ]
     },
     {
       "code": "S13",
@@ -119,7 +126,12 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Taller de Diseño II",
+        "Taller de Diseño I",
+        "Morfología I",
+        "Morfología II"
+      ]
     },
     {
       "code": "S16",
@@ -127,7 +139,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Morfología I"
+      ]
     },
     {
       "code": "S17",
@@ -151,7 +165,9 @@
       "hours": 64,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Taller de Diseño III"
+      ]
     },
     {
       "code": "S20",
@@ -159,7 +175,10 @@
       "hours": 64,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Tecnología II",
+        "Tecnología I"
+      ]
     },
     {
       "code": "S21",
@@ -167,7 +186,9 @@
       "hours": 64,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Tecnologías de fabricación digital I"
+      ]
     },
     {
       "code": "S22",
@@ -199,7 +220,10 @@
       "hours": 64,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Taller de producción I",
+        "Tecnología I"
+      ]
     },
     {
       "code": "S26",
@@ -223,7 +247,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Taller de Diseño IV"
+      ]
     },
     {
       "code": "S29",
@@ -263,7 +289,10 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Taller de Diseño IV",
+        "Laboratorio de diseño e innovación"
+      ]
     },
     {
       "code": "S34",

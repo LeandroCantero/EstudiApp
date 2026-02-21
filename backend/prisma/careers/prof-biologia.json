@@ -87,7 +87,9 @@
       "hours": 48,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S12",
@@ -135,7 +137,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Química general e inorgánica"
+      ]
     },
     {
       "code": "S18",
@@ -151,7 +155,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Biofísica I"
+      ]
     },
     {
       "code": "S20",
@@ -183,7 +189,9 @@
       "hours": 64,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Química orgánica"
+      ]
     },
     {
       "code": "S24",
@@ -191,7 +199,9 @@
       "hours": 48,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "naturales I"
+      ]
     },
     {
       "code": "S25",
@@ -199,7 +209,9 @@
       "hours": 64,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Bioquímica"
+      ]
     },
     {
       "code": "S26",
@@ -207,7 +219,11 @@
       "hours": 64,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Genética",
+        "Zoología",
+        "Botánica"
+      ]
     },
     {
       "code": "S27",
@@ -295,7 +311,10 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Botánica",
+        "Zoología"
+      ]
     },
     {
       "code": "S38",

@@ -1,0 +1,87 @@
+
+============= ing-energia-electrica.json =============
+Year 1: Introducción a la Energía Eléctrica | Álgebra y Geometría Analítica | Química | Introducción al análisis matemático | Electrotecnia | Sistemas de representación gráfica | Física I | Materia UNAHUR | Análisis matemático I
+Year 2: Sistemas de mediciones | Programación | Circuitos eléctricos | Inglés I | Física II | Electrónica | Inglés II
+Year 3: Máquinas eléctricas I | Espacio de integración curricular I | Análisis matemático II | Termodinámica | Organización industrial | Materiales eléctricos | Física III | Matemática avanzada | Probabilidad y estadística
+Year 4: Sistemas de control | Electrónica industrial | Electromagnetismo aplicado | Máquinas eléctricas II | Análisis de circuitos y señales | Uso eficiente de la energía | Economía
+Year 5: Transmisión de la energía eléctrica | Distribución de la energía eléctrica | Generación de energía eléctrica | Legislación | Sistemas eléctricos de potencia | Optativa | Espacio de integración curricular II
+
+============= ing-metalurgica.json =============
+Year 1: Introducción a la Metalurgia | Algebra y Geometría Analítica | Química | Introducción al análisis Matemático | Metalurgia I | Sistemas de Representación Gráfica | Física I | Asignatura UNAHUR | Análisis Matemático I
+Year 2: Técnicas de Análisis | Programación | Metalurgia II | Inglés I | Física II | Probabilidad y Estadística | Inglés II | Ensayos de Materiales
+Year 3: Espacio de Integración Curricular I | Análisis Matemático II | Termodinámica | Organización Industrial | Ciencia de los Materiales | Física III | Matemática Avanzada | Química II -Inorgánica
+Year 4: Metalurgia Física | Fisicoquímica Metalúrgica | Electrotecnia y Sistemas de Control | Mecánica de los Fluidos | Instalaciones Térmicas | Soldadura | Economía
+Year 5: Refractarios y Cerámicos | Legislación | Procesos de Reducción y Aceración | Conformación Plástica | Espacio de Integración Curricular II
+
+============= lic-diseno-industrial.json =============
+Year 1: Introducción al Diseño | Sistemas de representación gráfica | Tecnología I | Modelado | Taller de Diseño I | Matemática | Morfología I | universidad
+Year 2: Taller de Diseño II | Tecnología y sociedad | Taller de producción I | Tecnología II | Programación | Ciencias aplicadas al diseño | Taller de Diseño III | Morfología II | Tecnologías de fabricación digital I | Asignatura UNAHUR
+Year 3: Taller de Diseño IV | Tecnología III | Tecnologías de fabricación digital II | Diseño e industria | Inglés I | Diseño Centrado en las personas | Taller de producción II | diseño | Gestión del conocimiento
+Year 4: Laboratorio de diseño e innovación | Nuevas tecnologías | usuario | Gestión de proyectos | Comunicación de proyecto | Proyecto final | Economía y diseño | Diseño, ética y sociedad | Sustentabilidad
+
+============= lic-gestion-ambiental.json =============
+Year 1: Introducción a la cuestión ambiental CIC | Matemática I CFB | Biología CFE | Introducción a la química CFB | Asignatura Unahur CFC | Ecología CFE | Matemática II CFB | Química general e inorgánica CFB | Legislación ambiental CFE | Problemáticas ambientales urbanas CFE | Higiene y seguridad CFE | Cultura y alfabetización digital en la UniversidadCFC
+Year 2: Taller integrado de gestión ambiental CIC | Física CFB | Matemática III CFB | Geología ambiental CFE | Climatología CFE | Ecología política CFE | Fisicoquímica CFB | Química ambiental CFE | Gestión del agua CFE
+Year 3: Economía ambiental CFE | Estadística y diseño experimental CFB | Cartografía y SIG CFE | Educación ambiental CFE | Gestión de residuos CFE | Química analítica aplicada CFE | Evaluación de sitios contaminados CFE | Política ambiental CFE | Muestreo ambiental CFE
+Year 4: Gestión integral de proyectos CIC | Taller de trabajo final CIC | Tecnologías de remediación CFE | Gestión ambiental en gobiernos locales CFE | Manejo integrado de cuencas CFE | Gestión de la infraestructura verde urbana CFE | Gestión comunitaria en salud y ambiente CFE | Energía y ambiente CFE | Gestión integral del riesgo CFE
+
+============= lic-gestion-mantenimiento.json =============
+Year 1: Matemática | Introducción a la gestión del mantenimiento | Cultura y alfabetización digital en la universidad | Química general | Organización industrial | Física | Electrotecnia | Asignatura Unahur | Seguridad, higiene y medio ambiente | Sistemas de Representación Gráfica
+Year 2: Materiales y elementos de máquinas | Hidráulica y Neumática | Planificación del Mantenimiento | Instalaciones eléctricas | Instalaciones industriales | Control de gestión | Técnicas predictivas | Gestión de la calidad
+Year 3: Redes de datos y comunicaciones | Proyecto de integración | Economía y Costo del ciclo de vida de los Activos | Probabilidad y estadística | Organización y planeamiento estratégico del mantenimiento | Contratos y Gestión de proveedores | Políticas de mantenimiento I
+Year 4: Análisis de confiabilidad | Administración de paradas de planta | Eficiencia energética | Políticas de mantenimiento II | Etica y ejercicio profesional | Sistema de Gestión de Activos. Auditorías de mantenimiento | Sistemas informáticos de Mantenimiento (SIM) | Proyecto Final
+
+============= lic-kinesiologia.json =============
+Year 1: Cultura y alfabetización digital en la universidad | Anátomo-Fisiología I | Introducción to la Salud Comunitaria | Fundamentos de la Kinesiología y Fisiatría | Desarrollo de las Capacidades Funcionales | Anátomo-Fisiología II | Salud Comunitaria I | Antropología | Valoración Funcional I | Comunicación en Salud
+Year 2: Salud Comunitaria II | Aptitud Física y Ejercicio Saludable | Valoración Funcional II | Bases y Fundamentos del Diagnóstico en Salud | Práctica Kinefisiátrica I | Introducción a la Nutrición | Salud Comunitaria III | Fisiopatología | Valoración Funcional III | Práctica Kinefisiátrica II
+Year 3: Salud Comunitaria IV | Ateneo Clínico I | Farmacología | Psicología | Historia Sociosanitaria de la Salud | Valoración Funcional IV | Kinefisiatría I | Ateneo Clínico II | Kinefisiatría II | Práctica Kinefisiátrica III
+Year 4: Salud Comunitaria V | Deontología y aspectos legales del ejercicio profesional de la Kinesiología y Fisiatría | Asignatura UNAHUR | Kinefisiatría III | Terapéutica Kinésica Cardio-Respiratoria | Práctica Kinefisiátrica IV | Ética y desarrollo Profesional | Práctica Kinefisiátrica V | Kinefisiatría IV | Kinesiología y Fisiatría Laboral y Ergonomía | Práctica comunitaria en kinesiología
+
+============= lic-nutricion.json =============
+Year 1: Cultura y alfabetización digital en la universidad | Bioquímica | Introducción a la nutrición | Anátomo-Fisiología I | Introducción a la Salud Comunitaria | Idioma extranjero | Anátomo-Fisiología II | Salud Comunitaria I | Bioquímica Aplicada | Fundamentos de la Nutrición
+Year 2: Microbiología | Salud Comunitaria II | Introducción a la Tecnología de los Alimentos | Nutrición en la Infancia y la Adolescencia | Técnica en el Manejo de los Alimentos I | Psicología | Antropología | Salud Comunitaria III | Bromatología y Microbiología de los Alimentos | Técnica en el Manejo de los Alimentos II | PPS: Prácticas en Nutrición Comunitaria y Gestión I
+Year 3: Ética y Desarrollo Profesional | Salud Comunitaria IV | Fisiopatología y Dietoterapia de la persona adulta I | Evaluación Nutricional | PPS: Prácticas en Nutrición Comunitaria y Gestión II | Farmacología | Fisiopatología y Dietoterapia de la persona adulta II | Técnica Dietoterápica I | Fisiopatología y Dietoterapia en la Infancia y la adolescencia | Economía y Producción Regional de Alimentos
+Year 4: Salud Comunitaria V | Educación Alimentaria y Nutricional | Técnica Dietoterápica II | Psicología aplicada a la Nutrición | Fundamentos de los diferentes patrones de alimentación | Historia Sociosanitaria de la Salud | Gestión y Administración de los Servicios de Alimentación | Tecnología e Investigación en el desarrollo de los alimentos | Estadística y análisis de datos en ciencias de la salud | PPS: Práctica en la Industria Alimentaria I
+Year 5: PPS: Práctica en la Industria Alimentaria II | Política de salud alimentaria nacional y latinoamericana | PPS: Práctica en Administración de Servicios de Alimentación | Trabajo final | Nutrición en la actividad física y el deporte | Nutrigenómica y actualización de paradigmas en nutrición | PPS: Práctica en dietoterapia
+
+============= lic-obstetricia.json =============
+Year 1: Introducción a la Salud Comunitaria | Anátomo-Fisiología I | Genética Humana | Introducción a la Obstetricia | Anátomo-Fisiología II | Salud Comunitaria I | Bioquímica | Cultura y alfabetización digital en la universidad
+Year 2: Introducción a la Nutrición | Salud Comunitaria II | Obstetricia I | Salud Sexual y Reproductiva | Obstetricia II | Antropología | Salud Comunitaria III | Asignatura UNAHUR
+Year 3: Psicología | Obstetricia III | Salud Comunitaria IV | Deontología y aspectos legales del ejercicio profesional de la obstetricia | Obstetricia patológica | Obstetricia IV | Preparación Integral para la maternidad | Microbiología | Farmacología
+Year 4: Evaluación de salud fetal | Farmacología Obstétrica | Práctica obstétrica integrada I | Taller de investigación I | Salud Comunitaria V | Historia Sociosanitaria de la Salud | Ética y desarrollo Profesional | Puericultura | Taller de investigación II | Práctica obstétrica integrada II
+
+============= prof-biologia.json =============
+Year 1: Pedagogía | Lectura, escritura y oralidad | educativas | instituciones | celular y molecular | Química general e inorgánica | para Biología | Zoología | Botánica | digital en la universidad
+Year 2: Didáctica y currículum | Educación Sexual Integral | latinoamericano | el ámbito socioeducativo | Biofísica I | naturales I | Química orgánica | humana | Biofísica II | laboratorio
+Year 3: Educación superior | Asignatura UNAHUR | Bioquímica | naturales II | Microbiología e Inmunología | Evolución | Genética | Historia de la ciencia | nivel secundario
+Year 4: Tecnología educativa | Política educativa | experimental | Ciencias naturales | Ciencias de la Tierra | Educación ambiental | Educación para la salud | Ecología general | nivel superior
+
+============= prof-educacion-fisica.json =============
+Year 1: Pedagogía | Lectura, escritura y oralidad | Aprendizajes y prácticas educativas | Territorio, sujetos e instituciones | Deporte comunitario | Educación física en la niñez | Taller de prácticas lúdicas | Educación física en el joven y el adulto | didáctica I | Prácticas gimnásticas I
+Year 2: Didáctica y curriculum | Educación sexual integral | latinoamericano | universidad | socioeducativo | didáctica II | Prácticas gimnásticas II | didáctica III | didáctica - Natación I | Educación física
+Year 3: proyectos educativos | superior | Asignatura UNAHUR | y primario | Diseño de proyectos sociocomunitarios | didáctica IV | discapacidad | Taller de primeros auxilios | didáctica - Natación II | Historia de la Educación física argentina
+Year 4: Tecnología educativa | Política educativa | secundario y superior | Educación ambiental | didáctica - Atletismo | Teoría de la Educación física | física y desarrollo curricular | expresivas | entrenamiento deportivo
+
+============= prof-geografia.json =============
+Year 1: Pedagogía | Lectura, escritura y oralidad | Aprendizajes y prácticas educativas | Territorio, sujetos e instituciones | Introducción a la Geografía | Cartografía | Geografía social I | Geografía económica | universidad
+Year 2: Didáctica y curriculum | Educación Sexual Integral | Pensamiento pedagógico latinoamericano | socioeducativo | Geografía social II | Geografía ambiental I | Geografía política | Geografía ambiental II | Teoría de la Geografía
+Year 3: proyectos Educativos | superior | Asignatura UNAHUR | Didáctica de las Ciencias sociales | Geografía ambiental de la Argentina | Geografía urbana | Geografía rural | Didáctica de la Geografía | Sistemas Informáticos Geográficos | Prácticas docentes en el nivel secundario
+Year 4: Política educativa | capitalistas periféricos I | Problemas territoriales de la Argentina | capitalistas centrales | capitalistas periféricos II | Investigación educativa en Geografía | Prácticas docentes en el nivel superior
+
+============= prof-ingles.json =============
+Year 1: Lengua inglesa I | Gramática inglesa I | Fonética y práctica en laboratorio I | Pedagogía | Lectura, escritura y oralidad | Aprendizajes y prácticas educativas | Territorio, sujetos e instituciones
+Year 2: Lengua inglesa II | Gramática inglesa II | Fonética y práctica en laboratorio II | Didáctica y curriculum | Educación Sexual Integral | latinoamericano | universidad | socioeducativo
+Year 3: Lengua inglesa III | Fonética y práctica en laboratorio III | Lingüística | extranjera | primario | proyectos educativos | superior | Asignatura UNAHUR | Prácticas docentes en el nivel primario
+Year 4: Lengua inglesa IV | Fonética y práctica en laboratorio IV | Español | secundario y superior | extranjeras | Estudios literarios | Tecnología educativa | Política educativa
+
+============= prof-letras.json =============
+Year 1: Pedagogía | Lectura, escritura y oralidad | Aprendizajes y prácticas educativas | Territorio, sujetos e instituciones | Introducción a los Estudios Literarios | Taller de escritura creativa | Introducción a los Estudios lingüísticos | Taller de escritura académica | Literatura infantil y juvenil | universidad
+Year 2: Didáctica y currículum | Educación Sexual Integral | Pensamiento pedagógico latinoamericano | socioeducativo | Gramática | clásica | Literaturas premodernas europeas | Teoría y práctica de proyectos culturales | Didáctica de la lectura y la escritura
+Year 3: proyectos Educativos | Superior | Asignatura UNAHUR | Lingüística general | Didáctica de la literatura | originarios de América | Didáctica de la Lengua | Literatura argentina | Literatura latinoamericana | Prácticas docentes en el Nivel Secundario
+Year 4: Tecnología educativa | Política educativa | Alfabetización | Teoría y crítica literaria | Análisis del discurso | Políticas del lenguaje | Literaturas modernas europeas | adultos | Prácticas docentes en el Nivel Superior
+
+============= prof-matematica.json =============
+Year 1: Pedagogía | Lectura, escritura y oralidad | Aprendizajes y prácticas educativas | Territorio, sujetos e instituciones | Introducción al análisis matemático | Geometría euclideana y analítica | Algoritmos y estructura de datos | universidad
+Year 2: Didáctica y curriculum | Educación sexual integral | latinoamericano | socioeducativo | Álgebra lineal | Análisis matemático I | Análisis matemático II | Teoría de números | Matemática discreta | secundario I
+Year 3: Historia de la Nación Argentina y sus | Superior | Asignatura UNAHUR | matemática | Probabilidad y estadística | Didáctica de la matemática I | Fundamentos de la matemática I | Análisis complejo | secundario II
+Year 4: Política educativa | Computación científica | Didáctica de la matemática II | Fundamentos de la matemática II | Modelos matemáticos | Prácticas docentes en el nivel superior | Investigación educativa en matemática

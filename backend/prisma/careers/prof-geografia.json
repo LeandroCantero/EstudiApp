@@ -79,7 +79,9 @@
       "hours": 48,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S11",
@@ -111,7 +113,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Geografía social I"
+      ]
     },
     {
       "code": "S15",
@@ -119,7 +123,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la Geografía"
+      ]
     },
     {
       "code": "S16",
@@ -127,7 +133,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Geografía social I"
+      ]
     },
     {
       "code": "S17",
@@ -135,7 +143,10 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Geografía ambiental I",
+        "Introducción a la Geografía"
+      ]
     },
     {
       "code": "S18",
@@ -143,7 +154,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la Geografía"
+      ]
     },
     {
       "code": "S19",
@@ -175,7 +188,9 @@
       "hours": 64,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Didáctica y curriculum"
+      ]
     },
     {
       "code": "S23",
@@ -183,7 +198,9 @@
       "hours": 64,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Geografía ambiental I"
+      ]
     },
     {
       "code": "S24",
@@ -207,7 +224,9 @@
       "hours": 64,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Didáctica de las Ciencias sociales"
+      ]
     },
     {
       "code": "S27",
@@ -215,7 +234,9 @@
       "hours": 48,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Cartografía"
+      ]
     },
     {
       "code": "S28",
@@ -247,7 +268,10 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Geografía ambiental de la Argentina",
+        "Geografía económica"
+      ]
     },
     {
       "code": "S32",
@@ -263,7 +287,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "capitalistas periféricos I"
+      ]
     },
     {
       "code": "S34",

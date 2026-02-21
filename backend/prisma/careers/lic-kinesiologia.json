@@ -47,7 +47,9 @@
       "hours": 6,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Anátomo-Fisiología I"
+      ]
     },
     {
       "code": "7",
@@ -87,7 +89,9 @@
       "hours": 9,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Salud Comunitaria I"
+      ]
     },
     {
       "code": "12",
@@ -103,7 +107,10 @@
       "hours": 4,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Valoración Funcional I",
+        "Anátomo-Fisiología I"
+      ]
     },
     {
       "code": "14",
@@ -111,7 +118,9 @@
       "hours": 4,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Anátomo-Fisiología II"
+      ]
     },
     {
       "code": "15",
@@ -119,7 +128,9 @@
       "hours": 5,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Fundamentos de la Kinesiología y Fisiatría"
+      ]
     },
     {
       "code": "16",
@@ -135,7 +146,9 @@
       "hours": 9,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Salud Comunitaria II"
+      ]
     },
     {
       "code": "18",
@@ -143,7 +156,9 @@
       "hours": 3,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Anátomo-Fisiología II"
+      ]
     },
     {
       "code": "19",
@@ -151,7 +166,11 @@
       "hours": 5,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Valoración Funcional II",
+        "Valoración Funcional I",
+        "Anátomo-Fisiología I"
+      ]
     },
     {
       "code": "20",
@@ -159,7 +178,10 @@
       "hours": 4,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Práctica Kinefisiátrica I",
+        "Fundamentos de la Kinesiología y Fisiatría"
+      ]
     },
     {
       "code": "21",
@@ -167,7 +189,9 @@
       "hours": 9,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Salud Comunitaria III"
+      ]
     },
     {
       "code": "22",
@@ -183,7 +207,9 @@
       "hours": 3,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Anátomo-Fisiología II"
+      ]
     },
     {
       "code": "24",
@@ -207,7 +233,9 @@
       "hours": 5,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Valoración Funcional III"
+      ]
     },
     {
       "code": "27",
@@ -215,7 +243,10 @@
       "hours": 5,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Fisiopatología",
+        "Valoración Funcional II"
+      ]
     },
     {
       "code": "28",
@@ -223,7 +254,9 @@
       "hours": 4,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Ateneo Clínico I"
+      ]
     },
     {
       "code": "29",
@@ -231,7 +264,11 @@
       "hours": 6,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Kinefisiatría I",
+        "Fisiopatología",
+        "Valoración Funcional II"
+      ]
     },
     {
       "code": "30",
@@ -239,7 +276,11 @@
       "hours": 6,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Práctica Kinefisiátrica II",
+        "Fundamentos de la Kinesiología y Fisiatría",
+        "Práctica Kinefisiátrica I"
+      ]
     },
     {
       "code": "31",
@@ -271,7 +312,12 @@
       "hours": 5,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Kinefisiatría II",
+        "Fisiopatología",
+        "Valoración Funcional II",
+        "Kinefisiatría I"
+      ]
     },
     {
       "code": "35",
@@ -279,7 +325,10 @@
       "hours": 6,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Kinefisiatría I",
+        "Fisiopatología"
+      ]
     },
     {
       "code": "36",
@@ -287,7 +336,10 @@
       "hours": 7,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Práctica Kinefisiátrica III",
+        "Fundamentos de la Kinesiología y Fisiatría"
+      ]
     },
     {
       "code": "37",
@@ -303,7 +355,9 @@
       "hours": 7,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Práctica Kinefisiátrica IV"
+      ]
     },
     {
       "code": "39",
@@ -311,7 +365,11 @@
       "hours": 5,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Kinefisiatría III",
+        "Fisiopatología",
+        "Valoración Funcional II"
+      ]
     },
     {
       "code": "40",
@@ -319,7 +377,9 @@
       "hours": 5,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Valoración Funcional IV"
+      ]
     },
     {
       "code": "41",

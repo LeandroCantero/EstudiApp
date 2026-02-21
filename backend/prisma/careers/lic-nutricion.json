@@ -55,7 +55,9 @@
       "hours": 6,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Anátomo-Fisiología I"
+      ]
     },
     {
       "code": "8",
@@ -71,7 +73,9 @@
       "hours": 6,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Bioquímica"
+      ]
     },
     {
       "code": "10",
@@ -87,7 +91,10 @@
       "hours": 3,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Bioquímica Aplicada",
+        "Anátomo-Fisiología II"
+      ]
     },
     {
       "code": "12",
@@ -95,7 +102,9 @@
       "hours": 9,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Salud Comunitaria I"
+      ]
     },
     {
       "code": "13",
@@ -103,7 +112,9 @@
       "hours": 5,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Bioquímica Aplicada"
+      ]
     },
     {
       "code": "14",
@@ -111,7 +122,9 @@
       "hours": 6,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Fundamentos de la Nutrición"
+      ]
     },
     {
       "code": "15",
@@ -119,7 +132,9 @@
       "hours": 6,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la nutrición"
+      ]
     },
     {
       "code": "16",
@@ -143,7 +158,9 @@
       "hours": 9,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Salud Comunitaria II"
+      ]
     },
     {
       "code": "19",
@@ -151,7 +168,12 @@
       "hours": 4,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Bioquímica Aplicada",
+        "Anátomo-Fisiología II",
+        "Microbiología",
+        "Introducción a la Tecnología de los Alimentos"
+      ]
     },
     {
       "code": "20",
@@ -159,7 +181,10 @@
       "hours": 6,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Técnica en el Manejo de los Alimentos I",
+        "Introducción a la nutrición"
+      ]
     },
     {
       "code": "21",
@@ -183,7 +208,9 @@
       "hours": 9,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Salud Comunitaria III"
+      ]
     },
     {
       "code": "24",
@@ -191,7 +218,10 @@
       "hours": 6,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Anátomo-Fisiología II",
+        "Fundamentos de la Nutrición"
+      ]
     },
     {
       "code": "25",
@@ -199,7 +229,10 @@
       "hours": 6,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Anátomo-Fisiología II",
+        "Fundamentos de la Nutrición"
+      ]
     },
     {
       "code": "26",
@@ -207,7 +240,9 @@
       "hours": 6,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "PPS: Prácticas en Nutrición Comunitaria y Gestión I"
+      ]
     },
     {
       "code": "27",
@@ -215,7 +250,9 @@
       "hours": 3,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Anátomo-Fisiología II"
+      ]
     },
     {
       "code": "28",
@@ -223,7 +260,11 @@
       "hours": 5,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Fisiopatología y Dietoterapia de la persona adulta I",
+        "Anátomo-Fisiología II",
+        "Fundamentos de la Nutrición"
+      ]
     },
     {
       "code": "29",
@@ -231,7 +272,10 @@
       "hours": 5,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Técnica en el Manejo de los Alimentos II",
+        "Fisiopatología y Dietoterapia de la persona adulta I"
+      ]
     },
     {
       "code": "30",
@@ -239,7 +283,10 @@
       "hours": 7,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Nutrición en la Infancia y la Adolescencia",
+        "Fisiopatología y Dietoterapia de la persona adulta I"
+      ]
     },
     {
       "code": "31",
@@ -263,7 +310,10 @@
       "hours": 5,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Psicología",
+        "Fundamentos de la Nutrición"
+      ]
     },
     {
       "code": "34",
@@ -271,7 +321,11 @@
       "hours": 5,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Técnica Dietoterápica I",
+        "Técnica en el Manejo de los Alimentos II",
+        "Fisiopatología y Dietoterapia de la persona adulta I"
+      ]
     },
     {
       "code": "35",
@@ -303,7 +357,9 @@
       "hours": 5,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Economía y Producción Regional de Alimentos"
+      ]
     },
     {
       "code": "39",
@@ -335,7 +391,9 @@
       "hours": 7,
       "year": 5,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "PPS: Práctica en la Industria Alimentaria I"
+      ]
     },
     {
       "code": "43",
@@ -367,7 +425,10 @@
       "hours": 4,
       "year": 5,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Anátomo-Fisiología II",
+        "Fisiopatología y Dietoterapia de la persona adulta I"
+      ]
     },
     {
       "code": "47",

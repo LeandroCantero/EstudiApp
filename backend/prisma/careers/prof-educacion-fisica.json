@@ -63,7 +63,9 @@
       "hours": 64,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Educación física en la niñez"
+      ]
     },
     {
       "code": "S9",
@@ -87,7 +89,9 @@
       "hours": 48,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S12",
@@ -127,7 +131,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "didáctica I"
+      ]
     },
     {
       "code": "S17",
@@ -135,7 +141,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Prácticas gimnásticas I"
+      ]
     },
     {
       "code": "S18",
@@ -143,7 +151,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "didáctica II"
+      ]
     },
     {
       "code": "S19",
@@ -207,7 +217,9 @@
       "hours": 64,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "didáctica III"
+      ]
     },
     {
       "code": "S27",
@@ -231,7 +243,9 @@
       "hours": 64,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "didáctica - Natación I"
+      ]
     },
     {
       "code": "S30",
@@ -287,7 +301,10 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía",
+        "Historia de la Educación física argentina"
+      ]
     },
     {
       "code": "S37",

@@ -83,7 +83,9 @@
       "hours": 96,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Programación con Objetos I"
+      ]
     },
     {
       "code": "11",
@@ -192,7 +194,9 @@
       "hours": 32,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Inglés I"
+      ]
     },
     {
       "code": "24",
@@ -201,7 +205,8 @@
       "year": 3,
       "period": 1,
       "correlatives": [
-        "Análisis Matemático"
+        "Análisis Matemático",
+        "Matemática II"
       ]
     },
     {
@@ -262,7 +267,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Programación con Objetos II"
+      ]
     },
     {
       "code": "32",
@@ -270,7 +277,9 @@
       "hours": 32,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "UNAHUR I"
+      ]
     },
     {
       "code": "33",
@@ -334,7 +343,9 @@
       "hours": 64,
       "year": 5,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Arquitectura de Software I"
+      ]
     },
     {
       "code": "41",
@@ -350,7 +361,9 @@
       "hours": 64,
       "year": 5,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Optativa I"
+      ]
     },
     {
       "code": "43",

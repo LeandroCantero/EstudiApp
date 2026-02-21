@@ -127,7 +127,9 @@
       "hours": 9,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Programación de videojuegos I"
+      ]
     }
   ]
 }

@@ -55,7 +55,9 @@
       "hours": 64,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Matemática I"
+      ]
     },
     {
       "code": "9",
@@ -127,7 +129,9 @@
       "hours": 96,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Matemática II"
+      ]
     },
     {
       "code": "16",
@@ -231,7 +235,9 @@
       "hours": 96,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Bioquímica I"
+      ]
     },
     {
       "code": "35",

@@ -47,7 +47,9 @@
       "hours": 48,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Electromovilidad I"
+      ]
     },
     {
       "code": "E7",
@@ -71,7 +73,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Física I"
+      ]
     },
     {
       "code": "E10",
@@ -119,7 +123,9 @@
       "hours": 48,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Electromovilidad II"
+      ]
     },
     {
       "code": "E16",

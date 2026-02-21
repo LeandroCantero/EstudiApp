@@ -63,7 +63,9 @@
       "hours": 128,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Lengua inglesa I"
+      ]
     },
     {
       "code": "S9",
@@ -71,7 +73,9 @@
       "hours": 96,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Gramática inglesa I"
+      ]
     },
     {
       "code": "S10",
@@ -79,7 +83,9 @@
       "hours": 128,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Fonética y práctica en laboratorio I"
+      ]
     },
     {
       "code": "S11",
@@ -87,7 +93,9 @@
       "hours": 48,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S12",
@@ -127,7 +135,9 @@
       "hours": 96,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Lengua inglesa II"
+      ]
     },
     {
       "code": "S17",
@@ -135,7 +145,9 @@
       "hours": 48,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Fonética y práctica en laboratorio II"
+      ]
     },
     {
       "code": "S18",
@@ -143,7 +155,9 @@
       "hours": 48,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Gramática inglesa II"
+      ]
     },
     {
       "code": "S19",
@@ -191,7 +205,10 @@
       "hours": 160,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Didáctica y curriculum",
+        "Lengua inglesa II"
+      ]
     },
     {
       "code": "S25",
@@ -199,7 +216,9 @@
       "hours": 96,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Lengua inglesa III"
+      ]
     },
     {
       "code": "S26",
@@ -207,7 +226,9 @@
       "hours": 48,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Fonética y práctica en laboratorio III"
+      ]
     },
     {
       "code": "S27",
@@ -239,7 +260,9 @@
       "hours": 48,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Lengua inglesa III"
+      ]
     },
     {
       "code": "S31",

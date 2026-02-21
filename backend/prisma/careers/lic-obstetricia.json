@@ -39,7 +39,9 @@
       "hours": 6,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Anátomo-Fisiología I"
+      ]
     },
     {
       "code": "6",
@@ -79,7 +81,9 @@
       "hours": 9,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Salud Comunitaria I"
+      ]
     },
     {
       "code": "11",
@@ -87,7 +91,10 @@
       "hours": 9,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la Obstetricia",
+        "Anátomo-Fisiología I"
+      ]
     },
     {
       "code": "12",
@@ -95,7 +102,9 @@
       "hours": 9,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Anátomo-Fisiología II"
+      ]
     },
     {
       "code": "13",
@@ -103,7 +112,11 @@
       "hours": 9,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Obstetricia I",
+        "Introducción a la Obstetricia",
+        "Anátomo-Fisiología I"
+      ]
     },
     {
       "code": "14",
@@ -119,7 +132,9 @@
       "hours": 9,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Salud Comunitaria II"
+      ]
     },
     {
       "code": "16",
@@ -143,7 +158,12 @@
       "hours": 10,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Obstetricia II",
+        "Introducción a la Obstetricia",
+        "Anátomo-Fisiología I",
+        "Obstetricia I"
+      ]
     },
     {
       "code": "19",
@@ -151,7 +171,9 @@
       "hours": 9,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Salud Comunitaria III"
+      ]
     },
     {
       "code": "20",
@@ -167,7 +189,10 @@
       "hours": 6,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Obstetricia III",
+        "Bioquímica"
+      ]
     },
     {
       "code": "22",
@@ -175,7 +200,11 @@
       "hours": 10,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Obstetricia III",
+        "Introducción a la Obstetricia",
+        "Anátomo-Fisiología I"
+      ]
     },
     {
       "code": "23",
@@ -183,7 +212,9 @@
       "hours": 5,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Obstetricia II"
+      ]
     },
     {
       "code": "24",
@@ -191,7 +222,9 @@
       "hours": 3,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Bioquímica"
+      ]
     },
     {
       "code": "25",
@@ -199,7 +232,9 @@
       "hours": 3,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Anátomo-Fisiología II"
+      ]
     },
     {
       "code": "26",
@@ -207,7 +242,9 @@
       "hours": 4,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Obstetricia patológica"
+      ]
     },
     {
       "code": "27",
@@ -215,7 +252,11 @@
       "hours": 5,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Anátomo-Fisiología II",
+        "Farmacología",
+        "Obstetricia patológica"
+      ]
     },
     {
       "code": "28",
@@ -223,7 +264,10 @@
       "hours": 12,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Obstetricia IV",
+        "Obstetricia patológica"
+      ]
     },
     {
       "code": "29",
@@ -263,7 +307,9 @@
       "hours": 4,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Obstetricia III"
+      ]
     },
     {
       "code": "34",
@@ -271,7 +317,9 @@
       "hours": 4,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Taller de investigación I"
+      ]
     },
     {
       "code": "35",
@@ -279,7 +327,11 @@
       "hours": 12,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Práctica obstétrica integrada I",
+        "Obstetricia IV",
+        "Obstetricia patológica"
+      ]
     }
   ]
 }

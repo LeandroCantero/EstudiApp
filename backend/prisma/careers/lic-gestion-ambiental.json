@@ -95,7 +95,9 @@
       "hours": 96,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la cuestión ambiental CIC"
+      ]
     },
     {
       "code": "14",
@@ -103,7 +105,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Matemática I CFB"
+      ]
     },
     {
       "code": "15",
@@ -119,7 +123,10 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Ecología CFE",
+        "Química general e inorgánica CFB"
+      ]
     },
     {
       "code": "17",
@@ -127,7 +134,10 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Física CFB",
+        "Matemática II CFB"
+      ]
     },
     {
       "code": "18",
@@ -143,7 +153,10 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Física CFB",
+        "Química general e inorgánica CFB"
+      ]
     },
     {
       "code": "21",
@@ -151,7 +164,9 @@
       "hours": 96,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Fisicoquímica CFB"
+      ]
     },
     {
       "code": "22",
@@ -159,7 +174,10 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Climatología CFE",
+        "Geología ambiental CFE"
+      ]
     },
     {
       "code": "23",
@@ -207,7 +225,9 @@
       "hours": 32,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Química ambiental CFE"
+      ]
     },
     {
       "code": "32",
@@ -215,7 +235,10 @@
       "hours": 48,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Química analítica aplicada CFE",
+        "Geología ambiental CFE"
+      ]
     },
     {
       "code": "33",
@@ -231,7 +254,10 @@
       "hours": 96,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Economía ambiental CFE",
+        "Política ambiental CFE"
+      ]
     },
     {
       "code": "35",
@@ -247,7 +273,9 @@
       "hours": 48,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Evaluación de sitios contaminados CFE"
+      ]
     },
     {
       "code": "37",
@@ -263,7 +291,9 @@
       "hours": 48,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Gestión del agua CFE"
+      ]
     },
     {
       "code": "39",
@@ -311,7 +341,9 @@
       "hours": 64,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Estadística y diseño experimental CFB"
+      ]
     }
   ]
 }
