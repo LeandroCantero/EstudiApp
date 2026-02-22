@@ -1,5 +1,5 @@
 import { apiClient } from '../../../shared/api/base';
-import { UpdateFinalDto, UpdateSubjectStatusDto } from '../model/types';
+import { CreateNoteDto, SubjectNote, UpdateFinalDto, UpdateSubjectStatusDto } from '../model/types';
 
 export interface StudentSubjectResponse {
   id: string;
@@ -16,6 +16,7 @@ export interface StudentSubjectResponse {
       hours: number;
     };
   };
+  attemptCount: number;
 }
 
 export const subjectApi = {
@@ -34,4 +35,16 @@ export const subjectApi = {
   /** Get subject details by ID */
   getById: (id: string) => 
     apiClient.get<StudentSubjectResponse>(`/my-subjects/${id}`),
+
+  /** US-04: Get notes for a subject */
+  getNotes: (studentSubjectId: string) => 
+    apiClient.get<SubjectNote[]>(`/notes/subject/${studentSubjectId}`),
+
+  /** US-04: Create a note for a subject */
+  createNote: (studentSubjectId: string, data: CreateNoteDto) => 
+    apiClient.post<SubjectNote>(`/notes/subject/${studentSubjectId}`, data),
+
+  /** Delete a note */
+  deleteNote: (id: string) => 
+    apiClient.delete(`/notes/${id}`),
 };

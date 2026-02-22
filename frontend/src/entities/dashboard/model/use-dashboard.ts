@@ -12,12 +12,15 @@ export interface DashboardData {
   totalCredits: number;
   estimatedGraduationDate: string;
   remainingSubjects: number;
+  averageVelocity: number;
 }
 
 export interface Recommendation {
   id: string;
   priorityScore: number;
-  unlocksCount: number;
+  transitiveImpact: number;
+  matchesSeason: boolean;
+  hours: number;
   careerSubject: {
     id: string;
     code: string;

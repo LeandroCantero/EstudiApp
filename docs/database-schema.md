@@ -23,6 +23,7 @@ erDiagram
     STUDENT_SUBJECT ||--o{ SUBJECT_NOTE : notas
     STUDENT_SUBJECT ||--o{ EXAM : examenes
     STUDENT_SUBJECT ||--o{ EVENT : eventos
+    EXAM |o--o| EVENT : sincroniza
 ```
 
 ## 🗂️ Tablas Principales
@@ -123,9 +124,10 @@ Parciales, recuperatorios, finales.
 | id | UUID | PK |
 | studentSubjectId | UUID | FK |
 | type | String | Tipo: parcial1, parcial2, final, etc |
-| date | DateTime | Fecha del examen |
+| date | DateTime? | Fecha del examen (Opcional) |
 | grade | Float? | Nota obtenida |
 | maxGrade | Float | Nota máxima (default: 10) |
+| eventId | UUID? | FK (Unique) → Event (Sync Calendario) |
 
 ### 4. Créditos Extracurriculares
 
@@ -151,6 +153,7 @@ Parciales, recuperatorios, finales.
 | type | String | parcial, final, entrega, general |
 | date | DateTime | Fecha |
 | description | String? | Descripción |
+| examRecord | Exam? | Relación inversa con Exam |
 
 ### 6. Recursos
 

@@ -159,9 +159,13 @@ model Exam {
   studentSubject    StudentSubject @relation(fields: [studentSubjectId], references: [id], onDelete: Cascade)
   
   type              String   // "parcial1", "parcial2", "recuperatorio", "final", "promocion"
-  date              DateTime // Fecha del examen
+  date              DateTime? // Fecha del examen (Opcional)
   grade             Float?   // Nota obtenida
   maxGrade          Float    @default(10)
+  
+  // Sincronización con calendario
+  eventId           String?  @unique
+  calendarEvent     Event?   @relation(fields: [eventId], references: [id], onDelete: SetNull)
   
   createdAt         DateTime @default(now())
   updatedAt         DateTime @updatedAt
@@ -205,6 +209,8 @@ model Event {
   
   createdAt         DateTime @default(now())
   updatedAt         DateTime @updatedAt
+  
+  exam              Exam?    // Relación inversa con examen
 }
 
 // =====================================================

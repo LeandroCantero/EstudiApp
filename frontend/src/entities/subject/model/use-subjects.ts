@@ -26,6 +26,7 @@ export const useSubjects = () => {
       year: item.careerSubject.year ?? undefined,
       period: item.careerSubject.period ?? undefined,
       userId: '',
+      attemptCount: item.attemptCount,
     }));
   };
 

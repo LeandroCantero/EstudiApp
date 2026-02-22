@@ -147,25 +147,86 @@ export class UsersService {
       (s: any) => s.status === SubjectStatus.REGULARIZADA
     ).length;
 
-    // Materias pendientes (no aprobadas ni regularizadas)
-    const remainingSubjects = totalSubjects - approvedSubjects - regularizedSubjects;
+    // Materias pendientes (no aprobadas)
+    const pendingSubjects = activeCareerSubjects.filter(
+      (s: any) => s.status !== SubjectStatus.PROMOCIONADA
+    );
+    const remainingSubjectsCount = pendingSubjects.length;
 
-    // Tasa histórica: promedio de materias aprobadas por cuatrimestre
-    // Por defecto asumimos 3 materias por cuatrimestre si no hay historial
-    const averageProgress = 3;
+    if (remainingSubjectsCount === 0) {
+      return {
+        estimatedDate: new Date(),
+        remainingSubjects: 0,
+        averageProgress: 0,
+      };
+    }
 
-    // Cuatrimestres restantes
-    const remainingQuarters = Math.ceil(remainingSubjects / averageProgress);
+    // 1. Calcular Velocidad Real (Materias aprobadas por cuatrimestre)
+    const enrollmentDate = user.userCareers[0].createdAt;
+    const now = new Date();
+    const monthsPassed = (now.getFullYear() - enrollmentDate.getFullYear()) * 12 + (now.getMonth() - enrollmentDate.getMonth());
+    const semestersPassed = Math.max(1, Math.ceil(monthsPassed / 6));
+    
+    // Tasa histórica: materias aprobadas / cuatrimestres cursados
+    // Minimo 2 para no ser excesivamente pesimista en planes nuevos
+    const averageProgress = Math.max(2, Math.round((approvedSubjects / semestersPassed) * 10) / 10);
 
-    // Fecha estimada (cada cuatrimestre ~4 meses)
+    // 2. Calcular Camino Crítico (Longitud de la cadena de correlatividades más larga)
+    const pendingSubjectIds = pendingSubjects.map(s => s.careerSubjectId);
+    const criticalPathDepth = await this.calculateCriticalPathDepth(pendingSubjectIds);
+
+    // 3. Estimación final
+    // Es el máximo entre (materias restantes / velocidad) y (profundidad del camino crítico)
+    const remainingSemestersByVelocity = Math.ceil(remainingSubjectsCount / averageProgress);
+    const totalRemainingSemesters = Math.max(remainingSemestersByVelocity, criticalPathDepth);
+
+    // Fecha estimada (cada cuatrimestre ~6 meses reales de calendario académico + vacaciones)
     const estimatedDate = new Date();
-    estimatedDate.setMonth(estimatedDate.getMonth() + remainingQuarters * 4);
+    estimatedDate.setMonth(estimatedDate.getMonth() + totalRemainingSemesters * 6);
 
     return {
       estimatedDate,
-      remainingSubjects,
+      remainingSubjects: remainingSubjectsCount,
       averageProgress,
     };
+  }
+
+  // RN9 Helper: Encuentra la cadena más larga de correlatividades en las materias pendientes
+  private async calculateCriticalPathDepth(pendingSubjectIds: string[]): Promise<number> {
+    if (pendingSubjectIds.length === 0) return 0;
+
+    const subjects = await this.prisma.careerSubject.findMany({
+      where: { id: { in: pendingSubjectIds } },
+      include: { prerequisites: true },
+    });
+
+    // Mapeo para búsqueda rápida
+    const subjectMap = new Map(subjects.map(s => [s.id, s]));
+    const cache = new Map<string, number>();
+
+    const getDepth = (id: string): number => {
+      if (cache.has(id)) return cache.get(id)!;
+      
+      const s = subjectMap.get(id) as any;
+      if (!s || !s.prerequisites || s.prerequisites.length === 0) {
+        return 1;
+      }
+
+      // Solo nos interesan los prerequisitos que TAMBIÉN están pendientes
+      const pendingPrereqs = s.prerequisites.filter((p: any) => pendingSubjectIds.includes(p.id));
+      if (pendingPrereqs.length === 0) return 1;
+
+      const depth = 1 + Math.max(...pendingPrereqs.map((p: any) => getDepth(p.id)));
+      cache.set(id, depth);
+      return depth;
+    };
+
+    let maxDepth = 0;
+    for (const id of pendingSubjectIds) {
+      maxDepth = Math.max(maxDepth, getDepth(id));
+    }
+
+    return maxDepth;
   }
 
   // US-05: Obtener total de créditos
@@ -255,6 +316,7 @@ export class UsersService {
       totalCredits,
       estimatedGraduationDate: graduation.estimatedDate,
       remainingSubjects: graduation.remainingSubjects,
+      averageVelocity: graduation.averageProgress,
     };
   }
 }

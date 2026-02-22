@@ -1,5 +1,5 @@
-import { CheckCircle2, GraduationCap, TrendingUp, Calendar, Award } from 'lucide-react';
 import { useDashboard } from '@/entities/dashboard/model/use-dashboard';
+import { Award, Calendar, CheckCircle2, GraduationCap, TrendingUp } from 'lucide-react';
 
 export const DashboardPage = () => {
   const { data, recommendations, isLoading, error } = useDashboard();
@@ -70,9 +70,14 @@ export const DashboardPage = () => {
               : 'Calculando...'}
           </span>
         </div>
-        <p className="text-xs text-foreground/70">
-          {data?.remainingSubjects || 0} materias pendientes
-        </p>
+        <div className="flex justify-between items-center mt-1">
+          <p className="text-xs text-foreground/70">
+            {data?.remainingSubjects || 0} materias pendientes
+          </p>
+          <div className="bg-primary/20 px-2 py-0.5 rounded text-[10px] font-bold text-primary">
+            RITMO: {data?.averageVelocity || 0} MAT/CUAT
+          </div>
+        </div>
       </div>
 
       <section className="flex flex-col gap-4">
@@ -84,7 +89,9 @@ export const DashboardPage = () => {
                 key={rec.careerSubject.id} 
                 code={rec.careerSubject.code}
                 name={rec.careerSubject.subject.name} 
-                reason={`Desbloquea ${rec.unlocksCount} materias`}
+                impact={rec.transitiveImpact}
+                isSeason={rec.matchesSeason}
+                hours={rec.hours}
               />
             ))
           ) : (
@@ -110,17 +117,37 @@ const StatCard = ({ icon, label, value }: { icon: React.ReactNode; label: string
   </div>
 );
 
-const SubjectSuggestion = ({ code, name, reason }: { code: string; name: string; reason: string }) => (
-  <div className="bg-card rounded-xl p-4 flex items-center gap-4">
-    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-      <CheckCircle2 size={20} className="text-primary" />
+const SubjectSuggestion = ({ 
+  code, 
+  name, 
+  impact, 
+  isSeason, 
+  hours 
+}: { 
+  code: string; 
+  name: string; 
+  impact: number; 
+  isSeason: boolean; 
+  hours: number;
+}) => (
+  <div className="bg-card rounded-xl p-4 flex items-center gap-4 border border-foreground/5 relative overflow-hidden group">
+    {isSeason && (
+      <div className="absolute top-0 right-0 bg-primary/20 text-primary text-[8px] font-black uppercase px-2 py-0.5 rounded-bl-lg">
+        Ideal para este cuatrimestre
+      </div>
+    )}
+    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+      <CheckCircle2 size={20} />
     </div>
     <div className="flex flex-col flex-1">
-      <div className="flex items-center gap-2">
-        <span className="text-xs font-bold text-primary bg-primary/10 px-2 py-0.5 rounded">{code}</span>
-        <span className="font-medium text-sm">{name}</span>
+      <div className="flex items-center gap-2 mb-0.5">
+        <span className="text-xs font-bold text-primary bg-primary/10 px-2 py-0.5 rounded uppercase">{code}</span>
+        <span className="font-semibold text-sm">{name}</span>
       </div>
-      <span className="text-xs text-foreground/60">{reason}</span>
+      <div className="flex items-center gap-3">
+        <span className="text-[10px] text-foreground/40 font-medium">Impacto total: <b className="text-foreground/60">{impact} materias</b></span>
+        <span className="text-[10px] text-foreground/40 font-medium">Carga: <b className="text-foreground/60">{hours}hs</b></span>
+      </div>
     </div>
   </div>
 );

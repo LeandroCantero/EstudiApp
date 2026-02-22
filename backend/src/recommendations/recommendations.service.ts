@@ -32,23 +32,26 @@ export class RecommendationsService {
       const canTake = await this.canTakeSubject(userId, subject.careerSubjectId);
       if (!canTake) continue;
 
-      // Calcular puntaje de prioridad
-      // Más alta = más materias desbloquea
-      const unlocksCount = subject.careerSubject.requiredBy.length;
+      // 1. Calcular impacto profundo (Transitive Unlocks)
+      const transitiveImpact = await this.calculateTransitiveImpact(subject.careerSubjectId);
       
-      // Bonus si desbloquea materias de años superiores
-      const unlocksHigherYear = await this.checkUnlocksHigherYear(
-        subject.careerSubjectId,
-        subject.careerSubject.year || 0,
-      );
+      // 2. Estacionalidad (Priorizar si el periodo coincide con el cuatrimestre actual)
+      const currentMonth = new Date().getMonth(); // 0-11
+      const currentSemester = currentMonth < 7 ? 1 : 2; // Mar-Jul = 1, Ago-Dic = 2
+      const matchesSeason = subject.careerSubject.period === currentSemester;
 
-      const priorityScore = unlocksCount + (unlocksHigherYear ? 5 : 0);
+      // 3. Balance de carga (Sugerimos las horas para que el usuario pueda elegir)
+      const hours = subject.careerSubject.subject.hours;
+
+      // Cálculo de puntaje final
+      const priorityScore = (transitiveImpact * 2) + (matchesSeason ? 10 : 0);
 
       recommendations.push({
         ...subject,
         priorityScore,
-        unlocksCount,
-        unlocksHigherYear,
+        transitiveImpact,
+        matchesSeason,
+        hours,
       });
     }
 
@@ -105,5 +108,30 @@ export class RecommendationsService {
     }
 
     return false;
+  }
+
+  // RN5 Helper: Cuenta cuántas materias en TOTAL desbloquea esta materia en el árbol futuro
+  private async calculateTransitiveImpact(careerSubjectId: string): Promise<number> {
+    const visited = new Set<string>();
+    
+    const countUnlocks = async (id: string): Promise<number> => {
+      const subject = await this.prisma.careerSubject.findUnique({
+        where: { id },
+        include: { requiredBy: true },
+      });
+
+      if (!subject || subject.requiredBy.length === 0) return 0;
+
+      let count = 0;
+      for (const next of subject.requiredBy) {
+        if (!visited.has(next.id)) {
+          visited.add(next.id);
+          count += 1 + await countUnlocks(next.id);
+        }
+      }
+      return count;
+    };
+
+    return countUnlocks(careerSubjectId);
   }
 }

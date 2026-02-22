@@ -47,34 +47,33 @@
 
 ### FASE 4: Dashboard y Recomendaciones
 - **Recommendations** (Controller + Service):
-  - GET /recommendations - US-03: Algoritmo RN5 "Camino Lógico"
+  - GET /recommendations - US-03: Algoritmo RN5 "Camino Lógico" (Base)
   - Prioriza materias que desbloquean más cuatrimestres futuros
 
 ### FASE 5: Simulador
 - **Simulator** (Controller + Service):
   - POST /simulate - US-08: Simular escenarios (RN7)
   - Calcula impacto en % avance, fecha graduación, materias desbloqueadas
-  - No persiste cambios (modo temporal)
 
 ### FASE 6: Notas, Créditos y Calendario
 - **Credits** (Controller + Service):
-  - GET /credits - Listar créditos
-  - POST /credits - Crear crédito (US-05)
-  - DELETE /credits/:id - Eliminar crédito
-
+  - GET /credits, POST /credits, DELETE /credits (US-05)
 - **Notes** (Controller + Service):
-  - GET /notes/subject/:id - Ver notas (US-04)
-  - POST /notes/subject/:id - Crear nota/link (US-04)
-  - DELETE /notes/:id - Eliminar nota
-
+  - GET /notes/subject/:id, POST /notes/subject/:id (US-04)
 - **Events** (Controller + Service):
-  - GET /calendar - Ver eventos (con filtros de fecha)
-  - POST /calendar/events - Crear evento
-  - DELETE /calendar/events/:id - Eliminar evento
+  - GET /calendar, POST /calendar/events, DELETE /calendar/events
 
 ### FASE 7: Configuración
-- **AppModule** actualizado con todos los módulos nuevos
-- **ImportService** actualizado para funcionar con nuevo schema
+- **AppModule** consolidado con todos los nuevos módulos.
+
+### FASE 8: Inteligencia Académica (Intelligence Boost)
+- **Mejora RN9 (Proyección de Graduación)**: Basada en velocidad histórica y análisis de Camino Crítico.
+- **Mejora RN5 (Recomendaciones)**: Algoritmo de Impacto Transitivo, estacionalidad y carga horaria.
+
+### FASE 9: Gestión de Exámenes y Sincronización
+- **ExamsModule** (CRUD completo + Sync Calendario):
+  - Gestión de parciales, finales y TPs con fechas opcionales.
+  - Sincronización bidireccional automática con el calendario.
 
 ## 📋 Cobertura BRD
 
@@ -83,22 +82,22 @@
 - ✅ RN2: Correlatividad de cursada (validación de prerequisitos)
 - ✅ RN3: Gestión de finales (solo regularizadas pueden tener final)
 - ✅ RN4: Sistema de créditos (categorización manual)
-- ✅ RN5: Algoritmo de priorización "Camino Lógico"
+- ✅ RN5: Algoritmo Avanzado "Impacto Transitivo"
 - ✅ RN6: Consistencia de datos (recálculo automático de promedio)
 - ✅ RN7: Lógica de simulación (temporal, no persiste)
 - ✅ RN8: Cierre de materia (validación de dependencias)
-- ✅ RN9: Proyección de graduación (basada en tasa histórica)
+- ✅ RN9: Proyección de graduación (Velocidad + Camino Crítico)
 
 ### Historias de Usuario Implementadas
-- ✅ US-01: Dashboard con métricas (promedio, % avance, créditos, fecha graduación)
+- ✅ US-01: Dashboard con métricas avanzadas (Ritmo, Proyección Real)
 - ✅ US-02: Gestionar estado de materias
-- ✅ US-03: Recomendaciones automáticas de cursada
-- ✅ US-04: Adjuntar links y notas a materias
+- ✅ US-03: Recomendaciones inteligentes (Impacto Transitivo)
+- ✅ US-04: Adjuntar links, notas y **exámenes sincronizados**.
 - ✅ US-05: Registrar créditos extracurriculares
-- ✅ US-06: Visualizar fecha estimada de graduación
+- ✅ US-06: Visualizar fecha estimada de graduación (Proyección Real)
 - ✅ US-07: Setup inicial seleccionar carrera y carga rápida
 - ✅ US-08: Simulador visual materias futuras
-- ✅ US-09: Registrar materias desaprobadas/recursadas
+- ✅ US-09: Registro de recursadas con contador de intentos (badges).
 
 ### Casos de Estudio Soportados
 - ✅ Caso 1: Dependencia de exámenes finales
@@ -165,6 +164,9 @@ backend/src/
 ├── events/
 │   ├── events.controller.ts
 │   └── events.service.ts
+├── exams/
+│   ├── exams.controller.ts
+│   └── exams.service.ts
 ├── types/
 │   └── express.d.ts
 └── app.module.ts (actualizado)

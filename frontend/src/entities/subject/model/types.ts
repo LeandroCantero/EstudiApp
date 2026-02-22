@@ -10,6 +10,7 @@ export interface Subject {
   year?: number;
   period?: number;
   userId: string;
+  attemptCount: number;
 }
 
 export interface CreateSubjectDto extends Omit<Subject, 'id'> {}
@@ -32,4 +33,44 @@ export interface AcademicMetrics {
   approved: number;
   progress: number;
   average: number;
+}
+
+export interface SubjectNote {
+  id: string;
+  studentSubjectId: string;
+  title?: string;
+  content?: string;
+  url?: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface CreateNoteDto {
+  title?: string;
+  content?: string;
+  url?: string;
+}
+
+export interface Exam {
+  id: string;
+  studentSubjectId: string;
+  type: string;
+  date?: string;
+  grade?: number;
+  maxGrade: number;
+  createdAt: string;
+  updatedAt: string;
+  eventId?: string;
+}
+
+export interface CreateExamDto {
+  type: string;
+  date?: string;
+  grade?: number;
+}
+
+export interface UpdateExamDto {
+  type?: string;
+  date?: string;
+  grade?: number;
 }

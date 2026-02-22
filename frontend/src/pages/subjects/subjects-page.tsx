@@ -106,6 +106,11 @@ export const SubjectsPage = () => {
                 }`}>
                   {subject.status.replace('_', ' ')}
                 </span>
+                {subject.status === 'RECURSANDO' && subject.attemptCount > 1 && (
+                  <span className="text-[10px] font-bold px-2 py-1 rounded-full bg-purple-500 text-white shadow-sm ml-2">
+                    INTENTO #{subject.attemptCount}
+                  </span>
+                )}
               </div>
               <h3 className="font-semibold text-lg group-hover:text-primary transition-colors flex items-center justify-between">
                 {subject.name}

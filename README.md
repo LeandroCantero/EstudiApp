@@ -2,11 +2,11 @@
 
 Sistema de seguimiento académico diseñado para estudiantes de la UNAHUR. Permite centralizar el progreso de la carrera, ofreciendo una visión clara de materias aprobadas, pendientes, promedios y correlatividades.
 
-## 🌟 Características Principales
-- **Gestión de Planes de Estudio:** Soporte para múltiples carreras de la UNAHUR (Informática, Biotecnología, Educación, etc.).
-- **Control de Correlatividades:** Validación automática de materias habilitadas para cursar.
-- **Historial Académico:** Registro de notas, fechas de aprobación y estado (En Curso, Final, Promoción).
-- **Dashboard Personalizado:** Métricas de avance y promedio en tiempo real.
+- **Dashboard Inteligente:** Métricas de avance, promedio real y **proyección de graduación** basada en ritmo histórico y camino crítico.
+- **Sugerencias Avanzadas:** Algoritmo de recomendación por impacto transitivo y estacionalidad.
+- **Gestión de Exámenes:** Registro de parciales y notas con **sincronización automática al calendario**.
+- **Historial Académico:** Registro detallado de notas y seguimiento de intentos (recursadas).
+- **Simulador:** Proyectá el impacto de aprobar o desaprobar materias antes de que suceda.
 
 ## 🛠️ Tecnologías
 
@@ -19,9 +19,6 @@ Sistema de seguimiento académico diseñado para estudiantes de la UNAHUR. Permi
 ### Frontend
 - **Framework:** React + Vite
 - **Lenguaje:** TypeScript
-- **Estilos:** TailwindCSS (Previsto)
-
-
 - **Estilos:** TailwindCSS (Previsto)
 
 ---
