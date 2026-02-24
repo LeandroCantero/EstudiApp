@@ -74,23 +74,40 @@ export class CareersImportService {
       });
 
       // 2b. Handle CareerSubject (The Link)
-      // Check if THIS subject is already linked to THIS career
-      const existingLink = await this.prisma.careerSubject.findUnique({
+      // Identity is defined by (careerId, subjectId)
+      // 1. Check if the target code is already taken by ANOTHER subject record in this career
+      const conflictingCode = await this.prisma.careerSubject.findUnique({
+        where: {
+          careerId_code: {
+            careerId: career.id,
+            code: jsonSubject.code,
+          },
+        },
+      });
+
+      if (conflictingCode && conflictingCode.subjectId !== globalSubject.id) {
+        // Conflict! The code is held by another subject. 
+        // We rename it temporarily to free up the code for the correct subject.
+        await this.prisma.careerSubject.update({
+          where: { id: conflictingCode.id },
+          data: { code: `OLD_${conflictingCode.code}_${Date.now()}` },
+        });
+      }
+
+      // 2. Perform upsert based on subject identity
+      const careerSubject = await this.prisma.careerSubject.upsert({
         where: {
           careerId_subjectId: {
             careerId: career.id,
             subjectId: globalSubject.id,
           },
         },
-      });
-
-      if (existingLink) {
-        codeToJoinIdMap.set(jsonSubject.code, existingLink.id);
-        continue;
-      }
-
-      const createdLink = await this.prisma.careerSubject.create({
-        data: {
+        update: {
+          code: jsonSubject.code,
+          year: jsonSubject.year,
+          period: jsonSubject.period,
+        },
+        create: {
           code: jsonSubject.code,
           year: jsonSubject.year,
           period: jsonSubject.period,
@@ -98,7 +115,8 @@ export class CareersImportService {
           subjectId: globalSubject.id,
         },
       });
-      codeToJoinIdMap.set(jsonSubject.code, createdLink.id);
+      
+      codeToJoinIdMap.set(jsonSubject.code, careerSubject.id);
     }
 
     // 3. Connect correlatives (Career-specific)
