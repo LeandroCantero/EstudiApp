@@ -38,11 +38,11 @@ Cálculo basado en dos métricas concurrentes:
 2. **Profundidad del Camino Crítico (P):** Longitud de la cadena más larga de correlatividades pendientes.
 - **Resultado:** `Max((MateriasRestantes / V), P)` cuatrimestres restantes.
 
-### 2.5. Lógica del Simulador (RN7)
-El simulador utiliza un **Prisma Client Mock** o transacciones no confirmadas:
-- Crea un estado efímero del `StudentSubject`.
-- Ejecuta los cálculos de RN9 y RN5 sobre este estado volátil.
-- Visualiza cambios en el % de avance sin impactar en las tablas reales.
+### 2.5. Lógica del Simulador (RN7) - Frontend-Driven
+El simulador opera íntegramente en el cliente mediante **React Flow** y el estado local de React:
+- Permite al usuario "pintar" estados hipotéticos (ej: Promocionada) sobre nodos de materias.
+- Recalcula aristas y estados de bloqueo en tiempo real sin llamar al backend.
+- No utiliza persistencia; al recargar la página, el estado vuelve a sincronizarse con el backend oficial.
 
 ## 3. Cálculos Académicos (RN6)
 
@@ -57,7 +57,7 @@ El simulador utiliza un **Prisma Client Mock** o transacciones no confirmadas:
 ## 4. Interfaces y Endpoints Relacionados
 - `GET /recommendations`: Ejecuta Algoritmo RN5.
 - `GET /users/graduation-date`: Ejecuta Algoritmo RN9.
-- `POST /simulate`: Punto de entrada del Simulador.
+- `Simulación Local`: Realizada en `CareerMapPage` (Frontend).
 
 ---
 **Autor:** Cantero, Leandro  

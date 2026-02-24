@@ -13,6 +13,7 @@ erDiagram
     USER ||--o{ CREDIT : acumula_creditos
     USER ||--o{ EVENT : agenda
     USER ||--o{ USER_RESOURCE : guarda
+    USER ||--o{ GLOBAL_RESOURCE : crea
     
     CAREER ||--o{ USER_CAREER : es_cursada
     CAREER ||--o{ CAREER_SUBJECT : contiene
@@ -198,7 +199,7 @@ Recursos personales del usuario.
 - US-05 Créditos: Credit
 - US-06 Graduación: Cálculos sobre StudentSubject
 - US-07 Setup: User + UserCareer + StudentSubject masivo
-- US-08 Simulador: Cálculos temporales
+- US-08 Simulador: Cálculos reactivos en Frontend
 - US-09 Recursadas: attemptCount
 - RN1-RN9: Todas las reglas soportadas por el schema
 - 2 Carreras: UserCareer con approvedCount

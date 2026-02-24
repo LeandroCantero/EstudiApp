@@ -13,7 +13,15 @@ export interface DashboardData {
   estimatedGraduationDate: string;
   remainingSubjects: number;
   averageVelocity: number;
+  gradeBreakdown: {
+    id: string;
+    name: string;
+    code: string;
+    grade: number;
+    status: string;
+  }[];
 }
+
 
 export interface Recommendation {
   id: string;
@@ -30,11 +38,24 @@ export interface Recommendation {
   };
 }
 
+export interface DashboardAlert {
+  id: string;
+  type: 'CORRELATIVE_BLOCK' | 'REGULARITY_EXPIRY';
+  priority: 'CRITICAL' | 'HIGH' | 'MEDIUM';
+  subjectId: string;
+  subjectName: string;
+  message: string;
+  metadata: any;
+}
+
+
 export const useDashboard = () => {
   const [data, setData] = useState<DashboardData | null>(null);
   const [recommendations, setRecommendations] = useState<Recommendation[]>([]);
+  const [alerts, setAlerts] = useState<DashboardAlert[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
 
   useEffect(() => {
     const fetchDashboard = async () => {
@@ -47,23 +68,27 @@ export const useDashboard = () => {
           return;
         }
 
-        const [dashboardData, recommendationsData] = await Promise.all([
+        const [dashboardData, recommendationsData, alertsData] = await Promise.all([
           apiClient.get<DashboardData>('/users/dashboard'),
           apiClient.get<Recommendation[]>('/recommendations'),
+          apiClient.get<DashboardAlert[]>('/my-subjects/alerts'),
         ]);
 
         setData(dashboardData);
         setRecommendations(recommendationsData);
+        setAlerts(alertsData);
       } catch (err) {
         setError('Error al cargar el dashboard');
         console.error(err);
       } finally {
         setIsLoading(false);
       }
+
     };
 
     fetchDashboard();
   }, []);
 
-  return { data, recommendations, isLoading, error };
+  return { data, recommendations, alerts, isLoading, error };
+
 };

@@ -10,14 +10,11 @@ import { EventsController } from './events/events.controller';
 import { EventsService } from './events/events.service';
 import { ExamsController } from './exams/exams.controller';
 import { ExamsService } from './exams/exams.service';
-import { ImportModule } from './import/import.module';
 import { NotesController } from './notes/notes.controller';
 import { NotesService } from './notes/notes.service';
 import { PrismaService } from './prisma.service';
 import { RecommendationsController } from './recommendations/recommendations.controller';
 import { RecommendationsService } from './recommendations/recommendations.service';
-import { SimulatorController } from './simulator/simulator.controller';
-import { SimulatorService } from './simulator/simulator.service';
 import { StudentSubjectsModule } from './student-subjects/student-subjects.module';
 import { UsersModule } from './users/users.module';
 
@@ -28,15 +25,14 @@ import { UsersModule } from './users/users.module';
             validate: validateEnv,
         }),
         CareersModule,
-        ImportModule,
         AuthModule,
+
         UsersModule,
         StudentSubjectsModule,
     ],
     controllers: [
         AppController,
         RecommendationsController,
-        SimulatorController,
         CreditsController,
         NotesController,
         EventsController,
@@ -45,11 +41,11 @@ import { UsersModule } from './users/users.module';
     providers: [
         PrismaService,
         RecommendationsService,
-        SimulatorService,
         CreditsService,
         NotesService,
         EventsService,
         ExamsService,
     ],
+
 })
 export class AppModule { }

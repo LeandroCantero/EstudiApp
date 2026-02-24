@@ -75,4 +75,11 @@ export class StudentSubjectsController {
   async retake(@Req() req: RequestWithUser, @Param('id') id: string) {
     return this.service.markAsRetaking(req.user.userId, id);
   }
+
+  @Get('alerts')
+  @ApiOperation({ summary: 'Obtener alertas críticas del usuario' })
+  async getAlerts(@Req() req: RequestWithUser) {
+    return this.service.getAlerts(req.user.userId);
+  }
 }
+

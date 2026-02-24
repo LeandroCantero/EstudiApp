@@ -18,15 +18,16 @@ export interface UpdateSubjectDto extends Partial<CreateSubjectDto> {}
 
 export interface UpdateSubjectStatusDto {
   status: SubjectStatus;
-  grade?: number;
+  courseGrade?: number;
   enrollmentYear?: number;
   enrollmentPeriod?: number;
 }
 
 export interface UpdateFinalDto {
-  finalDate: string;
-  finalGrade: number;
+  finalDate?: string;
+  grade: number;
 }
+
 
 export interface AcademicMetrics {
   total: number;

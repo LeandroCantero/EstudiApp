@@ -168,8 +168,14 @@ export class UsersService {
     const semestersPassed = Math.max(1, Math.ceil(monthsPassed / 6));
     
     // Tasa histórica: materias aprobadas / cuatrimestres cursados
+    // RN: Materias anuales (period 0) cuentan doble para la velocidad
+    const totalWeightApproved = activeCareerSubjects
+      .filter((s: any) => s.status === SubjectStatus.PROMOCIONADA)
+      .reduce((sum, s: any) => sum + (s.careerSubject.period === 0 ? 2 : 1), 0);
+
     // Minimo 2 para no ser excesivamente pesimista en planes nuevos
-    const averageProgress = Math.max(2, Math.round((approvedSubjects / semestersPassed) * 10) / 10);
+    const averageProgress = Math.max(2, Math.round((totalWeightApproved / semestersPassed) * 10) / 10);
+
 
     // 2. Calcular Camino Crítico (Longitud de la cadena de correlatividades más larga)
     const pendingSubjectIds = pendingSubjects.map(s => s.careerSubjectId);
@@ -208,18 +214,24 @@ export class UsersService {
       if (cache.has(id)) return cache.get(id)!;
       
       const s = subjectMap.get(id) as any;
-      if (!s || !s.prerequisites || s.prerequisites.length === 0) {
-        return 1;
+      if (!s) return 0;
+
+      // RN: Materias anuales (period 0) cuentan como 2 cuatrimestres
+      const subjectWeight = s.period === 0 ? 2 : 1;
+
+      if (!s.prerequisites || s.prerequisites.length === 0) {
+        return subjectWeight;
       }
 
       // Solo nos interesan los prerequisitos que TAMBIÉN están pendientes
       const pendingPrereqs = s.prerequisites.filter((p: any) => pendingSubjectIds.includes(p.id));
-      if (pendingPrereqs.length === 0) return 1;
+      if (pendingPrereqs.length === 0) return subjectWeight;
 
-      const depth = 1 + Math.max(...pendingPrereqs.map((p: any) => getDepth(p.id)));
+      const depth = subjectWeight + Math.max(...pendingPrereqs.map((p: any) => getDepth(p.id)));
       cache.set(id, depth);
       return depth;
     };
+
 
     let maxDepth = 0;
     for (const id of pendingSubjectIds) {
@@ -260,9 +272,14 @@ export class UsersService {
         },
         subjects: {
           include: {
-            careerSubject: true,
+            careerSubject: {
+              include: {
+                subject: true,
+              },
+            },
           },
         },
+
         credits: true,
       },
     });
@@ -317,6 +334,13 @@ export class UsersService {
       estimatedGraduationDate: graduation.estimatedDate,
       remainingSubjects: graduation.remainingSubjects,
       averageVelocity: graduation.averageProgress,
+      gradeBreakdown: subjectsWithGrade.map(s => ({
+        id: s.id,
+        name: s.careerSubject.subject.name,
+        code: s.careerSubject.code,
+        grade: s.finalGrade ?? s.courseGrade,
+        status: s.status,
+      })),
     };
   }
 }

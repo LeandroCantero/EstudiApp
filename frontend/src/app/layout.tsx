@@ -1,10 +1,13 @@
 
 import { Outlet } from 'react-router-dom';
+import { CommandPalette } from '../shared/ui/command-palette';
 import { MobileHeader } from '../widgets/navigation/mobile-header';
 import { MobileNav } from '../widgets/navigation/mobile-nav';
 import { Sidebar } from '../widgets/navigation/sidebar';
 
 export const MainLayout = () => {
+
+
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col md:flex-row">
       {/* Desktop Sidebar */}
@@ -21,6 +24,8 @@ export const MainLayout = () => {
         {/* Bottom Nav for Mobile */}
         <MobileNav />
       </div>
+      <CommandPalette />
     </div>
   );
 };
+

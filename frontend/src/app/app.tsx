@@ -1,14 +1,15 @@
-import { useEffect, useState } from 'react';
-import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { LoginPage } from '@/pages/auth/login-page';
 import { RegisterPage } from '@/pages/auth/register-page';
-import { DashboardPage } from '@/pages/dashboard/dashboard-page';
-import { SubjectsPage } from '@/pages/subjects/subjects-page';
-import { OnboardingPage } from '@/pages/onboarding/onboarding-page';
 import { CalendarPage } from '@/pages/calendar/calendar-page';
+import { CareerMapPage } from '@/pages/career-map/career-map-page';
+import { DashboardPage } from '@/pages/dashboard/dashboard-page';
+import { OnboardingPage } from '@/pages/onboarding/onboarding-page';
 import { ResourcesPage } from '@/pages/resources/resources-page';
 import { SubjectDetailPage } from '@/pages/subject-detail/subject-detail-page';
+import { SubjectsPage } from '@/pages/subjects/subjects-page';
 import { Sidebar } from '@/widgets/navigation/sidebar';
+import { useEffect, useState } from 'react';
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 
 export const App = () => {
   const location = useLocation();
@@ -44,6 +45,7 @@ export const App = () => {
           <Route path="/materias" element={<SubjectsPage />} />
           <Route path="/materias/:id" element={<SubjectDetailPage />} />
           <Route path="/calendario" element={<CalendarPage />} />
+          <Route path="/mapa" element={<CareerMapPage />} />
           <Route path="/recursos" element={<ResourcesPage />} />
           <Route path="/onboarding" element={<OnboardingPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />

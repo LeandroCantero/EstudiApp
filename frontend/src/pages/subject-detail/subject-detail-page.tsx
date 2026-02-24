@@ -3,16 +3,21 @@ import { subjectApi } from '@/entities/subject/api/subject-api';
 import { useExams } from '@/entities/subject/model/use-exams';
 import { useSubjectNotes } from '@/entities/subject/model/use-subject-notes';
 import {
-    ArrowLeft,
-    BookOpen,
-    Calendar,
-    Clock,
-    Edit3,
-    ExternalLink,
-    FileText,
-    GraduationCap,
-    Plus,
-    Trash2
+  AlertTriangle,
+  ArrowLeft,
+  BookOpen,
+
+  Calendar,
+  CheckCircle2,
+  Clock,
+  Edit3,
+
+  ExternalLink,
+  FileText,
+  GraduationCap,
+  Plus,
+  Trash2,
+  X
 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -48,13 +53,22 @@ export const SubjectDetailPage = () => {
     grade: '' 
   });
 
+  const [courseGrade, setCourseGrade] = useState('');
+  const [finalGrade, setFinalGrade] = useState('');
+  const [detailError, setDetailError] = useState<string | null>(null);
+
+
+
   useEffect(() => {
     const fetchSubject = async () => {
       if (!id) return;
       try {
         const data = await subjectApi.getById(id);
         setSubject(data);
+        setCourseGrade(data.courseGrade?.toString() || '');
+        setFinalGrade(data.finalGrade?.toString() || '');
       } catch (err) {
+
         console.error('Error fetching subject:', err);
       } finally {
         setIsLoadingSubject(false);
@@ -112,7 +126,40 @@ export const SubjectDetailPage = () => {
     setIsAddingExam(true);
   };
 
+  const handleUpdateStatus = async (status: string, grade?: number) => {
+    if (!id) return;
+    try {
+      setDetailError(null);
+      const updated = await subjectApi.updateStatus(id, { 
+        status: status as any,
+        courseGrade: grade
+      });
+      setSubject(updated);
+      setCourseGrade(updated.courseGrade?.toString() || '');
+    } catch (err: any) {
+      console.error('Error updating status:', err);
+      setDetailError(err.response?.data?.message || 'Error al actualizar el estado');
+    }
+  };
+
+  const handleRegisterFinal = async () => {
+    if (!id || !finalGrade) return;
+    try {
+      setDetailError(null);
+      const updated = await subjectApi.updateFinal(id, { 
+        grade: parseFloat(finalGrade) 
+      });
+      setSubject(updated);
+      setFinalGrade(updated.finalGrade?.toString() || '');
+    } catch (err: any) {
+      console.error('Error registering final:', err);
+      setDetailError(err.response?.data?.message || 'Error al registrar el final');
+    }
+  };
+
+
   if (isLoadingSubject) {
+
     return (
       <div className="flex items-center justify-center h-[60vh]">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary" />
@@ -162,7 +209,22 @@ export const SubjectDetailPage = () => {
         </div>
       </header>
 
+      {/* Error Alert */}
+      {detailError && (
+        <div className="bg-red-500/10 border border-red-500/20 rounded-2xl p-4 flex items-start gap-4 animate-in fade-in slide-in-from-top-2">
+          <AlertTriangle className="text-red-500 shrink-0" size={20} />
+          <div className="flex-1">
+            <h4 className="text-sm font-bold text-red-500 mb-1">Conflicto de Correlatividades / Validación</h4>
+            <p className="text-xs text-red-500/80 leading-relaxed">{detailError}</p>
+          </div>
+          <button onClick={() => setDetailError(null)} className="p-1 hover:bg-red-500/10 rounded-lg transition-colors">
+            <X size={16} className="text-red-500/40" />
+          </button>
+        </div>
+      )}
+
       {/* Tabs */}
+
       <div className="flex gap-2 p-1 bg-card rounded-xl">
         {[
           { id: 'info', label: 'Información', icon: BookOpen },
@@ -187,41 +249,96 @@ export const SubjectDetailPage = () => {
       {/* Content */}
       <div className="flex flex-col gap-4">
         {activeTab === 'info' && (
-          <>
-            {/* Grades */}
-            <div className="bg-card rounded-2xl p-5">
+          <div className="flex flex-col gap-6">
+            {/* Subject Status Selector */}
+            <div className="bg-card rounded-2xl p-5 border border-foreground/5">
+              <h3 className="font-semibold mb-4 flex items-center gap-2">
+                <CheckCircle2 size={18} className="text-primary" />
+                Estado Académico
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {Object.entries(statusLabels).map(([key, value]) => (
+                  <button
+                    key={key}
+                    onClick={() => handleUpdateStatus(key)}
+                    className={`px-4 py-2 rounded-xl text-xs font-bold transition-all border ${
+                      subject.status === key 
+                        ? 'bg-primary text-primary-foreground border-primary' 
+                        : 'bg-background text-foreground/40 border-transparent hover:border-foreground/10'
+                    }`}
+                  >
+                    {value.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Grades Management */}
+            <div className="bg-card rounded-2xl p-5 border border-foreground/5">
               <h3 className="font-semibold mb-4 flex items-center gap-2">
                 <GraduationCap size={18} className="text-primary" />
                 Calificaciones
               </h3>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-background rounded-xl p-4">
-                  <span className="text-xs text-foreground/60">Cursada</span>
-                  <p className="text-2xl font-bold">
-                    {subject.courseGrade?.toFixed(2) || '-'}
-                  </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-background rounded-xl p-4 flex flex-col gap-2">
+                  <span className="text-xs text-foreground/60 font-medium">Nota de Cursada</span>
+                  <div className="flex gap-2">
+                    <input 
+                      type="number"
+                      step="0.1"
+                      min="0"
+                      max="10"
+                      className="bg-card border-none rounded-lg p-3 text-lg font-bold w-24 outline-none focus:ring-1 ring-primary"
+                      placeholder="-"
+                      value={courseGrade}
+                      onChange={(e) => setCourseGrade(e.target.value)}
+                    />
+                    <button 
+                      onClick={() => handleUpdateStatus(subject.status, parseFloat(courseGrade))}
+                      className="flex-1 bg-primary/10 text-primary text-xs font-bold rounded-lg hover:bg-primary/20 transition-all uppercase tracking-wider"
+                    >
+                      Guardar
+                    </button>
+                  </div>
                 </div>
-                <div className="bg-background rounded-xl p-4">
-                  <span className="text-xs text-foreground/60">Final</span>
-                  <p className="text-2xl font-bold">
-                    {subject.finalGrade?.toFixed(2) || '-'}
-                  </p>
+
+                <div className="bg-background rounded-xl p-4 flex flex-col gap-2">
+                  <span className="text-xs text-foreground/60 font-medium">Nota Final</span>
+                  <div className="flex gap-2">
+                    <input 
+                      type="number"
+                      step="0.1"
+                      min="0"
+                      max="10"
+                      className="bg-card border-none rounded-lg p-3 text-lg font-bold w-24 outline-none focus:ring-1 ring-primary"
+                      placeholder="-"
+                      value={finalGrade}
+                      onChange={(e) => setFinalGrade(e.target.value)}
+                    />
+                    <button 
+                      onClick={handleRegisterFinal}
+                      className="flex-1 bg-primary text-primary-foreground text-xs font-bold rounded-lg hover:opacity-90 transition-all uppercase tracking-wider shadow-sm shadow-primary/20"
+                    >
+                      Registrar Final
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Hours */}
-            <div className="bg-card rounded-2xl p-5 flex items-center gap-4">
+            {/* Hours Info */}
+            <div className="bg-card rounded-2xl p-5 flex items-center gap-4 border border-foreground/5">
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                 <Clock size={24} className="text-primary" />
               </div>
               <div>
-                <span className="text-xs text-foreground/60">Carga Horaria</span>
+                <span className="text-xs text-foreground/60">Carga Horaria Total</span>
                 <p className="text-xl font-bold">{subject.careerSubject.subject.hours} horas</p>
               </div>
             </div>
-          </>
+          </div>
         )}
+
 
         {activeTab === 'notes' && (
           <div className="flex flex-col gap-4">

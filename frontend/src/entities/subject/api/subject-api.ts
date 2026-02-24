@@ -7,6 +7,7 @@ export interface StudentSubjectResponse {
   courseGrade: number | null;
   finalGrade: number | null;
   careerSubject: {
+    id: string;
     code: string;
     year: number | null;
     period: number | null;
@@ -15,9 +16,14 @@ export interface StudentSubjectResponse {
       name: string;
       hours: number;
     };
+    prerequisites: {
+      id: string;
+      code: string;
+    }[];
   };
   attemptCount: number;
 }
+
 
 export const subjectApi = {
   /** Get all subjects for the current authenticated user */
@@ -47,4 +53,9 @@ export const subjectApi = {
   /** Delete a note */
   deleteNote: (id: string) => 
     apiClient.delete(`/notes/${id}`),
+
+  /** Get critical alerts for the user */
+  getAlerts: () => 
+    apiClient.get<any[]>('/my-subjects/alerts'),
 };
+

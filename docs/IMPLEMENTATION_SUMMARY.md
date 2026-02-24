@@ -22,7 +22,7 @@
   - `UsersController`: 
     - GET /users/me - Perfil completo
     - PATCH /users/me - Actualizar perfil
-    - POST /users/setup-career - US-07: Setup inicial
+    - POST /users/setup-career - US-07: Setup inicial (Carga de plan de estudios)
     - GET /users/dashboard - US-01: Métricas dashboard
     - GET /users/graduation-date - US-06: Fecha estimada graduación
     - GET /users/credits - US-05: Créditos
@@ -50,10 +50,8 @@
   - GET /recommendations - US-03: Algoritmo RN5 "Camino Lógico" (Base)
   - Prioriza materias que desbloquean más cuatrimestres futuros
 
-### FASE 5: Simulador
-- **Simulator** (Controller + Service):
-  - POST /simulate - US-08: Simular escenarios (RN7)
-  - Calcula impacto en % avance, fecha graduación, materias desbloqueadas
+### FASE 5: Simulador Académico (Frontend-Driven)
+- **Implementación Reactiva**: La lógica de simulación (RN7) se ha movido íntegramente al Frontend (Mapa de Carrera) para permitir una interacción instantánea y sin latencia sin comprometer la persistencia de datos.
 
 ### FASE 6: Notas, Créditos y Calendario
 - **Credits** (Controller + Service):
@@ -152,9 +150,6 @@ backend/src/
 ├── recommendations/
 │   ├── recommendations.controller.ts
 │   └── recommendations.service.ts
-├── simulator/
-│   ├── simulator.controller.ts
-│   └── simulator.service.ts
 ├── credits/
 │   ├── credits.controller.ts
 │   └── credits.service.ts

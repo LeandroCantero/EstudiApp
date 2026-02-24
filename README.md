@@ -19,7 +19,8 @@ Sistema de seguimiento académico diseñado para estudiantes de la UNAHUR. Permi
 ### Frontend
 - **Framework:** React + Vite
 - **Lenguaje:** TypeScript
-- **Estilos:** TailwindCSS (Previsto)
+- **Estilos:** TailwindCSS
+- **Visualización:** React Flow (Mapa de Carrera Interactivo)
 
 ---
 
@@ -120,9 +121,10 @@ npm run dev
 
 ## 📂 Estructura del Proyecto
 - `backend/`: API NestJS + Prisma ORM.
-  - `prisma/plans/`: PDFs originales.
-  - `src/careers/`: Lógica de carreras e importación.
-  - `src/subjects/`: Motor de correlatividades y sugerencias.
+  - `prisma/careers/`: Plantillas de planes de estudio por carrera.
+  - `src/careers/`: Lógica de gestión de planes de estudio.
+  - `src/student-subjects/`: Motor de correlatividades y seguimiento académico.
+  - `src/recommendations/`: Algoritmo inteligente de sugerencia de cursada.
 - `frontend/`: UI React + Vite.
 
 ## 🤝 Contribución

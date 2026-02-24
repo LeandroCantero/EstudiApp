@@ -140,7 +140,13 @@ export class StudentSubjectsService {
     }
 
     // Si aprueba (>=4), cambia a aprobada
-    const newStatus = grade >= 4 ? SubjectStatus.PROMOCIONADA : studentSubject.status;
+    let newStatus = grade >= 4 ? SubjectStatus.PROMOCIONADA : studentSubject.status;
+
+    // RN8: Validar correlativas si se intenta promocionar vía nota final
+    if (newStatus === SubjectStatus.PROMOCIONADA) {
+      await this.validatePrerequisitesForClosing(userId, studentSubject.careerSubjectId);
+    }
+
 
     return this.prisma.studentSubject.update({
       where: { id },
@@ -234,9 +240,14 @@ export class StudentSubjectsService {
     const careerSubject = await this.prisma.careerSubject.findUnique({
       where: { id: careerSubjectId },
       include: {
-        prerequisites: true,
+        prerequisites: {
+          include: {
+            subject: true,
+          }
+        },
       },
     });
+
 
     if (!careerSubject) return;
 
@@ -250,9 +261,10 @@ export class StudentSubjectsService {
 
       if (!studentPrereq || studentPrereq.status !== SubjectStatus.PROMOCIONADA) {
         throw new BadRequestException(
-          `No puedes promocionar esta materia. Debes aprobar primero: ${prereq.subjectId}`,
+          `No puedes promocionar esta materia. Debes aprobar primero: ${prereq.subject.name} (${prereq.code})`,
         );
       }
+
     }
   }
 
@@ -346,4 +358,83 @@ export class StudentSubjectsService {
 
     return bottlenecks.sort((a, b) => b.blocksCount - a.blocksCount);
   }
+
+  async getAlerts(userId: string) {
+    const subjects = await this.prisma.studentSubject.findMany({
+      where: { userId },
+      include: {
+        careerSubject: {
+          include: {
+            subject: true,
+            prerequisites: {
+              include: {
+                subject: true,
+              }
+            },
+          },
+        },
+      },
+    });
+
+    const alerts = [];
+
+    for (const subject of subjects) {
+      // 1. Alerta de Correlatividad de Cierre (RN8)
+      if (
+        subject.status === SubjectStatus.REGULARIZADA ||
+        subject.status === SubjectStatus.EN_CURSO
+      ) {
+        for (const prereq of subject.careerSubject.prerequisites) {
+          const studentPrereq = subjects.find(
+            (s) => s.careerSubjectId === prereq.id,
+          );
+
+          if (!studentPrereq || studentPrereq.status !== SubjectStatus.PROMOCIONADA) {
+            alerts.push({
+              id: `block-${subject.id}-${prereq.id}`,
+              type: 'CORRELATIVE_BLOCK',
+              priority: 'HIGH',
+              subjectId: subject.id,
+              subjectName: subject.careerSubject.subject.name,
+              message: `No puedes cerrar ${subject.careerSubject.subject.name} hasta aprobar el final de ${prereq.subject.name}.`,
+              metadata: {
+                prereqId: prereq.id,
+                prereqName: prereq.subject.name,
+              },
+            });
+          }
+        }
+      }
+
+      // 2. Alerta de Vencimiento de Regularidad (RN3)
+      if (subject.status === SubjectStatus.REGULARIZADA) {
+        // Asumimos 2 años de regularidad (validez)
+        const expiryDate = new Date(subject.updatedAt);
+        expiryDate.setFullYear(expiryDate.getFullYear() + 2);
+        
+        const now = new Date();
+        const sixMonthsFromNow = new Date();
+        sixMonthsFromNow.setMonth(now.getMonth() + 6);
+
+        if (expiryDate <= sixMonthsFromNow) {
+          alerts.push({
+            id: `expiry-${subject.id}`,
+            type: 'REGULARITY_EXPIRY',
+            priority: expiryDate <= now ? 'CRITICAL' : 'MEDIUM',
+            subjectId: subject.id,
+            subjectName: subject.careerSubject.subject.name,
+            message: expiryDate <= now 
+              ? `La regularidad de ${subject.careerSubject.subject.name} ha vencido.`
+              : `La regularidad de ${subject.careerSubject.subject.name} vence pronto (${expiryDate.toLocaleDateString()}).`,
+            metadata: {
+              expiryDate,
+            },
+          });
+        }
+      }
+    }
+
+    return alerts;
+  }
 }
+
