@@ -36,10 +36,12 @@
     {
       "code": "6",
       "name": "Química General e Inorgánica",
-      "hours": 64,
+      "hours": 96,
       "year": 1,
-      "period": 1,
-      "correlatives": []
+      "period": 2,
+      "correlatives": [
+        "Introducción a la Química"
+      ]
     },
     {
       "code": "7",
@@ -52,9 +54,9 @@
     {
       "code": "8",
       "name": "Matemática II",
-      "hours": 64,
+      "hours": 96,
       "year": 1,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Matemática I"
       ]
@@ -81,7 +83,10 @@
       "hours": 96,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Biología General",
+        "Higiene y Seguridad"
+      ]
     },
     {
       "code": "12",
@@ -89,15 +94,20 @@
       "hours": 96,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Química General e Inorgánica",
+        "Higiene y Seguridad"
+      ]
     },
     {
       "code": "13",
       "name": "Física",
-      "hours": 64,
+      "hours": 96,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Matemática II"
+      ]
     },
     {
       "code": "17",

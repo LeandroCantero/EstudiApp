@@ -22,8 +22,10 @@
       "name": "Tecnología I",
       "hours": 64,
       "year": 1,
-      "period": 1,
-      "correlatives": []
+      "period": 2,
+      "correlatives": [
+        "Introducción al Diseño"
+      ]
     },
     {
       "code": "S4",
@@ -37,9 +39,11 @@
       "code": "S5",
       "name": "Taller de Diseño I",
       "hours": 64,
-      "year": 1,
+      "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción al Diseño"
+      ]
     },
     {
       "code": "S6",
@@ -108,9 +112,11 @@
       "code": "S13",
       "name": "Programación",
       "hours": 64,
-      "year": 2,
-      "period": 1,
-      "correlatives": []
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Nuevos entornos y lenguajes"
+      ]
     },
     {
       "code": "S14",
@@ -148,8 +154,10 @@
       "name": "Tecnologías de fabricación digital I",
       "hours": 64,
       "year": 2,
-      "period": 1,
-      "correlatives": []
+      "period": 2,
+      "correlatives": [
+        "Programación"
+      ]
     },
     {
       "code": "S18",

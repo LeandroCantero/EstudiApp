@@ -106,6 +106,7 @@
       "year": 2,
       "period": 1,
       "correlatives": [
+        "Introducción al análisis matemático",
         "Geometría euclideana y analítica"
       ]
     },
@@ -115,7 +116,9 @@
       "hours": 80,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción al análisis matemático"
+      ]
     },
     {
       "code": "S15",
@@ -149,10 +152,10 @@
     },
     {
       "code": "S18",
-      "name": "secundario I",
-      "hours": 64,
+      "name": "Prácticas de la enseñanza en el nivel secundario I",
+      "hours": 96,
       "year": 2,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {

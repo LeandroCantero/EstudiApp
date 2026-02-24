@@ -46,10 +46,12 @@
     {
       "code": "6",
       "name": "Salud Comunitaria I",
-      "hours": 6,
+      "hours": 96,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la Salud Comunitaria"
+      ]
     },
     {
       "code": "7",
@@ -70,10 +72,13 @@
     {
       "code": "9",
       "name": "Introducción a la Nutrición",
-      "hours": 3,
+      "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la Salud Comunitaria",
+        "Anátomo-Fisiología I"
+      ]
     },
     {
       "code": "10",
@@ -88,22 +93,23 @@
     {
       "code": "11",
       "name": "Obstetricia I",
-      "hours": 9,
+      "hours": 128,
       "year": 2,
       "period": 1,
       "correlatives": [
-        "Introducción a la Obstetricia",
-        "Anátomo-Fisiología I"
+        "Anátomo-Fisiología I",
+        "Genética Humana"
       ]
     },
     {
       "code": "12",
       "name": "Salud Sexual y Reproductiva",
-      "hours": 9,
+      "hours": 96,
       "year": 2,
       "period": 1,
       "correlatives": [
-        "Anátomo-Fisiología II"
+        "Anátomo-Fisiología I",
+        "Genética Humana"
       ]
     },
     {

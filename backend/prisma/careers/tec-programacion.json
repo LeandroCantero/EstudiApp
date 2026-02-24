@@ -6,7 +6,7 @@
       "name": "Matemática para informática I",
       "hours": 64,
       "year": 1,
-      "period": 2,
+      "period": 1,
       "correlatives": []
     },
     {
@@ -20,9 +20,9 @@
     {
       "code": "3",
       "name": "Organización de computadoras I",
-      "hours": 64,
+      "hours": 32,
       "year": 1,
-      "period": 2,
+      "period": 1,
       "correlatives": []
     },
     {
@@ -30,25 +30,13 @@
       "name": "Nuevos entornos y lenguajes",
       "hours": 32,
       "year": 1,
-      "period": 2,
-      "correlatives": [
-        "Introducción a lógica y problemas computacionales"
-      ]
-    },
-    {
-      "code": "5",
-      "name": "Taller de lenguajes de marcado y tecnologías web",
-      "hours": 64,
-      "year": 1,
-      "period": 2,
-      "correlatives": [
-        "Introducción a lógica y problemas computacionales"
-      ]
+      "period": 1,
+      "correlatives": []
     },
     {
       "code": "6",
       "name": "Programación estructurada",
-      "hours": 96,
+      "hours": 128,
       "year": 1,
       "period": 2,
       "correlatives": [
@@ -74,22 +62,31 @@
       "correlatives": []
     },
     {
-      "code": "9",
-      "name": "Bases de Datos",
-      "hours": 96,
+      "code": "5",
+      "name": "Taller de lenguajes de marcado y tecnologías web",
+      "hours": 32,
       "year": 1,
       "period": 2,
       "correlatives": [
-        "Matemática para informática I",
-        "Matemática para Informática II"
+        "Introducción a lógica y problemas computacionales"
+      ]
+    },
+    {
+      "code": "9",
+      "name": "Bases de Datos",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": [
+        "Programación estructurada"
       ]
     },
     {
       "code": "10",
-      "name": "Programación con objetos I",
+      "name": "Programación de objetos I",
       "hours": 128,
-      "year": 1,
-      "period": 2,
+      "year": 2,
+      "period": 1,
       "correlatives": [
         "Programación estructurada"
       ]
@@ -98,63 +95,94 @@
       "code": "11",
       "name": "Estructuras de datos",
       "hours": 128,
-      "year": 1,
-      "period": 2,
+      "year": 2,
+      "period": 1,
       "correlatives": [
         "Programación estructurada"
       ]
     },
     {
+      "code": "12",
+      "name": "Materia UNAHUR",
+      "hours": 32,
+      "year": 2,
+      "period": 1,
+      "correlatives": []
+    },
+    {
       "code": "13",
-      "name": "Programación con objetos II",
-      "hours": 96,
-      "year": 1,
+      "name": "Programación de objetos II",
+      "hours": 128,
+      "year": 2,
       "period": 2,
       "correlatives": [
-        "Programación con objetos I"
+        "Programación de objetos I"
       ]
     },
     {
       "code": "14",
-      "name": "Electiva I",
+      "name": "Construcción de interfaces de usuario",
       "hours": 64,
-      "year": 1,
+      "year": 2,
       "period": 2,
       "correlatives": [
-        "Programación estructurada"
+        "Programación de objetos I"
       ]
     },
     {
       "code": "15",
-      "name": "Electiva II",
-      "hours": 64,
-      "year": 1,
-      "period": 2,
-      "correlatives": [
-        "Organización de computadoras I",
-        "Electiva I"
-      ]
-    },
-    {
-      "code": "16",
       "name": "Inglés II",
       "hours": 32,
-      "year": 1,
+      "year": 2,
       "period": 2,
       "correlatives": [
         "Inglés I"
       ]
     },
     {
-      "code": "18",
-      "name": "Estrategias de persistencia",
-      "hours": 96,
-      "year": 1,
+      "code": "16",
+      "name": "Electiva I",
+      "hours": 64,
+      "year": 2,
       "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "17",
+      "name": "Estrategias de persistencia",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
       "correlatives": [
-        "Programación con objetos I",
-        "Programación con objetos II"
+        "Programación de objetos II",
+        "Bases de Datos"
       ]
+    },
+    {
+      "code": "18",
+      "name": "Elementos de ingeniería de software",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Programación de objetos II"
+      ]
+    },
+    {
+      "code": "19",
+      "name": "Electiva II",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "20",
+      "name": "Espacio de integración curricular",
+      "hours": 96,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
     }
   ]
 }

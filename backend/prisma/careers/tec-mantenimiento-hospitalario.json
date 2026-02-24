@@ -4,7 +4,7 @@
     {
       "code": "1",
       "name": "Matemática",
-      "hours": 6,
+      "hours": 96,
       "year": 1,
       "period": 1,
       "correlatives": []
@@ -100,10 +100,12 @@
     {
       "code": "13",
       "name": "Planificación del Mantenimiento",
-      "hours": 7,
+      "hours": 96,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la gestión del mantenimiento"
+      ]
     },
     {
       "code": "14",

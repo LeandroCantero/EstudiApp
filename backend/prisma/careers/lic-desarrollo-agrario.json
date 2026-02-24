@@ -104,9 +104,9 @@
     {
       "code": "13",
       "name": "Química general",
-      "hours": 64,
-      "year": 2,
-      "period": 1,
+      "hours": 96,
+      "year": 1,
+      "period": 2,
       "correlatives": [
         "Matemática aplicada"
       ]
@@ -153,10 +153,10 @@
       "code": "18",
       "name": "Fundamentos de la sanidad vegetal",
       "hours": 64,
-      "year": 2,
+      "year": 1,
       "period": 2,
       "correlatives": [
-        "Ecofisiología vegetal"
+        "Biología"
       ]
     },
     {

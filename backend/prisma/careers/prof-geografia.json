@@ -67,10 +67,10 @@
     },
     {
       "code": "S9",
-      "name": "universidad",
+      "name": "Asignatura UNAHUR I",
       "hours": 32,
       "year": 1,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -101,10 +101,10 @@
     },
     {
       "code": "S13",
-      "name": "socioeducativo",
+      "name": "Práctica en el ámbito socioeducativo",
       "hours": 64,
       "year": 2,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -168,11 +168,13 @@
     },
     {
       "code": "S20",
-      "name": "superior",
-      "hours": 48,
+      "name": "Didáctica en contextos de Educación superior",
+      "hours": 64,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Didáctica y curriculum"
+      ]
     },
     {
       "code": "S21",

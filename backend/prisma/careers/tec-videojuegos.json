@@ -3,16 +3,16 @@
   "subjects": [
     {
       "code": "1",
-      "name": "Matemática para informática I",
-      "hours": 7,
+      "name": "Matemática para Informática I",
+      "hours": 64,
       "year": 1,
       "period": 1,
       "correlatives": []
     },
     {
       "code": "2",
-      "name": "Introducción a lógica y problemas computacionales",
-      "hours": 7,
+      "name": "Introducción a Lógica y Problemas Computacionales",
+      "hours": 64,
       "year": 1,
       "period": 1,
       "correlatives": []
@@ -20,115 +20,164 @@
     {
       "code": "3",
       "name": "Introducción a los Videojuegos",
-      "hours": 8,
+      "hours": 96,
       "year": 1,
       "period": 1,
       "correlatives": []
     },
     {
       "code": "4",
-      "name": "Cultura y alfabetización digital en la universidad",
-      "hours": 4,
+      "name": "Nuevos Entornos y Lenguajes",
+      "hours": 32,
       "year": 1,
       "period": 1,
       "correlatives": []
     },
     {
       "code": "5",
-      "name": "Taller de diseño conceptual de juegos",
-      "hours": 7,
+      "name": "Taller de Diseño Conceptual de Juegos",
+      "hours": 96,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a los Videojuegos"
+      ]
     },
     {
       "code": "6",
-      "name": "Taller de programación",
-      "hours": 7,
+      "name": "Programación Estructurada",
+      "hours": 96,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a Lógica y Problemas Computacionales",
+        "Matemática para Informática I"
+      ]
     },
     {
       "code": "7",
-      "name": "Arte digital para videojuegos",
-      "hours": 8,
+      "name": "Arte Digital para Videojuegos",
+      "hours": 64,
       "year": 1,
       "period": 2,
       "correlatives": []
     },
     {
       "code": "8",
-      "name": "Materia UNAHUR",
-      "hours": 3,
+      "name": "Inglés I",
+      "hours": 32,
       "year": 1,
       "period": 2,
       "correlatives": []
     },
     {
       "code": "9",
-      "name": "Programación con objetos",
-      "hours": 7,
+      "name": "Bases de Datos",
+      "hours": 96,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Matemática para Informática I"
+      ]
     },
     {
       "code": "10",
-      "name": "Diseño de interfaces y experiencia de usuario",
-      "hours": 7,
+      "name": "Programación con Objetos",
+      "hours": 128,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Programación Estructurada"
+      ]
     },
     {
       "code": "11",
-      "name": "Introducción a motores de videojuegos",
-      "hours": 7,
+      "name": "Introducción a Motores de Videojuegos",
+      "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Programación Estructurada"
+      ]
     },
     {
       "code": "12",
-      "name": "Programación de videojuegos I",
-      "hours": 6,
+      "name": "Materia UNAHUR",
+      "hours": 32,
       "year": 2,
       "period": 1,
       "correlatives": []
     },
     {
       "code": "13",
-      "name": "Planificación de negocios",
-      "hours": 7,
-      "year": 2,
-      "period": 2,
-      "correlatives": []
-    },
-    {
-      "code": "14",
-      "name": "Bases de datos",
-      "hours": 7,
-      "year": 2,
-      "period": 2,
-      "correlatives": []
-    },
-    {
-      "code": "15",
-      "name": "Elementos de ingeniería de Software",
-      "hours": 7,
-      "year": 2,
-      "period": 2,
-      "correlatives": []
-    },
-    {
-      "code": "16",
-      "name": "Programación de videojuegos II",
-      "hours": 9,
+      "name": "Programación de Videojuegos I",
+      "hours": 96,
       "year": 2,
       "period": 2,
       "correlatives": [
-        "Programación de videojuegos I"
+        "Programación con Objetos",
+        "Introducción a Motores de Videojuegos"
+      ]
+    },
+    {
+      "code": "14",
+      "name": "Electiva I",
+      "hours": 64,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Introducción a Motores de Videojuegos"
+      ]
+    },
+    {
+      "code": "15",
+      "name": "Construcción de Interfaces de Usuario",
+      "hours": 96,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Programación con Objetos"
+      ]
+    },
+    {
+      "code": "16",
+      "name": "Inglés II",
+      "hours": 32,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Inglés I"
+      ]
+    },
+    {
+      "code": "17",
+      "name": "Electiva II",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Programación de Videojuegos I"
+      ]
+    },
+    {
+      "code": "18",
+      "name": "Elementos de Ingeniería de Software",
+      "hours": 96,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Programación de Videojuegos I",
+        "Bases de Datos"
+      ]
+    },
+    {
+      "code": "19",
+      "name": "Programación de Videojuegos II",
+      "hours": 96,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Programación de Videojuegos I"
       ]
     }
   ]

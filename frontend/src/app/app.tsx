@@ -41,7 +41,7 @@ export const App = () => {
       <Sidebar />
       <main className={`flex-1 flex flex-col min-w-0 ${
         location.pathname === '/mapa' 
-          ? 'w-full h-screen h-[100dvh]' 
+          ? 'w-full h-screen' 
           : 'max-w-5xl mx-auto w-full px-6 pt-8 pb-24 md:pb-8'
       }`}>
         <Routes>

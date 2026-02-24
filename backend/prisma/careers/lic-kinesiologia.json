@@ -54,10 +54,12 @@
     {
       "code": "7",
       "name": "Salud Comunitaria I",
-      "hours": 6,
+      "hours": 96,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción to la Salud Comunitaria"
+      ]
     },
     {
       "code": "8",
@@ -240,7 +242,7 @@
     {
       "code": "27",
       "name": "Kinefisiatría I",
-      "hours": 5,
+      "hours": 80,
       "year": 3,
       "period": 2,
       "correlatives": [
@@ -261,7 +263,7 @@
     {
       "code": "29",
       "name": "Kinefisiatría II",
-      "hours": 6,
+      "hours": 96,
       "year": 3,
       "period": 2,
       "correlatives": [

@@ -75,10 +75,10 @@
     },
     {
       "code": "S10",
-      "name": "universidad",
+      "name": "Asignatura UNAHUR I",
       "hours": 32,
       "year": 1,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -109,10 +109,10 @@
     },
     {
       "code": "S14",
-      "name": "socioeducativo",
+      "name": "Práctica en el ámbito socioeducativo",
       "hours": 64,
       "year": 2,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -127,7 +127,7 @@
     },
     {
       "code": "S16",
-      "name": "clásica",
+      "name": "Cultura y literatura de la antigüedad clásica",
       "hours": 64,
       "year": 2,
       "period": 1,

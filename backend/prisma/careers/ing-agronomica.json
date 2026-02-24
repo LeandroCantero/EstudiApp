@@ -64,7 +64,7 @@
     {
       "code": "9",
       "name": "Química general",
-      "hours": 64,
+      "hours": 80,
       "year": 1,
       "period": 2,
       "correlatives": [
@@ -326,9 +326,11 @@
       "code": "37",
       "name": "Climatología y fenología",
       "hours": 64,
-      "year": 1,
+      "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Matemática aplicada"
+      ]
     },
     {
       "code": "38",

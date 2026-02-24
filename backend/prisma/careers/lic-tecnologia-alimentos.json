@@ -4,7 +4,7 @@
     {
       "code": "1",
       "name": "Matemática I",
-      "hours": 6,
+      "hours": 96,
       "year": 1,
       "period": 1,
       "correlatives": []
@@ -138,11 +138,12 @@
     {
       "code": "16",
       "name": "Fisicoquímica de los Alimentos I",
-      "hours": 6,
+      "hours": 96,
       "year": 2,
       "period": 2,
       "correlatives": [
-        "Química General e Inorgánica"
+        "Química General e Inorgánica",
+        "Matemática II"
       ]
     },
     {

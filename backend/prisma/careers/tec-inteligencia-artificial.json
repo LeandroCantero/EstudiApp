@@ -3,108 +3,107 @@
   "subjects": [
     {
       "code": "1",
-      "name": "Matemática para informática",
-      "hours": 7,
+      "name": "Matemática para Informática I",
+      "hours": 64,
       "year": 1,
       "period": 1,
       "correlatives": []
     },
     {
       "code": "2",
-      "name": "Introducción a lógica y problemas computacionales",
-      "hours": 7,
+      "name": "Introducción a Lógica y Problemas Computacionales",
+      "hours": 64,
       "year": 1,
       "period": 1,
       "correlatives": []
     },
     {
       "code": "3",
-      "name": "Introducción a la inteligencia artificial",
-      "hours": 5,
+      "name": "Introducción a la Inteligencia Artificial",
+      "hours": 64,
       "year": 1,
       "period": 1,
       "correlatives": []
     },
     {
       "code": "4",
-      "name": "Cultura y alfabetización digital en la universidad",
-      "hours": 4,
+      "name": "Nuevos Entornos y Lenguajes",
+      "hours": 32,
       "year": 1,
       "period": 1,
       "correlatives": []
     },
     {
       "code": "5",
-      "name": "Álgebra lineal",
-      "hours": 5,
+      "name": "Álgebra Lineal",
+      "hours": 64,
       "year": 1,
       "period": 2,
       "correlatives": [
-        "Matemática para informática"
+        "Matemática para Informática I"
       ]
     },
     {
       "code": "6",
       "name": "Cálculo",
-      "hours": 6,
+      "hours": 96,
       "year": 1,
       "period": 2,
       "correlatives": [
-        "Matemática para informática"
+        "Matemática para Informática I"
       ]
     },
     {
       "code": "7",
       "name": "Taller de Programación I",
-      "hours": 6,
+      "hours": 96,
       "year": 1,
       "period": 2,
       "correlatives": [
-        "Introducción a lógica y problemas computacionales"
+        "Introducción a Lógica y Problemas Computacionales"
       ]
     },
     {
       "code": "8",
-      "name": "Tecnología y sociedad",
-      "hours": 4,
+      "name": "Tecnología y Sociedad",
+      "hours": 64,
       "year": 1,
       "period": 2,
       "correlatives": []
     },
     {
       "code": "9",
-      "name": "Bases de datos",
-      "hours": 7,
-      "year": 2,
-      "period": 1,
-      "correlatives": [
-        "Taller de Programación I"
-      ]
+      "name": "Inglés I",
+      "hours": 32,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
     },
     {
       "code": "10",
-      "name": "Probabilidad y estadística",
-      "hours": 5,
+      "name": "Bases de Datos",
+      "hours": 96,
       "year": 2,
       "period": 1,
       "correlatives": [
-        "Matemática para informática"
+        "Álgebra Lineal"
       ]
     },
     {
       "code": "11",
-      "name": "Taller de Programación II",
-      "hours": 5,
+      "name": "Probabilidad y Estadística",
+      "hours": 64,
       "year": 2,
       "period": 1,
       "correlatives": [
-        "Taller de Programación I"
+        "Álgebra Lineal",
+        "Cálculo"
       ]
     },
     {
       "code": "12",
-      "name": "Fundamentos de ciencias de datos",
-      "hours": 5,
+      "name": "Taller de Programación II",
+      "hours": 96,
       "year": 2,
       "period": 1,
       "correlatives": [
@@ -113,83 +112,98 @@
     },
     {
       "code": "13",
-      "name": "Fundamentos de redes neuronales",
-      "hours": 5,
+      "name": "Fundamentos de Redes Neuronales",
+      "hours": 64,
       "year": 2,
-      "period": 2,
+      "period": 1,
       "correlatives": [
-        "Álgebra lineal",
-        "Cálculo"
+        "Introducción a la Inteligencia Artificial",
+        "Álgebra Lineal",
+        "Taller de Programación I"
       ]
     },
     {
       "code": "14",
-      "name": "Aprendizaje Automático",
-      "hours": 6,
+      "name": "Fundamentos de Ciencias de Datos",
+      "hours": 64,
       "year": 2,
       "period": 2,
       "correlatives": [
-        "Fundamentos de ciencias de datos",
-        "Probabilidad y estadística"
+        "Introducción a la Inteligencia Artificial",
+        "Álgebra Lineal",
+        "Cálculo"
       ]
     },
     {
       "code": "15",
-      "name": "Taller de Programación III",
-      "hours": 5,
+      "name": "Aprendizaje Automático",
+      "hours": 96,
       "year": 2,
       "period": 2,
       "correlatives": [
-        "Taller de Programación II"
+        "Probabilidad y Estadística",
+        "Fundamentos de Redes Neuronales"
       ]
     },
     {
       "code": "16",
-      "name": "Inglés",
-      "hours": 4,
+      "name": "Taller de Programación III",
+      "hours": 96,
       "year": 2,
       "period": 2,
-      "correlatives": []
-    },
-    {
-      "code": "17",
-      "name": "Asignatura UNAHUR",
-      "hours": 3,
-      "year": 3,
-      "period": 1,
-      "correlatives": []
-    },
-    {
-      "code": "18",
-      "name": "Aprendizaje Automático Avanzado",
-      "hours": 6,
-      "year": 3,
-      "period": 1,
       "correlatives": [
-        "Aprendizaje Automático",
-        "Fundamentos de redes neuronales"
-      ]
-    },
-    {
-      "code": "19",
-      "name": "Procesamiento de Imágenes y Visión por Computadora",
-      "hours": 5,
-      "year": 3,
-      "period": 1,
-      "correlatives": [
-        "Álgebra lineal",
         "Taller de Programación II"
       ]
     },
     {
-      "code": "20",
-      "name": "Proyecto integrador",
-      "hours": 8,
+      "code": "17",
+      "name": "Inglés II",
+      "hours": 32,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Inglés I"
+      ]
+    },
+    {
+      "code": "18",
+      "name": "Materia UNAHUR",
+      "hours": 32,
+      "year": 3,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "19",
+      "name": "Aprendizaje Automático Avanzado",
+      "hours": 96,
       "year": 3,
       "period": 1,
       "correlatives": [
         "Aprendizaje Automático",
-        "Bases de datos"
+        "Taller de Programación III"
+      ]
+    },
+    {
+      "code": "20",
+      "name": "Procesamiento de Imágenes y Visión por Computadora",
+      "hours": 96,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Aprendizaje Automático",
+        "Taller de Programación III"
+      ]
+    },
+    {
+      "code": "21",
+      "name": "Proyecto Integrador",
+      "hours": 128,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Aprendizaje Automático",
+        "Taller de Programación III"
       ]
     }
   ]

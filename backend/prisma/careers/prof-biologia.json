@@ -35,8 +35,8 @@
     },
     {
       "code": "S5",
-      "name": "celular y molecular",
-      "hours": 64,
+      "name": "Introducción a la Biología celular y molecular",
+      "hours": 96,
       "year": 1,
       "period": 1,
       "correlatives": []
@@ -62,16 +62,20 @@
       "name": "Zoología",
       "hours": 96,
       "year": 1,
-      "period": 1,
-      "correlatives": []
+      "period": 2,
+      "correlatives": [
+        "Introducción a la Biología celular y molecular"
+      ]
     },
     {
       "code": "S9",
       "name": "Botánica",
-      "hours": 64,
+      "hours": 96,
       "year": 1,
-      "period": 1,
-      "correlatives": []
+      "period": 2,
+      "correlatives": [
+        "Introducción a la Biología celular y molecular"
+      ]
     },
     {
       "code": "S10",
@@ -143,11 +147,14 @@
     },
     {
       "code": "S18",
-      "name": "humana",
+      "name": "Anatomía y Fisiología humana",
       "hours": 64,
       "year": 2,
-      "period": 1,
-      "correlatives": []
+      "period": 2,
+      "correlatives": [
+        "Introducción a la Biología celular y molecular",
+        "Química general e inorgánica"
+      ]
     },
     {
       "code": "S19",

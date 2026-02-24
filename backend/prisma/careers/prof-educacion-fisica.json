@@ -103,8 +103,8 @@
     },
     {
       "code": "S13",
-      "name": "latinoamericano",
-      "hours": 48,
+      "name": "Pensamiento Pedagógico Latinoamericano",
+      "hours": 64,
       "year": 2,
       "period": 1,
       "correlatives": []
@@ -173,19 +173,21 @@
     },
     {
       "code": "S21",
-      "name": "proyectos educativos",
-      "hours": 48,
+      "name": "Historia de la Nación Argentina y sus proyectos educativos",
+      "hours": 64,
       "year": 3,
       "period": 1,
       "correlatives": []
     },
     {
       "code": "S22",
-      "name": "superior",
-      "hours": 48,
+      "name": "Didáctica en contextos de Educación superior",
+      "hours": 64,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Didáctica y curriculum"
+      ]
     },
     {
       "code": "S23",
@@ -197,11 +199,13 @@
     },
     {
       "code": "S24",
-      "name": "y primario",
+      "name": "Prácticas docentes en el nivel inicial y primario",
       "hours": 160,
       "year": 3,
-      "period": 1,
-      "correlatives": []
+      "period": 2,
+      "correlatives": [
+        "Didáctica y curriculum"
+      ]
     },
     {
       "code": "S25",

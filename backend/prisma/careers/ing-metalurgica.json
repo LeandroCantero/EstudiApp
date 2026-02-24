@@ -71,7 +71,9 @@
       "hours": 96,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción al análisis Matemático"
+      ]
     },
     {
       "code": "E10",
@@ -213,7 +215,9 @@
       "hours": 96,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Análisis Matemático II"
+      ]
     },
     {
       "code": "E25",
@@ -273,7 +277,10 @@
       "hours": 64,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Termodinámica",
+        "Mecánica de los Fluidos"
+      ]
     },
     {
       "code": "E31",

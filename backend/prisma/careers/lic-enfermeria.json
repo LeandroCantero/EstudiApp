@@ -35,11 +35,14 @@
     },
     {
       "code": "5",
-      "name": "Salud Comunitaria I",
-      "hours": 6,
+      "name": "Enfermería en salud comunitaria",
+      "hours": 96,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la Salud Comunitaria",
+        "Fundamentos de Enfermería I"
+      ]
     },
     {
       "code": "6",
@@ -53,11 +56,13 @@
     },
     {
       "code": "7",
-      "name": "Introducción to la Nutrición",
-      "hours": 3,
-      "year": 1,
-      "period": 2,
-      "correlatives": []
+      "name": "Nutrición y dietoterapia",
+      "hours": 64,
+      "year": 2,
+      "period": 1,
+      "correlatives": [
+        "Anatomo-Fisiología I"
+      ]
     },
     {
       "code": "8",
@@ -154,21 +159,21 @@
     {
       "code": "18",
       "name": "Microbiología",
-      "hours": 3,
+      "hours": 64,
       "year": 3,
       "period": 1,
       "correlatives": [
-        "Introducción en microbiología y farmacología para enfermería"
+        "Farmacología"
       ]
     },
     {
       "code": "19",
       "name": "Farmacología",
-      "hours": 3,
-      "year": 3,
+      "hours": 64,
+      "year": 2,
       "period": 1,
       "correlatives": [
-        "Introducción en microbiología y farmacología para enfermería"
+        "Anátomo-Fisiología II"
       ]
     },
     {

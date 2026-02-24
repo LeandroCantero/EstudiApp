@@ -39,7 +39,10 @@
       "hours": 96,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la Energía Eléctrica",
+        "Álgebra y Geometría Analítica"
+      ]
     },
     {
       "code": "E6",
@@ -55,7 +58,9 @@
       "hours": 64,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción al análisis matemático"
+      ]
     },
     {
       "code": "E8",
@@ -71,7 +76,9 @@
       "hours": 96,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción al análisis matemático"
+      ]
     },
     {
       "code": "E10",
@@ -88,8 +95,10 @@
       "name": "Programación",
       "hours": 64,
       "year": 2,
-      "period": 2,
-      "correlatives": []
+      "period": 1,
+      "correlatives": [
+        "Nuevos Entornos y Lenguajes"
+      ]
     },
     {
       "code": "E12",
@@ -127,8 +136,7 @@
       "year": 2,
       "period": 2,
       "correlatives": [
-        "Física II",
-        "Circuitos eléctricos"
+        "Sistemas de mediciones"
       ]
     },
     {
@@ -148,8 +156,7 @@
       "year": 3,
       "period": 1,
       "correlatives": [
-        "Electrotecnia",
-        "Física II"
+        "Circuitos eléctricos"
       ]
     },
     {
@@ -159,8 +166,7 @@
       "year": 3,
       "period": 1,
       "correlatives": [
-        "Física II",
-        "Análisis matemático I"
+        "Circuitos eléctricos"
       ]
     },
     {
@@ -216,7 +222,9 @@
       "hours": 96,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Análisis matemático II"
+      ]
     },
     {
       "code": "E25",
@@ -231,10 +239,10 @@
       "name": "Sistemas de control",
       "hours": 64,
       "year": 4,
-      "period": 2,
+      "period": 1,
       "correlatives": [
-        "Matemática avanzada",
-        "Análisis de circuitos y señales"
+        "Electrónica",
+        "Matemática avanzada"
       ]
     },
     {

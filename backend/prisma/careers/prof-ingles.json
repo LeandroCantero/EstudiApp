@@ -107,8 +107,8 @@
     },
     {
       "code": "S13",
-      "name": "latinoamericano",
-      "hours": 48,
+      "name": "Pensamiento Pedagógico Latinoamericano",
+      "hours": 64,
       "year": 2,
       "period": 1,
       "correlatives": []
@@ -123,10 +123,10 @@
     },
     {
       "code": "S15",
-      "name": "socioeducativo",
+      "name": "Práctica en el ámbito socioeducativo",
       "hours": 64,
       "year": 2,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -152,17 +152,19 @@
     {
       "code": "S18",
       "name": "Lingüística",
-      "hours": 48,
+      "hours": 64,
       "year": 3,
       "period": 1,
       "correlatives": [
-        "Gramática inglesa II"
+        "Lengua inglesa II",
+        "Gramática inglesa II",
+        "Adquisición de la lengua materna y extranjera"
       ]
     },
     {
       "code": "S19",
-      "name": "extranjera",
-      "hours": 32,
+      "name": "Adquisición de la lengua materna y extranjera",
+      "hours": 64,
       "year": 3,
       "period": 1,
       "correlatives": []

@@ -2,81 +2,119 @@
   "career": "Tec. Univ. en Redes y Operaciones Informáticas",
   "subjects": [
     {
-      "code": "E1",
-      "name": "Matemática para informática I",
+      "code": "1",
+      "name": "Matemática para Informática I",
       "hours": 64,
       "year": 1,
       "period": 1,
       "correlatives": []
     },
     {
-      "code": "E2",
+      "code": "2",
+      "name": "Introducción a lógica y problemas computacionales",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "3",
+      "name": "Organización de computadoras I",
+      "hours": 64,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "4",
+      "name": "Nuevos entornos y lenguajes",
+      "hours": 32,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
+      "code": "5",
       "name": "Taller de intérpretes de comandos",
       "hours": 64,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a lógica y problemas computacionales"
+      ]
     },
     {
-      "code": "E3",
-      "name": "Organización de computadoras I",
-      "hours": 64,
-      "year": 1,
-      "period": 2,
-      "correlatives": []
-    },
-    {
-      "code": "E4",
-      "name": "Bases de Datos",
-      "hours": 64,
-      "year": 1,
-      "period": 2,
-      "correlatives": []
-    },
-    {
-      "code": "E5",
-      "name": "Taller de programación",
-      "hours": 64,
-      "year": 1,
-      "period": 2,
-      "correlatives": []
-    },
-    {
-      "code": "E6",
-      "name": "Redes de computadoras",
-      "hours": 64,
-      "year": 2,
-      "period": 1,
-      "correlatives": []
-    },
-    {
-      "code": "E7",
+      "code": "6",
       "name": "Organización de computadoras II",
-      "hours": 64,
-      "year": 2,
-      "period": 1,
+      "hours": 96,
+      "year": 1,
+      "period": 2,
       "correlatives": [
         "Organización de computadoras I"
       ]
     },
     {
-      "code": "E8",
+      "code": "7",
+      "name": "Sistemas de comunicación",
+      "hours": 64,
+      "year": 1,
+      "period": 2,
+      "correlatives": [
+        "Organización de computadoras I"
+      ]
+    },
+    {
+      "code": "8",
+      "name": "Inglés I",
+      "hours": 32,
+      "year": 1,
+      "period": 2,
+      "correlatives": []
+    },
+    {
+      "code": "9",
+      "name": "Bases de Datos",
+      "hours": 96,
+      "year": 2,
+      "period": 1,
+      "correlatives": [
+        "Matemática para Informática I"
+      ]
+    },
+    {
+      "code": "10",
+      "name": "Redes de Computadoras",
+      "hours": 96,
+      "year": 2,
+      "period": 1,
+      "correlatives": [
+        "Organización de computadoras II",
+        "Sistemas de comunicación"
+      ]
+    },
+    {
+      "code": "11",
       "name": "Sistemas Operativos",
-      "hours": 64,
+      "hours": 96,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Taller de intérpretes de comandos",
+        "Organización de computadoras II"
+      ]
     },
     {
-      "code": "E9",
-      "name": "Operaciones",
-      "hours": 64,
+      "code": "12",
+      "name": "Operaciones I",
+      "hours": 96,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Taller de intérpretes de comandos"
+      ]
     },
     {
-      "code": "E10",
+      "code": "13",
       "name": "Materia UNAHUR",
       "hours": 32,
       "year": 2,
@@ -84,20 +122,79 @@
       "correlatives": []
     },
     {
-      "code": "E11",
+      "code": "14",
       "name": "Redes avanzadas",
       "hours": 96,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Redes de Computadoras"
+      ]
     },
     {
-      "code": "E12",
-      "name": "Seguridad de la Información",
+      "code": "15",
+      "name": "Electiva I",
       "hours": 64,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Organización de computadoras II",
+        "Sistemas de comunicación"
+      ]
+    },
+    {
+      "code": "16",
+      "name": "Electiva II",
+      "hours": 64,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Matemática para Informática I",
+        "Taller de intérpretes de comandos"
+      ]
+    },
+    {
+      "code": "17",
+      "name": "Inglés II",
+      "hours": 32,
+      "year": 2,
+      "period": 2,
+      "correlatives": [
+        "Inglés I"
+      ]
+    },
+    {
+      "code": "18",
+      "name": "Seguridad de la Información",
+      "hours": 96,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Redes avanzadas",
+        "Operaciones I"
+      ]
+    },
+    {
+      "code": "19",
+      "name": "Laboratorio de sistemas operativos y redes",
+      "hours": 64,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Redes de Computadoras",
+        "Sistemas Operativos"
+      ]
+    },
+    {
+      "code": "20",
+      "name": "Operaciones II",
+      "hours": 96,
+      "year": 3,
+      "period": 1,
+      "correlatives": [
+        "Operaciones I",
+        "Sistemas Operativos"
+      ]
     }
   ]
 }
