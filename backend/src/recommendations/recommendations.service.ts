@@ -79,7 +79,7 @@ export class RecommendationsService {
 
       if (!studentPrereq) return false;
 
-      const validStatuses: SubjectStatus[] = [SubjectStatus.REGULARIZADA, SubjectStatus.PROMOCIONADA];
+      const validStatuses: SubjectStatus[] = [SubjectStatus.PROMOCIONADA];
       if (!validStatuses.includes(studentPrereq.status)) {
         return false;
       }

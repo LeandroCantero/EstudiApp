@@ -31,6 +31,7 @@ A diferencia de un conteo simple, el sistema utiliza un algoritmo recursivo para
 - **Bonus Transitivo:** Suma de todas las materias en la cadena de desbloqueo (hijos, nietos, etc.).
 - **Estacionalidad:** Multiplicador (+2) si la materia se dicta en el cuatrimestre actual (basado en el campo `period`).
 - **Carga Horaria:** Factor de balanceo para no sugerir exceder la capacidad del alumno.
+- **Regla de Recomendación Estricta:** Una materia solo se recomienda (`isRecommended`) si el 100% de sus correlativas directas están en estado `PROMOCIONADA`. Si están solo `REGULARIZADA`, la materia se desbloquea para cursar pero no califica para recomendación destacada.
 
 ### 2.4. Proyección de Graduación (RN9)
 Cálculo basado en dos métricas concurrentes:
@@ -38,11 +39,13 @@ Cálculo basado en dos métricas concurrentes:
 2. **Profundidad del Camino Crítico (P):** Longitud de la cadena más larga de correlatividades pendientes.
 - **Resultado:** `Max((MateriasRestantes / V), P)` cuatrimestres restantes.
 
-### 2.5. Lógica del Simulador (RN7) - Frontend-Driven
+### 2.5. Lógica del Simulador (RN7) - Bidireccional y Persistente
 El simulador opera íntegramente en el cliente mediante **React Flow** y el estado local de React:
-- Permite al usuario "pintar" estados hipotéticos (ej: Promocionada) sobre nodos de materias.
-- Recalcula aristas y estados de bloqueo en tiempo real sin llamar al backend.
-- No utiliza persistencia; al recargar la página, el estado vuelve a sincronizarse con el backend oficial.
+- **Bidireccionalidad:** Permite al usuario "pintar" estados (`PROMOCIONADA`) o "despintarlos" (`PENDIENTE`), recalculando en cascada el impacto en materias futuras y recomendaciones actuales.
+- **Layout DAG Horizontal:** Organiza las materias automáticamente de izquierda a derecha según su profundidad de correlatividades (niveles de dependencia), no por año cronológico.
+- **Libre Movimiento:** Los nodos no son fijos; el usuario puede arrastrarlos para personalizar su vista. El sistema preserva estas posiciones manuales durante la sesión de simulación.
+- **Limpieza Visual:** Utiliza conectores (Handles) laterales e invisibles para reducir la carga cognitiva, enfocándose en bloques de color sólido.
+- No utiliza persistencia en DB; al recargar la página, el estado vuelve a sincronizarse con el backend oficial.
 
 ## 3. Cálculos Académicos (RN6)
 
@@ -61,4 +64,4 @@ El simulador opera íntegramente en el cliente mediante **React Flow** y el esta
 
 ---
 **Autor:** Cantero, Leandro  
-**Fecha:** 22/02/2026
+**Fecha:** 24/02/2026

@@ -1,15 +1,14 @@
 import { StudentSubjectResponse, subjectApi } from '@/entities/subject/api/subject-api';
-import { apiClient } from '@/shared/api/base';
-import { Network, Sparkles } from 'lucide-react';
+import { Network, Sparkles, X } from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
 import ReactFlow, {
-    Background,
-    Controls,
-    MarkerType,
-    MiniMap,
-    Node,
-    useEdgesState,
-    useNodesState,
+  Background,
+  Controls,
+  MarkerType,
+  MiniMap,
+  Node,
+  useEdgesState,
+  useNodesState,
 } from 'reactflow';
 import 'reactflow/dist/style.css';
 import { SubjectNode } from './subject-node';
@@ -18,9 +17,14 @@ const nodeTypes = {
   subject: SubjectNode,
 };
 
-interface Recommendation {
-  careerSubject: { id: string };
-  priorityScore: number;
+interface SubjectNodeData {
+  name: string;
+  code: string;
+  status: string;
+  impact: number;
+  isAnnual: boolean;
+  isSimulated: boolean;
+  isRecommended: boolean;
 }
 
 export const CareerMapPage = () => {
@@ -28,13 +32,43 @@ export const CareerMapPage = () => {
   const [edges, setEdges, onEdgesChange] = useEdgesState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [originalSubjects, setOriginalSubjects] = useState<StudentSubjectResponse[]>([]);
-  const [recommendations, setRecommendations] = useState<string[]>([]);
   const [simulatedStatuses, setSimulatedStatuses] = useState<Record<string, string>>({});
   const [showRecommendations, setShowRecommendations] = useState(true);
+  const [showLegend, setShowLegend] = useState(false);
 
-  const buildGraph = useCallback((subjects: StudentSubjectResponse[], simulated: Record<string, string>, recs: string[], showRecs: boolean) => {
-    // 1. Calcular impacto
+  const calculateRecommendations = useCallback((subjects: StudentSubjectResponse[], currentSimulated: Record<string, string>) => {
+    // Implementación frontend de RN9: Recomendación Estricta
+    // 1. Identificar candidatas (PENDIENTE y con correlativas promocionadas)
+    return subjects
+      .filter(s => {
+        const status = currentSimulated[s.careerSubject.id] || s.status;
+        if (status !== 'PENDIENTE') return false;
+
+        // Todas las correlativas deben estar PROMOCIONADA
+        return s.careerSubject.prerequisites.every(pre => {
+          const preStatus = currentSimulated[pre.id] || subjects.find(sub => sub.careerSubject.id === pre.id)?.status;
+          return preStatus === 'PROMOCIONADA';
+        });
+      })
+      .map(s => s.careerSubject.id);
+  }, []);
+
+  const buildGraph = useCallback((subjects: StudentSubjectResponse[], simulated: Record<string, string>, showRecs: boolean) => {
+    // Recalcular recomendaciones basadas en el estado simulado
+    const currentRecs = calculateRecommendations(subjects, simulated);
+    
+    // 1. Calcular impacto y profundidad
     const impactMap = new Map<string, number>();
+    const depthMap = new Map<string, number>();
+
+    const calculateDepth = (id: string, visited = new Set<string>()): number => {
+      if (visited.has(id)) return 0;
+      visited.add(id);
+      const sub = subjects.find(s => s.careerSubject.id === id);
+      if (!sub || sub.careerSubject.prerequisites.length === 0) return 0;
+      return 1 + Math.max(...sub.careerSubject.prerequisites.map(p => calculateDepth(p.id, visited)));
+    };
+
     subjects.forEach(s => {
       const calculateImpact = (id: string, visited = new Set()): number => {
         if (visited.has(id)) return 0;
@@ -45,93 +79,107 @@ export const CareerMapPage = () => {
         return dependents.length + dependents.reduce((acc, dep) => acc + calculateImpact(dep.careerSubject.id, visited), 0);
       };
       impactMap.set(s.careerSubject.id, calculateImpact(s.careerSubject.id));
+      depthMap.set(s.careerSubject.id, calculateDepth(s.careerSubject.id));
     });
 
-    // 2. Crear Nodos
-    const newNodes = subjects.map((s) => {
-      const year = s.careerSubject.year || 1;
-      const period = s.careerSubject.period || 1;
-      const x = (year - 1) * 320;
-      const periodOffset = (period === 0 ? 1.5 : period) * 140;
-      
-      const subjectsInSameSlot = subjects.filter(sub => 
-        sub.careerSubject.year === s.careerSubject.year && 
-        sub.careerSubject.period === s.careerSubject.period &&
-        sub.id !== s.id
-      );
-      const indexInSlot = subjectsInSameSlot.findIndex(sub => sub.id === s.id);
-      const y = periodOffset + (indexInSlot > -1 ? indexInSlot * 110 : 0);
+    // 2. Organizar por Dependencia para el Layout (DAG)
+    const colWidth = 350;
+    const subjectHeight = 120;
+    
+    // Agrupar por profundidad (nivel en el grafo)
+    const columns: Record<number, StudentSubjectResponse[]> = {};
+    subjects.forEach(s => {
+      const depth = depthMap.get(s.careerSubject.id) || 0;
+      if (!columns[depth]) columns[depth] = [];
+      columns[depth].push(s);
+    });
 
-      let status = simulated[s.careerSubject.id] || s.status;
+    // 3. Crear o Actualizar Nodos
+    setNodes(nds => {
+      const newNodes: Node[] = [];
       
-      if (status === 'PENDIENTE') {
-        const hasUnmetPrereqs = s.careerSubject.prerequisites.some(p => {
-          const prereqId = p.id;
-          const prereqStatus = simulated[prereqId] || subjects.find(sub => sub.careerSubject.id === prereqId)?.status;
-          return prereqStatus !== 'PROMOCIONADA' && prereqStatus !== 'REGULARIZADA';
+      Object.entries(columns).forEach(([depthStr, colSubjects]) => {
+        const depth = parseInt(depthStr);
+        const x = depth * colWidth;
+        
+        const sortedInCol = [...colSubjects].sort((a, b) => {
+          const yearA = a.careerSubject.year || 0;
+          const yearB = b.careerSubject.year || 0;
+          if (yearA !== yearB) return yearA - yearB;
+          return (impactMap.get(b.careerSubject.id) || 0) - (impactMap.get(a.careerSubject.id) || 0);
         });
-        if (hasUnmetPrereqs) status = 'BLOQUEADA';
-      }
+        
+        sortedInCol.forEach((s, index) => {
+          const y = index * subjectHeight;
+          const status = simulated[s.careerSubject.id] || s.status;
+          const isRecommended = showRecs && currentRecs.includes(s.careerSubject.id);
+          
+          let finalStatus = status;
+          if (status === 'PENDIENTE') {
+            const hasUnmetPrereqs = s.careerSubject.prerequisites.some(pre => {
+              const prereqStatus = simulated[pre.id] || subjects.find(sub => sub.careerSubject.id === pre.id)?.status;
+              return prereqStatus !== 'PROMOCIONADA' && prereqStatus !== 'REGULARIZADA';
+            });
+            if (hasUnmetPrereqs) finalStatus = 'BLOQUEADA';
+          }
 
-      const isRecommended = showRecs && recs.includes(s.careerSubject.id);
-
-      return {
-        id: s.careerSubject.id,
-        type: 'subject',
-        position: { x, y },
-        data: { 
-          name: s.careerSubject.subject.name, 
-          code: s.careerSubject.code,
-          status,
-          impact: impactMap.get(s.careerSubject.id) || 0,
-          isAnnual: s.careerSubject.period === 0,
-          isSimulated: !!simulated[s.careerSubject.id],
-          isRecommended
-        },
-      };
+          // Intentar encontrar el nodo existente para preservar su posición
+          const existingNode = nds.find(n => n.id === s.careerSubject.id);
+          
+          newNodes.push({
+            id: s.careerSubject.id,
+            type: 'subject',
+            position: existingNode ? existingNode.position : { x, y },
+            data: { 
+              name: s.careerSubject.subject.name, 
+              code: s.careerSubject.code,
+              status: finalStatus,
+              impact: impactMap.get(s.careerSubject.id) || 0,
+              isAnnual: s.careerSubject.period === 0,
+              isSimulated: !!simulated[s.careerSubject.id],
+              isRecommended
+            },
+          });
+        });
+      });
+      return newNodes;
     });
 
-    // 3. Crear Edges
+    // 4. Crear Edges
     const newEdges = subjects.flatMap(s => 
       s.careerSubject.prerequisites.map(p => {
-        const isTargetRecommended = showRecs && recs.includes(s.careerSubject.id);
-        const isSourceRecommended = showRecs && recs.includes(p.id);
-        const isOptimalPath = isTargetRecommended && (isSourceRecommended || s.status === 'EN_CURSO');
+        const isTargetRecommended = showRecs && currentRecs.includes(s.careerSubject.id);
+        const isSourceRecommended = showRecs && currentRecs.includes(p.id);
+        const isOptimalPath = isTargetRecommended && (isSourceRecommended || (simulated[p.id] || subjects.find(sub => sub.careerSubject.id === p.id)?.status) === 'PROMOCIONADA');
 
         return {
           id: `e-${p.id}-${s.careerSubject.id}`,
           source: p.id,
           target: s.careerSubject.id,
-          animated: (simulated[s.careerSubject.id] || s.status) === 'EN_CURSO' || isOptimalPath,
+          animated: isOptimalPath,
           style: { 
-            stroke: isOptimalPath ? 'rgba(var(--primary), 0.8)' : 'rgba(var(--primary), 0.2)', 
+            stroke: isOptimalPath ? '#fa8112' : 'rgba(var(--foreground), 0.1)', 
             strokeWidth: isOptimalPath ? 3 : 2 
           },
           markerEnd: { 
             type: MarkerType.ArrowClosed, 
-            color: isOptimalPath ? 'rgb(var(--primary))' : 'rgba(var(--primary), 0.5)' 
+            color: isOptimalPath ? '#fa8112' : 'rgba(var(--foreground), 0.2)' 
           },
         };
       })
     );
 
-    setNodes(newNodes);
     setEdges(newEdges);
-  }, [setNodes, setEdges]);
+  }, [setNodes, setEdges, calculateRecommendations]);
 
   useEffect(() => {
     const fetchContent = async () => {
       try {
         setIsLoading(true);
-        const [subjects, recsData] = await Promise.all([
-          subjectApi.getMySubjects(),
-          apiClient.get<Recommendation[]>('/recommendations')
-        ]);
+        const subjects = await subjectApi.getMySubjects();
         
-        const recIds = recsData.map(r => r.careerSubject.id);
         setOriginalSubjects(subjects);
-        setRecommendations(recIds);
-        buildGraph(subjects, {}, recIds, true);
+        buildGraph(subjects, {}, true);
       } catch (err) {
         console.error('Error fetching data for map:', err);
       } finally {
@@ -143,19 +191,34 @@ export const CareerMapPage = () => {
 
   const onNodeClick = (_: React.MouseEvent, node: Node) => {
     const subjectId = node.id;
-    const currentStatus = node.data.status;
-    
+    const currentSimStatus = simulatedStatuses[subjectId];
+    const originalSubject = originalSubjects.find(s => s.careerSubject.id === subjectId);
+    if (!originalSubject) return;
+
+    // Si la materia está bloqueada y no estamos ya simulándola, no permitimos interactuar
+    if (node.data.status === 'BLOQUEADA' && !currentSimStatus) {
+      return;
+    }
+
     setSimulatedStatuses(prev => {
       const next = { ...prev };
-      if (currentStatus === 'BLOQUEADA' && !prev[subjectId]) return prev;
+      const isSimulating = !!currentSimStatus;
       
-      if (!prev[subjectId] || prev[subjectId] === 'PENDIENTE') {
-        next[subjectId] = 'PROMOCIONADA';
-      } else {
+      if (isSimulating) {
+        // Al hacer clic de nuevo, removemos la simulación y vuelve a su estado real (sea EN_CURSO, PENDIENTE, etc)
         delete next[subjectId];
+      } else {
+        // Si no se está simulando, toggleamos:
+        // - Si está Aprobada -> Pendiente (para ver qué se bloquea)
+        // - Si está cualquier otra cosa -> Aprobada (para ver qué se desbloquea)
+        if (originalSubject.status === 'PROMOCIONADA') {
+          next[subjectId] = 'PENDIENTE';
+        } else {
+          next[subjectId] = 'PROMOCIONADA';
+        }
       }
       
-      buildGraph(originalSubjects, next, recommendations, showRecommendations);
+      buildGraph(originalSubjects, next, showRecommendations);
       return next;
     });
   };
@@ -163,7 +226,7 @@ export const CareerMapPage = () => {
   const toggleRecommendations = () => {
     const newVal = !showRecommendations;
     setShowRecommendations(newVal);
-    buildGraph(originalSubjects, simulatedStatuses, recommendations, newVal);
+    buildGraph(originalSubjects, simulatedStatuses, newVal);
   };
 
   if (isLoading) {
@@ -175,43 +238,76 @@ export const CareerMapPage = () => {
   }
 
   return (
-    <div className="flex flex-col h-[calc(100vh-8rem)] gap-4">
-      <header className="flex justify-between items-center bg-card/30 p-4 rounded-2xl border border-border/50">
-        <div className="flex items-center gap-3">
+    <div className="flex flex-col h-full w-full relative">
+      <header className="absolute top-6 left-6 right-6 z-10 flex justify-between items-start pointer-events-none">
+        <div className="flex items-center gap-3 bg-card/80 backdrop-blur-md p-3 px-5 rounded-2xl border border-border/50 shadow-xl pointer-events-auto">
           <div className="p-2 bg-primary/10 rounded-lg text-primary">
-            <Network size={24} />
+            <Network size={20} />
           </div>
           <div>
-            <h1 className="text-xl font-bold tracking-tight">Mapa de Carrera</h1>
-            <p className="text-xs text-foreground/60 font-medium">Gestiona tu trayectoria académica</p>
+            <h1 className="text-lg font-bold tracking-tight leading-none mb-1">Mapa de Carrera</h1>
+            <p className="text-[10px] text-foreground/60 font-medium uppercase tracking-wider">Simulador de Trayectoria</p>
           </div>
         </div>
         
-        <div className="flex items-center gap-2">
-          <button 
-            onClick={toggleRecommendations}
-            className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all border-none outline-none ${
-              showRecommendations 
-              ? 'bg-yellow-500 text-yellow-950 shadow-lg shadow-yellow-500/20' 
-              : 'bg-foreground/5 text-foreground/40 hover:bg-foreground/10'
-            }`}
-          >
-            <Sparkles size={14} />
-            {showRecommendations ? 'RECOMENDACIONES ACTIVAS' : 'MOSTRAR RECOMENDACIONES'}
-          </button>
-
-          {Object.keys(simulatedStatuses).length > 0 && (
+        <div className="flex flex-col items-end gap-3 pointer-events-auto">
+          <div className="flex items-center gap-2">
             <button 
-              onClick={() => { setSimulatedStatuses({}); buildGraph(originalSubjects, {}, recommendations, showRecommendations); }}
-              className="text-xs font-bold text-destructive bg-destructive/10 px-4 py-2 rounded-xl hover:bg-destructive hover:text-destructive-foreground transition-all border-none outline-none"
+              onClick={toggleRecommendations}
+              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-[10px] font-black transition-all border-none outline-none shadow-xl ${
+                showRecommendations 
+                ? 'bg-primary text-primary-foreground shadow-primary/20' 
+                : 'bg-card/80 backdrop-blur-md text-foreground/40 hover:bg-card hover:text-foreground border border-border/50'
+              }`}
             >
-              LIMPIAR SIMULACIÓN ({Object.keys(simulatedStatuses).length})
+              <Sparkles size={14} />
+              {showRecommendations ? 'RECOMENDACIONES ACTIVAS' : 'MOSTRAR RECOMENDACIONES'}
             </button>
-          )}
+
+            {Object.keys(simulatedStatuses).length > 0 && (
+              <button 
+                onClick={() => { setSimulatedStatuses({}); buildGraph(originalSubjects, {}, showRecommendations); }}
+                className="text-[10px] font-black text-destructive bg-destructive/10 backdrop-blur-md px-4 py-2.5 rounded-xl hover:bg-destructive hover:text-white transition-all border border-destructive/20 shadow-xl shadow-destructive/10 outline-none"
+              >
+                LIMPIAR ({Object.keys(simulatedStatuses).length})
+              </button>
+            )}
+          </div>
+
+          {/* LEYENDA INTELIGENTE REUBICADA */}
+          <div 
+            className={`bg-card/90 backdrop-blur-md rounded-2xl border border-border/50 shadow-2xl transition-all duration-300 flex flex-col overflow-hidden ${showLegend ? 'p-4 w-[200px] gap-3' : 'p-2 w-10 h-10 items-center justify-center cursor-pointer hover:bg-card hover:scale-105'}`} 
+            onClick={() => !showLegend && setShowLegend(true)}
+          >
+            {showLegend ? (
+              <>
+                <div className="flex justify-between items-center border-b border-border/20 pb-2">
+                  <p className="text-[9px] font-black uppercase text-foreground/40 tracking-widest">Leyenda</p>
+                  <button onClick={(e) => { e.stopPropagation(); setShowLegend(false); }} className="p-1 hover:bg-foreground/5 rounded-md transition-colors">
+                    <X size={12} className="text-foreground/40" />
+                  </button>
+                </div>
+                <div className="grid grid-cols-1 gap-y-2">
+                  <div className="flex items-center gap-2"><div className="w-2.5 h-2.5 rounded bg-green-600" /> <span className="text-[9px] font-bold">APROBADA</span></div>
+                  <div className="flex items-center gap-2"><div className="w-2.5 h-2.5 rounded bg-primary" /> <span className="text-[9px] font-bold">CURSANDO</span></div>
+                  <div className="flex items-center gap-2"><div className="w-2.5 h-2.5 rounded bg-card border border-foreground/10" /> <span className="text-[9px] font-bold text-foreground/60">PENDIENTE</span></div>
+                  <div className="flex items-center gap-2"><div className="w-2.5 h-2.5 rounded bg-muted/50 border border-foreground/5" /> <span className="text-[9px] font-bold text-foreground/30">BLOQUEADA</span></div>
+                  <div className="flex items-center gap-2 mt-1 pt-2 border-t border-border/20 flex-wrap">
+                    <div className="w-3.5 h-3.5 rounded bg-amber-400" /> 
+                    <span className="text-[9px] font-bold text-amber-500">RECOMENDADO</span>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <div className="flex flex-col items-center justify-center text-foreground/40" title="Ver leyenda">
+                <Network size={16} />
+              </div>
+            )}
+          </div>
         </div>
       </header>
 
-      <div className="flex-1 bg-card rounded-2xl border border-border overflow-hidden relative shadow-sm">
+      <div className="flex-1 bg-background relative overflow-hidden">
         <ReactFlow
           nodes={nodes}
           edges={edges}
@@ -221,37 +317,27 @@ export const CareerMapPage = () => {
           nodeTypes={nodeTypes}
           fitView
           maxZoom={1.5}
-          minZoom={0.2}
+          minZoom={0.1}
           defaultEdgeOptions={{
             type: 'smoothstep',
           }}
         >
           <Background color="currentColor" className="text-foreground/5" gap={24} />
-          <Controls className="!bg-card !border-border !fill-foreground !rounded-xl !shadow-lg" />
+          <Controls showInteractive={false} className="mb-24 md:mb-0" />
           <MiniMap 
             nodeColor={(n) => {
               const status = n.data?.status;
-              if (status === 'PROMOCIONADA') return '#22c55e';
-              if (status === 'EN_CURSO') return '#4f46e5';
+              if (status === 'PROMOCIONADA') return '#16a34a';
+              if (status === 'EN_CURSO') return '#fa8112';
               if (status === 'BLOQUEADA') return '#94a3b8';
               return '#cbd5e1';
             }}
-            maskColor="rgb(var(--background) / 0.8)"
-            className="!bg-card !border-border !rounded-xl"
-            style={{ height: 120 }}
+            maskColor="rgba(var(--background), 0.7)"
+            className="!bg-card/80 !backdrop-blur-md !border-border/50 !rounded-xl !shadow-2xl !m-6 overflow-hidden"
+            style={{ height: 100, width: 150 }}
           />
         </ReactFlow>
         
-        <div className="absolute bottom-4 left-4 bg-card/95 backdrop-blur p-4 rounded-2xl border border-border shadow-2xl flex flex-col gap-3">
-          <p className="text-[10px] font-black uppercase text-foreground/40 tracking-widest border-b border-border pb-2">Leyenda de Estados</p>
-          <div className="grid grid-cols-2 gap-x-6 gap-y-2">
-            <div className="flex items-center gap-2"><div className="w-2.5 h-2.5 rounded-full bg-green-500" /> <span className="text-[10px] font-bold">APROBADA</span></div>
-            <div className="flex items-center gap-2"><div className="w-2.5 h-2.5 rounded-full bg-primary animate-pulse" /> <span className="text-[10px] font-bold">CURSANDO</span></div>
-            <div className="flex items-center gap-2"><div className="w-2.5 h-2.5 rounded-full bg-foreground/20" /> <span className="text-[10px] font-bold">DISPONIBLE</span></div>
-            <div className="flex items-center gap-2"><div className="w-2.5 h-2.5 rounded-full bg-slate-400 opacity-50" /> <span className="text-[10px] font-bold">BLOQUEADA</span></div>
-            <div className="flex items-center gap-2 mt-1 col-span-2 pt-2 border-t border-border"><div className="w-3 h-0.5 bg-primary" /> <span className="text-[10px] font-bold text-primary">CAMINO RECOMENDADO</span></div>
-          </div>
-        </div>
       </div>
     </div>
   );

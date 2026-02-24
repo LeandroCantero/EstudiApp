@@ -44,6 +44,12 @@ export class StudentSubjectsController {
     return this.service.getBottleneckSubjects(req.user.userId);
   }
 
+  @Get('alerts')
+  @ApiOperation({ summary: 'Obtener alertas críticas del usuario' })
+  async getAlerts(@Req() req: RequestWithUser) {
+    return this.service.getAlerts(req.user.userId);
+  }
+
   @Get(':id')
   @ApiOperation({ summary: 'Obtener detalle de una materia' })
   async findOne(@Req() req: RequestWithUser, @Param('id') id: string) {
@@ -74,12 +80,6 @@ export class StudentSubjectsController {
   @ApiOperation({ summary: 'US-09: Marcar como recursando' })
   async retake(@Req() req: RequestWithUser, @Param('id') id: string) {
     return this.service.markAsRetaking(req.user.userId, id);
-  }
-
-  @Get('alerts')
-  @ApiOperation({ summary: 'Obtener alertas críticas del usuario' })
-  async getAlerts(@Req() req: RequestWithUser) {
-    return this.service.getAlerts(req.user.userId);
   }
 }
 

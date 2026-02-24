@@ -10,13 +10,7 @@ import { CareersImportService } from '../src/careers/careers-import.service';
 
 async function main() {
   console.log('🌱 Starting seed...');
-
-  // Limpiar base de datos
-  await prisma.careerSubject.deleteMany();
-  await prisma.subject.deleteMany();
-  await prisma.career.deleteMany();
-
-  console.log('📚 Creating UNAHUR careers...');
+  console.log('📚 Syncing UNAHUR careers...');
 
   // Instituto de Biotecnología
   const careers = [
@@ -76,7 +70,11 @@ async function main() {
 
   const createdCareers = [];
   for (const career of careers) {
-    const c = await prisma.career.create({ data: career });
+    const c = await prisma.career.upsert({
+      where: { name: career.name },
+      update: { institute: career.institute, duration: career.duration },
+      create: career,
+    });
     createdCareers.push(c);
   }
 

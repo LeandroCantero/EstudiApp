@@ -129,7 +129,7 @@ export class CareersImportService {
           where: { id: currentLinkId },
           data: {
             prerequisites: {
-              connect: prereqLinkIds.map(id => ({ id })),
+              set: prereqLinkIds.map(id => ({ id })),
             },
           },
         });

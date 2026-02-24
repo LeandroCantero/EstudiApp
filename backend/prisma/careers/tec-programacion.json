@@ -10,6 +10,14 @@
       "correlatives": []
     },
     {
+      "code": "2",
+      "name": "Introducción a lógica y problemas computacionales",
+      "hours": 96,
+      "year": 1,
+      "period": 1,
+      "correlatives": []
+    },
+    {
       "code": "3",
       "name": "Organización de computadoras I",
       "hours": 64,
@@ -23,7 +31,9 @@
       "hours": 32,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a lógica y problemas computacionales"
+      ]
     },
     {
       "code": "5",
@@ -31,7 +41,9 @@
       "hours": 64,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a lógica y problemas computacionales"
+      ]
     },
     {
       "code": "6",
@@ -39,7 +51,9 @@
       "hours": 96,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a lógica y problemas computacionales"
+      ]
     },
     {
       "code": "7",
