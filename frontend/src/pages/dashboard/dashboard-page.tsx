@@ -81,7 +81,6 @@ export const DashboardPage = () => {
           <QuickPlanner 
             currentVelocity={data?.averageVelocity || 0}
             remainingSubjects={(data?.remainingSubjects || 0) - plannedSubjects.length}
-            onPlanChange={(plan) => console.log('Nuevo plan:', plan)}
           />
 
           <section className="flex flex-col gap-4">
