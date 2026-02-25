@@ -1,18 +1,15 @@
-import { BookOpen, CheckCircle2, ChevronRight, Clock, Filter, Plus, Search } from 'lucide-react';
+import { BookOpen, CheckCircle2, ChevronRight, Clock, Filter, Search, X } from 'lucide-react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { useCredits } from '../../entities/credit/model/use-credits';
 import { useSubjects } from '../../entities/subject/model/use-subjects';
-import { CreditModal } from './credit-modal';
 
 
 export const SubjectsPage = () => {
   const navigate = useNavigate();
-  const { subjects, isLoading: isLoadingSubjects, error: errorSubjects } = useSubjects();
-  const { credits, totalCredits, isLoading: isLoadingCredits, addCredit, deleteCredit } = useCredits();
+  const { subjects, isLoading, error } = useSubjects();
 
-  const [isCreditModalOpen, setIsCreditModalOpen] = useState(false);
+  const [isFiltersOpen, setIsFiltersOpen] = useState(false);
   
   // Filter states
   const [searchQuery, setSearchQuery] = useState('');
@@ -20,32 +17,26 @@ export const SubjectsPage = () => {
   const [yearFilter, setYearFilter] = useState<string>('ALL');
   const [periodFilter, setPeriodFilter] = useState<string>('ALL');
 
-  const isLoading = isLoadingSubjects || isLoadingCredits;
-  const error = errorSubjects;
-
-  const categories = [
-    { label: 'Formación', key: 'Formación', max: 20 },
-    { label: 'Investigación', key: 'Investigación', max: 10 },
-    { label: 'Extensión', key: 'Extensión', max: 10 },
-    { label: 'Otros', key: 'Otros', max: 5 },
-  ];
-
-  const getCategoryCount = (key: string) => {
-    return credits
-      .filter(c => c.category === key)
-      .reduce((sum, c) => sum + c.credits, 0);
-  };
-
   // Filtered logic
   const filteredSubjects = subjects.filter(s => {
     const matchesSearch = s.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
                          s.code.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesStatus = statusFilter === 'ALL' || s.status === statusFilter;
     const matchesYear = yearFilter === 'ALL' || s.year?.toString() === yearFilter;
+    
+    // Strict period comparison: periodFilter value is string '0', '1', '2'
     const matchesPeriod = periodFilter === 'ALL' || s.period?.toString() === periodFilter;
     
     return matchesSearch && matchesStatus && matchesYear && matchesPeriod;
   });
+
+  const hasAnnualSubjects = subjects.some(s => s.period === 0);
+
+  const activeFiltersCount = [
+    statusFilter !== 'ALL',
+    yearFilter !== 'ALL',
+    periodFilter !== 'ALL'
+  ].filter(Boolean).length;
 
   if (isLoading) {
     return (
@@ -88,84 +79,94 @@ export const SubjectsPage = () => {
             />
           </div>
           <button 
-            onClick={() => {
-              setStatusFilter('ALL');
-              setYearFilter('ALL');
-              setPeriodFilter('ALL');
-              setSearchQuery('');
-            }}
-            className="bg-card p-3 rounded-xl text-foreground/40 hover:text-primary transition-colors border border-foreground/5"
-            title="Limpiar filtros"
+            onClick={() => setIsFiltersOpen(!isFiltersOpen)}
+            className={`p-3 rounded-xl transition-all border flex items-center justify-center relative ${
+              isFiltersOpen || activeFiltersCount > 0 
+                ? 'bg-primary/10 border-primary/20 text-primary shadow-sm shadow-primary/5' 
+                : 'bg-card border-foreground/5 text-foreground/40 hover:text-primary'
+            }`}
+            title="Filtros"
           >
             <Filter size={20} />
+            {activeFiltersCount > 0 && (
+              <span className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-primary-foreground text-[10px] font-black rounded-full flex items-center justify-center ring-2 ring-background">
+                {activeFiltersCount}
+              </span>
+            )}
           </button>
         </div>
 
-        <div className="grid grid-cols-3 gap-2">
-          <select 
-            value={statusFilter}
-            onChange={(e) => setStatusFilter(e.target.value)}
-            className="bg-card border border-foreground/5 rounded-lg p-2 text-[10px] font-bold uppercase outline-none focus:ring-1 ring-primary"
-          >
-            <option value="ALL">Todos los Estados</option>
-            <option value="PENDIENTE">Pendientes</option>
-            <option value="EN_CURSO">En Curso</option>
-            <option value="REGULARIZADA">Regularizadas</option>
-            <option value="PROMOCIONADA">Aprobadas</option>
-          </select>
-
-          <select 
-            value={yearFilter}
-            onChange={(e) => setYearFilter(e.target.value)}
-            className="bg-card border border-foreground/5 rounded-lg p-2 text-[10px] font-bold uppercase outline-none focus:ring-1 ring-primary"
-          >
-            <option value="ALL">Todos los Años</option>
-            {[1, 2, 3, 4, 5].map(y => (
-              <option key={y} value={y.toString()}>{y}° Año</option>
-            ))}
-          </select>
-
-          <select 
-            value={periodFilter}
-            onChange={(e) => setPeriodFilter(e.target.value)}
-            className="bg-card border border-foreground/5 rounded-lg p-2 text-[10px] font-bold uppercase outline-none focus:ring-1 ring-primary"
-          >
-            <option value="ALL">Todo Período</option>
-            <option value="1">1° Cuat.</option>
-            <option value="2">2° Cuat.</option>
-            <option value="0">Anual</option>
-          </select>
-        </div>
-
-        {/* BRD US-05: Categorized Credits Tracker */}
-        <div className="bg-card border border-foreground/5 rounded-2xl p-4 flex flex-col gap-3">
-          <div className="flex items-center justify-between">
-            <div className="flex flex-col">
-              <span className="text-[10px] font-black text-foreground/30 uppercase tracking-widest">Créditos Extracurriculares</span>
-              <div className="flex items-baseline gap-1">
-                <span className="text-3xl font-black text-primary">{totalCredits}</span>
-                <span className="text-xs font-bold text-foreground/30">/ 35 Puntos Requeridos</span>
+        {/* Filters Panel Popover-like */}
+        {isFiltersOpen && (
+          <div className="bg-card border border-primary/10 rounded-2xl p-4 shadow-xl animate-in slide-in-from-top-2 duration-200 flex flex-col gap-4">
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] font-black uppercase text-foreground/30 tracking-widest">Filtros Avanzados</span>
+              <div className="flex gap-2">
+                <button 
+                  onClick={() => {
+                    setStatusFilter('ALL');
+                    setYearFilter('ALL');
+                    setPeriodFilter('ALL');
+                    setSearchQuery('');
+                  }}
+                  className="text-[10px] font-bold text-primary hover:underline"
+                >
+                  Limpiar todo
+                </button>
+                <button onClick={() => setIsFiltersOpen(false)} className="text-foreground/20 hover:text-foreground">
+                  <X size={16} />
+                </button>
               </div>
             </div>
-            <button 
-              onClick={() => setIsCreditModalOpen(true)}
-              className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:scale-110 transition-transform shadow-lg shadow-primary/20"
-            >
-               <Plus size={20} />
-            </button>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+              <div className="flex flex-col gap-1">
+                <label className="text-[9px] font-black uppercase text-foreground/30 ml-1">Estado</label>
+                <select 
+                   value={statusFilter}
+                   onChange={(e) => setStatusFilter(e.target.value)}
+                   className="!bg-[#1a1a1a] border border-foreground/5 rounded-lg p-2.5 text-xs font-bold text-foreground/80 outline-none focus:ring-1 ring-primary w-full appearance-none"
+                >
+                  <option value="ALL" className="bg-[#1a1a1a]">Todos los Estados</option>
+                  <option value="PENDIENTE" className="bg-[#1a1a1a]">Pendientes</option>
+                  <option value="EN_CURSO" className="bg-[#1a1a1a]">En Curso</option>
+                  <option value="REGULARIZADA" className="bg-[#1a1a1a]">Regularizadas</option>
+                  <option value="PROMOCIONADA" className="bg-[#1a1a1a]">Aprobadas</option>
+                  <option value="DESAPROBADA" className="bg-[#1a1a1a]">Desaprobadas</option>
+                  <option value="RECURSANDO" className="bg-[#1a1a1a]">Recursando</option>
+                </select>
+              </div>
+
+              <div className="flex flex-col gap-1">
+                <label className="text-[9px] font-black uppercase text-foreground/30 ml-1">Año</label>
+                <select 
+                  value={yearFilter}
+                  onChange={(e) => setYearFilter(e.target.value)}
+                  className="!bg-[#1a1a1a] border border-foreground/5 rounded-lg p-2.5 text-xs font-bold text-foreground/80 outline-none focus:ring-1 ring-primary w-full appearance-none"
+                >
+                  <option value="ALL" className="bg-[#1a1a1a]">Todos los Años</option>
+                  {[1, 2, 3, 4, 5].map(y => (
+                    <option key={y} value={y.toString()} className="bg-[#1a1a1a]">{y}° Año</option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="flex flex-col gap-1">
+                <label className="text-[9px] font-black uppercase text-foreground/30 ml-1">Cuatrimestre</label>
+                <select 
+                   value={periodFilter}
+                   onChange={(e) => setPeriodFilter(e.target.value)}
+                   className="!bg-[#1a1a1a] border border-foreground/5 rounded-lg p-2.5 text-xs font-bold text-foreground/80 outline-none focus:ring-1 ring-primary w-full appearance-none"
+                >
+                  <option value="ALL" className="bg-[#1a1a1a]">Todo Período</option>
+                  <option value="1" className="bg-[#1a1a1a]">1° Cuat.</option>
+                  <option value="2" className="bg-[#1a1a1a]">2° Cuat.</option>
+                  {hasAnnualSubjects && <option value="0" className="bg-[#1a1a1a]">Anual</option>}
+                </select>
+              </div>
+            </div>
           </div>
-          
-          <div className="grid grid-cols-2 gap-2 mt-1">
-            {categories.map(cat => (
-              <CreditCategory 
-                key={cat.key} 
-                label={cat.label} 
-                count={getCategoryCount(cat.key)} 
-                max={cat.max} 
-              />
-            ))}
-          </div>
-        </div>
+        )}
       </div>
 
 
@@ -235,32 +236,7 @@ export const SubjectsPage = () => {
           ))
         )}
       </div>
-      <CreditModal 
-        isOpen={isCreditModalOpen}
-        onClose={() => setIsCreditModalOpen(false)}
-        credits={credits}
-        addCredit={addCredit}
-        deleteCredit={deleteCredit}
-      />
     </div>
   );
 };
-
-
-const CreditCategory = ({ label, count, max }: { label: string; count: number; max: number }) => (
-  <div className="bg-background rounded-xl p-3 flex flex-col gap-1 border border-foreground/5">
-    <span className="text-[10px] font-bold text-foreground/50 leading-none">{label}</span>
-    <div className="flex justify-between items-end">
-      <span className="text-sm font-black text-primary">{count}<span className="text-[10px] text-foreground/20 font-medium">/{max}</span></span>
-      <div className="flex gap-0.5 mb-1">
-        {Array.from({ length: 5 }).map((_, i) => (
-          <div 
-            key={i} 
-            className={`w-1.5 h-3 rounded-full ${i < Math.ceil((count/max)*5) ? 'bg-primary' : 'bg-foreground/5'}`} 
-          />
-        ))}
-      </div>
-    </div>
-  </div>
-);
 

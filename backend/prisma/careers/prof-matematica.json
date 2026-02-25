@@ -38,7 +38,7 @@
       "name": "Introducción al análisis matemático",
       "hours": 160,
       "year": 1,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -46,7 +46,7 @@
       "name": "Geometría euclideana y analítica",
       "hours": 160,
       "year": 1,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -54,7 +54,7 @@
       "name": "Algoritmos y estructura de datos",
       "hours": 64,
       "year": 1,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -62,7 +62,7 @@
       "name": "universidad",
       "hours": 32,
       "year": 1,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -205,7 +205,7 @@
       "name": "Didáctica de la matemática I",
       "hours": 80,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Didáctica y curriculum"
       ]
@@ -215,7 +215,7 @@
       "name": "Fundamentos de la matemática I",
       "hours": 64,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Teoría de números"
       ]
@@ -225,7 +225,7 @@
       "name": "Análisis complejo",
       "hours": 64,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Análisis matemático II"
       ]
@@ -235,7 +235,7 @@
       "name": "secundario II",
       "hours": 96,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "secundario I"
       ]

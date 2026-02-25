@@ -114,7 +114,7 @@
       "name": "Laboratorio de Producción Vegetal",
       "hours": 64,
       "year": 2,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -138,7 +138,7 @@
       "name": "Matemática III",
       "hours": 96,
       "year": 2,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Matemática II"
       ]
@@ -148,7 +148,7 @@
       "name": "Física Aplicada",
       "hours": 48,
       "year": 2,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -180,7 +180,7 @@
       "name": "Economía de la Innovación",
       "hours": 48,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -188,7 +188,7 @@
       "name": "Estadística y Diseño experimental",
       "hours": 64,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -196,7 +196,7 @@
       "name": "Bioética y Responsabilidad Profesional",
       "hours": 32,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -204,7 +204,7 @@
       "name": "Biotecnología Médica e Inmunología",
       "hours": 96,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -244,7 +244,7 @@
       "name": "Bioquímica II",
       "hours": 96,
       "year": 4,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Bioquímica I"
       ]
@@ -254,7 +254,7 @@
       "name": "Biotecnología Animal",
       "hours": 64,
       "year": 4,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -262,7 +262,7 @@
       "name": "Sociología de la Ciencia y La Tecnología",
       "hours": 48,
       "year": 4,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -270,7 +270,7 @@
       "name": "Bioprocesos",
       "hours": 96,
       "year": 4,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {

@@ -219,7 +219,7 @@
       "name": "Diseño Centrado en las personas",
       "hours": 64,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -227,7 +227,7 @@
       "name": "Taller de producción II",
       "hours": 64,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Taller de producción I",
         "Tecnología I"
@@ -238,7 +238,7 @@
       "name": "diseño",
       "hours": 64,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -246,7 +246,7 @@
       "name": "Gestión del conocimiento",
       "hours": 32,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {

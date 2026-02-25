@@ -38,7 +38,7 @@
       "name": "Estructuras de Datos",
       "hours": 128,
       "year": 1,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Introducción a la Programación"
       ]
@@ -48,7 +48,7 @@
       "name": "Programación con Objetos I",
       "hours": 128,
       "year": 1,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Introducción a la Programación"
       ]
@@ -58,7 +58,7 @@
       "name": "Bases de Datos",
       "hours": 96,
       "year": 1,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Introducción a la Programación"
       ]
@@ -68,7 +68,7 @@
       "name": "Inglés I",
       "hours": 32,
       "year": 1,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -116,7 +116,7 @@
       "name": "Programación Funcional",
       "hours": 64,
       "year": 2,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Programación con Objetos I"
       ]
@@ -126,7 +126,7 @@
       "name": "Construcción de Interfaces de Usuario",
       "hours": 96,
       "year": 2,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Programación con Objetos II",
         "Bases de Datos"
@@ -137,7 +137,7 @@
       "name": "Algoritmos",
       "hours": 96,
       "year": 2,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Estructuras de Datos"
       ]
@@ -147,7 +147,7 @@
       "name": "Estrategias de Persistencia",
       "hours": 96,
       "year": 2,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Programación con Objetos II",
         "Bases de Datos"
@@ -158,7 +158,7 @@
       "name": "Laboratorio de Sistemas Operativos y Redes",
       "hours": 64,
       "year": 2,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Redes de Computadoras",
         "Sistemas Operativos"
@@ -218,7 +218,7 @@
       "name": "Inglés II",
       "hours": 32,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Inglés I"
       ]
@@ -228,7 +228,7 @@
       "name": "Matemática III",
       "hours": 64,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Análisis Matemático",
         "Matemática II"
@@ -239,7 +239,7 @@
       "name": "Programación Concurrente",
       "hours": 64,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Sistemas Operativos",
         "Programación con Objetos II"
@@ -250,7 +250,7 @@
       "name": "Ingeniería de Requerimientos",
       "hours": 64,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Elementos de Ingeniería de Software"
       ]
@@ -260,7 +260,7 @@
       "name": "Desarrollo de Aplicaciones",
       "hours": 96,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Construcción de Interfaces de Usuario",
         "Estrategias de Persistencia",
@@ -320,7 +320,7 @@
       "name": "Práctica Profesional Supervisada (PPS)",
       "hours": 96,
       "year": 4,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -328,7 +328,7 @@
       "name": "Teoría de la Computación",
       "hours": 64,
       "year": 4,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -336,7 +336,7 @@
       "name": "Arquitectura de Software I",
       "hours": 64,
       "year": 4,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -344,7 +344,7 @@
       "name": "Sistemas Distribuidos y Tiempo Real",
       "hours": 96,
       "year": 4,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -420,7 +420,7 @@
       "name": "Tecnología y Sociedad",
       "hours": 48,
       "year": 5,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     }
   ]

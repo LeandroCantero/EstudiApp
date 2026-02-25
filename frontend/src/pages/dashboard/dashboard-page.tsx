@@ -1,26 +1,24 @@
 import { useCalendar } from '@/entities/calendar/model/use-calendar';
+import { useCredits } from '@/entities/credit/model/use-credits';
 import { useDashboard } from '@/entities/dashboard/model/use-dashboard';
 import { Award, CheckCircle2, GraduationCap, TrendingUp } from 'lucide-react';
 import { useState } from 'react';
+import { CreditModal } from '../subjects/credit-modal';
 import { AcademicTimeline } from './academic-timeline';
 import { AlertsPanel } from './alerts-panel';
 import { MetricModal } from './metric-modal';
 import { QuickPlanner } from './quick-planner';
 
-
-
-
 export const DashboardPage = () => {
   const { data, recommendations, alerts, isLoading: isLoadingDashboard, error } = useDashboard();
   const { events, isLoading: isLoadingCalendar } = useCalendar();
+  const { credits, totalCredits, addCredit, deleteCredit, isLoading: isLoadingCredits } = useCredits();
   
-  const isLoading = isLoadingDashboard || isLoadingCalendar;
+  const isLoading = isLoadingDashboard || isLoadingCalendar || isLoadingCredits;
 
   const [activeModal, setActiveModal] = useState<'average' | 'progress' | null>(null);
+  const [isCreditModalOpen, setIsCreditModalOpen] = useState(false);
   const [plannedSubjects, setPlannedSubjects] = useState<string[]>([]);
-
-
-
 
   if (isLoading) {
     return (
@@ -44,7 +42,6 @@ export const DashboardPage = () => {
 
       <AlertsPanel alerts={alerts} />
 
-
       {error && (
         <div className="p-4 bg-red-500/10 text-red-600 text-sm rounded-xl">
           Error cargando métricas: {error}
@@ -67,7 +64,9 @@ export const DashboardPage = () => {
         <StatCard 
           icon={<Award size={24} className="text-primary" />} 
           label="Créditos" 
-          value={`${data?.totalCredits || 0}`} 
+          value={`${totalCredits || 0}`} 
+          onClick={() => setIsCreditModalOpen(true)}
+          highlight
         />
         <StatCard 
           icon={<CheckCircle2 size={24} className="text-primary" />} 
@@ -136,27 +135,36 @@ export const DashboardPage = () => {
           credits: data?.totalCredits
         }}
       />
+
+      <CreditModal 
+        isOpen={isCreditModalOpen}
+        onClose={() => setIsCreditModalOpen(false)}
+        credits={credits}
+        addCredit={addCredit}
+        deleteCredit={deleteCredit}
+      />
     </div>
   );
 };
 
 
-const StatCard = ({ icon, label, value, onClick }: { 
+const StatCard = ({ icon, label, value, onClick, highlight }: { 
   icon: React.ReactNode; 
   label: string; 
   value: string;
   onClick?: () => void;
+  highlight?: boolean;
 }) => (
   <div 
     onClick={onClick}
-    className={`bg-card rounded-2xl p-4 flex flex-col gap-2 shadow-sm transition-all ${onClick ? 'cursor-pointer hover:shadow-md hover:border-primary/20 border border-transparent' : ''}`}
+    className={`bg-card rounded-2xl p-4 flex flex-col gap-2 shadow-sm transition-all border ${onClick ? 'cursor-pointer hover:shadow-md hover:border-primary/20 bg-background/50' : 'border-transparent'} ${highlight ? 'border-primary/20 ring-1 ring-primary/5' : ''}`}
   >
     <div className="flex justify-between items-start">
       <div className="p-2 bg-background rounded-lg">{icon}</div>
       {onClick && <TrendingUp size={12} className="text-primary/20" />}
     </div>
     <div className="flex flex-col">
-      <span className="text-2xl font-bold">{value}</span>
+      <span className="text-2xl font-bold text-primary">{value}</span>
       <span className="text-xs text-foreground/60">{label}</span>
     </div>
   </div>

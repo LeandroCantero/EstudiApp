@@ -210,7 +210,7 @@
       "name": "originarios de América",
       "hours": 48,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -218,7 +218,7 @@
       "name": "Didáctica de la Lengua",
       "hours": 48,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Gramática",
         "Didáctica y currículum"
@@ -229,7 +229,7 @@
       "name": "Literatura argentina",
       "hours": 64,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Introducción a los Estudios Literarios"
       ]
@@ -239,7 +239,7 @@
       "name": "Literatura latinoamericana",
       "hours": 64,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Introducción a los Estudios Literarios"
       ]
@@ -249,7 +249,7 @@
       "name": "Prácticas docentes en el Nivel Secundario",
       "hours": 160,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {

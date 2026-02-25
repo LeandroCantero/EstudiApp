@@ -179,7 +179,7 @@
       "name": "Laboratorio de sistemas operativos y redes",
       "hours": 64,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Redes de Computadoras",
         "Sistemas Operativos"
@@ -190,7 +190,7 @@
       "name": "Operaciones II",
       "hours": 96,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Operaciones I",
         "Sistemas Operativos"

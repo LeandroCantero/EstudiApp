@@ -1,14 +1,10 @@
-import { Controller, Get, Post, Delete, Body, Param, UseGuards, Req } from '@nestjs/common';
-import { ApiTags, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
-import { CreditsService } from './credits.service';
+import { Body, Controller, Delete, Get, Param, Post, Req, UseGuards } from '@nestjs/common';
+import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 import { RequestWithUser } from '../types/express';
+import { CreditsService } from './credits.service';
 
-class CreateCreditDto {
-  category: string;
-  activity: string;
-  credits: number;
-}
+import { CreateCreditDto } from './dto/create-credit.dto';
 
 @ApiTags('Credits')
 @Controller('credits')

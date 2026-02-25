@@ -1,0 +1,93 @@
+AUDIT REPORT: Unbalanced Plans (All P1 in at least one year with multiple subjects)
+
+ing-metalurgica.json (Ingeniería Metalúrgica)
+  Year 1: P1=4, P2=5, P0=0, Total=9
+  Year 2: P1=0, P2=8, P0=0, Total=8
+  Year 3: P1=8, P2=0, P0=0, Total=8
+  Year 4: P1=3, P2=4, P0=0, Total=7
+  Year 5: P1=0, P2=5, P0=0, Total=5
+
+lic-biotecnologia.json (Licenciatura en Biotecnología)
+  Year 1: P1=7, P2=2, P0=0, Total=9
+  Year 2: P1=6, P2=0, P0=0, Total=6
+  Year 3: P1=9, P2=0, P0=0, Total=9
+  Year 4: P1=8, P2=0, P0=0, Total=8
+  Year 5: P1=3, P2=0, P0=0, Total=3
+
+lic-diseno-industrial.json (Licenciatura en Diseño Industrial)
+  Year 1: P1=6, P2=2, P0=0, Total=8
+  Year 2: P1=9, P2=1, P0=0, Total=10
+  Year 3: P1=9, P2=0, P0=0, Total=9
+  Year 4: P1=9, P2=0, P0=0, Total=9
+
+lic-gestion-ambiental.json (Licenciatura en Gestión Ambiental)
+  Year 1: P1=10, P2=2, P0=0, Total=12
+  Year 2: P1=9, P2=0, P0=0, Total=9
+  Year 3: P1=9, P2=0, P0=0, Total=9
+  Year 4: P1=9, P2=0, P0=0, Total=9
+
+prof-biologia.json (Profesorado Universitario de Biología)
+  Year 1: P1=8, P2=2, P0=0, Total=10
+  Year 2: P1=9, P2=1, P0=0, Total=10
+  Year 3: P1=9, P2=0, P0=0, Total=9
+  Year 4: P1=9, P2=0, P0=0, Total=9
+
+prof-educacion-fisica.json (Profesorado Universitario en Educación Física)
+  Year 1: P1=10, P2=0, P0=0, Total=10
+  Year 2: P1=10, P2=0, P0=0, Total=10
+  Year 3: P1=9, P2=1, P0=0, Total=10
+  Year 4: P1=9, P2=0, P0=0, Total=9
+
+prof-geografia.json (Profesorado Universitario de Geografía)
+  Year 1: P1=8, P2=1, P0=0, Total=9
+  Year 2: P1=8, P2=1, P0=0, Total=9
+  Year 3: P1=10, P2=0, P0=0, Total=10
+  Year 4: P1=7, P2=0, P0=0, Total=7
+
+prof-ingles.json (Profesorado Universitario de Inglés)
+  Year 1: P1=7, P2=0, P0=0, Total=7
+  Year 2: P1=7, P2=1, P0=0, Total=8
+  Year 3: P1=9, P2=0, P0=0, Total=9
+  Year 4: P1=8, P2=0, P0=0, Total=8
+
+prof-letras.json (Profesorado Universitario de Letras)
+  Year 1: P1=9, P2=1, P0=0, Total=10
+  Year 2: P1=8, P2=1, P0=0, Total=9
+  Year 3: P1=10, P2=0, P0=0, Total=10
+  Year 4: P1=9, P2=0, P0=0, Total=9
+
+prof-matematica.json (Profesorado Universitario de Matemática)
+  Year 1: P1=8, P2=0, P0=0, Total=8
+  Year 2: P1=9, P2=1, P0=0, Total=10
+  Year 3: P1=9, P2=0, P0=0, Total=9
+  Year 4: P1=7, P2=0, P0=0, Total=7
+
+tec-electromovilidad.json (Tec. Univ. en Electromovilidad)
+  Year 1: P1=5, P2=0, P0=0, Total=5
+  Year 2: P1=4, P2=5, P0=0, Total=9
+  Year 3: P1=0, P2=2, P0=0, Total=2
+
+tec-inteligencia-artificial.json (Tec. Univ. en Inteligencia Artificial)
+  Year 1: P1=4, P2=5, P0=0, Total=9
+  Year 2: P1=4, P2=4, P0=0, Total=8
+  Year 3: P1=4, P2=0, P0=0, Total=4
+
+tec-mantenimiento-hospitalario.json (Tec. Univ. en Mantenimiento Hospitalario)
+  Year 1: P1=5, P2=5, P0=0, Total=10
+  Year 2: P1=5, P2=3, P0=0, Total=8
+  Year 3: P1=2, P2=0, P0=0, Total=2
+
+tec-produccion-agroecol.json (Tec. Univ. en Producción Agroecológica Periurbana)
+  Year 1: P1=4, P2=5, P0=0, Total=9
+  Year 2: P1=6, P2=4, P0=0, Total=10
+  Year 3: P1=4, P2=0, P0=0, Total=4
+
+tec-videojuegos.json (Tec. Univ. en Programación de Videojuegos)
+  Year 1: P1=4, P2=4, P0=0, Total=8
+  Year 2: P1=4, P2=4, P0=0, Total=8
+  Year 3: P1=3, P2=0, P0=0, Total=3
+
+tec-viverismo.json (Tec. Univ. en Viverismo)
+  Year 1: P1=4, P2=5, P0=0, Total=9
+  Year 2: P1=4, P2=5, P0=0, Total=9
+  Year 3: P1=5, P2=0, P0=0, Total=5

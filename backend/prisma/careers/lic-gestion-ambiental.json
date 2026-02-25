@@ -148,7 +148,7 @@
       "name": "Ecología política CFE",
       "hours": 48,
       "year": 2,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -156,7 +156,7 @@
       "name": "Fisicoquímica CFB",
       "hours": 64,
       "year": 2,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Física CFB",
         "Química general e inorgánica CFB"
@@ -167,7 +167,7 @@
       "name": "Química ambiental CFE",
       "hours": 96,
       "year": 2,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Fisicoquímica CFB"
       ]
@@ -177,7 +177,7 @@
       "name": "Gestión del agua CFE",
       "hours": 64,
       "year": 2,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Climatología CFE",
         "Geología ambiental CFE"
@@ -228,7 +228,7 @@
       "name": "Química analítica aplicada CFE",
       "hours": 32,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Química ambiental CFE"
       ]
@@ -238,7 +238,7 @@
       "name": "Evaluación de sitios contaminados CFE",
       "hours": 48,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Química analítica aplicada CFE",
         "Geología ambiental CFE"
@@ -249,7 +249,7 @@
       "name": "Política ambiental CFE",
       "hours": 48,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -344,7 +344,7 @@
       "name": "Muestreo ambiental CFE",
       "hours": 64,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Estadística y diseño experimental CFB"
       ]

@@ -225,7 +225,7 @@
       "name": "Evolución",
       "hours": 64,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Genética",
         "Zoología",
@@ -237,7 +237,7 @@
       "name": "Genética",
       "hours": 48,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -245,7 +245,7 @@
       "name": "Historia de la ciencia",
       "hours": 48,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -253,7 +253,7 @@
       "name": "nivel secundario",
       "hours": 160,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {

@@ -38,7 +38,7 @@
       "name": "Lectura, escritura y oralidad",
       "hours": 48,
       "year": 1,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -46,7 +46,7 @@
       "name": "Aprendizajes y prácticas educativas",
       "hours": 64,
       "year": 1,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -54,7 +54,7 @@
       "name": "Territorio, sujetos e instituciones",
       "hours": 64,
       "year": 1,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -182,7 +182,7 @@
       "name": "proyectos educativos",
       "hours": 48,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -190,7 +190,7 @@
       "name": "superior",
       "hours": 48,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -198,7 +198,7 @@
       "name": "Asignatura UNAHUR",
       "hours": 32,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -206,7 +206,7 @@
       "name": "Prácticas docentes en el nivel primario",
       "hours": 160,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Didáctica y curriculum",
         "Lengua inglesa II"

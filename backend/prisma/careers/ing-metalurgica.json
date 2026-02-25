@@ -193,7 +193,7 @@
       "name": "Ciencia de los Materiales",
       "hours": 64,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Química",
         "Metalurgia II"
@@ -204,7 +204,7 @@
       "name": "Física III",
       "hours": 96,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Física II"
       ]
@@ -214,7 +214,7 @@
       "name": "Matemática Avanzada",
       "hours": 96,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Análisis Matemático II"
       ]
@@ -224,7 +224,7 @@
       "name": "Química II -Inorgánica",
       "hours": 64,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {

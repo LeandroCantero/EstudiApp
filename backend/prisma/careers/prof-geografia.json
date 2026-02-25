@@ -209,7 +209,7 @@
       "name": "Geografía urbana",
       "hours": 64,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -217,7 +217,7 @@
       "name": "Geografía rural",
       "hours": 64,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -225,7 +225,7 @@
       "name": "Didáctica de la Geografía",
       "hours": 64,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Didáctica de las Ciencias sociales"
       ]
@@ -235,7 +235,7 @@
       "name": "Sistemas Informáticos Geográficos",
       "hours": 48,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Cartografía"
       ]
@@ -245,7 +245,7 @@
       "name": "Prácticas docentes en el nivel secundario",
       "hours": 160,
       "year": 3,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {

@@ -46,7 +46,7 @@
       "name": "Educación física en la niñez",
       "hours": 64,
       "year": 1,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -54,7 +54,7 @@
       "name": "Taller de prácticas lúdicas",
       "hours": 64,
       "year": 1,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -62,7 +62,7 @@
       "name": "Educación física en el joven y el adulto",
       "hours": 64,
       "year": 1,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Educación física en la niñez"
       ]
@@ -72,7 +72,7 @@
       "name": "didáctica I",
       "hours": 64,
       "year": 1,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -80,7 +80,7 @@
       "name": "Prácticas gimnásticas I",
       "hours": 64,
       "year": 1,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -130,7 +130,7 @@
       "name": "didáctica II",
       "hours": 64,
       "year": 2,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "didáctica I"
       ]
@@ -140,7 +140,7 @@
       "name": "Prácticas gimnásticas II",
       "hours": 64,
       "year": 2,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "Prácticas gimnásticas I"
       ]
@@ -150,7 +150,7 @@
       "name": "didáctica III",
       "hours": 64,
       "year": 2,
-      "period": 1,
+      "period": 2,
       "correlatives": [
         "didáctica II"
       ]
@@ -160,7 +160,7 @@
       "name": "didáctica - Natación I",
       "hours": 64,
       "year": 2,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {
@@ -168,7 +168,7 @@
       "name": "Educación física",
       "hours": 64,
       "year": 2,
-      "period": 1,
+      "period": 2,
       "correlatives": []
     },
     {

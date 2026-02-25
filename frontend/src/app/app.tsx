@@ -10,6 +10,8 @@ import { SubjectsPage } from '@/pages/subjects/subjects-page';
 import { Sidebar } from '@/widgets/navigation/sidebar';
 import { useEffect, useState } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const App = () => {
   const location = useLocation();
@@ -29,11 +31,14 @@ export const App = () => {
   }
 
   const authRoutes = (
-    <Routes>
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="/register" element={<RegisterPage />} />
-      <Route path="*" element={<Navigate to="/login" replace />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="*" element={<Navigate to="/login" replace />} />
+      </Routes>
+      <ToastContainer position="bottom-right" theme="dark" />
+    </>
   );
 
   const mainRoutes = (
@@ -55,6 +60,7 @@ export const App = () => {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
+      <ToastContainer position="bottom-right" theme="dark" />
     </div>
   );
 
