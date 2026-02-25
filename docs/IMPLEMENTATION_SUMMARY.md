@@ -51,7 +51,9 @@
   - Prioriza materias que desbloquean más cuatrimestres futuros
 
 ### FASE 5: Simulador Académico (Frontend-Driven)
-- **Implementación Reactiva**: La lógica de simulación (RN7) se ha movido íntegramente al Frontend (Mapa de Carrera) para permitir una interacción instantánea y sin latencia sin comprometer la persistencia de datos.
+- **Implementación Reactiva**: La lógica de simulación (RN7) se ha movido íntegramente al Frontend (Mapa de Carrera) para permitir una interacción instantánea y sin latencia.
+- **Rediseño de Layout (v2)**: Migración de layout basado en dependencias a **Layout Horizontal por Cuatrimiento**, facilitando el seguimiento del plan de estudios oficial.
+- **Componentes de Infografía**: Introducción de `QuarterHeaderNode` y mejora del `SubjectNode` para soportar estados de regularidad y recomendaciones visuales.
 
 ### FASE 6: Notas, Créditos y Calendario
 - **Credits** (Controller + Service):

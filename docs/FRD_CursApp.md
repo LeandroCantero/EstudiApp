@@ -42,8 +42,10 @@ Cálculo basado en dos métricas concurrentes:
 ### 2.5. Lógica del Simulador (RN7) - Bidireccional y Persistente
 El simulador opera íntegramente en el cliente mediante **React Flow** y el estado local de React:
 - **Bidireccionalidad:** Permite al usuario "pintar" estados (`PROMOCIONADA`) o "despintarlos" (`PENDIENTE`), recalculando en cascada el impacto en materias futuras y recomendaciones actuales.
-- **Layout DAG Horizontal:** Organiza las materias automáticamente de izquierda a derecha según su profundidad de correlatividades (niveles de dependencia), no por año cronológico.
-- **Libre Movimiento:** Los nodos no son fijos; el usuario puede arrastrarlos para personalizar su vista. El sistema preserva estas posiciones manuales durante la sesión de simulación.
+- **Layout por Cuatrimestre:** Organiza las materias en columnas verticales según su cuatrimestre cronológico (`year` y `period`). Esto permite visualizar el avance real sobre el plan de estudios original.
+- **Headers Dinámicos:** Cada columna cuenta con un encabezado funcional que indica el cuatrimestre y año correspondientes.
+- **Visualización de Estados:** Soporta visualmente todos los estados del sistema, incluyendo `REGULARIZADA` (azul) y `RECOMENDADA` (ámbar con efecto de brillo).
+- **Libre Movimiento:** El usuario puede arrastrar nodos para ajustar la vista, aunque el sistema inicializa el layout de forma estructurada.
 - **Limpieza Visual:** Utiliza conectores (Handles) laterales e invisibles para reducir la carga cognitiva, enfocándose en bloques de color sólido.
 - No utiliza persistencia en DB; al recargar la página, el estado vuelve a sincronizarse con el backend oficial.
 
@@ -64,4 +66,4 @@ El simulador opera íntegramente en el cliente mediante **React Flow** y el esta
 
 ---
 **Autor:** Cantero, Leandro  
-**Fecha:** 24/02/2026
+**Fecha:** 25/02/2026
