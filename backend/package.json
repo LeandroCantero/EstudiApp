@@ -10,7 +10,8 @@
     "start:prod": "node dist/main",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
-    "seed": "ts-node prisma/seed.ts"
+    "seed": "ts-node prisma/seed.ts",
+    "test": "vitest"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
@@ -48,7 +49,8 @@
     "@types/pg": "^8.16.0",
     "eslint": "^9.18.0",
     "prisma": "^7.4.0",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.0"
   },
   "prisma": {
     "seed": "ts-node prisma/seed.ts"

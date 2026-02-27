@@ -4,7 +4,7 @@
 **CursApp - Study Tracker**
 
 Versión: 	1.0  
-Fecha: 	25/02/2026  
+Fecha: 	27/02/2026  
 Sponsor Operación: 	UNAHUR  
 Sponsor Organización:	UNAHUR  
 Autor: 	Cantero, Leandro  
@@ -76,7 +76,7 @@ Abarca desde la autenticación del usuario, gestión de estados académicos, gen
 |  | Regla 0 [SETUP] | Regla 1 [CURSADA] | Regla 2 [FINAL] | Regla 3 [RECOMENDACIÓN] | Regla 4 [PROYECCIÓN] | Regla 5 [SIMULACIÓN] | Regla 6 [RECURSOS] |
 | ----- | :---: | ----- | ----- | ----- | ----- | ----- | ----- |
 | **Condición** | Usuario nuevo registrado. | Materia previa regularizada. | Materia previa aprobada (final). | Correlativas directas al 100% aprobadas. | Existen materias aprobadas en el historial. | Modo simulador activo en el cliente. | Acceso al detalle de materia. |
-| **Acción** | Cargar plan de estudio de la carrera seleccionada. | Permitir transición de PENDIENTE a EN_CURSO (RN2). | Permitir transición a PROMOCIONADA (Aprobada) (RN8). | Aplicar algoritmo de Impacto Transitivo (RN5). | Calcular fecha estimada según ritmo histórico (V). | Ejecutar lógica bidireccional en React Flow (RN7). | Permitir adjuntar links y notas personales. |
+| **Acción** | Cargar plan de estudio de la carrera seleccionada. | Permitir transición de PENDIENTE a EN_CURSO (RN2). | Permitir transición a APROBADA (RN8). | Aplicar algoritmo de Impacto Transitivo (RN5). | Calcular fecha estimada según ritmo histórico (V). | Ejecutar lógica bidireccional en React Flow (RN7). | Permitir adjuntar links y notas personales. |
 | **Lógica** | **[Detalle 0](#L0)** | **[Detalle 1](#L1)** | **[Detalle 2](#L2)** | **[Detalle 3](#L3)** | **[Detalle 4](#L4)** | **[Detalle 5](#L5)** | **[Detalle 6](#L6)** |
 
 <a name="L0"></a>**Detalle 0:** Al detectar el Onboarding (US-07), el sistema inicializa el autómata de estados para todas las materias del plan `careers-import.service`.
@@ -95,10 +95,10 @@ Abarca desde la autenticación del usuario, gestión de estados académicos, gen
 
 2. **Casos de estudio**
 
-| ALUMNO 1 | Regla 0 [SETUP] | Regla 1 [CURSADA] | Regla 3 [RECOMENDACIÓN] | Regla 4 [PROYECCIÓN] | Regla 6 [RECURSOS] |
-| :---: | :---: | ----- | ----- | ----- | ----- |
-| **Condición** | Inscripto en Univ. Prog. | Regularizó: -Matemática I -Intro. Prog. | Aprobó con Final: -Matemática I | Tiene V = 3 materias/cuat. | Cargó Drive de apuntes en Intro. Prog. |
-| **Resultado** | Ve 32 materias en Dashboard. | Puede cursar: -Matemática II -Prog. Objetos I | Se recomienda: -Matemática II (Bonus Transitivo). | Graduación estimada en 2.5 años. | Accesible desde cualquier dispositivo. |
+| ALUMNO 1 | Regla 0 [SETUP] | Regla 1 [CURSADA] | Regla 2 [FINAL] | Regla 3 [RECOMENDACIÓN] | Regla 4 [PROYECCIÓN] | Regla 5 [SIMULACIÓN] | Regla 6 [RECURSOS] |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Condición** | Inscripto en Univ. Prog. | Regularizó: -Matemática I -Intro. Prog. | Rinde mesa de Intro. Prog. (Nota >= 4). | Aprobó con Final: -Matemática I | Tiene V = 3 materias/cuat. | Marca "Prog. Objetos I" como aprobada en el Mapa. | Cargó Drive de apuntes en Intro. Prog. |
+| **Resultado** | Ve 32 materias en Dashboard. | Puede cursar: -Matemática II -Prog. Objetos I (RN2). | Estado cambia a **APROBADA**. | Se recomienda: -Matemática II (Impacto Transitivo). | Graduación estimada en 2.5 años. | El grafo visualiza desbloqueos en cascada de 2do año. | Accesible desde cualquier dispositivo. |
 
 4. **Requerimientos Funcionales**
 
@@ -125,14 +125,27 @@ Abarca desde la autenticación del usuario, gestión de estados académicos, gen
 
     2. **Criterios de Bondad** 
 
-Para cada transición de estado académica, se definen los conjuntos de impacto:
+Para cada ciclo académico, se definen los conjuntos de impacto que gobiernan el motor de reglas (RN):
 
 **ESTADO A => IMPACTO B**
 
-|  | Regla C1 [APROBADA] | Regla C2 [RECOMENDADA] | Regla C3 [SIMULADA] |
-| :---: | ----- | ----- | ----- |
-| **Condición** | Transición a PROMOCIONADA. | Correlativas OK + Alto peso transitivo. | Cambio de estado en UI de simulación. |
-| **Acción** | Recalcular Promedio y % de Avance. | Marcar con brillo ámbar en el mapa. | Recalcular cascada visual de desbloqueos pendientes. |
+**ESTADO A: Representa la situación inicial del estudiante al comenzar un periodo académico:**
+
+| | Regla C1 [PROMOCIONADA] | Regla C2 [ELEGIBLE] | Regla C3 [SIMULADA] |
+| :--- | :--- | :--- | :--- |
+| **Condición** | Materias en estado PROMOCIONADA o **APROBADA**. | Materias PENDIENTE con correlativas OK (RN2) + Alto impacto. | Nodos del Mapa interactivo con estado alterado localmente. |
+| **Acción** | Determinan el Promedio Académico y % de Avance Real. | Brillar con prioridad en Dashboard y Recomendaciones. | Disparar recalculo de proyecciones y desbloqueos visuales. |
+
+**IMPACTO B: Define los resultados posibles tras finalizar una cursada o instancia de examen (RN1):**
+
+| | Regla C1 [PROMOCIONADA] | Regla C2 [REGULARIZADA] | Regla C3 [EXAMEN FINAL] | Regla C4 [DESAPROBADA] |
+| :--- | :--- | :--- | :--- | :--- |
+| **Condición** | Aprobación directa por nota de cursada >= 7 (RN3). | Cursada aprobada con nota 4-6 (RN3). | Materia regularizada pendiente de aprobación definitiva. | Nota inferior a 4 o pérdida de condición (RN3). |
+| **Acción** | Cierre definitivo (Estado: PROMOCIONADA). | Materia disponible para cursar hijos (RN2) pero no para cierre. | Transición a **APROBADA** tras aprobar mesa de examen. | Incremento de `AttemptCount` y habilitación para recursar. |
+
+* **Lógica de Sugerencia:** Al inicio de cuatrimestre, el sistema genera el conjunto **MATERIAS A** (Elegibles) priorizando aquellas con mayor peso transitivo según el algoritmo de Camino Crítico (RN9).
+* **Lógica de Cierre:** El **IMPACTO B** actualiza automáticamente las métricas de éxito (Aprobadas vs. Desaprobadas) y recalcula la velocidad de avance para ajustar la fecha de graduación.
+* **Fusión de Estados:** Para el cálculo de progreso porcentual, una materia en **IMPACTO B** con Regla C2 [REGULARIZADA] computa al 50% del peso, mientras que la Regla C1 [PROMOCIONADA] computa al 100%.
 
 5. **Pantallas de Usuario**
 
@@ -148,6 +161,4 @@ No aplica para esta versión de documentación textual (Ver Prototipos Figma).
 | Velocidad de Avance | Tasa histórica de materias aprobadas por periodo de tiempo. |
 
 **Autor:** Cantero, Leandro  
-**Fecha:** 25/02/2026
-
-[image1]: <data:image/png;base64,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/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtI3BAj3Mko9QWZh7SIRtE6/2naFDEUGEwpLZBCWji5NM4p2JtTf7/A0X3j0hFpSjS/VAAIAZ4B7e/kAAAAAAElFTkSuQmCC>
+**Fecha:** 27/02/2026
