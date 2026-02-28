@@ -35,22 +35,26 @@ export class RecommendationsService {
       // 1. Calcular impacto profundo (Transitive Unlocks)
       const transitiveImpact = await this.calculateTransitiveImpact(subject.careerSubjectId);
       
-      // 2. Estacionalidad (Priorizar si el periodo coincide con el cuatrimestre actual)
-      const currentMonth = new Date().getMonth(); // 0-11
-      const currentSemester = currentMonth < 7 ? 1 : 2; // Mar-Jul = 1, Ago-Dic = 2
-      const matchesSeason = subject.careerSubject.period === currentSemester;
+      // 2. Proximidad de Periodo (RN5: 1.1 > 1.2 dentro del mismo año)
+      // Bonus pequeño para seguir el orden natural si ambas están habilitadas
+      const periodScore = (2 - (subject.careerSubject.period === 0 ? 0 : subject.careerSubject.period || 1)) * 2;
 
-      // 3. Balance de carga (Sugerimos las horas para que el usuario pueda elegir)
+      // 3. Cercanía de Año (RN5: Dar prioridad a las de años inferiores para no saltear etapas)
+      // Usamos una escala invertida: menor año = mayor puntaje
+      const yearProximityScore = (10 - (subject.careerSubject.year || 1)) * 10;
+
+      // 4. Balance de carga (Sugerimos las horas para que el usuario pueda elegir)
       const hours = subject.careerSubject.subject.hours;
 
-      // Cálculo de puntaje final
-      const priorityScore = (transitiveImpact * 2) + (matchesSeason ? 10 : 0);
+      // Cálculo de puntaje final (Ponderación sugerida)
+      const priorityScore = (transitiveImpact * 3) + yearProximityScore + periodScore;
 
       recommendations.push({
         ...subject,
         priorityScore,
         transitiveImpact,
-        matchesSeason,
+        yearProximityScore,
+        periodScore,
         hours,
       });
     }
@@ -79,8 +83,12 @@ export class RecommendationsService {
 
       if (!studentPrereq) return false;
 
-      const validStatuses: SubjectStatus[] = [SubjectStatus.PROMOCIONADA];
-      if (!validStatuses.includes(studentPrereq.status)) {
+      // RN2: La correlativa debe estar APROBADA (Promocionada o Final con nota >= 4)
+      const isAproved = 
+        studentPrereq.status === SubjectStatus.PROMOCIONADA || 
+        (studentPrereq.status === SubjectStatus.REGULARIZADA && (studentPrereq.finalGrade ?? 0) >= 4);
+
+      if (!isAproved) {
         return false;
       }
     }
