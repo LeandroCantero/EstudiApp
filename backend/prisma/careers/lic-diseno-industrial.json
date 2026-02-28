@@ -86,7 +86,9 @@
       "hours": 32,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "universidad"
+      ]
     },
     {
       "code": "S11",
@@ -124,7 +126,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Matemática"
+      ]
     },
     {
       "code": "S15",
@@ -204,7 +208,9 @@
       "hours": 64,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción al Diseño"
+      ]
     },
     {
       "code": "S23",
@@ -212,7 +218,9 @@
       "hours": 32,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "universidad"
+      ]
     },
     {
       "code": "S24",
@@ -220,7 +228,9 @@
       "hours": 64,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Morfología I"
+      ]
     },
     {
       "code": "S25",
@@ -230,7 +240,7 @@
       "period": 2,
       "correlatives": [
         "Taller de producción I",
-        "Tecnología I"
+        "Tecnología II"
       ]
     },
     {
@@ -239,7 +249,9 @@
       "hours": 64,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Taller de Diseño III"
+      ]
     },
     {
       "code": "S27",
@@ -247,7 +259,9 @@
       "hours": 32,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Diseño e industria"
+      ]
     },
     {
       "code": "S28",
@@ -265,7 +279,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Programación"
+      ]
     },
     {
       "code": "S30",
@@ -273,7 +289,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Diseño Centrado en las personas"
+      ]
     },
     {
       "code": "S31",
@@ -281,7 +299,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Diseño e industria"
+      ]
     },
     {
       "code": "S32",
@@ -289,7 +309,9 @@
       "hours": 32,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Taller de Diseño IV"
+      ]
     },
     {
       "code": "S33",
@@ -308,7 +330,9 @@
       "hours": 32,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Gestión de proyectos"
+      ]
     },
     {
       "code": "S35",
@@ -316,7 +340,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Tecnología y sociedad"
+      ]
     },
     {
       "code": "S36",
@@ -324,7 +350,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Gestión de proyectos"
+      ]
     }
   ]
 }

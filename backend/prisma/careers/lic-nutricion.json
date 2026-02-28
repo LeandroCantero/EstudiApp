@@ -201,7 +201,9 @@
       "hours": 6,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la Salud Comunitaria"
+      ]
     },
     {
       "code": "22",
@@ -209,7 +211,9 @@
       "hours": 3,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Idioma extranjero"
+      ]
     },
     {
       "code": "23",
@@ -303,7 +307,9 @@
       "hours": 5,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la nutrición"
+      ]
     },
     {
       "code": "32",
@@ -311,7 +317,9 @@
       "hours": 9,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Salud Comunitaria IV"
+      ]
     },
     {
       "code": "33",
@@ -342,7 +350,9 @@
       "hours": 5,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Psicología"
+      ]
     },
     {
       "code": "36",
@@ -350,7 +360,9 @@
       "hours": 3,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Fundamentos de la Nutrición"
+      ]
     },
     {
       "code": "37",
@@ -358,7 +370,9 @@
       "hours": 6,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Antropología"
+      ]
     },
     {
       "code": "38",
@@ -376,7 +390,9 @@
       "hours": 5,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la Tecnología de los Alimentos"
+      ]
     },
     {
       "code": "40",
@@ -384,7 +400,9 @@
       "hours": 5,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Anátomo-Fisiología I"
+      ]
     },
     {
       "code": "41",
@@ -392,7 +410,9 @@
       "hours": 7,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Tecnología e Investigación en el desarrollo de los alimentos"
+      ]
     },
     {
       "code": "42",
@@ -410,7 +430,9 @@
       "hours": 5,
       "year": 5,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Salud Comunitaria V"
+      ]
     },
     {
       "code": "44",
@@ -418,7 +440,9 @@
       "hours": 12,
       "year": 5,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Gestión y Administración de los Servicios de Alimentación"
+      ]
     },
     {
       "code": "45",
@@ -426,7 +450,9 @@
       "hours": 7,
       "year": 5,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "PPS: Práctica en la Industria Alimentaria I"
+      ]
     },
     {
       "code": "46",
@@ -445,7 +471,9 @@
       "hours": 3,
       "year": 5,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Bioquímica Aplicada"
+      ]
     },
     {
       "code": "48",
@@ -453,7 +481,9 @@
       "hours": 12,
       "year": 5,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Técnica Dietoterápica II"
+      ]
     }
   ]
 }

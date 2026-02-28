@@ -15,7 +15,9 @@
       "hours": 64,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Matemática para Informática I"
+      ]
     },
     {
       "code": "3",
@@ -31,7 +33,9 @@
       "hours": 32,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a lógica y problemas computacionales"
+      ]
     },
     {
       "code": "5",
@@ -119,7 +123,9 @@
       "hours": 32,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Inglés I"
+      ]
     },
     {
       "code": "14",

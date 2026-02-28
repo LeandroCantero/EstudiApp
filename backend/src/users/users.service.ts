@@ -198,6 +198,7 @@ export class UsersService {
   }
 
   // RN9 Helper: Encuentra la cadena más larga de correlatividades en las materias pendientes
+  // Heurística: Si una materia es del último año y no tiene correlativas, se asume que es la materia final/tesina.
   private async calculateCriticalPathDepth(pendingSubjectIds: string[]): Promise<number> {
     if (pendingSubjectIds.length === 0) return 0;
 
@@ -205,6 +206,9 @@ export class UsersService {
       where: { id: { in: pendingSubjectIds } },
       include: { prerequisites: true },
     });
+
+    // 1. Identificar el último año para la heurística de "Materia Final"
+    const maxYear = Math.max(...subjects.map(s => s.year || 0));
 
     // Mapeo para búsqueda rápida
     const subjectMap = new Map(subjects.map(s => [s.id, s]));
@@ -216,14 +220,12 @@ export class UsersService {
       const s = subjectMap.get(id) as any;
       if (!s) return 0;
 
-      // RN: Materias anuales (period 0) cuentan como 2 cuatrimestres
       const subjectWeight = s.period === 0 ? 2 : 1;
 
       if (!s.prerequisites || s.prerequisites.length === 0) {
         return subjectWeight;
       }
 
-      // Solo nos interesan los prerequisitos que TAMBIÉN están pendientes
       const pendingPrereqs = s.prerequisites.filter((p: any) => pendingSubjectIds.includes(p.id));
       if (pendingPrereqs.length === 0) return subjectWeight;
 
@@ -232,13 +234,28 @@ export class UsersService {
       return depth;
     };
 
+    // 2. Separar materias base de materias "potencialmente finales"
+    let maxNormalDepth = 0;
+    const finalSubjects: any[] = [];
 
-    let maxDepth = 0;
-    for (const id of pendingSubjectIds) {
-      maxDepth = Math.max(maxDepth, getDepth(id));
+    for (const s of subjects) {
+      // Heurística: último año + sin correlativas = materia final (tesina/proyecto)
+      if (s.year === maxYear && (!s.prerequisites || s.prerequisites.length === 0)) {
+        finalSubjects.push(s);
+      } else {
+        const depth = getDepth(s.id);
+        if (depth > maxNormalDepth) maxNormalDepth = depth;
+      }
     }
 
-    return maxDepth;
+    // 3. Ajuste: La materia final se suma al camino crítico más largo
+    let finalAdjustment = 0;
+    if (finalSubjects.length > 0) {
+      // Tomamos el peso de la materia final (usualmente 1 cuatrimestre)
+      finalAdjustment = Math.max(...finalSubjects.map(s => s.period === 0 ? 2 : 1));
+    }
+
+    return maxNormalDepth + finalAdjustment;
   }
 
   // US-05: Obtener total de créditos

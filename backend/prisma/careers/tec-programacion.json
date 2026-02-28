@@ -107,7 +107,9 @@
       "hours": 32,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Inglés I"
+      ]
     },
     {
       "code": "13",
@@ -145,7 +147,9 @@
       "hours": 64,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Programación estructurada"
+      ]
     },
     {
       "code": "17",
@@ -174,7 +178,9 @@
       "hours": 64,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Organización de computadoras I"
+      ]
     },
     {
       "code": "20",
@@ -182,7 +188,10 @@
       "hours": 96,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Estrategias de persistencia",
+        "Elementos de ingeniería de software"
+      ]
     }
   ]
 }

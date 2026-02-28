@@ -23,7 +23,9 @@
       "hours": 64,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S4",
@@ -31,7 +33,9 @@
       "hours": 64,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S5",
@@ -47,7 +51,9 @@
       "hours": 32,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Lectura, escritura y oralidad"
+      ]
     },
     {
       "code": "S7",
@@ -55,7 +61,9 @@
       "hours": 64,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Lectura, escritura y oralidad"
+      ]
     },
     {
       "code": "S8",
@@ -63,7 +71,9 @@
       "hours": 32,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Lectura, escritura y oralidad"
+      ]
     },
     {
       "code": "S9",
@@ -71,7 +81,9 @@
       "hours": 48,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a los Estudios Literarios"
+      ]
     },
     {
       "code": "S10",
@@ -97,7 +109,9 @@
       "hours": 32,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Territorio, sujetos e instituciones"
+      ]
     },
     {
       "code": "S13",
@@ -105,7 +119,9 @@
       "hours": 48,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S14",
@@ -113,7 +129,9 @@
       "hours": 64,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Territorio, sujetos e instituciones"
+      ]
     },
     {
       "code": "S15",
@@ -131,7 +149,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a los Estudios Literarios"
+      ]
     },
     {
       "code": "S17",
@@ -139,7 +159,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a los Estudios Literarios"
+      ]
     },
     {
       "code": "S18",
@@ -147,7 +169,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S19",
@@ -166,7 +190,9 @@
       "hours": 48,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Teoría y práctica de proyectos culturales"
+      ]
     },
     {
       "code": "S21",
@@ -174,7 +200,9 @@
       "hours": 48,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Didáctica y currículum"
+      ]
     },
     {
       "code": "S22",
@@ -211,7 +239,9 @@
       "hours": 48,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a los Estudios Literarios"
+      ]
     },
     {
       "code": "S26",
@@ -250,7 +280,9 @@
       "hours": 160,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Práctica en el ámbito socioeducativo"
+      ]
     },
     {
       "code": "S30",
@@ -258,7 +290,9 @@
       "hours": 32,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Asignatura UNAHUR I"
+      ]
     },
     {
       "code": "S31",
@@ -266,7 +300,9 @@
       "hours": 48,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S32",
@@ -274,7 +310,9 @@
       "hours": 48,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Taller de escritura académica"
+      ]
     },
     {
       "code": "S33",
@@ -302,7 +340,9 @@
       "hours": 48,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a los Estudios lingüísticos"
+      ]
     },
     {
       "code": "S36",
@@ -310,7 +350,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a los Estudios Literarios"
+      ]
     },
     {
       "code": "S37",
@@ -318,7 +360,9 @@
       "hours": 80,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "proyectos Educativos"
+      ]
     },
     {
       "code": "S38",
@@ -326,7 +370,9 @@
       "hours": 80,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Prácticas docentes en el Nivel Secundario"
+      ]
     }
   ]
 }

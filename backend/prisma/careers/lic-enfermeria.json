@@ -90,7 +90,9 @@
       "hours": 9,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Fundamentos de Enfermería I"
+      ]
     },
     {
       "code": "11",
@@ -108,7 +110,9 @@
       "hours": 5,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Anátomo-Fisiología II"
+      ]
     },
     {
       "code": "13",
@@ -116,7 +120,9 @@
       "hours": 3,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la Salud Comunitaria"
+      ]
     },
     {
       "code": "14",
@@ -144,7 +150,9 @@
       "hours": 6,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Cultura y alfabetización digital en la universidad"
+      ]
     },
     {
       "code": "17",
@@ -222,7 +230,9 @@
       "hours": 3,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Antropología"
+      ]
     },
     {
       "code": "25",
@@ -230,7 +240,9 @@
       "hours": 4,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Psicología"
+      ]
     },
     {
       "code": "26",
@@ -288,7 +300,9 @@
       "hours": 9,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Epistemología Aplicada a la Enfermería"
+      ]
     },
     {
       "code": "32",
@@ -306,7 +320,9 @@
       "hours": 6,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Salud Comunitaria V"
+      ]
     },
     {
       "code": "34",
@@ -314,7 +330,9 @@
       "hours": 3,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Deontología y aspectos legales del ejercicio profesional de la Enfermería"
+      ]
     },
     {
       "code": "35",
@@ -322,7 +340,9 @@
       "hours": 6,
       "year": 5,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Ética y Desarrollo Profesional"
+      ]
     },
     {
       "code": "36",

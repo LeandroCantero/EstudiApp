@@ -15,7 +15,9 @@
       "hours": 64,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción al desarrollo agrario"
+      ]
     },
     {
       "code": "3",
@@ -39,7 +41,9 @@
       "hours": 32,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción al desarrollo agrario"
+      ]
     },
     {
       "code": "6",
@@ -47,7 +51,9 @@
       "hours": 32,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Ateneo de estudio de casos"
+      ]
     },
     {
       "code": "7",
@@ -65,7 +71,9 @@
       "hours": 64,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "UNAHUR I"
+      ]
     },
     {
       "code": "9",
@@ -73,7 +81,9 @@
       "hours": 64,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción al desarrollo agrario"
+      ]
     },
     {
       "code": "10",
@@ -81,7 +91,9 @@
       "hours": 32,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Agroecología"
+      ]
     },
     {
       "code": "11",
@@ -89,7 +101,9 @@
       "hours": 32,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "UNAHUR I"
+      ]
     },
     {
       "code": "12",
@@ -137,7 +151,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Biología"
+      ]
     },
     {
       "code": "17",
@@ -185,7 +201,9 @@
       "hours": 64,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Fundamentos de la sanidad vegetal"
+      ]
     },
     {
       "code": "22",
@@ -203,7 +221,9 @@
       "hours": 256,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Horticultura"
+      ]
     },
     {
       "code": "24",
@@ -261,7 +281,9 @@
       "hours": 32,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Nuevos entornos y lenguajes: la producción de conocimiento en la cultura digital"
+      ]
     },
     {
       "code": "30",
@@ -299,7 +321,9 @@
       "hours": 32,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Tecnologías agrícolas"
+      ]
     },
     {
       "code": "34",
@@ -307,7 +331,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Manejo agroecológico de adversidades"
+      ]
     },
     {
       "code": "35",
@@ -345,7 +371,9 @@
       "hours": 64,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Análisis de territorios"
+      ]
     }
   ]
 }

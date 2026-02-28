@@ -15,7 +15,9 @@
       "hours": 4,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Agroecología"
+      ]
     },
     {
       "code": "3",
@@ -117,7 +119,9 @@
       "hours": 2,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Nuevos entornos y lenguajes"
+      ]
     },
     {
       "code": "14",
@@ -125,7 +129,9 @@
       "hours": 2,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Inglés I"
+      ]
     },
     {
       "code": "15",
@@ -153,7 +159,9 @@
       "hours": 4,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Inmersión a la realidad social agraria"
+      ]
     },
     {
       "code": "18",
@@ -161,7 +169,9 @@
       "hours": 4,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Inmersión a la realidad social agraria"
+      ]
     },
     {
       "code": "19",
@@ -179,7 +189,9 @@
       "hours": 4,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Diseño y manejo de agroecosistemas"
+      ]
     },
     {
       "code": "21",

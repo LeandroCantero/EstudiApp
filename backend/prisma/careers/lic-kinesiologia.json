@@ -101,7 +101,9 @@
       "hours": 4,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Desarrollo de las Capacidades Funcionales"
+      ]
     },
     {
       "code": "13",
@@ -140,7 +142,9 @@
       "hours": 3,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Anátomo-Fisiología I"
+      ]
     },
     {
       "code": "17",
@@ -201,7 +205,9 @@
       "hours": 4,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Valoración Funcional I"
+      ]
     },
     {
       "code": "23",
@@ -219,7 +225,9 @@
       "hours": 3,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Antropología"
+      ]
     },
     {
       "code": "25",
@@ -227,7 +235,9 @@
       "hours": 6,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción to la Salud Comunitaria"
+      ]
     },
     {
       "code": "26",
@@ -290,7 +300,9 @@
       "hours": 9,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Salud Comunitaria IV"
+      ]
     },
     {
       "code": "32",
@@ -298,7 +310,9 @@
       "hours": 3,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Fundamentos de la Kinesiología y Fisiatría"
+      ]
     },
     {
       "code": "33",
@@ -306,7 +320,9 @@
       "hours": 3,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Comunicación en Salud"
+      ]
     },
     {
       "code": "34",
@@ -349,7 +365,9 @@
       "hours": 3,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Deontología y aspectos legales del ejercicio profesional de la Kinesiología y Fisiatría"
+      ]
     },
     {
       "code": "38",
@@ -389,7 +407,9 @@
       "hours": 6,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Salud Comunitaria V"
+      ]
     }
   ]
 }

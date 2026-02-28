@@ -57,7 +57,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Electrotecnia"
+      ]
     },
     {
       "code": "E8",
@@ -65,7 +67,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Álgebra y geometría analítica"
+      ]
     },
     {
       "code": "E9",
@@ -93,7 +97,9 @@
       "hours": 96,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Física I"
+      ]
     },
     {
       "code": "E12",
@@ -101,7 +107,9 @@
       "hours": 64,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Análisis matemático I"
+      ]
     },
     {
       "code": "E13",
@@ -135,7 +143,9 @@
       "hours": 96,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Electromovilidad II"
+      ]
     }
   ]
 }

@@ -1,0 +1,26 @@
+{
+  "career": "Tec. Univ. en Energía Eléctrica",
+  "subjects": [
+    { "code": "1", "name": "Introducción a la Energía Eléctrica", "hours": 64, "year": 1, "period": 1, "correlatives": [] },
+    { "code": "2", "name": "Álgebra y Geometría Analítica", "hours": 64, "year": 1, "period": 1, "correlatives": [] },
+    { "code": "3", "name": "Nuevos Entornos y Lenguajes", "hours": 32, "year": 1, "period": 1, "correlatives": [] },
+    { "code": "4", "name": "Química", "hours": 64, "year": 1, "period": 1, "correlatives": [] },
+    { "code": "5", "name": "Introducción al Análisis Matemático", "hours": 64, "year": 1, "period": 1, "correlatives": [] },
+    { "code": "6", "name": "Electrotecnia", "hours": 96, "year": 1, "period": 2, "correlatives": ["Introducción a la Energía Eléctrica", "Álgebra y Geometría Analítica"] },
+    { "code": "7", "name": "Sistemas de Representación Gráfica", "hours": 32, "year": 1, "period": 2, "correlatives": ["Álgebra y Geometría Analítica"] },
+    { "code": "8", "name": "Física I", "hours": 64, "year": 1, "period": 2, "correlatives": ["Introducción al Análisis Matemático"] },
+    { "code": "9", "name": "Materia UNAHUR I", "hours": 32, "year": 1, "period": 2, "correlatives": ["Nuevos Entornos y Lenguajes"] },
+    { "code": "10", "name": "Análisis Matemático I", "hours": 96, "year": 1, "period": 2, "correlatives": ["Introducción al Análisis Matemático"] },
+    { "code": "11", "name": "Sistemas de Mediciones", "hours": 64, "year": 2, "period": 1, "correlatives": ["Electrotecnia"] },
+    { "code": "12", "name": "Programación", "hours": 64, "year": 2, "period": 1, "correlatives": ["Nuevos Entornos y Lenguajes"] },
+    { "code": "13", "name": "Circuitos Eléctricos", "hours": 96, "year": 2, "period": 1, "correlatives": ["Electrotecnia"] },
+    { "code": "14", "name": "Inglés I", "hours": 32, "year": 2, "period": 1, "correlatives": ["Materia UNAHUR I"] },
+    { "code": "15", "name": "Física II", "hours": 64, "year": 2, "period": 1, "correlatives": ["Física I"] },
+    { "code": "16", "name": "Ingeniería Ambiental, Seguridad e Higiene", "hours": 80, "year": 2, "period": 2, "correlatives": ["Química"] },
+    { "code": "17", "name": "Dispositivos e Instalaciones Eléctricas I", "hours": 96, "year": 2, "period": 2, "correlatives": ["Circuitos Eléctricos"] },
+    { "code": "18", "name": "Electrónica", "hours": 96, "year": 2, "period": 2, "correlatives": ["Sistemas de Mediciones"] },
+    { "code": "19", "name": "Inglés II", "hours": 32, "year": 2, "period": 2, "correlatives": ["Inglés I"] },
+    { "code": "20", "name": "Máquinas Eléctricas I", "hours": 96, "year": 3, "period": 1, "correlatives": ["Circuitos Eléctricos"] },
+    { "code": "21", "name": "Espacio de Integración Curricular I", "hours": 64, "year": 3, "period": 1, "correlatives": ["Circuitos Eléctricos", "Ingeniería Ambiental, Seguridad e Higiene"] }
+  ]
+}

@@ -47,7 +47,9 @@
       "hours": 64,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S7",
@@ -55,7 +57,9 @@
       "hours": 64,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S8",
@@ -103,7 +107,9 @@
       "hours": 32,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Territorio, sujetos e instituciones"
+      ]
     },
     {
       "code": "S13",
@@ -111,7 +117,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S14",
@@ -127,7 +135,9 @@
       "hours": 64,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Territorio, sujetos e instituciones"
+      ]
     },
     {
       "code": "S16",
@@ -167,7 +177,9 @@
       "hours": 64,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Lengua inglesa I"
+      ]
     },
     {
       "code": "S20",
@@ -175,7 +187,9 @@
       "hours": 32,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Práctica en el ámbito socioeducativo"
+      ]
     },
     {
       "code": "S21",
@@ -183,7 +197,9 @@
       "hours": 48,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Didáctica y curriculum"
+      ]
     },
     {
       "code": "S22",
@@ -191,7 +207,9 @@
       "hours": 48,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "primario"
+      ]
     },
     {
       "code": "S23",
@@ -238,7 +256,9 @@
       "hours": 48,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Lectura, escritura y oralidad"
+      ]
     },
     {
       "code": "S28",
@@ -246,7 +266,9 @@
       "hours": 32,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "superior"
+      ]
     },
     {
       "code": "S29",
@@ -254,7 +276,9 @@
       "hours": 32,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Adquisición de la lengua materna y extranjera"
+      ]
     },
     {
       "code": "S30",
@@ -272,7 +296,9 @@
       "hours": 32,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "universidad"
+      ]
     },
     {
       "code": "S32",
@@ -280,7 +306,9 @@
       "hours": 48,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     }
   ]
 }

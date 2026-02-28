@@ -50,7 +50,9 @@
       "hours": 32,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Álgebra y Geometría Analítica"
+      ]
     },
     {
       "code": "E7",
@@ -68,7 +70,9 @@
       "hours": 32,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la Energía Eléctrica"
+      ]
     },
     {
       "code": "E9",
@@ -117,7 +121,9 @@
       "hours": 32,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Materia UNAHUR"
+      ]
     },
     {
       "code": "E14",
@@ -196,7 +202,9 @@
       "hours": 64,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Espacio de integración curricular I"
+      ]
     },
     {
       "code": "E22",
@@ -204,7 +212,9 @@
       "hours": 64,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Circuitos eléctricos"
+      ]
     },
     {
       "code": "E23",
@@ -232,7 +242,9 @@
       "hours": 64,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Análisis matemático II"
+      ]
     },
     {
       "code": "E26",
@@ -285,7 +297,9 @@
       "hours": 80,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Matemática avanzada"
+      ]
     },
     {
       "code": "E31",
@@ -293,7 +307,9 @@
       "hours": 64,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Máquinas eléctricas II"
+      ]
     },
     {
       "code": "E32",
@@ -301,7 +317,9 @@
       "hours": 64,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Organización industrial"
+      ]
     },
     {
       "code": "E33",
@@ -329,7 +347,9 @@
       "hours": 64,
       "year": 5,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Transmisión de la energía eléctrica"
+      ]
     },
     {
       "code": "E36",
@@ -337,7 +357,9 @@
       "hours": 64,
       "year": 5,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Economía"
+      ]
     },
     {
       "code": "E37",
@@ -356,7 +378,9 @@
       "hours": 64,
       "year": 5,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Sistemas eléctricos de potencia"
+      ]
     },
     {
       "code": "E39",

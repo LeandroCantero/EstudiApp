@@ -57,7 +57,9 @@
       "hours": 6,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la Química"
+      ]
     },
     {
       "code": "8",
@@ -75,7 +77,9 @@
       "hours": 2,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Cultura y alfabetización digital en la universidad"
+      ]
     },
     {
       "code": "10",
@@ -83,7 +87,9 @@
       "hours": 3,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la Tecnología de los Alimentos"
+      ]
     },
     {
       "code": "11",
@@ -243,7 +249,9 @@
       "hours": 5,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Seminario General de Procesos Productivos de los Alimentos I"
+      ]
     },
     {
       "code": "27",
@@ -297,11 +305,13 @@
     },
     {
       "code": "32",
-      "name": "Legislación y Normas de la Industria Alimenticia",
+      "name": "Legislación y Normas de la Industry Alimenticia",
       "hours": 4,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Gestión de la Calidad e Inocuidad de los Alimentos"
+      ]
     },
     {
       "code": "33",
@@ -309,7 +319,9 @@
       "hours": 2,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Inglés I"
+      ]
     },
     {
       "code": "34",
@@ -399,7 +411,9 @@
       "hours": 3,
       "year": 5,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Legislación y Normas de la Industry Alimenticia"
+      ]
     },
     {
       "code": "43",

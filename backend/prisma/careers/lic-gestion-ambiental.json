@@ -75,7 +75,9 @@
       "hours": 64,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la cuestión ambiental CIC"
+      ]
     },
     {
       "code": "11",
@@ -83,7 +85,9 @@
       "hours": 48,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la cuestión ambiental CIC"
+      ]
     },
     {
       "code": "12",
@@ -91,7 +95,9 @@
       "hours": 32,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la cuestión ambiental CIC"
+      ]
     },
     {
       "code": "13",
@@ -119,7 +125,9 @@
       "hours": 96,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Matemática II CFB"
+      ]
     },
     {
       "code": "16",
@@ -149,7 +157,9 @@
       "hours": 48,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Ecología CFE"
+      ]
     },
     {
       "code": "20",
@@ -189,7 +199,9 @@
       "hours": 128,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Taller integrado de gestión ambiental CIC"
+      ]
     },
     {
       "code": "24",
@@ -197,7 +209,9 @@
       "hours": 64,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Matemática I CFB"
+      ]
     },
     {
       "code": "26",
@@ -205,7 +219,9 @@
       "hours": 64,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Problemáticas ambientales urbanas CFE"
+      ]
     },
     {
       "code": "27",
@@ -213,7 +229,9 @@
       "hours": 64,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la cuestión ambiental CIC"
+      ]
     },
     {
       "code": "29",
@@ -221,7 +239,9 @@
       "hours": 48,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Problemáticas ambientales urbanas CFE"
+      ]
     },
     {
       "code": "31",
@@ -250,7 +270,9 @@
       "hours": 48,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Legislación ambiental CFE"
+      ]
     },
     {
       "code": "34",
@@ -269,7 +291,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Gestión integral de proyectos CIC"
+      ]
     },
     {
       "code": "36",
@@ -287,7 +311,9 @@
       "hours": 48,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Política ambiental CFE"
+      ]
     },
     {
       "code": "38",
@@ -305,7 +331,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Manejo integrado de cuencas CFE"
+      ]
     },
     {
       "code": "40",
@@ -313,7 +341,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Educación ambiental CFE"
+      ]
     },
     {
       "code": "41",
@@ -321,7 +351,9 @@
       "hours": 48,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Manejo integrado de cuencas CFE"
+      ]
     },
     {
       "code": "42",
@@ -329,7 +361,9 @@
       "hours": 48,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Gestión ambiental en gobiernos locales CFE"
+      ]
     },
     {
       "code": "5",

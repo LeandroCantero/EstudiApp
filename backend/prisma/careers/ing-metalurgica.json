@@ -92,7 +92,9 @@
       "hours": 64,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Algebra y Geometría Analítica"
+      ]
     },
     {
       "code": "E12",
@@ -110,7 +112,9 @@
       "hours": 32,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Asignatura UNAHUR"
+      ]
     },
     {
       "code": "E14",
@@ -128,7 +132,9 @@
       "hours": 64,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción al análisis Matemático"
+      ]
     },
     {
       "code": "E16",
@@ -157,7 +163,10 @@
       "hours": 128,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Metalurgia II",
+        "Ensayos de Materiales"
+      ]
     },
     {
       "code": "E19",
@@ -186,7 +195,9 @@
       "hours": 64,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la Metalurgia"
+      ]
     },
     {
       "code": "E22",
@@ -225,7 +236,9 @@
       "hours": 64,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Química"
+      ]
     },
     {
       "code": "E26",
@@ -298,7 +311,9 @@
       "hours": 64,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Organización Industrial"
+      ]
     },
     {
       "code": "E33",
@@ -306,7 +321,9 @@
       "hours": 80,
       "year": 5,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Ciencia de los Materiales"
+      ]
     },
     {
       "code": "E34",
@@ -314,7 +331,9 @@
       "hours": 64,
       "year": 5,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Organización Industrial"
+      ]
     },
     {
       "code": "E35",

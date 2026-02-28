@@ -23,7 +23,9 @@
       "hours": 64,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S4",
@@ -31,7 +33,9 @@
       "hours": 64,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S5",
@@ -47,7 +51,9 @@
       "hours": 64,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S7",
@@ -55,7 +61,9 @@
       "hours": 64,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S8",
@@ -73,7 +81,9 @@
       "hours": 64,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Aprendizajes y prácticas educativas"
+      ]
     },
     {
       "code": "S10",
@@ -81,7 +91,9 @@
       "hours": 64,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Aprendizajes y prácticas educativas"
+      ]
     },
     {
       "code": "S11",
@@ -99,7 +111,9 @@
       "hours": 32,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Territorio, sujetos e instituciones"
+      ]
     },
     {
       "code": "S13",
@@ -107,7 +121,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S14",
@@ -123,7 +139,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Territorio, sujetos e instituciones"
+      ]
     },
     {
       "code": "S16",
@@ -161,7 +179,9 @@
       "hours": 64,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Prácticas gimnásticas I"
+      ]
     },
     {
       "code": "S20",
@@ -169,7 +189,9 @@
       "hours": 64,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Educación física en la niñez"
+      ]
     },
     {
       "code": "S21",
@@ -177,7 +199,9 @@
       "hours": 64,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S22",
@@ -213,7 +237,9 @@
       "hours": 48,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "socioeducativo"
+      ]
     },
     {
       "code": "S26",
@@ -231,7 +257,9 @@
       "hours": 48,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "socioeducativo"
+      ]
     },
     {
       "code": "S28",
@@ -239,7 +267,9 @@
       "hours": 48,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "socioeducativo"
+      ]
     },
     {
       "code": "S29",
@@ -257,7 +287,9 @@
       "hours": 48,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Historia de la Nación Argentina y sus proyectos educativos"
+      ]
     },
     {
       "code": "S31",
@@ -265,7 +297,9 @@
       "hours": 32,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "universidad"
+      ]
     },
     {
       "code": "S32",
@@ -273,7 +307,9 @@
       "hours": 48,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S33",
@@ -281,7 +317,9 @@
       "hours": 160,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Prácticas docentes en el nivel inicial y primario"
+      ]
     },
     {
       "code": "S34",
@@ -289,7 +327,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "socioeducativo"
+      ]
     },
     {
       "code": "S35",
@@ -297,7 +337,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "didáctica IV"
+      ]
     },
     {
       "code": "S36",
@@ -316,7 +358,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Didáctica y curriculum"
+      ]
     },
     {
       "code": "S38",
@@ -324,7 +368,9 @@
       "hours": 48,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Taller de prácticas lúdicas"
+      ]
     },
     {
       "code": "S39",
@@ -332,7 +378,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Educación física"
+      ]
     }
   ]
 }

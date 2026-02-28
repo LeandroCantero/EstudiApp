@@ -15,7 +15,9 @@
       "hours": 4,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción al viverismo"
+      ]
     },
     {
       "code": "3",
@@ -165,7 +167,9 @@
       "hours": 2,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Inglés I"
+      ]
     },
     {
       "code": "19",

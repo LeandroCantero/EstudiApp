@@ -69,7 +69,9 @@
       "hours": 64,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la Inteligencia Artificial"
+      ]
     },
     {
       "code": "9",
@@ -77,7 +79,9 @@
       "hours": 32,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Nuevos Entornos y Lenguajes"
+      ]
     },
     {
       "code": "10",
@@ -171,7 +175,9 @@
       "hours": 32,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Inglés I"
+      ]
     },
     {
       "code": "19",

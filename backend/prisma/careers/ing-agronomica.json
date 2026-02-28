@@ -108,7 +108,9 @@
       "hours": 32,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "UNAHUR I"
+      ]
     },
     {
       "code": "14",
@@ -147,7 +149,9 @@
       "hours": 64,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción al desarrollo agrario"
+      ]
     },
     {
       "code": "19",
@@ -185,7 +189,9 @@
       "hours": 64,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción al desarrollo agrario"
+      ]
     },
     {
       "code": "23",
@@ -224,7 +230,9 @@
       "hours": 64,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Discusiones sobre desarrollo"
+      ]
     },
     {
       "code": "27",
@@ -242,7 +250,9 @@
       "hours": 64,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción al desarrollo agrario"
+      ]
     },
     {
       "code": "29",
@@ -280,7 +290,9 @@
       "hours": 64,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Análisis de territorios"
+      ]
     },
     {
       "code": "33",
@@ -368,7 +380,9 @@
       "hours": 64,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Bioinsumos agropecuarios"
+      ]
     },
     {
       "code": "43",
@@ -387,7 +401,9 @@
       "hours": 64,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Políticas para el desarrollo territorial"
+      ]
     },
     {
       "code": "45",
@@ -395,7 +411,9 @@
       "hours": 32,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Análisis de territorios"
+      ]
     },
     {
       "code": "46",
@@ -474,7 +492,7 @@
       "year": 1,
       "period": 1,
       "correlatives": [
-        "Matemática aplicada"
+        "Administración de agroecosistemas"
       ]
     }
   ]

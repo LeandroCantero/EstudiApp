@@ -23,7 +23,9 @@
       "hours": 64,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S4",
@@ -31,7 +33,9 @@
       "hours": 64,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S5",
@@ -47,7 +51,9 @@
       "hours": 64,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la Geografía"
+      ]
     },
     {
       "code": "S7",
@@ -55,7 +61,9 @@
       "hours": 80,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la Geografía"
+      ]
     },
     {
       "code": "S8",
@@ -63,7 +71,9 @@
       "hours": 80,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la Geografía"
+      ]
     },
     {
       "code": "S9",
@@ -89,7 +99,9 @@
       "hours": 32,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Territorio, sujetos e instituciones"
+      ]
     },
     {
       "code": "S12",
@@ -97,7 +109,9 @@
       "hours": 48,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S13",
@@ -105,7 +119,9 @@
       "hours": 64,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Territorio, sujetos e instituciones"
+      ]
     },
     {
       "code": "S14",
@@ -164,7 +180,9 @@
       "hours": 48,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Didáctica y curriculum"
+      ]
     },
     {
       "code": "S20",
@@ -210,7 +228,9 @@
       "hours": 64,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Geografía social II"
+      ]
     },
     {
       "code": "S25",
@@ -218,7 +238,9 @@
       "hours": 64,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Geografía social II"
+      ]
     },
     {
       "code": "S26",
@@ -246,7 +268,9 @@
       "hours": 160,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Práctica en el ámbito socioeducativo"
+      ]
     },
     {
       "code": "S29",
@@ -254,7 +278,9 @@
       "hours": 48,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S30",
@@ -262,7 +288,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Geografía económica"
+      ]
     },
     {
       "code": "S31",
@@ -281,7 +309,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Geografía económica"
+      ]
     },
     {
       "code": "S33",
@@ -299,7 +329,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pensamiento pedagógico latinoamericano"
+      ]
     },
     {
       "code": "S35",
@@ -307,7 +339,9 @@
       "hours": 160,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Prácticas docentes en el nivel secundario"
+      ]
     }
   ]
 }

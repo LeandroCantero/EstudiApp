@@ -1,7 +1,7 @@
 import { Logger, ValidationPipe, VersioningType } from '@nestjs/common';
 import { HttpAdapterHost, NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
-import helmet from 'helmet';
+import { apiReference } from '@scalar/nestjs-api-reference';
 import { AppModule } from './app.module';
 import { AllExceptionsFilter } from './common/filters/http-exception.filter';
 import { PrismaClientExceptionFilter } from './common/filters/prisma-exception.filter';
@@ -14,9 +14,6 @@ import { TransformInterceptor } from './common/interceptors/transform.intercepto
 async function bootstrap() {
   const logger = new Logger('Bootstrap');
   const app = await NestFactory.create(AppModule);
-
-  // Seguridad: Helmet - Protege cabeceras HTTP comunes
-  app.use(helmet());
 
   // Prefijo global para la API
   app.setGlobalPrefix('api');
@@ -54,7 +51,17 @@ async function bootstrap() {
     .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('docs', app, document);
+  
+  app.use(
+    '/docs',
+    apiReference({
+      theme: 'purple',
+      layout: 'modern',
+      spec: {
+        content: document,
+      },
+    }),
+  );
 
   // CORS
   app.enableCors();
@@ -63,7 +70,7 @@ async function bootstrap() {
   await app.listen(port);
 
   logger.log(`🚀 API activa en: http://localhost:${port}/api/v1`);
-  logger.log(`📄 Documentación Swagger: http://localhost:${port}/docs`);
+  logger.log(`📄 Documentación Scalar: http://localhost:${port}/docs`);
 }
 
 bootstrap();

@@ -117,6 +117,8 @@ describe('Academic Logic Tests', () => {
         subjects: [
           { status: SubjectStatus.PROMOCIONADA, careerSubject: { careerId: 'c1', period: 1 } },
           { status: SubjectStatus.PROMOCIONADA, careerSubject: { careerId: 'c1', period: 2 } },
+          { status: SubjectStatus.PENDIENTE, careerSubject: { careerId: 'c1', period: 1, id: 'cs3' } },
+          { status: SubjectStatus.PENDIENTE, careerSubject: { careerId: 'c1', period: 2, id: 'cs4' } },
         ]
       };
 

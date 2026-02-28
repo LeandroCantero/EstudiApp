@@ -47,7 +47,9 @@
       "hours": 7,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Matemática"
+      ]
     },
     {
       "code": "7",
@@ -55,7 +57,9 @@
       "hours": 6,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Matemática"
+      ]
     },
     {
       "code": "8",
@@ -138,7 +142,9 @@
       "hours": 6,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Organización industrial"
+      ]
     },
     {
       "code": "17",
@@ -156,7 +162,9 @@
       "hours": 6,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Organización industrial"
+      ]
     },
     {
       "code": "19",
@@ -174,7 +182,9 @@
       "hours": 9,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Planificación del Mantenimiento"
+      ]
     },
     {
       "code": "21",
@@ -182,7 +192,9 @@
       "hours": 5,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Control de gestión"
+      ]
     },
     {
       "code": "22",
@@ -190,7 +202,9 @@
       "hours": 6,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Matemática"
+      ]
     },
     {
       "code": "23",
@@ -198,7 +212,9 @@
       "hours": 5,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Gestión de la calidad"
+      ]
     },
     {
       "code": "24",
@@ -206,7 +222,9 @@
       "hours": 5,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Control de gestión"
+      ]
     },
     {
       "code": "25",
@@ -236,7 +254,9 @@
       "hours": 6,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Organización y planeamiento estratégico del mantenimiento"
+      ]
     },
     {
       "code": "28",
@@ -244,7 +264,9 @@
       "hours": 7,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Electrotecnia"
+      ]
     },
     {
       "code": "29",
@@ -264,7 +286,9 @@
       "hours": 5,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Asignatura Unahur"
+      ]
     },
     {
       "code": "31",
@@ -283,7 +307,9 @@
       "hours": 5,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Cultura y alfabetización digital en la universidad"
+      ]
     },
     {
       "code": "33",

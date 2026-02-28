@@ -130,7 +130,9 @@
       "hours": 3,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la Salud Comunitaria"
+      ]
     },
     {
       "code": "15",
@@ -156,7 +158,9 @@
       "hours": 3,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Antropología"
+      ]
     },
     {
       "code": "18",
@@ -187,7 +191,9 @@
       "hours": 4,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la Obstetricia"
+      ]
     },
     {
       "code": "21",
@@ -281,7 +287,9 @@
       "hours": 4,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Cultura y alfabetización digital en la universidad"
+      ]
     },
     {
       "code": "30",
@@ -289,7 +297,9 @@
       "hours": 9,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Salud Comunitaria IV"
+      ]
     },
     {
       "code": "31",
@@ -297,7 +307,9 @@
       "hours": 6,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Antropología"
+      ]
     },
     {
       "code": "32",
@@ -305,7 +317,9 @@
       "hours": 3,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Deontología y aspectos legales del ejercicio profesional de la obstetricia"
+      ]
     },
     {
       "code": "33",

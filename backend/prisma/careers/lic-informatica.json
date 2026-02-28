@@ -211,7 +211,9 @@
       "hours": 32,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Inglés I"
+      ]
     },
     {
       "code": "23",
@@ -283,7 +285,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Ingeniería de Requerimientos"
+      ]
     },
     {
       "code": "30",
@@ -321,7 +325,9 @@
       "hours": 96,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Ingeniería de Requerimientos"
+      ]
     },
     {
       "code": "34",
@@ -329,7 +335,9 @@
       "hours": 64,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Lógica y Programación"
+      ]
     },
     {
       "code": "35",
@@ -337,7 +345,9 @@
       "hours": 64,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Desarrollo de Aplicaciones"
+      ]
     },
     {
       "code": "36",
@@ -345,7 +355,10 @@
       "hours": 96,
       "year": 4,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Redes de Computadoras",
+        "Programación Concurrente"
+      ]
     },
     {
       "code": "37",
@@ -353,7 +366,9 @@
       "hours": 160,
       "year": 5,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Práctica Profesional Supervisada (PPS)"
+      ]
     },
     {
       "code": "38",
@@ -361,15 +376,19 @@
       "hours": 64,
       "year": 5,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Práctica Profesional Supervisada (PPS)"
+      ]
     },
     {
       "code": "39",
-      "name": "Características de Lenguajes de Progra- mación",
+      "name": "Características de Lenguajes de Programación",
       "hours": 64,
       "year": 5,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Lenguajes Formales y Autómatas"
+      ]
     },
     {
       "code": "40",
@@ -387,7 +406,9 @@
       "hours": 64,
       "year": 5,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Sistemas Operativos"
+      ]
     },
     {
       "code": "42",
@@ -405,7 +426,9 @@
       "hours": 64,
       "year": 5,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Lenguajes Formales y Autómatas"
+      ]
     },
     {
       "code": "44",
@@ -413,7 +436,9 @@
       "hours": 48,
       "year": 5,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Gestión de Proyectos de Desarrollo de Software"
+      ]
     },
     {
       "code": "45",
@@ -421,7 +446,9 @@
       "hours": 48,
       "year": 5,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Ejercicio Profesional"
+      ]
     }
   ]
 }

@@ -23,7 +23,9 @@
       "hours": 64,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S4",
@@ -31,7 +33,9 @@
       "hours": 64,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S5",
@@ -55,7 +59,9 @@
       "hours": 64,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción al análisis matemático"
+      ]
     },
     {
       "code": "S8",
@@ -81,7 +87,9 @@
       "hours": 32,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Territorio, sujetos e instituciones"
+      ]
     },
     {
       "code": "S11",
@@ -89,7 +97,9 @@
       "hours": 48,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S12",
@@ -97,7 +107,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Territorio, sujetos e instituciones"
+      ]
     },
     {
       "code": "S13",
@@ -156,7 +168,9 @@
       "hours": 96,
       "year": 2,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "socioeducativo"
+      ]
     },
     {
       "code": "S19",
@@ -164,7 +178,9 @@
       "hours": 48,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S20",
@@ -172,7 +188,9 @@
       "hours": 48,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Didáctica y curriculum"
+      ]
     },
     {
       "code": "S21",
@@ -188,7 +206,9 @@
       "hours": 64,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Análisis matemático II"
+      ]
     },
     {
       "code": "S23",
@@ -246,7 +266,9 @@
       "hours": 48,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S29",
@@ -254,7 +276,9 @@
       "hours": 80,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Algoritmos y estructura de datos"
+      ]
     },
     {
       "code": "S30",
@@ -294,7 +318,9 @@
       "hours": 128,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "secundario II"
+      ]
     },
     {
       "code": "S34",

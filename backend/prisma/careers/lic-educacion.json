@@ -15,7 +15,9 @@
       "hours": 32,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Asignatura UNAHUR I"
+      ]
     },
     {
       "code": "3",
@@ -23,7 +25,9 @@
       "hours": 32,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Nuevos entornos y lenguajes"
+      ]
     },
     {
       "code": "4",
@@ -41,7 +45,9 @@
       "hours": 64,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía I: Los sentidos de educar"
+      ]
     },
     {
       "code": "6",
@@ -49,7 +55,9 @@
       "hours": 64,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía I: Los sentidos de educar"
+      ]
     },
     {
       "code": "7",
@@ -95,7 +103,9 @@
       "hours": 64,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Pensamiento Pedagógico Latinoamericano"
+      ]
     },
     {
       "code": "12",
@@ -103,7 +113,9 @@
       "hours": 64,
       "year": 1,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía II: Enfoques y teorías"
+      ]
     },
     {
       "code": "13",

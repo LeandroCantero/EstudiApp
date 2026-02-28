@@ -1,0 +1,24 @@
+{
+  "career": "Enfermería Universitaria",
+  "subjects": [
+    { "code": "1", "name": "Introducción a la Salud Comunitaria", "hours": 64, "year": 1, "period": 1, "correlatives": [] },
+    { "code": "2", "name": "Cultura y alfabetización digital en la universidad", "hours": 32, "year": 1, "period": 1, "correlatives": [] },
+    { "code": "3", "name": "Anatomo-Fisiología I", "hours": 96, "year": 1, "period": 1, "correlatives": [] },
+    { "code": "4", "name": "Fundamentos de Enfermería I", "hours": 96, "year": 1, "period": 1, "correlatives": [] },
+    { "code": "5", "name": "Salud Comunitaria I", "hours": 64, "year": 1, "period": 2, "correlatives": ["Introducción a la Salud Comunitaria"] },
+    { "code": "6", "name": "Anátomo-Fisiología II", "hours": 96, "year": 1, "period": 2, "correlatives": ["Anatomo-Fisiología I"] },
+    { "code": "7", "name": "Enfermería en Salud Materno Infantil I", "hours": 128, "year": 1, "period": 2, "correlatives": ["Fundamentos de Enfermería I"] },
+    { "code": "8", "name": "Enfermería de la persona Adulta y Anciana I", "hours": 128, "year": 2, "period": 1, "correlatives": ["Anatomo-Fisiología II", "Salud Comunitaria I"] },
+    { "code": "9", "name": "Fundamentos de Enfermería II", "hours": 96, "year": 2, "period": 1, "correlatives": ["Fundamentos de Enfermería I"] },
+    { "code": "10", "name": "Farmacología", "hours": 64, "year": 2, "period": 1, "correlatives": ["Anátomo-Fisiología II"] },
+    { "code": "11", "name": "Salud Comunitaria II", "hours": 64, "year": 2, "period": 1, "correlatives": ["Salud Comunitaria I"] },
+    { "code": "12", "name": "Nutrición y dietoterapia", "hours": 64, "year": 2, "period": 2, "correlatives": ["Anatomo-Fisiología I"] },
+    { "code": "13", "name": "Enfermería en Salud Materno Infantil II", "hours": 128, "year": 2, "period": 2, "correlatives": ["Enfermería en Salud Materno Infantil I"] },
+    { "code": "14", "name": "Enfermería en Salud Mental", "hours": 96, "year": 2, "period": 2, "correlatives": ["Fundamentos de Enfermería II"] },
+    { "code": "15", "name": "Salud Comunitaria III", "hours": 64, "year": 2, "period": 2, "correlatives": ["Salud Comunitaria II"] },
+    { "code": "16", "name": "Enfermería de la persona Adulta y Anciana II", "hours": 128, "year": 3, "period": 1, "correlatives": ["Enfermería de la persona Adulta y Anciana I"] },
+    { "code": "17", "name": "Enfermería Infanto Juvenil", "hours": 128, "year": 3, "period": 1, "correlatives": ["Enfermería en Salud Materno Infantil II"] },
+    { "code": "18", "name": "Fundamentos de enfermería III", "hours": 64, "year": 3, "period": 2, "correlatives": ["Fundamentos de Enfermería II"] },
+    { "code": "19", "name": "Práctica pre- Profesional Supervisada I", "hours": 160, "year": 3, "period": 2, "correlatives": ["Enfermería de la persona Adulta y Anciana II", "Enfermería Infanto Juvenil"] }
+  ]
+}

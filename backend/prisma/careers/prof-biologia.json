@@ -23,7 +23,9 @@
       "hours": 64,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S4",
@@ -31,7 +33,9 @@
       "hours": 64,
       "year": 1,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S5",
@@ -101,7 +105,9 @@
       "hours": 32,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "instituciones"
+      ]
     },
     {
       "code": "S13",
@@ -109,7 +115,9 @@
       "hours": 48,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S14",
@@ -117,7 +125,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "instituciones"
+      ]
     },
     {
       "code": "S15",
@@ -125,7 +135,9 @@
       "hours": 64,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Química general e inorgánica"
+      ]
     },
     {
       "code": "S16",
@@ -133,7 +145,9 @@
       "hours": 48,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la Biología celular y molecular"
+      ]
     },
     {
       "code": "S17",
@@ -172,7 +186,9 @@
       "hours": 48,
       "year": 2,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Química general e inorgánica"
+      ]
     },
     {
       "code": "S21",
@@ -180,7 +196,9 @@
       "hours": 48,
       "year": 3,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Didáctica y currículum"
+      ]
     },
     {
       "code": "S22",
@@ -238,7 +256,9 @@
       "hours": 48,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Introducción a la Biología celular y molecular"
+      ]
     },
     {
       "code": "S28",
@@ -246,7 +266,9 @@
       "hours": 48,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S29",
@@ -254,7 +276,9 @@
       "hours": 160,
       "year": 3,
       "period": 2,
-      "correlatives": []
+      "correlatives": [
+        "el ámbito socioeducativo"
+      ]
     },
     {
       "code": "S30",
@@ -262,7 +286,9 @@
       "hours": 32,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "digital en la universidad"
+      ]
     },
     {
       "code": "S31",
@@ -270,7 +296,9 @@
       "hours": 48,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Pedagogía"
+      ]
     },
     {
       "code": "S32",
@@ -278,7 +306,9 @@
       "hours": 48,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "laboratorio"
+      ]
     },
     {
       "code": "S33",
@@ -286,7 +316,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "naturales II"
+      ]
     },
     {
       "code": "S34",
@@ -294,7 +326,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Biofísica I"
+      ]
     },
     {
       "code": "S35",
@@ -302,7 +336,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Ecología general"
+      ]
     },
     {
       "code": "S36",
@@ -310,7 +346,9 @@
       "hours": 48,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "Anatomía y Fisiología humana"
+      ]
     },
     {
       "code": "S37",
@@ -329,7 +367,9 @@
       "hours": 64,
       "year": 4,
       "period": 1,
-      "correlatives": []
+      "correlatives": [
+        "nivel secundario"
+      ]
     }
   ]
 }
