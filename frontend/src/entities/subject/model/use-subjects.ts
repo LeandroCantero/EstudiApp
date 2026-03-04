@@ -2,20 +2,13 @@ import { useCallback, useEffect, useState } from 'react';
 import { StudentSubjectResponse, subjectApi } from '../api/subject-api';
 import { Subject, UpdateFinalDto, UpdateSubjectStatusDto } from './types';
 
-interface MappedSubject extends Subject {
-  enrollmentYear?: number;
-  enrollmentPeriod?: number;
-  finalDate?: string;
-  finalGrade?: number;
-}
-
 export const useSubjects = () => {
-  const [subjects, setSubjects] = useState<MappedSubject[]>([]);
+  const [subjects, setSubjects] = useState<Subject[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [studentCredits, setStudentCredits] = useState(0);
 
-  const mapBackendToFrontend = (data: StudentSubjectResponse[]): MappedSubject[] => {
+  const mapBackendToFrontend = (data: StudentSubjectResponse[]): Subject[] => {
     return data.map((item) => ({
       id: item.id,
       name: item.careerSubject.subject.name,
@@ -25,6 +18,8 @@ export const useSubjects = () => {
       hours: item.careerSubject.subject.hours,
       year: item.careerSubject.year ?? undefined,
       period: item.careerSubject.period ?? undefined,
+      completionYear: item.completionYear ?? undefined,
+      completionPeriod: item.completionPeriod ?? undefined,
       userId: '',
       attemptCount: item.attemptCount,
     }));
@@ -74,7 +69,7 @@ export const useSubjects = () => {
     }
   };
 
-  const getSubjectById = async (id: string): Promise<MappedSubject | null> => {
+  const getSubjectById = async (id: string): Promise<Subject | null> => {
     try {
       const data = await subjectApi.getById(id);
       return mapBackendToFrontend([data])[0];

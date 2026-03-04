@@ -22,6 +22,8 @@ export interface StudentSubjectResponse {
     }[];
   };
   attemptCount: number;
+  completionYear: number | null;
+  completionPeriod: number | null;
 }
 
 

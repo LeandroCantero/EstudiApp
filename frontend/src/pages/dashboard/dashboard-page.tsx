@@ -10,17 +10,18 @@ import { MetricModal } from './metric-modal';
 import { QuickPlanner } from './quick-planner';
 
 export const DashboardPage = () => {
-  const { data, recommendations, alerts, isLoading: isLoadingDashboard, error } = useDashboard();
+  const { data, recommendations, alerts, isLoading: isLoadingDashboard, error, refresh: refreshDashboard } = useDashboard();
   const { events, isLoading: isLoadingCalendar } = useCalendar();
-  const { credits, totalCredits, addCredit, deleteCredit, isLoading: isLoadingCredits } = useCredits();
+  const { credits, totalCredits, addCredit, deleteCredit, isLoading: isLoadingCredits, refresh: refreshCredits } = useCredits();
   
-  const isLoading = isLoadingDashboard || isLoadingCalendar || isLoadingCredits;
-
   const [activeModal, setActiveModal] = useState<'average' | 'progress' | null>(null);
   const [isCreditModalOpen, setIsCreditModalOpen] = useState(false);
   const [plannedSubjects, setPlannedSubjects] = useState<string[]>([]);
 
-  if (isLoading) {
+  // Solo mostramos el spinner global si es la CARGA INICIAL (no tenemos datos)
+  const isInitialLoading = (isLoadingDashboard && !data) || (isLoadingCalendar && events.length === 0) || (isLoadingCredits && credits.length === 0);
+  
+  if (isInitialLoading) {
     return (
       <div className="flex items-center justify-center h-[60vh]">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary" />
@@ -30,6 +31,7 @@ export const DashboardPage = () => {
 
   return (
     <div className="flex flex-col gap-6 pb-24">
+      {/* ... cabecera y alertas ... */}
       <header className="flex flex-col gap-1">
         <h1 className="text-2xl font-bold tracking-tight">
           Hola, {data?.userName?.split(' ')[0] || 'Estudiante'} 👋
@@ -48,6 +50,7 @@ export const DashboardPage = () => {
         </div>
       )}
 
+      {/* ... resto del dashboard ... */}
       <div className="grid grid-cols-2 gap-4">
         <StatCard 
           icon={<TrendingUp size={24} className="text-primary" />} 
@@ -98,7 +101,7 @@ export const DashboardPage = () => {
                     isPlanned={plannedSubjects.includes(rec.careerSubject.id)}
                     onPlan={() => {
                       if (plannedSubjects.includes(rec.careerSubject.id)) {
-                        setPlannedSubjects(plannedSubjects.filter(id => id !== rec.careerSubject.id));
+                        setPlannedSubjects(plannedSubjects.filter((id: string) => id !== rec.careerSubject.id));
                       } else {
                         setPlannedSubjects([...plannedSubjects, rec.careerSubject.id]);
                       }
@@ -131,7 +134,8 @@ export const DashboardPage = () => {
           regularized: data?.regularizedSubjects,
           progress: data?.progressPercentage,
           remaining: data?.remainingSubjects,
-          credits: data?.totalCredits
+          credits: totalCredits,
+          totalSubjects: data?.totalSubjects
         }}
       />
 
@@ -139,8 +143,14 @@ export const DashboardPage = () => {
         isOpen={isCreditModalOpen}
         onClose={() => setIsCreditModalOpen(false)}
         credits={credits}
-        addCredit={addCredit}
-        deleteCredit={deleteCredit}
+        addCredit={async (dto) => {
+          await addCredit(dto, true); // true = silent
+          refreshDashboard(true);
+        }}
+        deleteCredit={async (id) => {
+           await deleteCredit(id, true); // true = silent
+           refreshDashboard(true);
+        }}
       />
     </div>
   );
@@ -156,7 +166,11 @@ const StatCard = ({ icon, label, value, onClick, highlight }: {
 }) => (
   <div 
     onClick={onClick}
-    className={`bg-card rounded-2xl p-4 flex flex-col gap-2 shadow-sm transition-all border ${onClick ? 'cursor-pointer hover:shadow-md hover:border-primary/20 bg-background/50' : 'border-transparent'} ${highlight ? 'border-primary/20 ring-1 ring-primary/5' : ''}`}
+    className={`bg-card rounded-2xl p-4 flex flex-col gap-2 shadow-sm transition-all duration-300 border ${
+      onClick 
+        ? 'cursor-pointer hover:shadow-xl hover:border-primary/30 hover:-translate-y-1 active:scale-[0.98] bg-background/50 hover:bg-primary/[0.02]' 
+        : 'border-transparent'
+    } ${highlight ? 'border-primary/20 ring-1 ring-primary/5' : ''}`}
   >
     <div className="flex justify-between items-start">
       <div className="p-2 bg-background rounded-lg">{icon}</div>

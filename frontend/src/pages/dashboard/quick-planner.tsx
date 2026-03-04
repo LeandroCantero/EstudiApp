@@ -43,10 +43,10 @@ export const QuickPlanner = ({ currentVelocity, remainingSubjects }: QuickPlanne
   const { semesters, needed } = calculateNeededVelocity();
 
   const getDifficulty = () => {
-    if (needed <= 2.5) return { label: 'Relajado', color: 'text-green-500', bg: 'bg-green-500/10' };
-    if (needed <= 4.5) return { label: 'Recomendado', color: 'text-primary', bg: 'bg-primary/10' };
-    if (needed <= 6.5) return { label: 'Esfuerzo Alto', color: 'text-orange-500', bg: 'bg-orange-500/10' };
-    return { label: 'Poco Probable', color: 'text-red-500', bg: 'bg-red-500/10' };
+    if (needed <= 2.0) return { label: 'Relajado', color: 'text-green-500', bg: 'bg-green-500/10' };
+    if (needed <= 3.0) return { label: 'Recomendado', color: 'text-primary', bg: 'bg-primary/10' };
+    if (needed <= 4.0) return { label: 'Esfuerzo Máximo', color: 'text-orange-500', bg: 'bg-orange-500/10' };
+    return { label: 'Excede el Límite', color: 'text-red-500', bg: 'bg-red-500/10' };
   };
 
   const difficulty = getDifficulty();
@@ -93,7 +93,7 @@ export const QuickPlanner = ({ currentVelocity, remainingSubjects }: QuickPlanne
         <div className="bg-foreground/[0.02] border border-foreground/5 rounded-2xl p-4 flex flex-col gap-1">
           <span className="text-[9px] font-bold text-foreground/30 uppercase tracking-widest">Ritmo Necesario</span>
           <div className="flex items-center gap-2">
-            <span className="text-xl font-black text-primary">{needed}</span>
+            <span className={`text-xl font-black ${needed > 4 ? 'text-red-500' : 'text-primary'}`}>{needed}</span>
             <span className="text-[10px] font-bold text-foreground/40 leading-none">materias /<br/>cuatrimestre</span>
           </div>
         </div>
@@ -144,9 +144,11 @@ export const QuickPlanner = ({ currentVelocity, remainingSubjects }: QuickPlanne
             <div className="flex flex-col gap-0.5">
               <p className="text-xs font-bold text-foreground/80">Tu velocidad actual es de {currentVelocity} materias/cuatri.</p>
               <p className="text-[10px] text-foreground/50 leading-relaxed">
-                {needed > currentVelocity 
-                  ? `Para recibirte en la fecha elegida necesitas aumentar tu ritmo un ${Math.round((needed/currentVelocity - 1) * 100)}%.`
-                  : `Vas por buen camino. Manteniendo tu ritmo actual podrías incluso terminar antes de lo previsto.`
+                {needed > 4 
+                  ? `Atención: Superas el límite académico de 4 materias por cuatrimestre. Considera estirar tu meta.`
+                  : needed > currentVelocity 
+                    ? `Para recibirte en la fecha elegida necesitas aumentar tu ritmo un ${Math.round((needed/currentVelocity - 1) * 100)}%.`
+                    : `Vas por buen camino. Manteniendo tu ritmo actual podrías incluso terminar antes de lo previsto.`
                 }
               </p>
             </div>

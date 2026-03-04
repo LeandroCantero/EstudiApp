@@ -66,24 +66,58 @@ export const MetricModal = ({ isOpen, onClose, type, data }: MetricModalProps) =
             </div>
           ) : (
             <div className="flex flex-col gap-6">
+              {/* Grilla de Cuadrados */}
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-primary/10 p-5 rounded-2xl flex flex-col gap-1 items-center">
-                  <span className="text-xs font-black text-primary/60 uppercase">Aprobadas</span>
-                  <span className="text-3xl font-black text-primary">{data.approved}</span>
-                </div>
-                <div className="bg-orange-500/10 p-5 rounded-2xl flex flex-col gap-1 items-center">
-                  <span className="text-xs font-black text-orange-600/60 uppercase">Regularizadas</span>
-                  <span className="text-3xl font-black text-orange-600">{data.regularized}</span>
-                </div>
+                <StatCard 
+                  label="Aprobadas" 
+                  value={data.approved} 
+                  colorClass="bg-primary/10 text-primary border-primary/5" 
+                  subLabel="Finales metidos"
+                />
+                <StatCard 
+                  label="Regularizadas" 
+                  value={data.regularized} 
+                  colorClass="bg-orange-500/10 text-orange-600 border-orange-500/5" 
+                  subLabel="Cursadas cerradas"
+                />
+                <StatCard 
+                  label="Pendientes" 
+                  value={data.remaining} 
+                  colorClass="bg-foreground/5 text-foreground/70 border-foreground/5" 
+                  subLabel="Por cursar o rendir"
+                />
+                <StatCard 
+                  label="Créditos" 
+                  value={data.credits} 
+                  colorClass="bg-blue-500/10 text-blue-600 border-blue-500/5" 
+                  subLabel="Actividades extra"
+                />
               </div>
 
-              <div className="flex flex-col gap-2">
-                <h3 className="text-[10px] font-black uppercase tracking-widest text-foreground/30 px-1">Estadísticas de Carrera</h3>
-                <div className="space-y-3">
-                  <StatRow label="Progreso Total" value={`${data.progress}%`} barColor="bg-primary" />
-                  <StatRow label="Materias Pendientes" value={data.remaining} barColor="bg-foreground/10" />
-                  <StatRow label="Créditos Acumulados" value={data.credits} barColor="bg-blue-500" />
+              {/* Barra de Progreso Destacada al Final */}
+              <div className="mt-2 p-5 bg-card border rounded-2xl shadow-sm space-y-4">
+                <div className="flex justify-between items-end">
+                  <div className="flex flex-col gap-0.5">
+                    <span className="text-[10px] font-black uppercase tracking-widest text-foreground/30">Progreso General</span>
+                    <span className="text-sm font-bold text-foreground/60">{data.approved} de {data.totalSubjects} materias</span>
+                  </div>
+                  <div className="flex flex-col items-end">
+                    <span className="text-3xl font-black text-primary leading-none">{data.progress}%</span>
+                  </div>
                 </div>
+                
+                <div className="w-full h-4 bg-primary/5 rounded-full overflow-hidden border border-primary/10 relative">
+                  <div 
+                    className="h-full bg-primary transition-all duration-1000 ease-out shadow-[0_0_15px_rgba(var(--primary),0.3)]" 
+                    style={{ width: `${data.progress}%` }}
+                  />
+                  {/* Glass effect on the bar */}
+                  <div className="absolute inset-0 bg-white/5 pointer-events-none" />
+                </div>
+
+                <p className="text-[10px] text-center text-foreground/40 font-medium italic">
+                  * Las materias regularizadas cuentan al 50% para el progreso total.
+                </p>
               </div>
             </div>
           )}
@@ -93,14 +127,15 @@ export const MetricModal = ({ isOpen, onClose, type, data }: MetricModalProps) =
   );
 };
 
-const StatRow = ({ label, value, barColor }: { label: string; value: string | number; barColor: string }) => (
-  <div className="flex flex-col gap-1.5">
-    <div className="flex justify-between text-xs font-bold">
-      <span className="text-foreground/60">{label}</span>
-      <span>{value}</span>
-    </div>
-    <div className="w-full h-1.5 bg-foreground/5 rounded-full overflow-hidden">
-      <div className={`h-full ${barColor}`} style={{ width: typeof value === 'string' && value.includes('%') ? value : '100%' }}></div>
-    </div>
+const StatCard = ({ label, value, colorClass, subLabel }: { 
+  label: string; 
+  value: string | number; 
+  colorClass: string;
+  subLabel?: string;
+}) => (
+  <div className={`${colorClass} border p-5 rounded-2xl flex flex-col items-center justify-center text-center gap-1 transition-all hover:scale-[1.02] hover:shadow-lg`}>
+    <span className="text-[10px] font-black uppercase tracking-tight opacity-70 mb-1 leading-none">{label}</span>
+    <span className="text-3xl font-black">{value}</span>
+    {subLabel && <span className="text-[8px] font-bold opacity-40 uppercase tracking-tighter mt-1">{subLabel}</span>}
   </div>
 );

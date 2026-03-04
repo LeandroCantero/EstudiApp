@@ -39,8 +39,8 @@ model CareerSubject {
   career          Career           @relation(fields: [careerId], references: [id], onDelete: Cascade)
   subject         Subject          @relation(fields: [subjectId], references: [id], onDelete: Cascade)
   studentSubjects StudentSubject[]
-  CareerSubject_A CareerSubject[]  @relation("CareerSubjectCorrelatives")
-  CareerSubject_B CareerSubject[]  @relation("CareerSubjectCorrelatives")
+  prerequisites   CareerSubject[]  @relation("CareerSubjectCorrelatives")
+  requiredBy      CareerSubject[]  @relation("CareerSubjectCorrelatives")
 
   @@unique([careerId, subjectId])
   @@unique([careerId, code])
@@ -82,6 +82,8 @@ model StudentSubject {
   courseGrade     Float?
   finalGrade      Float?
   attemptCount    Int           @default(1)
+  completionYear  Int?
+  completionPeriod Int?
   createdAt       DateTime      @default(now())
   updatedAt       DateTime      @updatedAt
   events          Event[]

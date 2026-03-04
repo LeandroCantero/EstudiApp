@@ -83,6 +83,8 @@ export class StudentSubjectsService {
     id: string,
     newStatus: SubjectStatus,
     courseGrade?: number,
+    completionYear?: number,
+    completionPeriod?: number,
   ) {
     const studentSubject = await this.findOne(userId, id);
     const currentStatus = studentSubject.status;
@@ -104,6 +106,8 @@ export class StudentSubjectsService {
     if (courseGrade !== undefined) {
       dataToUpdate.courseGrade = Math.round(courseGrade * 100) / 100;
     }
+    if (completionYear !== undefined) dataToUpdate.completionYear = completionYear;
+    if (completionPeriod !== undefined) dataToUpdate.completionPeriod = completionPeriod;
 
     return this.prisma.studentSubject.update({
       where: { id },
@@ -123,6 +127,8 @@ export class StudentSubjectsService {
     userId: string,
     id: string,
     grade: number,
+    completionYear?: number,
+    completionPeriod?: number,
   ) {
     if (grade < 0 || grade > 10) {
       throw new BadRequestException('La nota debe estar entre 0 y 10');
@@ -153,6 +159,8 @@ export class StudentSubjectsService {
       data: {
         finalGrade: roundedGrade,
         status: newStatus,
+        completionYear: completionYear ?? undefined,
+        completionPeriod: completionPeriod ?? undefined,
       },
       include: {
         careerSubject: {
@@ -396,7 +404,7 @@ export class StudentSubjectsService {
               priority: 'HIGH',
               subjectId: subject.id,
               subjectName: subject.careerSubject.subject.name,
-              message: `No puedes cerrar ${subject.careerSubject.subject.name} hasta aprobar el final de ${prereq.subject.name}.`,
+              message: `No podés promocionar ${subject.careerSubject.subject.name} hasta aprobar el final de ${prereq.subject.name}.`,
               metadata: {
                 prereqId: prereq.id,
                 prereqName: prereq.subject.name,

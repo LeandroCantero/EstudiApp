@@ -7,8 +7,8 @@ export const useCredits = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchCredits = useCallback(async () => {
-    setIsLoading(true);
+  const fetchCredits = useCallback(async (silent = false) => {
+    if (!silent) setIsLoading(true);
     setError(null);
     try {
       const data = await creditApi.getCredits();
@@ -20,8 +20,8 @@ export const useCredits = () => {
     }
   }, []);
 
-  const addCredit = async (dto: CreateCreditDto) => {
-    setIsLoading(true);
+  const addCredit = async (dto: CreateCreditDto, silent = false) => {
+    if (!silent) setIsLoading(true);
     try {
       const newCredit = await creditApi.createCredit(dto);
       setCredits(prev => [newCredit, ...prev]);
@@ -33,12 +33,15 @@ export const useCredits = () => {
     }
   };
 
-  const deleteCredit = async (id: string) => {
+  const deleteCredit = async (id: string, silent = false) => {
+    if (!silent) setIsLoading(true);
     try {
       await creditApi.deleteCredit(id);
       setCredits(prev => prev.filter(c => c.id !== id));
     } catch (err: any) {
       throw new Error(err.message || 'Error al eliminar el crédito');
+    } finally {
+      setIsLoading(false);
     }
   };
 

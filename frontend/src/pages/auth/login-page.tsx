@@ -1,7 +1,7 @@
+import { userApi } from '@/entities/user/api/user-api';
+import { Eye, EyeOff, GraduationCap, Lock, Mail } from 'lucide-react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { GraduationCap, Lock, Mail, Eye, EyeOff } from 'lucide-react';
-import { userApi } from '@/entities/user/api/user-api';
 
 export const LoginPage = () => {
   const navigate = useNavigate();
@@ -60,7 +60,7 @@ export const LoginPage = () => {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="demo@unahur.edu.ar"
+                  placeholder="test@test.com"
                   className="w-full bg-background rounded-xl py-3.5 pl-12 pr-4 text-foreground placeholder:text-foreground/30 focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all"
                   required
                 />
@@ -123,7 +123,7 @@ export const LoginPage = () => {
           {/* Demo hint */}
           <div className="mt-6 pt-6 border-t border-foreground/10 text-center">
             <p className="text-xs text-foreground/40">
-              Usuario demo: demo@unahur.edu.ar / demo123
+              Usuario demo: test@test.com / password123
             </p>
           </div>
         </div>

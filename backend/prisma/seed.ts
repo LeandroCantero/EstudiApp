@@ -1,6 +1,7 @@
 /// <reference types="node" />
 import { PrismaPg } from '@prisma/adapter-pg';
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient, SubjectStatus } from '@prisma/client';
+import * as bcrypt from 'bcryptjs';
 import 'dotenv/config';
 
 const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL });
@@ -86,6 +87,99 @@ async function main() {
 
   console.log('✅ Seed completed successfully!');
   console.log({ totalCareers: careers.length });
+
+  // --- REALISTIC STUDENT SEED ---
+  console.log('👤 Creating realistic student profile...');
+  
+  const testEmail = 'test@test.com';
+  const hashedPassword = await bcrypt.hash('password123', 10);
+  
+  const user = await prisma.user.upsert({
+    where: { email: testEmail },
+    update: {},
+    create: {
+      email: testEmail,
+      password: hashedPassword,
+      name: 'Estudiante de Prueba',
+    },
+  });
+
+  const programmingCareer = await prisma.career.findFirst({
+    where: { name: 'Tec. Univ. en Programación' },
+  });
+
+  if (programmingCareer) {
+    await prisma.userCareer.upsert({
+      where: { userId_careerId: { userId: user.id, careerId: programmingCareer.id } },
+      update: {},
+      create: {
+        userId: user.id,
+        careerId: programmingCareer.id,
+      },
+    });
+
+    const careerSubjects = await prisma.careerSubject.findMany({
+      where: { careerId: programmingCareer.id },
+      include: { subject: true },
+    });
+
+    // Realistic state:
+    // 3 Promocionadas (1st Year, 1st Cuat)
+    // 1 Regularizada con Final (1st Year, 1st Cuat)
+    // 3 En Curso (1st Year, 2nd Cuat)
+
+    const statusMap: Record<string, { status: SubjectStatus, grade?: number, finalGrade?: number, year: number, period: number }> = {
+      '1': { status: SubjectStatus.PROMOCIONADA, grade: 9, year: 2025, period: 1 }, // Matemática I
+      '2': { status: SubjectStatus.PROMOCIONADA, grade: 8, year: 2025, period: 1 }, // Introducción a lógica...
+      '3': { status: SubjectStatus.PROMOCIONADA, grade: 10, year: 2025, period: 1 }, // Organización de compu I
+      '4': { status: SubjectStatus.PROMOCIONADA, finalGrade: 7, year: 2025, period: 1 }, // Nuevos entornos (User said 1 reg + final approved)
+      '6': { status: SubjectStatus.EN_CURSO, year: 2025, period: 2 }, // Programación estructurada
+      '7': { status: SubjectStatus.EN_CURSO, year: 2025, period: 2 }, // Matemática II
+      '8': { status: SubjectStatus.EN_CURSO, year: 2025, period: 2 }, // Inglés I
+    };
+
+    // Note: The user said "1 regularizada con final aprobado". 
+    // In our system, regularized + final approved = PROMOCIONADA but with finalGrade.
+    // I'll adjust the mapping: 1, 2, 3 as PROMOCIONADA (direct), 4 as PROMOCIONADA (via final).
+
+    for (const cs of careerSubjects) {
+      const config = statusMap[cs.code];
+      if (config) {
+        await prisma.studentSubject.upsert({
+          where: { userId_careerSubjectId: { userId: user.id, careerSubjectId: cs.id } },
+          update: {
+            status: config.status,
+            courseGrade: config.grade,
+            finalGrade: config.finalGrade,
+            completionYear: config.year,
+            completionPeriod: config.period,
+          },
+          create: {
+            userId: user.id,
+            careerSubjectId: cs.id,
+            status: config.status,
+            courseGrade: config.grade,
+            finalGrade: config.finalGrade,
+            completionYear: config.year,
+            completionPeriod: config.period,
+          },
+        });
+      } else {
+        // Ensure others are PENDIENTE
+        await prisma.studentSubject.upsert({
+          where: { userId_careerSubjectId: { userId: user.id, careerSubjectId: cs.id } },
+          update: { status: SubjectStatus.PENDIENTE },
+          create: {
+            userId: user.id,
+            careerSubjectId: cs.id,
+            status: SubjectStatus.PENDIENTE,
+          },
+        });
+      }
+    }
+  }
+
+  console.log('✅ Realistic student seed completed!');
 }
 
 main()

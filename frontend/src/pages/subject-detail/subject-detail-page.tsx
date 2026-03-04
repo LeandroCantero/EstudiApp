@@ -3,21 +3,21 @@ import { subjectApi } from '@/entities/subject/api/subject-api';
 import { useExams } from '@/entities/subject/model/use-exams';
 import { useSubjectNotes } from '@/entities/subject/model/use-subject-notes';
 import {
-  AlertTriangle,
-  ArrowLeft,
-  BookOpen,
+    AlertTriangle,
+    ArrowLeft,
+    BookOpen,
 
-  Calendar,
-  CheckCircle2,
-  Clock,
-  Edit3,
+    Calendar,
+    CheckCircle2,
+    Clock,
+    Edit3,
 
-  ExternalLink,
-  FileText,
-  GraduationCap,
-  Plus,
-  Trash2,
-  X
+    ExternalLink,
+    FileText,
+    GraduationCap,
+    Plus,
+    Trash2,
+    X
 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -55,6 +55,8 @@ export const SubjectDetailPage = () => {
 
   const [courseGrade, setCourseGrade] = useState('');
   const [finalGrade, setFinalGrade] = useState('');
+  const [completionYear, setCompletionYear] = useState<string>(new Date().getFullYear().toString());
+  const [completionPeriod, setCompletionPeriod] = useState<string>('1');
   const [detailError, setDetailError] = useState<string | null>(null);
 
 
@@ -67,6 +69,8 @@ export const SubjectDetailPage = () => {
         setSubject(data);
         setCourseGrade(data.courseGrade?.toString() || '');
         setFinalGrade(data.finalGrade?.toString() || '');
+        if (data.completionYear) setCompletionYear(data.completionYear.toString());
+        if (data.completionPeriod) setCompletionPeriod(data.completionPeriod.toString());
       } catch (err) {
 
         console.error('Error fetching subject:', err);
@@ -132,7 +136,9 @@ export const SubjectDetailPage = () => {
       setDetailError(null);
       const updated = await subjectApi.updateStatus(id, { 
         status: status as any,
-        courseGrade: grade
+        courseGrade: grade,
+        completionYear: parseInt(completionYear),
+        completionPeriod: parseInt(completionPeriod)
       });
       setSubject(updated);
       setCourseGrade(updated.courseGrade?.toString() || '');
@@ -147,7 +153,9 @@ export const SubjectDetailPage = () => {
     try {
       setDetailError(null);
       const updated = await subjectApi.updateFinal(id, { 
-        grade: parseFloat(finalGrade) 
+        grade: parseFloat(finalGrade),
+        completionYear: parseInt(completionYear),
+        completionPeriod: parseInt(completionPeriod)
       });
       setSubject(updated);
       setFinalGrade(updated.finalGrade?.toString() || '');
@@ -204,7 +212,12 @@ export const SubjectDetailPage = () => {
           </div>
           <h1 className="text-2xl font-bold">{subject.careerSubject.subject.name}</h1>
           <p className="text-sm text-foreground/60">
-            Año {subject.careerSubject.year} - {subject.careerSubject.period}° Cuatrimestre
+            Año {subject.careerSubject.year} - {subject.careerSubject.period === 0 ? 'Anual' : `${subject.careerSubject.period}° Cuatrimestre`}
+            {subject.completionYear && (
+              <span className="ml-2 text-primary font-bold">
+                • Completada: {subject.completionYear} ({subject.completionPeriod}° C.)
+              </span>
+            )}
           </p>
         </div>
       </header>
@@ -271,6 +284,36 @@ export const SubjectDetailPage = () => {
                   </button>
                 ))}
               </div>
+
+              {/* Completion Date Inputs (Only for non-pending states) */}
+              {subject.status !== 'PENDIENTE' && (
+                <div className="grid grid-cols-2 gap-4 mt-6 pt-6 border-t border-foreground/5">
+                  <div className="flex flex-col gap-1">
+                    <label className="text-[10px] font-black uppercase text-foreground/30 ml-1">Año de Cursada/Final</label>
+                    <select 
+                      value={completionYear}
+                      onChange={(e) => setCompletionYear(e.target.value)}
+                      className="!bg-background border border-foreground/5 rounded-xl p-3 text-xs font-bold text-foreground/80 outline-none focus:ring-1 ring-primary appearance-none cursor-pointer"
+                    >
+                      {Array.from({ length: 10 }, (_, i) => new Date().getFullYear() - 5 + i).map(y => (
+                        <option key={y} value={y.toString()}>{y}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <label className="text-[10px] font-black uppercase text-foreground/30 ml-1">Periodo</label>
+                    <select 
+                      value={completionPeriod}
+                      onChange={(e) => setCompletionPeriod(e.target.value)}
+                      className="!bg-background border border-foreground/5 rounded-xl p-3 text-xs font-bold text-foreground/80 outline-none focus:ring-1 ring-primary appearance-none cursor-pointer"
+                    >
+                      <option value="1">1° Cuatrimestre</option>
+                      <option value="2">2° Cuatrimestre</option>
+                      <option value="0">Anual / Verano</option>
+                    </select>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Grades Management */}

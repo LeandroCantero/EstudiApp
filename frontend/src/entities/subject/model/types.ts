@@ -9,6 +9,8 @@ export interface Subject {
   hours: number;
   year?: number;
   period?: number;
+  completionYear?: number;
+  completionPeriod?: number;
   userId: string;
   attemptCount: number;
 }
@@ -19,13 +21,15 @@ export interface UpdateSubjectDto extends Partial<CreateSubjectDto> {}
 export interface UpdateSubjectStatusDto {
   status: SubjectStatus;
   courseGrade?: number;
-  enrollmentYear?: number;
-  enrollmentPeriod?: number;
+  completionYear?: number;
+  completionPeriod?: number;
 }
 
 export interface UpdateFinalDto {
   finalDate?: string;
   grade: number;
+  completionYear?: number;
+  completionPeriod?: number;
 }
 
 

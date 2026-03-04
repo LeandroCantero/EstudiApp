@@ -173,8 +173,8 @@ export class UsersService {
       .filter((s: any) => s.status === SubjectStatus.PROMOCIONADA)
       .reduce((sum, s: any) => sum + (s.careerSubject.period === 0 ? 2 : 1), 0);
 
-    // Minimo 2 para no ser excesivamente pesimista en planes nuevos
-    const averageProgress = Math.max(2, Math.round((totalWeightApproved / semestersPassed) * 10) / 10);
+    // Minimo 2 para no ser excesivamente pesimista en planes nuevos. MAXIMO 4 (Límite académico)
+    const averageProgress = Math.min(4, Math.max(2, Math.round((totalWeightApproved / semestersPassed) * 10) / 10));
 
 
     // 2. Calcular Camino Crítico (Longitud de la cadena de correlatividades más larga)

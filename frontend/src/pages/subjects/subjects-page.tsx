@@ -228,7 +228,14 @@ export const SubjectsPage = () => {
                 )}
                 {subject.year && (
                   <div className="flex items-center gap-1.5 ml-auto text-[10px] font-black text-foreground/30 uppercase tracking-tighter">
-                    <span>AÑO {subject.year} • {subject.period === 0 ? 'ANUAL' : `${subject.period}° C.`}</span>
+                    <span>
+                      AÑO {subject.year} • {subject.period === 0 ? 'ANUAL' : `${subject.period}° C.`}
+                      {subject.completionYear && (
+                        <span className="text-primary ml-1">
+                          • {subject.completionYear} ({subject.completionPeriod}° C.)
+                        </span>
+                      )}
+                    </span>
                   </div>
                 )}
               </div>

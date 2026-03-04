@@ -1,5 +1,5 @@
 import { apiClient } from '@/shared/api/base';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 export interface DashboardData {
   userName: string;
@@ -57,38 +57,38 @@ export const useDashboard = () => {
   const [error, setError] = useState<string | null>(null);
 
 
-  useEffect(() => {
-    const fetchDashboard = async () => {
-      try {
-        setIsLoading(true);
-        const userId = localStorage.getItem('userId');
-        
-        if (!userId) {
-          setError('No se encontró usuario');
-          return;
-        }
-
-        const [dashboardData, recommendationsData, alertsData] = await Promise.all([
-          apiClient.get<DashboardData>('/users/dashboard'),
-          apiClient.get<Recommendation[]>('/recommendations'),
-          apiClient.get<DashboardAlert[]>('/my-subjects/alerts'),
-        ]);
-
-        setData(dashboardData);
-        setRecommendations(recommendationsData);
-        setAlerts(alertsData);
-      } catch (err) {
-        setError('Error al cargar el dashboard');
-        console.error(err);
-      } finally {
-        setIsLoading(false);
+  const fetchDashboard = useCallback(async (silent = false) => {
+    try {
+      if (!silent) setIsLoading(true);
+      const userId = localStorage.getItem('userId');
+      
+      if (!userId) {
+        setError('No se encontró usuario');
+        return;
       }
 
-    };
+      const [dashboardData, recommendationsData, alertsData] = await Promise.all([
+        apiClient.get<DashboardData>('/users/dashboard'),
+        apiClient.get<Recommendation[]>('/recommendations'),
+        apiClient.get<DashboardAlert[]>('/my-subjects/alerts'),
+      ]);
 
-    fetchDashboard();
+      setData(dashboardData);
+      setRecommendations(recommendationsData);
+      setAlerts(alertsData);
+    } catch (err) {
+      setError('Error al cargar el dashboard');
+      console.error(err);
+    } finally {
+      setIsLoading(false);
+    }
+
   }, []);
 
-  return { data, recommendations, alerts, isLoading, error };
 
+  useEffect(() => {
+    fetchDashboard();
+  }, [fetchDashboard]);
+
+  return { data, recommendations, alerts, isLoading, error, refresh: fetchDashboard };
 };

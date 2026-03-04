@@ -119,6 +119,16 @@ export class CareersImportService {
       codeToJoinIdMap.set(jsonSubject.code, careerSubject.id);
     }
 
+    // 2c. CLEANUP: Delete CareerSubject records for this career that are NOT in the new plan
+    // This prevents "ghost" subjects like OLD_... from appearing in the UI
+    const importedIds = Array.from(codeToJoinIdMap.values());
+    await this.prisma.careerSubject.deleteMany({
+      where: {
+        careerId: career.id,
+        id: { notIn: importedIds }
+      }
+    });
+
     // 3. Connect correlatives (Career-specific)
     // We connect CareerSubject to CareerSubject within the same career
     for (const jsonSubject of plan.subjects) {
