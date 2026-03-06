@@ -41,7 +41,7 @@ export const CareerMapPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [originalSubjects, setOriginalSubjects] = useState<StudentSubjectResponse[]>([]);
   const [simulatedStatuses, setSimulatedStatuses] = useState<Record<string, string>>({});
-  const [showRecommendations, setShowRecommendations] = useState(true);
+  const [showRecommendations, setShowRecommendations] = useState(false);
   const [showLegend, setShowLegend] = useState(false);
 
   const calculateRecommendations = useCallback(
@@ -54,7 +54,7 @@ export const CareerMapPage = () => {
             const preStatus =
               currentSimulated[pre.id] ||
               subjects.find((sub) => sub.careerSubject.id === pre.id)?.status;
-            return preStatus === 'PROMOCIONADA';
+            return preStatus === 'PROMOCIONADA' || preStatus === 'APROBADA';
           });
         })
         .map((s) => s.careerSubject.id);
@@ -110,10 +110,13 @@ export const CareerMapPage = () => {
         const [year, period] = quarterKey.split('-').map(Number);
         const x = colIndex * (COL_WIDTH + H_GAP);
 
-        // Sort subjects within column by impact descending
+        // Sort subjects within column by code numeric value
         const sortedInCol = [...colSubjects].sort(
-          (a, b) =>
-            (impactMap.get(b.careerSubject.id) || 0) - (impactMap.get(a.careerSubject.id) || 0),
+          (a, b) => {
+            const codeA = parseInt(a.careerSubject.code) || 0;
+            const codeB = parseInt(b.careerSubject.code) || 0;
+            return codeA - codeB;
+          }
         );
 
         // Header node for this quarter
@@ -140,7 +143,7 @@ export const CareerMapPage = () => {
               const prereqStatus =
                 simulated[pre.id] ||
                 subjects.find((sub) => sub.careerSubject.id === pre.id)?.status;
-              return prereqStatus !== 'PROMOCIONADA' && prereqStatus !== 'REGULARIZADA';
+              return prereqStatus !== 'PROMOCIONADA' && prereqStatus !== 'APROBADA' && prereqStatus !== 'REGULARIZADA';
             });
             if (hasUnmetPrereqs) finalStatus = 'BLOQUEADA';
           }
@@ -158,6 +161,7 @@ export const CareerMapPage = () => {
               isSimulated: !!simulated[s.careerSubject.id],
               isRecommended,
             },
+            zIndex: 10,
           });
         });
       });
@@ -171,7 +175,7 @@ export const CareerMapPage = () => {
           const srcStatus =
             simulated[p.id] || subjects.find((sub) => sub.careerSubject.id === p.id)?.status;
           const isOptimalPath =
-            isTargetRecommended && (srcStatus === 'PROMOCIONADA');
+            isTargetRecommended && (srcStatus === 'PROMOCIONADA' || srcStatus === 'APROBADA');
 
           return {
             id: `e-${p.id}-${s.careerSubject.id}`,
@@ -211,22 +215,46 @@ export const CareerMapPage = () => {
     fetchContent();
   }, [buildGraph]);
 
-  const onNodeClick = (_: React.MouseEvent, node: Node) => {
+  const onNodeClick = (e: React.MouseEvent, node: Node) => {
     if (node.type === 'quarterHeader') return;
     const subjectId = node.id;
-    const currentSimStatus = simulatedStatuses[subjectId];
     const originalSubject = originalSubjects.find((s) => s.careerSubject.id === subjectId);
     if (!originalSubject) return;
 
-    if (node.data.status === 'BLOQUEADA' && !currentSimStatus) return;
+    // Si ya está aprobada en la realidad, no permitimos cambios
+    if (originalSubject.status === 'PROMOCIONADA' || originalSubject.status === 'APROBADA') return;
+
+    const states = ['PENDIENTE', 'EN_CURSO', 'REGULARIZADA', 'APROBADA', 'PROMOCIONADA'];
+    const currentStatus = simulatedStatuses[subjectId] || originalSubject.status;
+    const currentIndex = states.indexOf(currentStatus as string);
 
     setSimulatedStatuses((prev) => {
       const next = { ...prev };
-      if (!!currentSimStatus) {
+      let newStatus: string;
+
+      if (e.altKey) {
+        // Alt + Clic: Toggle Extremos
+        newStatus = currentStatus === 'PROMOCIONADA' ? 'PENDIENTE' : 'PROMOCIONADA';
+      } else if (e.shiftKey) {
+        // Shift + Clic: Retroceder
+        const nextIdx = (currentIndex - 1 + states.length) % states.length;
+        newStatus = states[nextIdx];
+      } else {
+        // Si ya está aprobada, no avanza más 
+        if (currentStatus === 'PROMOCIONADA' || currentStatus === 'APROBADA') {
+          newStatus = 'PENDIENTE'; // Vuelve al inicio para cerrar le loop
+        } else {
+          newStatus = states[currentIndex + 1];
+        }
+      }
+
+      // Si el nuevo estado es el original, simplemente quitamos la simulación de esa materia
+      if (newStatus === originalSubject.status) {
         delete next[subjectId];
       } else {
-        next[subjectId] = originalSubject.status === 'PROMOCIONADA' ? 'PENDIENTE' : 'PROMOCIONADA';
+        next[subjectId] = newStatus;
       }
+
       buildGraph(originalSubjects, next, showRecommendations);
       return next;
     });
@@ -318,8 +346,12 @@ export const CareerMapPage = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-y-2">
                   <div className="flex items-center gap-2">
-                    <div className="w-2.5 h-2.5 rounded bg-green-600" />
+                    <div className="w-2.5 h-2.5 rounded bg-emerald-600" />
                     <span className="text-[9px] font-bold">APROBADA</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2.5 h-2.5 rounded bg-green-600" />
+                    <span className="text-[9px] font-bold">PROMOCIONADA</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="w-2.5 h-2.5 rounded bg-blue-600" />
@@ -334,7 +366,7 @@ export const CareerMapPage = () => {
                     <span className="text-[9px] font-bold text-foreground/60">PENDIENTE</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2.5 h-2.5 rounded bg-muted/50 border border-foreground/5" />
+                    <div className="w-2.5 h-2.5 rounded bg-[#181818] border border-foreground/5" />
                     <span className="text-[9px] font-bold text-foreground/30">BLOQUEADA</span>
                   </div>
                   <div className="flex items-center gap-2 mt-1 pt-2 border-t border-border/20">
@@ -377,9 +409,10 @@ export const CareerMapPage = () => {
               if (n.type === 'quarterHeader') return 'transparent';
               const status = n.data?.status;
               if (status === 'PROMOCIONADA') return '#16a34a';
+              if (status === 'APROBADA') return '#059669';
               if (status === 'REGULARIZADA') return '#2563eb';
               if (status === 'EN_CURSO' || status === 'RECURSANDO') return '#fa8112';
-              if (status === 'BLOQUEADA') return '#6b7280';
+              if (status === 'BLOQUEADA') return '#181818';
               return '#94a3b8';
             }}
             maskColor="rgba(var(--background), 0.7)"

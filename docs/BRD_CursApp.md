@@ -33,7 +33,8 @@
 
 | Versión | Fecha | Autor | Descripción |
 | :--- | :--- | :--- | :--- |
-| 1.0 | 12/02/2026 | Cantero, Leandro | Versión Inicial
+| 1.0 | 12/02/2026 | Cantero, Leandro | Versión Inicial |
+| 1.1 | 06/03/2026 | Cantero, Leandro | Incorporación de Mejora: Registro/Login (Roadmap) |
 
 ### 2. Alcance
 
@@ -61,6 +62,7 @@ La complejidad de los planes de estudio y los regímenes de correlatividades gen
 - Sección de Recursos generales y por materia (apuntes, links, notas, etc).
 - Calendario de entregas y exámenes.
 - Sistema de Créditos: Registro de actividades extracurriculares (Categoría, Actividad, Cantidad de Créditos).
+- **[MEJORA V1.1]** Registro y Login de Usuarios: Autenticación personal para persistencia multi-dispositivo.
 
 ### 3. Requerimientos de Negocio
 
@@ -77,6 +79,7 @@ La complejidad de los planes de estudio y los regímenes de correlatividades gen
 | **RN7 - Lógica de Simulación** | El modo simulador permite alterar estados de forma temporal sin persistir cambios en la historia académica real del usuario. |
 | **RN8 - Cierre de Materia** | Para registrar el estado final satisfactorio (Aprobada/Promocionada) de una materia nueva, es requisito mandatorio haber aprobado la materia correlativa anterior (Promocionada o haber aprobado el examen final). El sistema debe alertar sobre esta dependencia en el seguimiento. |
 | **RN9 - Proyección de Graduación** | El cálculo de la fecha estimada de graduación debe considerar la tasa de aprobación histórica (materias por cuatrimestre), la carga pendiente del plan de estudios y las restricciones de correlatividad. |
+| **RN10 - Autenticación Personal** | (Mejora v1.1) El acceso a los datos de la carrera debe estar protegido por una cuenta de usuario única para garantizar la privacidad y sincronización. |
 
 #### 3.2. Casos de Estudio
 
@@ -131,6 +134,10 @@ La complejidad de los planes de estudio y los regímenes de correlatividades gen
 - **ID:** US-09
 - **Descripción:** Como estudiante, quiero registrar mis materias desaprobadas o recursadas para llevar un control de mis intentos y demoras.
 - **Criterio de Aceptación:** Mantener un historial de estados que incluya fallos y recursadas.
+
+- **ID:** US-10
+- **Descripción:** (Mejora v1.1) Como estudiante, quiero registrarme e iniciar sesión para que mi progreso se guarde en la nube y pueda acceder desde cualquier dispositivo.
+- **Criterio de Aceptación:** Formulario de Login/Registro funcional con persistencia de datos vinculada a la cuenta.
 
 #### 4.2. Criterios de Bondad
 - **Integridad de Datos:** Los cálculos de promedio y créditos deben ser consistentes y precisos.

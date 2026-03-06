@@ -86,6 +86,7 @@ export class RecommendationsService {
       // RN2: La correlativa debe estar APROBADA (Promocionada o Final con nota >= 4)
       const isAproved = 
         studentPrereq.status === SubjectStatus.PROMOCIONADA || 
+        studentPrereq.status === SubjectStatus.APROBADA ||
         (studentPrereq.status === SubjectStatus.REGULARIZADA && (studentPrereq.finalGrade ?? 0) >= 4);
 
       if (!isAproved) {

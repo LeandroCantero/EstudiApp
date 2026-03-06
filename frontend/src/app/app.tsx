@@ -2,6 +2,7 @@ import { LoginPage } from '@/pages/auth/login-page';
 import { RegisterPage } from '@/pages/auth/register-page';
 import { CalendarPage } from '@/pages/calendar/calendar-page';
 import { CareerMapPage } from '@/pages/career-map/career-map-page';
+import { CreditsPage } from '@/pages/credits/credits-page';
 import { DashboardPage } from '@/pages/dashboard/dashboard-page';
 import { OnboardingPage } from '@/pages/onboarding/onboarding-page';
 import { ResourcesPage } from '@/pages/resources/resources-page';
@@ -55,6 +56,7 @@ export const App = () => {
           <Route path="/materias/:id" element={<SubjectDetailPage />} />
           <Route path="/calendario" element={<CalendarPage />} />
           <Route path="/mapa" element={<CareerMapPage />} />
+          <Route path="/creditos" element={<CreditsPage />} />
           <Route path="/recursos" element={<ResourcesPage />} />
           <Route path="/onboarding" element={<OnboardingPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />

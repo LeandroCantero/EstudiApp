@@ -1,4 +1,5 @@
-import { GraduationCap, TrendingUp, X } from 'lucide-react';
+import { ChevronRight, GraduationCap, TrendingUp, X } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 interface MetricModalProps {
   isOpen: boolean;
@@ -8,6 +9,7 @@ interface MetricModalProps {
 }
 
 export const MetricModal = ({ isOpen, onClose, type, data }: MetricModalProps) => {
+  const navigate = useNavigate();
   if (!isOpen) return null;
 
   const isAverage = type === 'average';
@@ -86,12 +88,19 @@ export const MetricModal = ({ isOpen, onClose, type, data }: MetricModalProps) =
                   colorClass="bg-foreground/5 text-foreground/70 border-foreground/5" 
                   subLabel="Por cursar o rendir"
                 />
-                <StatCard 
-                  label="Créditos" 
-                  value={data.credits} 
-                  colorClass="bg-blue-500/10 text-blue-600 border-blue-500/5" 
-                  subLabel="Actividades extra"
-                />
+                <div 
+                  onClick={() => {
+                    onClose();
+                    navigate('/creditos');
+                  }}
+                  className="bg-primary/5 text-primary border p-5 rounded-2xl flex flex-col items-center justify-center text-center gap-1 transition-all hover:scale-[1.02] cursor-pointer group"
+                >
+                  <span className="text-[10px] font-black uppercase tracking-tight opacity-70 mb-1 leading-none">Créditos</span>
+                  <span className="text-3xl font-black">{data.credits}</span>
+                  <span className="text-[8px] font-bold opacity-40 uppercase tracking-tighter mt-1 flex items-center gap-1">
+                    Ver Detalle <ChevronRight size={10} />
+                  </span>
+                </div>
               </div>
 
               {/* Barra de Progreso Destacada al Final */}

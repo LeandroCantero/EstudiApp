@@ -3,23 +3,23 @@ import { useCredits } from '@/entities/credit/model/use-credits';
 import { useDashboard } from '@/entities/dashboard/model/use-dashboard';
 import { Award, CheckCircle2, GraduationCap, TrendingUp } from 'lucide-react';
 import { useState } from 'react';
-import { CreditModal } from '../subjects/credit-modal';
+import { useNavigate } from 'react-router-dom';
 import { AcademicTimeline } from './academic-timeline';
 import { AlertsPanel } from './alerts-panel';
 import { MetricModal } from './metric-modal';
 import { QuickPlanner } from './quick-planner';
 
 export const DashboardPage = () => {
+  const navigate = useNavigate();
   const { data, recommendations, alerts, isLoading: isLoadingDashboard, error, refresh: refreshDashboard } = useDashboard();
   const { events, isLoading: isLoadingCalendar } = useCalendar();
-  const { credits, totalCredits, addCredit, deleteCredit, isLoading: isLoadingCredits, refresh: refreshCredits } = useCredits();
+  const { totalCredits, isLoading: isLoadingCredits } = useCredits();
   
   const [activeModal, setActiveModal] = useState<'average' | 'progress' | null>(null);
-  const [isCreditModalOpen, setIsCreditModalOpen] = useState(false);
   const [plannedSubjects, setPlannedSubjects] = useState<string[]>([]);
 
   // Solo mostramos el spinner global si es la CARGA INICIAL (no tenemos datos)
-  const isInitialLoading = (isLoadingDashboard && !data) || (isLoadingCalendar && events.length === 0) || (isLoadingCredits && credits.length === 0);
+  const isInitialLoading = (isLoadingDashboard && !data) || (isLoadingCalendar && events.length === 0) || (isLoadingCredits && totalCredits === undefined);
   
   if (isInitialLoading) {
     return (
@@ -34,7 +34,7 @@ export const DashboardPage = () => {
       {/* ... cabecera y alertas ... */}
       <header className="flex flex-col gap-1">
         <h1 className="text-2xl font-bold tracking-tight">
-          Hola, {data?.userName?.split(' ')[0] || 'Estudiante'} 👋
+          Hola, {data?.userName?.split(' ')[0] || 'Estudiante'}
         </h1>
         <div className="flex items-center gap-2 text-primary font-medium">
           <GraduationCap size={18} />
@@ -68,11 +68,11 @@ export const DashboardPage = () => {
           icon={<Award size={24} className="text-primary" />} 
           label="Créditos" 
           value={`${totalCredits || 0}`} 
-          onClick={() => setIsCreditModalOpen(true)}
+          onClick={() => navigate('/creditos')}
           highlight
         />
         <StatCard 
-          icon={<CheckCircle2 size={24} className="text-primary" />} 
+          icon={<CheckCircle2 size={24} className="text-green-500" />} 
           label="Aprobadas" 
           value={`${data?.approvedSubjects || 0}`} 
         />
@@ -136,20 +136,6 @@ export const DashboardPage = () => {
           remaining: data?.remainingSubjects,
           credits: totalCredits,
           totalSubjects: data?.totalSubjects
-        }}
-      />
-
-      <CreditModal 
-        isOpen={isCreditModalOpen}
-        onClose={() => setIsCreditModalOpen(false)}
-        credits={credits}
-        addCredit={async (dto) => {
-          await addCredit(dto, true); // true = silent
-          refreshDashboard(true);
-        }}
-        deleteCredit={async (id) => {
-           await deleteCredit(id, true); // true = silent
-           refreshDashboard(true);
         }}
       />
     </div>

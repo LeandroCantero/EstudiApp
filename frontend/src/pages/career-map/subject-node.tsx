@@ -20,6 +20,14 @@ const getStatusConfig = (status: string) => {
         icon: <CheckCircle2 className="text-white" size={13} />,
         text: 'text-white',
         badge: 'bg-white/20 text-white',
+        label: 'PROMOCIONADA',
+      };
+    case 'APROBADA':
+      return {
+        bg: 'bg-emerald-600',
+        icon: <CheckCircle2 className="text-white" size={13} />,
+        text: 'text-white',
+        badge: 'bg-white/20 text-white',
         label: 'APROBADA',
       };
     case 'REGULARIZADA':
@@ -49,7 +57,7 @@ const getStatusConfig = (status: string) => {
       };
     case 'BLOQUEADA':
       return {
-        bg: 'bg-muted/50',
+        bg: 'bg-[#181818]', // Solid opaque dark background
         icon: <Lock className="text-foreground/30" size={13} />,
         text: 'text-foreground/40',
         badge: 'bg-foreground/5 text-foreground/30',

@@ -141,7 +141,7 @@ export class UsersService {
 
     const totalSubjects = user.userCareers[0].career.subjects.length;
     const approvedSubjects = activeCareerSubjects.filter(
-      (s: any) => s.status === SubjectStatus.PROMOCIONADA
+      (s: any) => s.status === SubjectStatus.PROMOCIONADA || s.status === SubjectStatus.APROBADA
     ).length;
     const regularizedSubjects = activeCareerSubjects.filter(
       (s: any) => s.status === SubjectStatus.REGULARIZADA
@@ -149,7 +149,7 @@ export class UsersService {
 
     // Materias pendientes (no aprobadas)
     const pendingSubjects = activeCareerSubjects.filter(
-      (s: any) => s.status !== SubjectStatus.PROMOCIONADA
+      (s: any) => s.status !== SubjectStatus.PROMOCIONADA && s.status !== SubjectStatus.APROBADA
     );
     const remainingSubjectsCount = pendingSubjects.length;
 
@@ -170,7 +170,7 @@ export class UsersService {
     // Tasa histórica: materias aprobadas / cuatrimestres cursados
     // RN: Materias anuales (period 0) cuentan doble para la velocidad
     const totalWeightApproved = activeCareerSubjects
-      .filter((s: any) => s.status === SubjectStatus.PROMOCIONADA)
+      .filter((s: any) => s.status === SubjectStatus.PROMOCIONADA || s.status === SubjectStatus.APROBADA)
       .reduce((sum, s: any) => sum + (s.careerSubject.period === 0 ? 2 : 1), 0);
 
     // Minimo 2 para no ser excesivamente pesimista en planes nuevos. MAXIMO 4 (Límite académico)
@@ -311,9 +311,7 @@ export class UsersService {
     );
 
     const totalSubjects = user.userCareers[0].career.subjects.length;
-    const approvedSubjects = activeCareerSubjects.filter(
-      (s: any) => s.status === SubjectStatus.PROMOCIONADA
-    ).length;
+    const approvedSubjects = user.userCareers[0].approvedCount; // Fuente de verdad sincronizada en DB
     const regularizedSubjects = activeCareerSubjects.filter(
       (s: any) => s.status === SubjectStatus.REGULARIZADA
     ).length;
@@ -325,7 +323,7 @@ export class UsersService {
     // Promedio académico (RN6) - incluye nota final o cursadas cerradas (aplazos importan)
     const subjectsWithGrade = activeCareerSubjects.filter((s: any) => 
       s.finalGrade !== null || 
-      (s.courseGrade !== null && [SubjectStatus.PROMOCIONADA, SubjectStatus.REGULARIZADA, SubjectStatus.DESAPROBADA].includes(s.status))
+      (s.courseGrade !== null && [SubjectStatus.PROMOCIONADA, SubjectStatus.APROBADA, SubjectStatus.REGULARIZADA, SubjectStatus.DESAPROBADA].includes(s.status))
     );
     const averageGrade =
       subjectsWithGrade.length > 0

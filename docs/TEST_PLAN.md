@@ -8,9 +8,8 @@ Versión: 		1.0
 Fecha: 	25/02/2026  
 Sponsor Operación: UNAHUR  
 Sponsor Organización: UNAHUR  
-Autor:	Cantero, Leandro  
-Tutor: 	Prof. Ciarallo, Cristian  
-Release: Marzo 2026
+| 1.0 | 25/02/2026 | Cantero, Leandro | Versión Inicial |
+| 1.1 | 06/03/2026 | Cantero, Leandro | Adición de Caso de Prueba 12 (Autenticación) |
 
 **Tabla de contenidos**
 
@@ -54,6 +53,8 @@ Release: Marzo 2026
 [Caso de Prueba 10: Adjuntar link y nota a materia	5](#caso-de-prueba-10:-adjuntar-link-y-nota-a-materia)
 
 [Caso de Prueba 11: Simulación gráfica de escenarios futuros	5](#caso-de-prueba-11:-simulación-gráfica-de-escenarios-futuros)
+
+[Caso de Prueba 12: Validación de Autenticación y Perfiles (Roadmap V1.1)	5](#caso-de-prueba-12:-validación-de-autenticación-y-perfiles)
 
 [Plan de Ejecución:	5](#plan-de-ejecución:)
 
@@ -163,6 +164,12 @@ Se utilizará Vitest para la validación continua de los algoritmos de cálculo 
 
 * Utilizar el modo simulador para marcar la aprobación hipotética de una materia llave.  
 * Verificar que el sistema muestre gráficamente (sin persistir datos) cómo se desbloquearía el resto de la carrera (US-08).
+
+##### **Caso de Prueba 12: Validación de Autenticación y Perfiles (Roadmap V1.1)** {#caso-de-prueba-12:-validación-de-autenticación-y-perfiles}
+
+* Acceder al formulario de Login/Registro.
+* Verificar la creación de cuenta y el inicio de sesión exitoso. 
+* Confirmar que los datos académicos se sincronizan correctamente tras el login (US-10).
 
 # **Plan de Ejecución:** {#plan-de-ejecución:}
 

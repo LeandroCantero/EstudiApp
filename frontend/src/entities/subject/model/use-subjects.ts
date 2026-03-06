@@ -11,6 +11,7 @@ export const useSubjects = () => {
   const mapBackendToFrontend = (data: StudentSubjectResponse[]): Subject[] => {
     return data.map((item) => ({
       id: item.id,
+      careerSubjectId: item.careerSubject.id,
       name: item.careerSubject.subject.name,
       code: item.careerSubject.code,
       status: item.status as Subject['status'],
@@ -22,6 +23,7 @@ export const useSubjects = () => {
       completionPeriod: item.completionPeriod ?? undefined,
       userId: '',
       attemptCount: item.attemptCount,
+      prerequisiteIds: (item.careerSubject.prerequisites || []).map((pre) => pre.id),
     }));
   };
 
@@ -99,3 +101,4 @@ export const useSubjects = () => {
     refreshData: fetchSubjects,
   };
 };
+

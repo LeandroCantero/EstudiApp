@@ -1,7 +1,15 @@
-export type SubjectStatus = 'PENDIENTE' | 'EN_CURSO' | 'RECURSANDO' | 'REGULARIZADA' | 'PROMOCIONADA' | 'DESAPROBADA';
+export type SubjectStatus =
+  | 'PENDIENTE'
+  | 'EN_CURSO'
+  | 'RECURSANDO'
+  | 'REGULARIZADA'
+  | 'PROMOCIONADA'
+  | 'APROBADA'
+  | 'DESAPROBADA';
 
 export interface Subject {
   id: string;
+  careerSubjectId?: string;
   name: string;
   code: string;
   status: SubjectStatus;
@@ -13,6 +21,7 @@ export interface Subject {
   completionPeriod?: number;
   userId: string;
   attemptCount: number;
+  prerequisiteIds?: string[];
 }
 
 export interface CreateSubjectDto extends Omit<Subject, 'id'> {}
@@ -23,6 +32,7 @@ export interface UpdateSubjectStatusDto {
   courseGrade?: number;
   completionYear?: number;
   completionPeriod?: number;
+  attemptCount?: number;
 }
 
 export interface UpdateFinalDto {
@@ -31,7 +41,6 @@ export interface UpdateFinalDto {
   completionYear?: number;
   completionPeriod?: number;
 }
-
 
 export interface AcademicMetrics {
   total: number;
@@ -79,3 +88,4 @@ export interface UpdateExamDto {
   date?: string;
   grade?: number;
 }
+

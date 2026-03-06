@@ -1,6 +1,12 @@
 import { apiClient } from '../../../shared/api/base';
 import { CreateNoteDto, SubjectNote, UpdateFinalDto, UpdateSubjectStatusDto } from '../model/types';
 
+export interface TransitionWarning {
+  code: string;
+  severity: 'info' | 'warn' | 'block';
+  message: string;
+}
+
 export interface StudentSubjectResponse {
   id: string;
   status: string;
@@ -24,40 +30,37 @@ export interface StudentSubjectResponse {
   attemptCount: number;
   completionYear: number | null;
   completionPeriod: number | null;
+  transitionWarnings?: TransitionWarning[];
 }
 
+export interface StatusPreviewResponse {
+  allowed: boolean;
+  nextStatus: string;
+  warnings: TransitionWarning[];
+}
 
 export const subjectApi = {
-  /** Get all subjects for the current authenticated user */
-  getMySubjects: () => 
-    apiClient.get<StudentSubjectResponse[]>('/my-subjects'),
-  
-  /** Update subject status (e.g., from PENDIENTE to EN_CURSO) */
-  updateStatus: (id: string, data: UpdateSubjectStatusDto) => 
+  getMySubjects: () => apiClient.get<StudentSubjectResponse[]>('/my-subjects'),
+
+  updateStatus: (id: string, data: UpdateSubjectStatusDto) =>
     apiClient.patch<StudentSubjectResponse>(`/my-subjects/${id}/status`, data),
-  
-  /** Update final exam information */
-  updateFinal: (id: string, data: UpdateFinalDto) => 
-    apiClient.post<StudentSubjectResponse>(`/my-subjects/${id}/final`, data),
-  
-  /** Get subject details by ID */
-  getById: (id: string) => 
-    apiClient.get<StudentSubjectResponse>(`/my-subjects/${id}`),
 
-  /** US-04: Get notes for a subject */
-  getNotes: (studentSubjectId: string) => 
-    apiClient.get<SubjectNote[]>(`/notes/subject/${studentSubjectId}`),
+  previewStatusChange: (id: string, data: UpdateSubjectStatusDto) =>
+    apiClient.post<StatusPreviewResponse>(`/my-subjects/${id}/status/preview`, data),
 
-  /** US-04: Create a note for a subject */
-  createNote: (studentSubjectId: string, data: CreateNoteDto) => 
+  updateFinal: (id: string, data: UpdateFinalDto) => apiClient.post<StudentSubjectResponse>(`/my-subjects/${id}/final`, data),
+
+  getById: (id: string) => apiClient.get<StudentSubjectResponse>(`/my-subjects/${id}`),
+
+  getNotes: (studentSubjectId: string) => apiClient.get<SubjectNote[]>(`/notes/subject/${studentSubjectId}`),
+
+  createNote: (studentSubjectId: string, data: CreateNoteDto) =>
     apiClient.post<SubjectNote>(`/notes/subject/${studentSubjectId}`, data),
 
-  /** Delete a note */
-  deleteNote: (id: string) => 
-    apiClient.delete(`/notes/${id}`),
+  deleteNote: (id: string) => apiClient.delete(`/notes/${id}`),
 
-  /** Get critical alerts for the user */
-  getAlerts: () => 
-    apiClient.get<any[]>('/my-subjects/alerts'),
+  resetSubject: (id: string, resetAttempts?: boolean) =>
+    apiClient.post<StudentSubjectResponse>(`/my-subjects/${id}/reset`, { resetAttempts }),
+
+  getAlerts: () => apiClient.get<any[]>('/my-subjects/alerts'),
 };
-

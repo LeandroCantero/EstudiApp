@@ -52,6 +52,7 @@ describe('Academic Logic Tests', () => {
         name: 'Test User',
         userCareers: [{
           careerId: 'c1',
+          approvedCount: 1, // Simulating 1 PROMOCIONADA
           career: { name: 'Test Career', subjects: [{}, {}, {}, {}] } // 4 total
         }],
         subjects: [
@@ -96,11 +97,11 @@ describe('Academic Logic Tests', () => {
       const recs = await recommendationsService.getRecommendations('u1');
       
       expect(recs[0].transitiveImpact).toBe(3);
-      // Score = (Impact * 2) + (MatchesSeason ? 10 : 0)
-      // Assuming current month is Mar-Jul (Semester 1) or matches cs1 period
-      const currentMonth = new Date().getMonth();
-      const currentSemester = currentMonth < 7 ? 1 : 2;
-      const expectedScore = (3 * 2) + (currentSemester === 1 ? 10 : 0);
+      
+      // Score = (Impact * 3) + YearScore + PeriodScore
+      // Year proximity: (10 - 1) * 10 = 90
+      // Period score: (2 - 1) * 2 = 2
+      const expectedScore = (3 * 3) + 90 + 2;
       
       expect(recs[0].priorityScore).toBe(expectedScore);
     });

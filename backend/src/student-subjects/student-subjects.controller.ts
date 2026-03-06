@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Param, Patch, Post, Req, UseGuards } from '@nestjs/common';
 import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { SubjectStatus } from '@prisma/client';
-import { IsEnum, IsNumber, IsOptional } from 'class-validator';
+import { IsEnum, IsNumber, IsOptional, Min } from 'class-validator';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 import { RequestWithUser } from '../types/express';
 import { StudentSubjectsService } from './student-subjects.service';
@@ -13,10 +13,37 @@ class UpdateStatusDto {
   @IsOptional()
   @IsNumber()
   courseGrade?: number;
+
+  @IsOptional()
+  @IsNumber()
+  completionYear?: number;
+
+  @IsOptional()
+  @IsNumber()
+  completionPeriod?: number;
+
+  @IsOptional()
+  @IsNumber()
+  @Min(0)
+  attemptCount?: number;
+}
+
+class ResetSubjectDto {
+  @IsOptional()
+  resetAttempts?: boolean;
 }
 
 class RegisterGradeDto {
+  @IsNumber()
   grade: number;
+
+  @IsOptional()
+  @IsNumber()
+  completionYear?: number;
+
+  @IsOptional()
+  @IsNumber()
+  completionPeriod?: number;
 }
 
 @ApiTags('My Subjects')
@@ -56,6 +83,16 @@ export class StudentSubjectsController {
     return this.service.findOne(req.user.userId, id);
   }
 
+  @Post(':id/status/preview')
+  @ApiOperation({ summary: 'Previsualizar advertencias antes de cambiar estado' })
+  async previewStatusChange(
+    @Req() req: RequestWithUser,
+    @Param('id') id: string,
+    @Body() dto: UpdateStatusDto,
+  ) {
+    return this.service.previewStatusChange(req.user.userId, id, dto);
+  }
+
   @Patch(':id/status')
   @ApiOperation({ summary: 'US-02: Cambiar estado de materia' })
   async updateStatus(
@@ -63,7 +100,7 @@ export class StudentSubjectsController {
     @Param('id') id: string,
     @Body() dto: UpdateStatusDto,
   ) {
-    return this.service.updateStatus(req.user.userId, id, dto.status, dto.courseGrade);
+    return this.service.updateStatus(req.user.userId, id, dto);
   }
 
   @Post(':id/final')
@@ -73,7 +110,13 @@ export class StudentSubjectsController {
     @Param('id') id: string,
     @Body() dto: RegisterGradeDto,
   ) {
-    return this.service.registerFinalGrade(req.user.userId, id, dto.grade);
+    return this.service.registerFinalGrade(
+      req.user.userId,
+      id,
+      dto.grade,
+      dto.completionYear,
+      dto.completionPeriod,
+    );
   }
 
   @Post(':id/retake')
@@ -81,5 +124,14 @@ export class StudentSubjectsController {
   async retake(@Req() req: RequestWithUser, @Param('id') id: string) {
     return this.service.markAsRetaking(req.user.userId, id);
   }
-}
 
+  @Post(':id/reset')
+  @ApiOperation({ summary: 'Reiniciar materia al estado inicial (PENDIENTE)' })
+  async reset(
+    @Req() req: RequestWithUser,
+    @Param('id') id: string,
+    @Body() dto: ResetSubjectDto,
+  ) {
+    return this.service.resetSubject(req.user.userId, id, dto.resetAttempts);
+  }
+}

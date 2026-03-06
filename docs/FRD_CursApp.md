@@ -42,6 +42,7 @@ Release: 	Marzo 2026
 | Version | Fecha | Autor | Descripcion |
 | :---- | :---- | :---- | :---- |
 | 1.0 | 25/02/2026 | Cantero, Leandro | Versión inicial sincronizada con plataforma. |
+| 1.1 | 06/03/2026 | Cantero, Leandro | Incorporación de US-10 (Autenticación) en Roadmap. |
 
 2. **Alcance**
 
@@ -67,7 +68,7 @@ Requiere conexión estable a la base de datos de Supabase para la persistencia d
 
     6. **Alcance** 
 
-Abarca desde la autenticación del usuario, gestión de estados académicos, generación de proyecciones, simulación en el frontend y seguimiento de créditos.
+Abarca desde la gestión de estados académicos, generación de proyecciones, simulación en el frontend y seguimiento de créditos. **(Mejora v1.1: Autenticación de usuarios vía Clerk/Supabase).**
 
 3. **Información de Requerimientos de Negocio**
 
@@ -117,9 +118,7 @@ Abarca desde la autenticación del usuario, gestión de estados académicos, gen
 |  6 meses (Fase 1 completada) |
 |   |
 | **User Stories** |
-|  US-01 Como alumno quiero ver mi avance porcentual para motivarme con mi progreso. <br> US-03 Como alumno quiero sugerencias de materias para optimizar mi tiempo de graduación. <br> US-08 Como alumno quiero simular aprobaciones para planificar mis próximos años académicos. |
-|  **Criterio de Aceptación** |
-|  CA-01 Visualización de barra de progreso en Dashboard. <br> CA-03 Listado de materias recomendadas según impacto transitivo. <br> CA-08 Mapa interactivo con nodos coloreables para simulación. |
+|  **US-01** Como alumno quiero ver mi avance porcentual para motivarme con mi progreso. (CA-01: Barra en Dashboard) <br> **US-02** Como alumno quiero gestionar mis estados (En curso, etc.) para ver mi historial. (CA-02: Selector de estados funcional) <br> **US-03** Como alumno quiero sugerencias de materias para optimizar mi tiempo de graduación. (CA-03: Listado por impacto transitivo) <br> **US-04** Como alumno quiero adjuntar notas y links para centralizar mis recursos. (CA-04: Persistencia de recursos por materia) <br> **US-05** Como alumno quiero registrar créditos extracurriculares para cumplir requisitos. (CA-05: Contador de créditos acumulados) <br> **US-06** Como alumno quiero ver mi fecha estimada de graduación para planificar mi futuro. (CA-06: Widget de proyección en Dashboard) <br> **US-07** Como nuevo usuario quiero realizar una carga inicial rápida para empezar rápido. (CA-07: Proceso de Onboarding funcional) <br> **US-08** Como alumno quiero simular aprobaciones para visualizar mi carrera. (CA-08: Nodos interactivos en Simulador) <br> **US-09** Como alumno quiero registrar desaprobadas para controlar mis demoras. (CA-09: Historial de intentos persistente) <br> **US-10** (V1.1) Como estudiante quiero autenticarme para sincronizar mis datos. (CA-10: Login/Registro funcional) |
 |  **Dependencias** |
 |  Servicio de autenticación Clerk y base de datos Supabase. |
 
