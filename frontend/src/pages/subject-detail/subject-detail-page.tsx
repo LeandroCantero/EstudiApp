@@ -7,7 +7,6 @@ import {
     ArrowLeft,
     BookOpen,
     Calendar,
-    Check,
     CheckCircle2,
     Clock,
     Edit3,
@@ -21,6 +20,7 @@ import {
 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const statusLabels: Record<string, { label: string; color: string }> = {
   PENDIENTE: { label: 'Pendiente', color: 'bg-gray-500/10 text-gray-500' },
@@ -65,11 +65,10 @@ export const SubjectDetailPage = () => {
   const [isManualAttemptEditing, setIsManualAttemptEditing] = useState(false);
   const [manualAttemptDraft, setManualAttemptDraft] = useState('1');
   
-  // Feedback states
+  // Feedback states - avoid flash with transitioning state
   const [savingCourseGrade, setSavingCourseGrade] = useState(false);
   const [savingFinalGrade, setSavingFinalGrade] = useState(false);
-  const [successMessage, setSuccessMessage] = useState<string | null>(null);
-  const [isEditingCompletionDate, setIsEditingCompletionDate] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     const fetchSubject = async () => {
@@ -142,11 +141,10 @@ export const SubjectDetailPage = () => {
   };
 
   const handleUpdateStatus = async (status: string, grade?: number, manualAttempt?: number) => {
-    if (!id) return;
+    if (!id || isTransitioning) return;
+    setIsTransitioning(true);
     try {
       setDetailError(null);
-      setTransitionWarnings([]);
-      setSuccessMessage(null);
 
       const payload: any = {
         status: status as any,
@@ -170,19 +168,19 @@ export const SubjectDetailPage = () => {
       setIsManualAttemptEditing(false);
       
       if (grade !== undefined) {
-        setSuccessMessage('Nota de cursada guardada');
-        setTimeout(() => setSuccessMessage(null), 3000);
+        toast.success('Nota de cursada guardada', { autoClose: 2000 });
       }
     } catch (err: any) {
       console.error('Error updating status:', err);
       setDetailError(err?.message || 'Error al actualizar el estado');
+    } finally {
+      setTimeout(() => setIsTransitioning(false), 100);
     }
   };
 
   const handleSaveCourseGrade = async () => {
-    if (!id) return;
+    if (!id || !subject || savingCourseGrade) return;
     setSavingCourseGrade(true);
-    setSuccessMessage(null);
     try {
       const updated = await subjectApi.updateStatus(id, {
         status: subject.status as any,
@@ -190,8 +188,7 @@ export const SubjectDetailPage = () => {
       });
       setSubject(updated);
       setCourseGrade(updated.courseGrade?.toString() || '');
-      setSuccessMessage('Nota de cursada guardada');
-      setTimeout(() => setSuccessMessage(null), 3000);
+      toast.success('Nota de cursada guardada', { autoClose: 2000 });
     } catch (err: any) {
       console.error('Error saving course grade:', err);
       setDetailError(err?.message || 'Error al guardar la nota');
@@ -200,31 +197,11 @@ export const SubjectDetailPage = () => {
     }
   };
 
-  const handleUpdateCompletionDate = async () => {
-    if (!id) return;
-    try {
-      setSuccessMessage(null);
-      const updated = await subjectApi.updateStatus(id, {
-        status: subject.status as any,
-        completionYear: parseInt(completionYear),
-        completionPeriod: parseInt(completionPeriod),
-      });
-      setSubject(updated);
-      if (updated.completionYear) setCompletionYear(updated.completionYear.toString());
-      if (updated.completionPeriod) setCompletionPeriod(updated.completionPeriod.toString());
-      setIsEditingCompletionDate(false);
-      setSuccessMessage('Fecha actualizada');
-      setTimeout(() => setSuccessMessage(null), 3000);
-    } catch (err: any) {
-      console.error('Error updating completion date:', err);
-      setDetailError(err?.message || 'Error al actualizar la fecha');
-    }
-  };
-
   const handleResetSubject = async () => {
     if (!id) return;
     try {
       setDetailError(null);
+      setTransitionWarnings([]);
       const updated = await subjectApi.resetSubject(id, false);
       setSubject(updated);
       setCourseGrade('');
@@ -238,12 +215,11 @@ export const SubjectDetailPage = () => {
     }
   };
   const handleRegisterFinal = async () => {
-    if (!id || !finalGrade) return;
+    if (!id || !finalGrade || savingFinalGrade) return;
     try {
       setDetailError(null);
-      setSuccessMessage(null);
       setSavingFinalGrade(true);
-      const payload: any = { 
+      const payload: any = {
         grade: parseFloat(finalGrade)
       };
 
@@ -255,8 +231,7 @@ export const SubjectDetailPage = () => {
       const updated = await subjectApi.updateFinal(id, payload);
       setSubject(updated);
       setFinalGrade(updated.finalGrade?.toString() || '');
-      setSuccessMessage('Final registrado correctamente');
-      setTimeout(() => setSuccessMessage(null), 3000);
+      toast.success('Final registrado correctamente', { autoClose: 2000 });
     } catch (err: any) {
       console.error('Error registering final:', err);
       setDetailError(err?.message || 'Error al registrar el final');
@@ -312,15 +287,8 @@ export const SubjectDetailPage = () => {
           <p className="text-sm text-foreground/60">
             Año {subject.careerSubject.year} - {subject.careerSubject.period === 0 ? 'Anual' : `${subject.careerSubject.period}° Cuatrimestre`}
             {subject.completionYear && (
-              <span className="ml-2 text-primary font-bold flex items-center gap-1 inline-flex">
+              <span className="ml-2 text-primary font-bold">
                 • {subject.completionYear} ({subject.completionPeriod}° C.)
-                <button 
-                  onClick={() => setIsEditingCompletionDate(true)}
-                  className="p-1 hover:bg-primary/10 rounded transition-colors"
-                  title="Editar fecha"
-                >
-                  <Edit3 size={12} />
-                </button>
               </span>
             )}
           </p>
@@ -335,105 +303,36 @@ export const SubjectDetailPage = () => {
         </button>
       </header>
 
-      {/* Error Alert */}
-      {detailError && (
-        <div className="bg-red-500/10 border border-red-500/20 rounded-2xl p-4 flex items-start gap-4 animate-in fade-in slide-in-from-top-2">
-          <AlertTriangle className="text-red-500 shrink-0" size={20} />
-          <div className="flex-1">
-            <h4 className="text-sm font-bold text-red-500 mb-1">Conflicto de Correlatividades / Validación</h4>
-            <p className="text-xs text-red-500/80 leading-relaxed">{detailError}</p>
-          </div>
-          <button onClick={() => setDetailError(null)} className="p-1 hover:bg-red-500/10 rounded-lg transition-colors">
-            <X size={16} className="text-red-500/40" />
-          </button>
-        </div>
-      )}
-
-      {/* Success Message */}
-      {successMessage && (
-        <div className="bg-green-500/10 border border-green-500/20 rounded-2xl p-4 flex items-center gap-4 animate-in fade-in slide-in-from-top-2">
-          <Check className="text-green-500 shrink-0" size={20} />
-          <p className="text-sm text-green-500 font-medium">{successMessage}</p>
-        </div>
-      )}
-
-      {/* Completion Date Edit Modal */}
-      {isEditingCompletionDate && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-sm animate-in fade-in">
-          <div className="bg-card w-full max-w-sm rounded-3xl p-6 border border-foreground/5 shadow-2xl animate-in zoom-in-95 duration-200">
-            <div className="flex flex-col items-center text-center gap-4">
-              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
-                <Calendar size={32} />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">Editar Fecha</h3>
-                <p className="text-sm text-foreground/60 mt-2">
-                  Cambiá el año y cuatrimestre de cursada/final
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-2 gap-3 w-full mt-2">
-                <div className="flex flex-col gap-1">
-                  <label className="text-[10px] font-black uppercase text-foreground/30 ml-1">Año</label>
-                  <select 
-                    value={completionYear}
-                    onChange={(e) => setCompletionYear(e.target.value)}
-                    className="!bg-background border border-foreground/10 rounded-xl p-3 text-sm font-bold text-foreground/80 outline-none focus:ring-1 ring-primary appearance-none cursor-pointer"
-                  >
-                    {Array.from({ length: 15 }, (_, i) => new Date().getFullYear() - 10 + i).map(y => (
-                      <option key={y} value={y.toString()}>{y}</option>
-                    ))}
-                  </select>
-                </div>
-                <div className="flex flex-col gap-1">
-                  <label className="text-[10px] font-black uppercase text-foreground/30 ml-1">Cuatrimestre</label>
-                  <select 
-                    value={completionPeriod}
-                    onChange={(e) => setCompletionPeriod(e.target.value)}
-                    className="!bg-background border border-foreground/10 rounded-xl p-3 text-sm font-bold text-foreground/80 outline-none focus:ring-1 ring-primary appearance-none cursor-pointer"
-                  >
-                    <option value="1">1° Cuatrimestre</option>
-                    <option value="2">2° Cuatrimestre</option>
-                    <option value="0">Anual / Verano</option>
-                  </select>
-                </div>
-              </div>
-              
-              <div className="flex flex-col w-full gap-2 mt-2">
-                <button
-                  onClick={handleUpdateCompletionDate}
-                  className="w-full py-3 bg-primary text-primary-foreground rounded-xl font-bold hover:opacity-90 transition-all"
-                >
-                  Guardar
-                </button>
-                <button
-                  onClick={() => {
-                    setIsEditingCompletionDate(false);
-                    // Reset to original values
-                    if (subject.completionYear) setCompletionYear(subject.completionYear.toString());
-                    if (subject.completionPeriod) setCompletionPeriod(subject.completionPeriod.toString());
-                  }}
-                  className="w-full py-3 bg-transparent text-foreground/40 font-bold hover:text-foreground/60 transition-all"
-                >
-                  Cancelar
-                </button>
-              </div>
+      {/* Alerts - always render container to prevent flash */}
+      <div className="flex flex-col gap-2">
+        {detailError ? (
+          <div className="bg-red-500/10 border border-red-500/20 rounded-2xl p-4 flex items-start gap-4 animate-in fade-in slide-in-from-top-2 duration-200">
+            <AlertTriangle className="text-red-500 shrink-0" size={20} />
+            <div className="flex-1">
+              <h4 className="text-sm font-bold text-red-500 mb-1">Conflicto de Correlatividades / Validación</h4>
+              <p className="text-xs text-red-500/80 leading-relaxed">{detailError}</p>
             </div>
+            <button onClick={() => setDetailError(null)} className="p-1 hover:bg-red-500/10 rounded-lg transition-colors">
+              <X size={16} className="text-red-500/40" />
+            </button>
           </div>
-        </div>
-      )}
-
-      
-      {transitionWarnings.length > 0 && (
-        <div className="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-4">
-          <h4 className="text-sm font-bold text-amber-600 mb-2">Advertencia</h4>
-          <ul className="text-xs text-amber-700/90 space-y-1">
-            {transitionWarnings.map((warning, index) => (
-              <li key={`${warning}-${index}`}>- {warning}</li>
-            ))}
-          </ul>
-        </div>
-      )}
+        ) : transitionWarnings.length > 0 ? (
+          <div className="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-4 flex items-start gap-4 animate-in fade-in slide-in-from-top-2 duration-200">
+            <AlertTriangle className="text-amber-500 shrink-0" size={20} />
+            <div className="flex-1">
+              <h4 className="text-sm font-bold text-amber-600 mb-2">Advertencia</h4>
+              <ul className="text-xs text-amber-700/90 space-y-1">
+                {transitionWarnings.map((warning, index) => (
+                  <li key={`${warning}-${index}`}>- {warning}</li>
+                ))}
+              </ul>
+            </div>
+            <button onClick={() => setTransitionWarnings([])} className="p-1 hover:bg-amber-500/10 rounded-lg transition-colors">
+              <X size={16} className="text-amber-500/40" />
+            </button>
+          </div>
+        ) : null}
+      </div>
       {/* Tabs */}
       <div className="flex gap-2 p-1 bg-card rounded-xl">
         {[
@@ -512,62 +411,56 @@ export const SubjectDetailPage = () => {
                 </div>
               )}
 
-              <div className="mt-6 pt-6 border-t border-foreground/5 flex items-center justify-between gap-4">
-                <div className="flex items-center gap-3">
+              <div className="mt-6 pt-6 border-t border-foreground/5">
+                <div className="inline-flex items-center gap-2 rounded-xl bg-background px-3 py-2 border border-foreground/10">
+                  <h4 className="text-sm font-semibold">Recursadas</h4>
                   {!isManualAttemptEditing ? (
-                    <div className="flex items-center gap-2">
-                      <h4 className="text-sm font-semibold">Recursadas</h4>
-                      <span className="text-lg font-bold">{attemptCount}</span>
-                    </div>
+                    <>
+                      <span className="text-lg font-bold leading-none">{attemptCount}</span>
+                      <button
+                        onClick={() => {
+                          setManualAttemptDraft(attemptCount);
+                          setIsManualAttemptEditing(true);
+                        }}
+                        className="px-2.5 py-1.5 rounded-lg bg-foreground/5 text-xs font-bold hover:bg-foreground/10 transition-colors"
+                      >
+                        Editar
+                      </button>
+                    </>
                   ) : (
-                    <div className="flex items-center gap-2">
-                      <h4 className="text-sm font-semibold">Recursadas</h4>
+                    <>
                       <input
                         type="number"
                         min="0"
-                        className="w-16 text-center bg-background border border-foreground/10 rounded-lg py-1 px-2 font-bold outline-none focus:ring-1 ring-primary"
+                        className="w-16 text-center bg-card border border-foreground/10 rounded-lg py-1 px-2 font-bold outline-none focus:ring-1 ring-primary"
                         value={manualAttemptDraft}
                         onChange={(e) => setManualAttemptDraft(e.target.value)}
                       />
-                    </div>
+                      <button
+                        onClick={() => {
+                          const parsed = Number.parseInt(manualAttemptDraft, 10);
+                          if (Number.isNaN(parsed) || parsed < 0) {
+                            setDetailError('La cantidad de recursadas debe ser un entero mayor o igual a 0');
+                            return;
+                          }
+                          void handleUpdateStatus(subject.status, subject.courseGrade || undefined, parsed);
+                        }}
+                        className="px-2.5 py-1.5 rounded-lg bg-primary text-primary-foreground text-xs font-bold"
+                      >
+                        Guardar
+                      </button>
+                      <button
+                        onClick={() => {
+                          setIsManualAttemptEditing(false);
+                          setManualAttemptDraft(attemptCount);
+                        }}
+                        className="px-2.5 py-1.5 rounded-lg bg-foreground/5 text-xs font-bold hover:bg-foreground/10"
+                      >
+                        Cancelar
+                      </button>
+                    </>
                   )}
                 </div>
-                {!isManualAttemptEditing ? (
-                  <button
-                    onClick={() => {
-                      setManualAttemptDraft(attemptCount);
-                      setIsManualAttemptEditing(true);
-                    }}
-                    className="px-3 py-2 rounded-lg bg-foreground/5 text-xs font-bold hover:bg-foreground/10 transition-colors"
-                  >
-                    Editar
-                  </button>
-                ) : (
-                  <div className="flex items-center gap-2">
-                    <button
-                      onClick={() => {
-                        const parsed = Number.parseInt(manualAttemptDraft, 10);
-                        if (Number.isNaN(parsed) || parsed < 0) {
-                          setDetailError('La cantidad de recursadas debe ser un entero mayor o igual a 0');
-                          return;
-                        }
-                        void handleUpdateStatus(subject.status, subject.courseGrade || undefined, parsed);
-                      }}
-                      className="px-3 py-2 rounded-lg bg-primary text-primary-foreground text-xs font-bold"
-                    >
-                      Guardar
-                    </button>
-                    <button
-                      onClick={() => {
-                        setIsManualAttemptEditing(false);
-                        setManualAttemptDraft(attemptCount);
-                      }}
-                      className="px-3 py-2 rounded-lg bg-foreground/5 text-xs font-bold hover:bg-foreground/10"
-                    >
-                      Cancelar
-                    </button>
-                  </div>
-                )}
               </div>
             </div>
 
@@ -580,13 +473,13 @@ export const SubjectDetailPage = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="bg-background rounded-xl p-4 flex flex-col gap-2">
                   <span className="text-xs text-foreground/60 font-medium">Nota de Cursada</span>
-                  <div className="flex gap-2">
+                  <div className="flex items-center gap-2">
                     <input 
                       type="number"
                       step="0.1"
                       min="0"
                       max="10"
-                      className="bg-card border-none rounded-lg p-3 text-lg font-bold w-24 outline-none focus:ring-1 ring-primary"
+                      className="bg-card border-none rounded-lg p-2.5 text-lg font-bold w-20 outline-none focus:ring-1 ring-primary"
                       placeholder="-"
                       value={courseGrade}
                       onChange={(e) => setCourseGrade(e.target.value)}
@@ -594,22 +487,22 @@ export const SubjectDetailPage = () => {
                     <button 
                       onClick={handleSaveCourseGrade}
                       disabled={savingCourseGrade}
-                      className="flex-1 bg-primary/10 text-primary text-xs font-bold rounded-lg hover:bg-primary/20 transition-all uppercase tracking-wider disabled:opacity-50"
+                      className="flex-1 py-2.5 bg-primary/10 text-primary text-xs font-bold rounded-lg hover:bg-primary/20 transition-all disabled:opacity-50"
                     >
-                      {savingCourseGrade ? 'Guardando...' : 'Guardar'}
+                      {savingCourseGrade ? '...' : 'Guardar'}
                     </button>
                   </div>
                 </div>
 
                 <div className="bg-background rounded-xl p-4 flex flex-col gap-2">
                   <span className="text-xs text-foreground/60 font-medium">Nota Final</span>
-                  <div className="flex gap-2">
+                  <div className="flex items-center gap-2">
                     <input 
                       type="number"
                       step="0.1"
                       min="0"
                       max="10"
-                      className="bg-card border-none rounded-lg p-3 text-lg font-bold w-24 outline-none focus:ring-1 ring-primary"
+                      className="bg-card border-none rounded-lg p-2.5 text-lg font-bold w-20 outline-none focus:ring-1 ring-primary"
                       placeholder="-"
                       value={finalGrade}
                       onChange={(e) => setFinalGrade(e.target.value)}
@@ -617,9 +510,9 @@ export const SubjectDetailPage = () => {
                     <button 
                       onClick={handleRegisterFinal}
                       disabled={savingFinalGrade || !finalGrade}
-                      className="flex-1 bg-primary text-primary-foreground text-xs font-bold rounded-lg hover:opacity-90 transition-all uppercase tracking-wider shadow-sm shadow-primary/20 disabled:opacity-50"
+                      className="flex-1 py-2.5 bg-primary text-primary-foreground text-xs font-bold rounded-lg hover:opacity-90 transition-all disabled:opacity-50"
                     >
-                      {savingFinalGrade ? 'Registrando...' : 'Registrar Final'}
+                      {savingFinalGrade ? '...' : 'Registrar'}
                     </button>
                   </div>
                 </div>

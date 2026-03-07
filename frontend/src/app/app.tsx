@@ -54,7 +54,7 @@ export const App = () => {
           <Route path="/" element={<DashboardPage />} />
           <Route path="/materias" element={<SubjectsPage />} />
           <Route path="/materias/:id" element={<SubjectDetailPage />} />
-          <Route path="/calendario" element={<CalendarPage />} />
+          <Route path="/calendario" element={<CalendarPage key="calendario" />} />
           <Route path="/mapa" element={<CareerMapPage />} />
           <Route path="/creditos" element={<CreditsPage />} />
           <Route path="/recursos" element={<ResourcesPage />} />

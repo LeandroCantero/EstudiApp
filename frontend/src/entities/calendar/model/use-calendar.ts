@@ -4,7 +4,8 @@ import { CalendarEvent, CreateEventDto } from './types';
 
 export const useCalendar = () => {
   const [events, setEvents] = useState<CalendarEvent[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true); // Start true to avoid flash
+  const [hasLoadedOnce, setHasLoadedOnce] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const fetchEvents = useCallback(async (startDate?: string, endDate?: string) => {
@@ -13,8 +14,10 @@ export const useCalendar = () => {
     try {
       const data = await calendarApi.getEvents(startDate, endDate);
       setEvents(data);
+      setHasLoadedOnce(true);
     } catch (err: any) {
       setError(err.response?.data?.message || 'Error al cargar los eventos');
+      setHasLoadedOnce(true);
     } finally {
       setIsLoading(false);
     }
@@ -52,6 +55,7 @@ export const useCalendar = () => {
   return {
     events,
     isLoading,
+    hasLoadedOnce,
     error,
     refresh: fetchEvents,
     createEvent,
